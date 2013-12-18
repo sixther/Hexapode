@@ -16,6 +16,8 @@
 #include "task.h"
 #include "timer_17xx_40xx.h"
 #include "chip.h"
+#include "basic_io.h"
+#include "servomoteur.h"
 
 //define pour la fréquence du timer0 hard: 50µs
 #define TICKRATE1_HZ 20000
@@ -23,6 +25,9 @@
 #define TICKRATE2_HZ 50
 
 unsigned char ucTemoin = 0;
+unsigned long ulTaskNumber[configEXPECTED_NO_RUNNING_TASKS];
+
+ServoMoteur xMyServo;
 
 void vTIMER0_Init()
 {
@@ -52,12 +57,9 @@ void TIMER0_IRQHandler()
 	{
 		Chip_TIMER_ClearMatch(LPC_TIMER0, 0);
 		
-		if(ucTemoin)
-			Board_LED_Set(1, false);
-		else
-			Board_LED_Set(1, true);
-
-		ucTemoin=~ucTemoin;
+		vSetPwm(&xMyServo, 1);
+		
+		Board_LED_Set(1, xMyServo.ucGpio);
 	}
 }
 
@@ -68,7 +70,11 @@ static portTASK_FUNCTION(vTimerTask, pvParameters) {
 	while (1) {
 		Board_LED_Set(0, LedState);
 		LedState = (bool) !LedState;
-
+		
+		vInitPwm(&xMyServo, 20);
+				
+		Board_LED_Set(1, xMyServo.ucGpio);
+		
 		vTaskDelay(configTICK_RATE_HZ / TICKRATE2_HZ);
 	}
 }

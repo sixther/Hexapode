@@ -1,7 +1,7 @@
 typedef struct
 {
-		unsigned char ucAngle;
-		unsigned char ucCount;
+		unsigned int ucAngle;
+		unsigned int ucCount;
 		unsigned char ucGpio;
 }ServoMoteur;
 

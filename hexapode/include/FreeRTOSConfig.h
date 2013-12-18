@@ -70,7 +70,7 @@
  *----------------------------------------------------------*/
 
 #define configUSE_PREEMPTION		1
-#define configUSE_IDLE_HOOK			1
+#define configUSE_IDLE_HOOK			0
 #define configMAX_PRIORITIES		( ( unsigned portBASE_TYPE ) 8 )
 #define configUSE_TICK_HOOK			0
 #define configCPU_CLOCK_HZ			( ( unsigned long ) SystemCoreClock )
@@ -162,4 +162,12 @@ See http://www.FreeRTOS.org/RTOS-Cortex-M3-M4.html. */
 #endif /* defined(CORE_M0) */
 #endif /* defined(CORE_M4) */
 #endif /* defined(CORE_M3) */
+
+
+#define configEXPECTED_NO_RUNNING_TASKS		( 3 )
+extern unsigned long ulTaskNumber[];
+#define traceTASK_SWITCHED_IN() 	ulTaskNumber[ pxCurrentTCB->uxTCBNumber ] = 1
+#define traceTASK_SWITCHED_OUT() 	ulTaskNumber[ pxCurrentTCB->uxTCBNumber ] = 0
+
+
 #endif /* FREERTOS_CONFIG_H */

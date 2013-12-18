@@ -9,6 +9,8 @@ void vInitPwm(ServoMoteur *pxServoMoteur, unsigned char ucAngle)
 
 void vSetPwm(ServoMoteur *pxServoMoteur, unsigned char ucPasCount)
 {
+	pxServoMoteur->ucCount += ucPasCount;
+	
 	if(pxServoMoteur->ucCount < pxServoMoteur->ucAngle)
 	{
 		pxServoMoteur->ucGpio = 1;
@@ -17,6 +19,4 @@ void vSetPwm(ServoMoteur *pxServoMoteur, unsigned char ucPasCount)
 	{
 		pxServoMoteur->ucGpio = 0;
 	}
-	
-	pxServoMoteur->ucCount += ucPasCount;
 }

@@ -422,6 +422,16 @@
               <FileType>1</FileType>
               <FilePath>.\src\telemetre.c</FilePath>
             </File>
+            <File>
+              <FileName>HeadHexapode.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\HeadHexapode.c</FilePath>
+            </File>
+            <File>
+              <FileName>basic_io.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\basic_io.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
