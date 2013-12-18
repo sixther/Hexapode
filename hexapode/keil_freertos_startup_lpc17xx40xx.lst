@@ -103,7 +103,9 @@ ARM Macro Assembler    Page 2
    56 00000000         
    57 00000000         
    58 00000000         
-   59 00000000         #line   33               "..\\lpcopen\\software\\freerto
+   59 00000000         
+   60 00000000         
+   61 00000000         #line   33               "..\\lpcopen\\software\\freerto
 s\\startup_code\\keil_freertos_startup_lpc17xx40xx.s"
    33 00000000         
    34 00000000         ; <h> Stack Configuration
@@ -126,14 +128,14 @@ s\\startup_code\\keil_freertos_startup_lpc17xx40xx.s"
    47 00000200         
    48 00000200 00003000 
                        Heap_Size
-                               EQU              0x00003000
-   49 00000200         
 
 
 
 ARM Macro Assembler    Page 3 
 
 
+                               EQU              0x00003000
+   49 00000200         
    50 00000200                 AREA             HEAP, NOINIT, READWRITE, ALIGN=
 3
    51 00000000         __heap_base
@@ -191,14 +193,14 @@ ARM Macro Assembler    Page 3
    87 00000044 00000000        DCD              TIMER0_IRQHandler ; 17 Timer0
    88 00000048 00000000        DCD              TIMER1_IRQHandler ; 18 Timer1
    89 0000004C 00000000        DCD              TIMER2_IRQHandler ; 19 Timer2
-   90 00000050 00000000        DCD              TIMER3_IRQHandler ; 20 Timer3
-   91 00000054 00000000        DCD              UART0_IRQHandler ; 21 UART0
 
 
 
 ARM Macro Assembler    Page 4 
 
 
+   90 00000050 00000000        DCD              TIMER3_IRQHandler ; 20 Timer3
+   91 00000054 00000000        DCD              UART0_IRQHandler ; 21 UART0
    92 00000058 00000000        DCD              UART1_IRQHandler ; 22 UART1
    93 0000005C 00000000        DCD              UART2_IRQHandler ; 23 UART2
    94 00000060 00000000        DCD              UART3_IRQHandler ; 24 UART3
@@ -256,14 +258,14 @@ ARM Macro Assembler    Page 4
   129 000000CC         #line   137              "..\\lpcopen\\software\\freerto
 s\\startup_code\\keil_freertos_startup_lpc17xx40xx.s"
   137 000000CC         
-  138 000000CC         ;                IF      :LNOT::DEF:NO_CRP
-  139 000000CC         ;                AREA    |.ARM.__at_0x02FC|, CODE, READO
 
 
 
 ARM Macro Assembler    Page 5 
 
 
+  138 000000CC         ;                IF      :LNOT::DEF:NO_CRP
+  139 000000CC         ;                AREA    |.ARM.__at_0x02FC|, CODE, READO
                        NLY
   140 000000CC         ;CRP_Key         DCD     0xFFFFFFFF
   141 000000CC         ;                ENDIF
@@ -321,14 +323,14 @@ ARM Macro Assembler    Page 5
 ]
   181 00000010 E7FE            B                .
   182 00000012                 ENDP
-  183 00000012         SVC_Handler
-                               PROC
 
 
 
 ARM Macro Assembler    Page 6 
 
 
+  183 00000012         SVC_Handler
+                               PROC
   184 00000012                 EXPORT           SVC_Handler               [WEAK
 ]
   185 00000012 E7FE            B                .
@@ -386,14 +388,14 @@ ARM Macro Assembler    Page 6
 ]
   218 0000001C                 EXPORT           I2C1_IRQHandler           [WEAK
 ]
-  219 0000001C                 EXPORT           I2C2_IRQHandler           [WEAK
-]
 
 
 
 ARM Macro Assembler    Page 7 
 
 
+  219 0000001C                 EXPORT           I2C2_IRQHandler           [WEAK
+]
   220 0000001C                 EXPORT           SPI_IRQHandler            [WEAK
 ]
   221 0000001C                 EXPORT           SSP0_IRQHandler           [WEAK
@@ -451,14 +453,14 @@ s\\startup_code\\keil_freertos_startup_lpc17xx40xx.s"
   258 0000001C         TIMER3_IRQHandler
   259 0000001C         UART0_IRQHandler
   260 0000001C         UART1_IRQHandler
-  261 0000001C         UART2_IRQHandler
-  262 0000001C         UART3_IRQHandler
 
 
 
 ARM Macro Assembler    Page 8 
 
 
+  261 0000001C         UART2_IRQHandler
+  262 0000001C         UART3_IRQHandler
   263 0000001C         PWM1_IRQHandler
   264 0000001C         I2C0_IRQHandler
   265 0000001C         I2C1_IRQHandler
@@ -516,14 +518,14 @@ s\\startup_code\\keil_freertos_startup_lpc17xx40xx.s"
   329 0000002C         
   330 0000002C                 ENDIF
   331 0000002C         
-  332 0000002C                 END
-              00000000 
 
 
 
 ARM Macro Assembler    Page 9 
 
 
+  332 0000002C                 END
+              00000000 
               00000000 
               00000000 
               00000200 
