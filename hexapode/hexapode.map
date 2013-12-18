@@ -641,6 +641,8 @@ Removing Unused input sections from the image.
 
     Removing main.o(.rev16_text), (4 bytes).
     Removing main.o(.revsh_text), (4 bytes).
+    Removing servomoteur.o(i.vInitPwm), (10 bytes).
+    Removing servomoteur.o(i.vSetPwm), (22 bytes).
     Removing port.o(.rev16_text), (4 bytes).
     Removing port.o(.revsh_text), (4 bytes).
     Removing port.o(i.vPortEndScheduler), (2 bytes).
@@ -854,7 +856,7 @@ Removing Unused input sections from the image.
     Removing ring_buffer.o(i.RingBuffer_Pop), (64 bytes).
     Removing ring_buffer.o(i.RingBuffer_PopMult), (132 bytes).
 
-214 unused section(s) (total 7976 bytes) removed from the image.
+216 unused section(s) (total 8008 bytes) removed from the image.
 
 ==============================================================================
 
@@ -866,106 +868,106 @@ Image Symbol Table
 
     RESET                                    0x00000000   Section      204  keil_freertos_startup_lpc17xx40xx.o(RESET)
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
-    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
     ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
     ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtentry4.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtentry.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtentry2.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  rtentry.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  rtentry4.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_ldiv0.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  rt_heap_descriptor_intlibspace.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_div0.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_ldiv0.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_ldiv0_sigfpe.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  rt_heap_descriptor.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  rt_div0.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
     ../clib/angel/scatter.s                  0x00000000   Number         0  __scatter.o ABSOLUTE
     ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
-    ../clib/angel/sys.s                      0x00000000   Number         0  mutex_dummy.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  mutex_dummy.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
-    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
-    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  _get_argv.o ABSOLUTE
-    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
-    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
-    ../clib/heap1.c                          0x00000000   Number         0  h1_extend.o ABSOLUTE
-    ../clib/heap1.c                          0x00000000   Number         0  h1_extend_mt.o ABSOLUTE
-    ../clib/heap1.c                          0x00000000   Number         0  h1_init.o ABSOLUTE
-    ../clib/heap1.c                          0x00000000   Number         0  h1_free_mt.o ABSOLUTE
-    ../clib/heap1.c                          0x00000000   Number         0  h1_alloc_mt.o ABSOLUTE
-    ../clib/heap1.c                          0x00000000   Number         0  h1_free.o ABSOLUTE
-    ../clib/heap1.c                          0x00000000   Number         0  h1_init_mt.o ABSOLUTE
-    ../clib/heap1.c                          0x00000000   Number         0  h1_final_mt.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
     ../clib/heap1.c                          0x00000000   Number         0  h1_final.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_extend.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_final_mt.o ABSOLUTE
     ../clib/heap1.c                          0x00000000   Number         0  h1_alloc.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_alloc_mt.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_init_mt.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_free_mt.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_free.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_init.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_extend_mt.o ABSOLUTE
+    ../clib/heap2.c                          0x00000000   Number         0  fdtree.o ABSOLUTE
     ../clib/heap2.c                          0x00000000   Number         0  heap2mt.o ABSOLUTE
     ../clib/heap2.c                          0x00000000   Number         0  heap2.o ABSOLUTE
-    ../clib/heap2.c                          0x00000000   Number         0  fdtree.o ABSOLUTE
-    ../clib/heapalloc.c                      0x00000000   Number         0  maybetermalloc1.o ABSOLUTE
-    ../clib/heapalloc.c                      0x00000000   Number         0  maybetermalloc1.o ABSOLUTE
-    ../clib/heapalloc.c                      0x00000000   Number         0  maybetermalloc2.o ABSOLUTE
-    ../clib/heapalloc.c                      0x00000000   Number         0  maybetermalloc2.o ABSOLUTE
-    ../clib/heapalloc.c                      0x00000000   Number         0  heapstubs.o ABSOLUTE
-    ../clib/heapalloc.c                      0x00000000   Number         0  init_alloc.o ABSOLUTE
-    ../clib/heapalloc.c                      0x00000000   Number         0  hguard.o ABSOLUTE
-    ../clib/heapalloc.c                      0x00000000   Number         0  free.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
     ../clib/heapalloc.c                      0x00000000   Number         0  malloc.o ABSOLUTE
     ../clib/heapalloc.c                      0x00000000   Number         0  term_alloc.o ABSOLUTE
-    ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
-    ../clib/heapaux.c                        0x00000000   Number         0  heapauxa.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  free.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  init_alloc.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  heapstubs.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  maybetermalloc2.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  maybetermalloc1.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  hguard.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  maybetermalloc2.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  maybetermalloc1.o ABSOLUTE
     ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
-    ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
+    ../clib/heapaux.c                        0x00000000   Number         0  heapauxa.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
-    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
     ../clib/longlong.s                       0x00000000   Number         0  lludivv7m.o ABSOLUTE
-    ../clib/memcpset.s                       0x00000000   Number         0  aeabi_memset.o ABSOLUTE
-    ../clib/memcpset.s                       0x00000000   Number         0  rt_memcpy_v6.o ABSOLUTE
     ../clib/memcpset.s                       0x00000000   Number         0  rt_memclr_w.o ABSOLUTE
-    ../clib/memcpset.s                       0x00000000   Number         0  rt_memcpy_w.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memcpy_v6.o ABSOLUTE
     ../clib/memcpset.s                       0x00000000   Number         0  rt_memclr.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_wp.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_ss_wp.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_ss_wp.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_wp.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_ss.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_char_common.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_nopercent.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_ss.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_char_file.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_str.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_flags.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memcpy_w.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  aeabi_memset.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  noretval__2printf.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  __2printf.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_ss_wp.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_wp.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_wp.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_nopercent.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_ss.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_ss.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  _printf_char.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_char_file.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_flags.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_ss_wp.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_str.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_char_common.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_percent.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_s.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_percent_end.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_formal.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_outer.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
     ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
     ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
     ../fplib/fpinit.s                        0x00000000   Number         0  fpinit.o ABSOLUTE
@@ -1028,8 +1030,12 @@ Image Symbol Table
     ..\lpcopen\software\lpc_core\lpc_ip\usart_001.c 0x00000000   Number         0  usart_001.o ABSOLUTE
     ..\lpcopen\software\lpc_core\lpc_ip\usart_002.c 0x00000000   Number         0  usart_002.o ABSOLUTE
     dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    src\FeetHexapode.c                       0x00000000   Number         0  feethexapode.o ABSOLUTE
     src\\main.c                              0x00000000   Number         0  main.o ABSOLUTE
     src\main.c                               0x00000000   Number         0  main.o ABSOLUTE
+    src\servomoteur.c                        0x00000000   Number         0  servomoteur.o ABSOLUTE
+    src\telemetre.c                          0x00000000   Number         0  telemetre.o ABSOLUTE
+    src\tor.c                                0x00000000   Number         0  tor.o ABSOLUTE
     !!!main                                  0x000000cc   Section        8  __main.o(!!!main)
     !!!scatter                               0x000000d4   Section       52  __scatter.o(!!!scatter)
     !!handler_copy                           0x00000108   Section       26  __scatter_copy.o(!!handler_copy)
@@ -1479,161 +1485,161 @@ Memory Map of the image
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x00000000   0x000000cc   Data   RO          235    RESET               keil_freertos_startup_lpc17xx40xx.o
-    0x000000cc   0x00000008   Code   RO         2332  * !!!main             c_w.l(__main.o)
-    0x000000d4   0x00000034   Code   RO         2553    !!!scatter          c_w.l(__scatter.o)
-    0x00000108   0x0000001a   Code   RO         2555    !!handler_copy      c_w.l(__scatter_copy.o)
+    0x000000cc   0x00000008   Code   RO         2377  * !!!main             c_w.l(__main.o)
+    0x000000d4   0x00000034   Code   RO         2598    !!!scatter          c_w.l(__scatter.o)
+    0x00000108   0x0000001a   Code   RO         2600    !!handler_copy      c_w.l(__scatter_copy.o)
     0x00000122   0x00000002   PAD
-    0x00000124   0x0000001c   Code   RO         2557    !!handler_zi        c_w.l(__scatter_zi.o)
-    0x00000140   0x00000002   Code   RO         2495    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
-    0x00000142   0x00000000   Code   RO         2378    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
-    0x00000142   0x00000008   Code   RO         2379    .ARM.Collect$$libinit$$00000003  c_w.l(libinit2.o)
-    0x0000014a   0x00000000   Code   RO         2381    .ARM.Collect$$libinit$$00000008  c_w.l(libinit2.o)
-    0x0000014a   0x00000000   Code   RO         2383    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
-    0x0000014a   0x00000000   Code   RO         2385    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
-    0x0000014a   0x00000000   Code   RO         2388    .ARM.Collect$$libinit$$0000000F  c_w.l(libinit2.o)
-    0x0000014a   0x00000000   Code   RO         2390    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
-    0x0000014a   0x00000000   Code   RO         2392    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
-    0x0000014a   0x00000000   Code   RO         2394    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
-    0x0000014a   0x00000000   Code   RO         2396    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
-    0x0000014a   0x00000000   Code   RO         2398    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
-    0x0000014a   0x00000000   Code   RO         2400    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
-    0x0000014a   0x00000000   Code   RO         2402    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
-    0x0000014a   0x00000000   Code   RO         2404    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
-    0x0000014a   0x00000000   Code   RO         2406    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
-    0x0000014a   0x00000000   Code   RO         2408    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
-    0x0000014a   0x00000000   Code   RO         2412    .ARM.Collect$$libinit$$0000002A  c_w.l(libinit2.o)
-    0x0000014a   0x00000000   Code   RO         2414    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
-    0x0000014a   0x00000000   Code   RO         2416    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
-    0x0000014a   0x00000000   Code   RO         2418    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
-    0x0000014a   0x00000002   Code   RO         2419    .ARM.Collect$$libinit$$00000031  c_w.l(libinit2.o)
-    0x0000014c   0x00000002   Code   RO         2550    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
-    0x0000014e   0x00000000   Code   RO         2510    .ARM.Collect$$libshutdown$$00000003  c_w.l(libshutdown2.o)
-    0x0000014e   0x00000000   Code   RO         2513    .ARM.Collect$$libshutdown$$00000006  c_w.l(libshutdown2.o)
-    0x0000014e   0x00000000   Code   RO         2516    .ARM.Collect$$libshutdown$$00000009  c_w.l(libshutdown2.o)
-    0x0000014e   0x00000000   Code   RO         2518    .ARM.Collect$$libshutdown$$0000000B  c_w.l(libshutdown2.o)
-    0x0000014e   0x00000000   Code   RO         2521    .ARM.Collect$$libshutdown$$0000000E  c_w.l(libshutdown2.o)
-    0x0000014e   0x00000002   Code   RO         2522    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
-    0x00000150   0x00000000   Code   RO         2336    .ARM.Collect$$rtentry$$00000000  c_w.l(rtentry.o)
-    0x00000150   0x00000000   Code   RO         2426    .ARM.Collect$$rtentry$$00000002  c_w.l(rtentry2.o)
-    0x00000150   0x00000006   Code   RO         2438    .ARM.Collect$$rtentry$$00000004  c_w.l(rtentry4.o)
-    0x00000156   0x00000000   Code   RO         2428    .ARM.Collect$$rtentry$$00000009  c_w.l(rtentry2.o)
-    0x00000156   0x00000004   Code   RO         2429    .ARM.Collect$$rtentry$$0000000A  c_w.l(rtentry2.o)
-    0x0000015a   0x00000000   Code   RO         2431    .ARM.Collect$$rtentry$$0000000C  c_w.l(rtentry2.o)
-    0x0000015a   0x00000008   Code   RO         2432    .ARM.Collect$$rtentry$$0000000D  c_w.l(rtentry2.o)
-    0x00000162   0x00000002   Code   RO         2496    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
-    0x00000164   0x00000000   Code   RO         2526    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
-    0x00000164   0x00000004   Code   RO         2527    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
-    0x00000168   0x00000006   Code   RO         2528    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x00000124   0x0000001c   Code   RO         2602    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x00000140   0x00000002   Code   RO         2540    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x00000142   0x00000000   Code   RO         2423    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
+    0x00000142   0x00000008   Code   RO         2424    .ARM.Collect$$libinit$$00000003  c_w.l(libinit2.o)
+    0x0000014a   0x00000000   Code   RO         2426    .ARM.Collect$$libinit$$00000008  c_w.l(libinit2.o)
+    0x0000014a   0x00000000   Code   RO         2428    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
+    0x0000014a   0x00000000   Code   RO         2430    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x0000014a   0x00000000   Code   RO         2433    .ARM.Collect$$libinit$$0000000F  c_w.l(libinit2.o)
+    0x0000014a   0x00000000   Code   RO         2435    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
+    0x0000014a   0x00000000   Code   RO         2437    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x0000014a   0x00000000   Code   RO         2439    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x0000014a   0x00000000   Code   RO         2441    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x0000014a   0x00000000   Code   RO         2443    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x0000014a   0x00000000   Code   RO         2445    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x0000014a   0x00000000   Code   RO         2447    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x0000014a   0x00000000   Code   RO         2449    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x0000014a   0x00000000   Code   RO         2451    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x0000014a   0x00000000   Code   RO         2453    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x0000014a   0x00000000   Code   RO         2457    .ARM.Collect$$libinit$$0000002A  c_w.l(libinit2.o)
+    0x0000014a   0x00000000   Code   RO         2459    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
+    0x0000014a   0x00000000   Code   RO         2461    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x0000014a   0x00000000   Code   RO         2463    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x0000014a   0x00000002   Code   RO         2464    .ARM.Collect$$libinit$$00000031  c_w.l(libinit2.o)
+    0x0000014c   0x00000002   Code   RO         2595    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x0000014e   0x00000000   Code   RO         2555    .ARM.Collect$$libshutdown$$00000003  c_w.l(libshutdown2.o)
+    0x0000014e   0x00000000   Code   RO         2558    .ARM.Collect$$libshutdown$$00000006  c_w.l(libshutdown2.o)
+    0x0000014e   0x00000000   Code   RO         2561    .ARM.Collect$$libshutdown$$00000009  c_w.l(libshutdown2.o)
+    0x0000014e   0x00000000   Code   RO         2563    .ARM.Collect$$libshutdown$$0000000B  c_w.l(libshutdown2.o)
+    0x0000014e   0x00000000   Code   RO         2566    .ARM.Collect$$libshutdown$$0000000E  c_w.l(libshutdown2.o)
+    0x0000014e   0x00000002   Code   RO         2567    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x00000150   0x00000000   Code   RO         2381    .ARM.Collect$$rtentry$$00000000  c_w.l(rtentry.o)
+    0x00000150   0x00000000   Code   RO         2471    .ARM.Collect$$rtentry$$00000002  c_w.l(rtentry2.o)
+    0x00000150   0x00000006   Code   RO         2483    .ARM.Collect$$rtentry$$00000004  c_w.l(rtentry4.o)
+    0x00000156   0x00000000   Code   RO         2473    .ARM.Collect$$rtentry$$00000009  c_w.l(rtentry2.o)
+    0x00000156   0x00000004   Code   RO         2474    .ARM.Collect$$rtentry$$0000000A  c_w.l(rtentry2.o)
+    0x0000015a   0x00000000   Code   RO         2476    .ARM.Collect$$rtentry$$0000000C  c_w.l(rtentry2.o)
+    0x0000015a   0x00000008   Code   RO         2477    .ARM.Collect$$rtentry$$0000000D  c_w.l(rtentry2.o)
+    0x00000162   0x00000002   Code   RO         2541    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x00000164   0x00000000   Code   RO         2571    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x00000164   0x00000004   Code   RO         2572    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x00000168   0x00000006   Code   RO         2573    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
     0x0000016e   0x00000002   PAD
-    0x00000170   0x0000008a   Code   RO          242    .emb_text           port.o
+    0x00000170   0x0000008a   Code   RO          287    .emb_text           port.o
     0x000001fa   0x00000002   PAD
-    0x000001fc   0x00000000   Code   RO         2444    .emb_text           c_w.l(maybetermalloc1.o)
+    0x000001fc   0x00000000   Code   RO         2489    .emb_text           c_w.l(maybetermalloc1.o)
     0x000001fc   0x00000044   Code   RO          236    .text               keil_freertos_startup_lpc17xx40xx.o
-    0x00000240   0x0000005e   Code   RO         2236    .text               c_w.l(h1_alloc.o)
-    0x0000029e   0x0000004e   Code   RO         2238    .text               c_w.l(h1_free.o)
-    0x000002ec   0x000000ee   Code   RO         2294    .text               c_w.l(lludivv7m.o)
-    0x000003da   0x00000010   Code   RO         2328    .text               c_w.l(aeabi_memset.o)
-    0x000003ea   0x00000006   Code   RO         2330    .text               c_w.l(heapauxi.o)
-    0x000003f0   0x00000008   Code   RO         2344    .text               c_w.l(rt_heap_descriptor_intlibspace.o)
-    0x000003f8   0x00000004   Code   RO         2346    .text               c_w.l(hguard.o)
-    0x000003fc   0x0000008a   Code   RO         2348    .text               c_w.l(init_alloc.o)
-    0x00000486   0x0000000e   Code   RO         2352    .text               c_w.l(h1_init.o)
-    0x00000494   0x00000044   Code   RO         2373    .text               c_w.l(rt_memclr.o)
-    0x000004d8   0x00000008   Code   RO         2422    .text               c_w.l(libspace.o)
-    0x000004e0   0x00000034   Code   RO         2446    .text               c_w.l(h1_extend.o)
-    0x00000514   0x0000000e   Code   RO         2452    .text               c_w.l(defsig_rtmem_outer.o)
-    0x00000522   0x0000004e   Code   RO         2456    .text               c_w.l(rt_memclr_w.o)
-    0x00000570   0x00000002   Code   RO         2465    .text               c_w.l(use_no_semi.o)
-    0x00000572   0x00000000   Code   RO         2467    .text               c_w.l(indicate_semi.o)
-    0x00000572   0x0000004a   Code   RO         2468    .text               c_w.l(sys_stackheap_outer.o)
-    0x000005bc   0x0000000c   Code   RO         2476    .text               c_w.l(exit.o)
-    0x000005c8   0x0000000a   Code   RO         2478    .text               c_w.l(defsig_exit.o)
+    0x00000240   0x0000005e   Code   RO         2281    .text               c_w.l(h1_alloc.o)
+    0x0000029e   0x0000004e   Code   RO         2283    .text               c_w.l(h1_free.o)
+    0x000002ec   0x000000ee   Code   RO         2339    .text               c_w.l(lludivv7m.o)
+    0x000003da   0x00000010   Code   RO         2373    .text               c_w.l(aeabi_memset.o)
+    0x000003ea   0x00000006   Code   RO         2375    .text               c_w.l(heapauxi.o)
+    0x000003f0   0x00000008   Code   RO         2389    .text               c_w.l(rt_heap_descriptor_intlibspace.o)
+    0x000003f8   0x00000004   Code   RO         2391    .text               c_w.l(hguard.o)
+    0x000003fc   0x0000008a   Code   RO         2393    .text               c_w.l(init_alloc.o)
+    0x00000486   0x0000000e   Code   RO         2397    .text               c_w.l(h1_init.o)
+    0x00000494   0x00000044   Code   RO         2418    .text               c_w.l(rt_memclr.o)
+    0x000004d8   0x00000008   Code   RO         2467    .text               c_w.l(libspace.o)
+    0x000004e0   0x00000034   Code   RO         2491    .text               c_w.l(h1_extend.o)
+    0x00000514   0x0000000e   Code   RO         2497    .text               c_w.l(defsig_rtmem_outer.o)
+    0x00000522   0x0000004e   Code   RO         2501    .text               c_w.l(rt_memclr_w.o)
+    0x00000570   0x00000002   Code   RO         2510    .text               c_w.l(use_no_semi.o)
+    0x00000572   0x00000000   Code   RO         2512    .text               c_w.l(indicate_semi.o)
+    0x00000572   0x0000004a   Code   RO         2513    .text               c_w.l(sys_stackheap_outer.o)
+    0x000005bc   0x0000000c   Code   RO         2521    .text               c_w.l(exit.o)
+    0x000005c8   0x0000000a   Code   RO         2523    .text               c_w.l(defsig_exit.o)
     0x000005d2   0x00000002   PAD
-    0x000005d4   0x00000050   Code   RO         2484    .text               c_w.l(defsig_rtmem_inner.o)
-    0x00000624   0x00000032   Code   RO         2504    .text               c_w.l(defsig_general.o)
-    0x00000656   0x0000000e   Code   RO         2523    .text               c_w.l(sys_wrch.o)
-    0x00000664   0x00000030   Code   RO         1003    i.Board_Debug_Init  board_lpc1766stk.o
-    0x00000694   0x0000002c   Code   RO         1004    i.Board_Init        board_lpc1766stk.o
-    0x000006c0   0x00000028   Code   RO         1005    i.Board_LED_Set     board_lpc1766stk.o
-    0x000006e8   0x00000018   Code   RO         1332    i.Chip_Clock_DisablePLL  clock_17xx_40xx.o
-    0x00000700   0x00000018   Code   RO         1334    i.Chip_Clock_EnablePLL  clock_17xx_40xx.o
-    0x00000718   0x00000014   Code   RO         1335    i.Chip_Clock_EnablePeriphClock  clock_17xx_40xx.o
-    0x0000072c   0x00000018   Code   RO         1336    i.Chip_Clock_FeedPLL  clock_17xx_40xx.o
-    0x00000744   0x00000010   Code   RO         1337    i.Chip_Clock_GetCPUClockDiv  clock_17xx_40xx.o
-    0x00000754   0x00000014   Code   RO         1338    i.Chip_Clock_GetCPUClockSource  clock_17xx_40xx.o
-    0x00000768   0x00000020   Code   RO         1339    i.Chip_Clock_GetMainClockRate  clock_17xx_40xx.o
-    0x00000788   0x00000038   Code   RO         1340    i.Chip_Clock_GetMainPllOutClockRate  clock_17xx_40xx.o
-    0x000007c0   0x00000040   Code   RO         1341    i.Chip_Clock_GetPLCKDiv  clock_17xx_40xx.o
-    0x00000800   0x00000016   Code   RO         1342    i.Chip_Clock_GetPeripheralClockRate  clock_17xx_40xx.o
+    0x000005d4   0x00000050   Code   RO         2529    .text               c_w.l(defsig_rtmem_inner.o)
+    0x00000624   0x00000032   Code   RO         2549    .text               c_w.l(defsig_general.o)
+    0x00000656   0x0000000e   Code   RO         2568    .text               c_w.l(sys_wrch.o)
+    0x00000664   0x00000030   Code   RO         1048    i.Board_Debug_Init  board_lpc1766stk.o
+    0x00000694   0x0000002c   Code   RO         1049    i.Board_Init        board_lpc1766stk.o
+    0x000006c0   0x00000028   Code   RO         1050    i.Board_LED_Set     board_lpc1766stk.o
+    0x000006e8   0x00000018   Code   RO         1377    i.Chip_Clock_DisablePLL  clock_17xx_40xx.o
+    0x00000700   0x00000018   Code   RO         1379    i.Chip_Clock_EnablePLL  clock_17xx_40xx.o
+    0x00000718   0x00000014   Code   RO         1380    i.Chip_Clock_EnablePeriphClock  clock_17xx_40xx.o
+    0x0000072c   0x00000018   Code   RO         1381    i.Chip_Clock_FeedPLL  clock_17xx_40xx.o
+    0x00000744   0x00000010   Code   RO         1382    i.Chip_Clock_GetCPUClockDiv  clock_17xx_40xx.o
+    0x00000754   0x00000014   Code   RO         1383    i.Chip_Clock_GetCPUClockSource  clock_17xx_40xx.o
+    0x00000768   0x00000020   Code   RO         1384    i.Chip_Clock_GetMainClockRate  clock_17xx_40xx.o
+    0x00000788   0x00000038   Code   RO         1385    i.Chip_Clock_GetMainPllOutClockRate  clock_17xx_40xx.o
+    0x000007c0   0x00000040   Code   RO         1386    i.Chip_Clock_GetPLCKDiv  clock_17xx_40xx.o
+    0x00000800   0x00000016   Code   RO         1387    i.Chip_Clock_GetPeripheralClockRate  clock_17xx_40xx.o
     0x00000816   0x00000002   PAD
-    0x00000818   0x00000030   Code   RO         1343    i.Chip_Clock_GetSYSCLKRate  clock_17xx_40xx.o
-    0x00000848   0x00000012   Code   RO         1344    i.Chip_Clock_GetSystemClockRate  clock_17xx_40xx.o
+    0x00000818   0x00000030   Code   RO         1388    i.Chip_Clock_GetSYSCLKRate  clock_17xx_40xx.o
+    0x00000848   0x00000012   Code   RO         1389    i.Chip_Clock_GetSystemClockRate  clock_17xx_40xx.o
     0x0000085a   0x00000002   PAD
-    0x0000085c   0x0000000c   Code   RO         1350    i.Chip_Clock_SetCPUClockDiv  clock_17xx_40xx.o
-    0x00000868   0x00000014   Code   RO         1351    i.Chip_Clock_SetCPUClockSource  clock_17xx_40xx.o
-    0x0000087c   0x00000014   Code   RO         1353    i.Chip_Clock_SetUSBClockDiv  clock_17xx_40xx.o
-    0x00000890   0x00000020   Code   RO         1354    i.Chip_Clock_SetupPLL  clock_17xx_40xx.o
-    0x000008b0   0x00000016   Code   RO         1012    i.Chip_GPIO_WriteDirBit  board_lpc1766stk.o
+    0x0000085c   0x0000000c   Code   RO         1395    i.Chip_Clock_SetCPUClockDiv  clock_17xx_40xx.o
+    0x00000868   0x00000014   Code   RO         1396    i.Chip_Clock_SetCPUClockSource  clock_17xx_40xx.o
+    0x0000087c   0x00000014   Code   RO         1398    i.Chip_Clock_SetUSBClockDiv  clock_17xx_40xx.o
+    0x00000890   0x00000020   Code   RO         1399    i.Chip_Clock_SetupPLL  clock_17xx_40xx.o
+    0x000008b0   0x00000016   Code   RO         1057    i.Chip_GPIO_WriteDirBit  board_lpc1766stk.o
     0x000008c6   0x00000002   PAD
-    0x000008c8   0x00000020   Code   RO         1013    i.Chip_GPIO_WritePortBit  board_lpc1766stk.o
-    0x000008e8   0x00000032   Code   RO         1478    i.Chip_IOCON_PinMux  iocon_17xx_40xx.o
-    0x0000091a   0x0000000e   Code   RO         1579    i.Chip_TIMER_Init   timer_17xx_40xx.o
-    0x00000928   0x00000030   Code   RO         1580    i.Chip_Timer_GetClock  timer_17xx_40xx.o
-    0x00000958   0x00000030   Code   RO         1610    i.Chip_UART_DetermineClk  uart_17xx_40xx.o
-    0x00000988   0x0000003c   Code   RO         1613    i.Chip_UART_Get_UARTNum  uart_17xx_40xx.o
-    0x000009c4   0x00000020   Code   RO         1614    i.Chip_UART_Init    uart_17xx_40xx.o
-    0x000009e4   0x00000044   Code   RO         1621    i.Chip_UART_SetBaud  uart_17xx_40xx.o
-    0x00000a28   0x00000018   Code   RO         1622    i.Chip_UART_TxCmd   uart_17xx_40xx.o
-    0x00000a40   0x00000018   Code   RO         1955    i.IP_TIMER_Reset    timer_001.o
-    0x00000a58   0x00000012   Code   RO         1989    i.IP_UART_ConfigData  usart_001.o
-    0x00000a6a   0x00000048   Code   RO         1995    i.IP_UART_Init      usart_001.o
-    0x00000ab2   0x000000fc   Code   RO         2002    i.IP_UART_SetBaud   usart_001.o
-    0x00000bae   0x00000010   Code   RO         2003    i.IP_UART_TxCmd     usart_001.o
+    0x000008c8   0x00000020   Code   RO         1058    i.Chip_GPIO_WritePortBit  board_lpc1766stk.o
+    0x000008e8   0x00000032   Code   RO         1523    i.Chip_IOCON_PinMux  iocon_17xx_40xx.o
+    0x0000091a   0x0000000e   Code   RO         1624    i.Chip_TIMER_Init   timer_17xx_40xx.o
+    0x00000928   0x00000030   Code   RO         1625    i.Chip_Timer_GetClock  timer_17xx_40xx.o
+    0x00000958   0x00000030   Code   RO         1655    i.Chip_UART_DetermineClk  uart_17xx_40xx.o
+    0x00000988   0x0000003c   Code   RO         1658    i.Chip_UART_Get_UARTNum  uart_17xx_40xx.o
+    0x000009c4   0x00000020   Code   RO         1659    i.Chip_UART_Init    uart_17xx_40xx.o
+    0x000009e4   0x00000044   Code   RO         1666    i.Chip_UART_SetBaud  uart_17xx_40xx.o
+    0x00000a28   0x00000018   Code   RO         1667    i.Chip_UART_TxCmd   uart_17xx_40xx.o
+    0x00000a40   0x00000018   Code   RO         2000    i.IP_TIMER_Reset    timer_001.o
+    0x00000a58   0x00000012   Code   RO         2034    i.IP_UART_ConfigData  usart_001.o
+    0x00000a6a   0x00000048   Code   RO         2040    i.IP_UART_Init      usart_001.o
+    0x00000ab2   0x000000fc   Code   RO         2047    i.IP_UART_SetBaud   usart_001.o
+    0x00000bae   0x00000010   Code   RO         2048    i.IP_UART_TxCmd     usart_001.o
     0x00000bbe   0x00000002   PAD
-    0x00000bc0   0x00000010   Code   RO         1014    i.SystemCoreClockUpdate  board_lpc1766stk.o
-    0x00000bd0   0x00000044   Code   RO         1192    i.SystemInit        sysinit_lpc1766stk.o
-    0x00000c14   0x0000007c   Code   RO         1193    i.SystemSetupClocking  sysinit_lpc1766stk.o
+    0x00000bc0   0x00000010   Code   RO         1059    i.SystemCoreClockUpdate  board_lpc1766stk.o
+    0x00000bd0   0x00000044   Code   RO         1237    i.SystemInit        sysinit_lpc1766stk.o
+    0x00000c14   0x0000007c   Code   RO         1238    i.SystemSetupClocking  sysinit_lpc1766stk.o
     0x00000c90   0x00000030   Code   RO            3    i.TIMER0_IRQHandler  main.o
-    0x00000cc0   0x00000002   Code   RO         1015    i._sys_exit         board_lpc1766stk.o
+    0x00000cc0   0x00000002   Code   RO         1060    i._sys_exit         board_lpc1766stk.o
     0x00000cc2   0x00000002   PAD
-    0x00000cc4   0x00000030   Code   RO          682    i.eTaskConfirmSleepModeStatus  tasks.o
+    0x00000cc4   0x00000030   Code   RO          727    i.eTaskConfirmSleepModeStatus  tasks.o
     0x00000cf4   0x00000048   Code   RO            4    i.main              main.o
-    0x00000d3c   0x00000034   Code   RO          683    i.prvAddCurrentTaskToDelayedList  tasks.o
-    0x00000d70   0x00000054   Code   RO          684    i.prvCheckTasksWaitingTermination  tasks.o
-    0x00000dc4   0x00000024   Code   RO          685    i.prvGetExpectedIdleTime  tasks.o
-    0x00000de8   0x00000038   Code   RO          686    i.prvIdleTask       tasks.o
-    0x00000e20   0x00000006   Code   RO          243    i.prvTaskExitError  port.o
-    0x00000e26   0x00000018   Code   RO          929    i.pvPortMalloc      heap_3.o
+    0x00000d3c   0x00000034   Code   RO          728    i.prvAddCurrentTaskToDelayedList  tasks.o
+    0x00000d70   0x00000054   Code   RO          729    i.prvCheckTasksWaitingTermination  tasks.o
+    0x00000dc4   0x00000024   Code   RO          730    i.prvGetExpectedIdleTime  tasks.o
+    0x00000de8   0x00000038   Code   RO          731    i.prvIdleTask       tasks.o
+    0x00000e20   0x00000006   Code   RO          288    i.prvTaskExitError  port.o
+    0x00000e26   0x00000018   Code   RO          974    i.pvPortMalloc      heap_3.o
     0x00000e3e   0x00000002   PAD
-    0x00000e40   0x00000020   Code   RO          244    i.pxPortInitialiseStack  port.o
-    0x00000e60   0x00000024   Code   RO          441    i.uxListRemove      list.o
-    0x00000e84   0x00000004   Code   RO          956    i.vApplicationIdleHook  freertoscommonhooks.o
-    0x00000e88   0x00000016   Code   RO          442    i.vListInitialise   list.o
-    0x00000e9e   0x00000006   Code   RO          443    i.vListInitialiseItem  list.o
-    0x00000ea4   0x00000030   Code   RO          444    i.vListInsert       list.o
-    0x00000ed4   0x00000018   Code   RO          445    i.vListInsertEnd    list.o
-    0x00000eec   0x0000001c   Code   RO          246    i.vPortEnterCritical  port.o
-    0x00000f08   0x00000014   Code   RO          247    i.vPortExitCritical  port.o
-    0x00000f1c   0x0000001a   Code   RO          930    i.vPortFree         heap_3.o
+    0x00000e40   0x00000020   Code   RO          289    i.pxPortInitialiseStack  port.o
+    0x00000e60   0x00000024   Code   RO          486    i.uxListRemove      list.o
+    0x00000e84   0x00000004   Code   RO         1001    i.vApplicationIdleHook  freertoscommonhooks.o
+    0x00000e88   0x00000016   Code   RO          487    i.vListInitialise   list.o
+    0x00000e9e   0x00000006   Code   RO          488    i.vListInitialiseItem  list.o
+    0x00000ea4   0x00000030   Code   RO          489    i.vListInsert       list.o
+    0x00000ed4   0x00000018   Code   RO          490    i.vListInsertEnd    list.o
+    0x00000eec   0x0000001c   Code   RO          291    i.vPortEnterCritical  port.o
+    0x00000f08   0x00000014   Code   RO          292    i.vPortExitCritical  port.o
+    0x00000f1c   0x0000001a   Code   RO          975    i.vPortFree         heap_3.o
     0x00000f36   0x00000002   PAD
-    0x00000f38   0x0000003c   Code   RO          248    i.vPortSetupTimerInterrupt  port.o
-    0x00000f74   0x000000dc   Code   RO          249    i.vPortSuppressTicksAndSleep  port.o
-    0x00001050   0x00000018   Code   RO          250    i.vPortYield        port.o
+    0x00000f38   0x0000003c   Code   RO          293    i.vPortSetupTimerInterrupt  port.o
+    0x00000f74   0x000000dc   Code   RO          294    i.vPortSuppressTicksAndSleep  port.o
+    0x00001050   0x00000018   Code   RO          295    i.vPortYield        port.o
     0x00001068   0x0000004c   Code   RO            5    i.vTIMER0_Init      main.o
-    0x000010b4   0x00000034   Code   RO          694    i.vTaskDelay        tasks.o
-    0x000010e8   0x00000044   Code   RO          706    i.vTaskStartScheduler  tasks.o
-    0x0000112c   0x00000010   Code   RO          707    i.vTaskStepTick     tasks.o
-    0x0000113c   0x00000010   Code   RO          709    i.vTaskSuspendAll   tasks.o
-    0x0000114c   0x00000050   Code   RO          710    i.vTaskSwitchContext  tasks.o
+    0x000010b4   0x00000034   Code   RO          739    i.vTaskDelay        tasks.o
+    0x000010e8   0x00000044   Code   RO          751    i.vTaskStartScheduler  tasks.o
+    0x0000112c   0x00000010   Code   RO          752    i.vTaskStepTick     tasks.o
+    0x0000113c   0x00000010   Code   RO          754    i.vTaskSuspendAll   tasks.o
+    0x0000114c   0x00000050   Code   RO          755    i.vTaskSwitchContext  tasks.o
     0x0000119c   0x00000016   Code   RO            6    i.vTimerTask        main.o
     0x000011b2   0x00000002   PAD
-    0x000011b4   0x00000030   Code   RO          251    i.xPortStartScheduler  port.o
-    0x000011e4   0x00000024   Code   RO          252    i.xPortSysTickHandler  port.o
-    0x00001208   0x00000168   Code   RO          712    i.xTaskGenericCreate  tasks.o
-    0x00001370   0x000000c4   Code   RO          716    i.xTaskIncrementTick  tasks.o
-    0x00001434   0x0000009c   Code   RO          719    i.xTaskResumeAll    tasks.o
-    0x000014d0   0x00000010   Data   RO         1194    .constdata          sysinit_lpc1766stk.o
-    0x000014e0   0x00000020   Data   RO         2551    Region$$Table       anon$$obj.o
+    0x000011b4   0x00000030   Code   RO          296    i.xPortStartScheduler  port.o
+    0x000011e4   0x00000024   Code   RO          297    i.xPortSysTickHandler  port.o
+    0x00001208   0x00000168   Code   RO          757    i.xTaskGenericCreate  tasks.o
+    0x00001370   0x000000c4   Code   RO          761    i.xTaskIncrementTick  tasks.o
+    0x00001434   0x0000009c   Code   RO          764    i.xTaskResumeAll    tasks.o
+    0x000014d0   0x00000010   Data   RO         1239    .constdata          sysinit_lpc1766stk.o
+    0x000014e0   0x00000020   Data   RO         2596    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Base: 0x10000000, Size: 0x000033b8, Max: 0x00008000, ABSOLUTE)
@@ -1642,11 +1648,11 @@ Memory Map of the image
 
     0x10000000   0x00000001   Data   RW            7    .data               main.o
     0x10000001   0x00000003   PAD
-    0x10000004   0x00000010   Data   RW          253    .data               port.o
-    0x10000014   0x00000038   Data   RW          722    .data               tasks.o
-    0x1000004c   0x00000004   Data   RW         1023    .data               board_lpc1766stk.o
-    0x10000050   0x00000104   Zero   RW          721    .bss                tasks.o
-    0x10000154   0x00000060   Zero   RW         2423    .bss                c_w.l(libspace.o)
+    0x10000004   0x00000010   Data   RW          298    .data               port.o
+    0x10000014   0x00000038   Data   RW          767    .data               tasks.o
+    0x1000004c   0x00000004   Data   RW         1068    .data               board_lpc1766stk.o
+    0x10000050   0x00000104   Zero   RW          766    .bss                tasks.o
+    0x10000154   0x00000060   Zero   RW         2468    .bss                c_w.l(libspace.o)
     0x100001b4   0x00000004   PAD
     0x100001b8   0x00003000   Zero   RW          234    HEAP                keil_freertos_startup_lpc17xx40xx.o
     0x100031b8   0x00000200   Zero   RW          233    STACK               keil_freertos_startup_lpc17xx40xx.o

@@ -45,6 +45,7 @@ void vTIMER0_Init()
 	NVIC_ClearPendingIRQ(TIMER0_IRQn);
 }
 
+/* TIMER0 HARD */
 void TIMER0_IRQHandler()
 {
 	if(Chip_TIMER_MatchPending(LPC_TIMER0, 0)) 
@@ -90,7 +91,5 @@ int main()
 
 
 	while(1);
-	
-	return 0;
 }
 

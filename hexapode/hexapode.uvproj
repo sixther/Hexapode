@@ -402,6 +402,26 @@
               <FileType>2</FileType>
               <FilePath>..\lpcopen\software\freertos\startup_code\keil_freertos_startup_lpc17xx40xx.s</FilePath>
             </File>
+            <File>
+              <FileName>servomoteur.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\servomoteur.c</FilePath>
+            </File>
+            <File>
+              <FileName>FeetHexapode.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\FeetHexapode.c</FilePath>
+            </File>
+            <File>
+              <FileName>tor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\tor.c</FilePath>
+            </File>
+            <File>
+              <FileName>telemetre.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\telemetre.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
