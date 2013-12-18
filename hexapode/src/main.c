@@ -45,23 +45,6 @@ void vTIMER0_Init()
 	NVIC_ClearPendingIRQ(TIMER0_IRQn);
 }
 
-
-int main()
-{
-	Board_Init();
-	vTIMER0_Init();
-	
-	
-	/* Initial LED0 state is off */
-	Board_LED_Set(1, false);
-	
-
-
-	while(1);
-	
-	return 0;
-}
-
 void TIMER0_IRQHandler()
 {
 	if(Chip_TIMER_MatchPending(LPC_TIMER0, 0)) 
@@ -76,3 +59,38 @@ void TIMER0_IRQHandler()
 		ucTemoin=~ucTemoin;
 	}
 }
+
+/* Tache Timer 20 pour réarmer la PWM */
+static portTASK_FUNCTION(vTimerTask, pvParameters) {
+	bool LedState = false;
+
+	while (1) {
+		Board_LED_Set(0, LedState);
+		LedState = (bool) !LedState;
+
+		vTaskDelay(configTICK_RATE_HZ / TICKRATE2_HZ);
+	}
+}
+
+int main()
+{
+	Board_Init();
+	
+	vTIMER0_Init();
+
+	xTaskCreate(vTimerTask, (signed char *) "vTaskTimer",
+				configMINIMAL_STACK_SIZE, NULL, (tskIDLE_PRIORITY + 1UL),
+				(xTaskHandle *) NULL);	
+	
+	Board_LED_Set(0, false);
+	Board_LED_Set(1, false);
+	
+	/* Start the scheduler */
+	vTaskStartScheduler();
+
+
+	while(1);
+	
+	return 0;
+}
+
