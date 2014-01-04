@@ -31,6 +31,13 @@
 #define HEAD_PWMNUM1								18
 #define HEAD_PWMNUM2								19
 
+#define FEET_LEFT_FRONT_TORNUM			0x01		
+#define FEET_LEFT_MID_TORNUM				0x02
+#define FEET_LEFT_BACK_TORNUM				0x04
+
+#define FEET_RIGHT_FRONT_TORNUM			0x08
+#define FEET_RIGHT_MID_TORNUM				0x10
+#define FEET_RIGHT_BACK_TORNUM			0x20
 
 
 typedef struct
@@ -50,9 +57,14 @@ typedef struct
 
 void vInitHead(HeadHexapode *pxHead, unsigned char ucAngle1, unsigned char ucAngle2, 
 																	unsigned char ucPwmNum1, unsigned char ucPwmNum2);
+void vSetHead(HeadHexapode *pxHead, unsigned char ucAngle1, unsigned char ucAngle2);
 void vMoveHead(HeadHexapode *pxHead, unsigned char ucPasCount1, unsigned char ucPasCount2);
 
 
 void vInitFeet(FeetHexapode *pxFeet, unsigned char ucAngle1, unsigned char ucAngle2, unsigned char ucAngle3, 
-																							unsigned char ucPwmNum1, unsigned char ucPwmNum2, unsigned char ucPwmNum3);
+																							unsigned char ucPwmNum1, unsigned char ucPwmNum2, unsigned char ucPwmNum3,
+																							unsigned char ucTorNum);
+void vSetFeet(FeetHexapode *pxFeet, unsigned char ucAngle1, unsigned char ucAngle2, unsigned char ucAngle3);
 void vMoveFeet(FeetHexapode *pxFeet, unsigned char ucPasCount1, unsigned char ucPasCount2, unsigned char ucPasCount3);
+
+

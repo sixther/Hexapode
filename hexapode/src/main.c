@@ -55,6 +55,18 @@ void vTIMER0_Init()
 	NVIC_ClearPendingIRQ(TIMER0_IRQn);
 }
 
+void vInit_Hexapode()
+{
+		vInitFeet(&xFeetLeftFront, PPM_1MS, PPM_1MS, PPM_1MS, FEET_LEFT_FRONT_PWMNUM1, FEET_LEFT_FRONT_PWMNUM2, FEET_LEFT_FRONT_PWMNUM3, FEET_LEFT_FRONT_TORNUM);
+		vInitFeet(&xFeetLeftMid, PPM_1MS, PPM_1MS, PPM_1MS, FEET_LEFT_MID_PWMNUM1, FEET_LEFT_MID_PWMNUM2, FEET_LEFT_MID_PWMNUM3, FEET_LEFT_MID_TORNUM);
+		vInitFeet(&xFeetLeftBack, PPM_1MS, PPM_1MS, PPM_1MS, FEET_LEFT_BACK_PWMNUM1, FEET_LEFT_BACK_PWMNUM2, FEET_LEFT_BACK_PWMNUM3, FEET_LEFT_BACK_TORNUM);
+		vInitFeet(&xFeetRightFront, PPM_1MS, PPM_1MS, PPM_1MS, FEET_RIGHT_FRONT_PWMNUM1, FEET_RIGHT_FRONT_PWMNUM2, FEET_RIGHT_FRONT_PWMNUM3, FEET_RIGHT_FRONT_TORNUM);
+		vInitFeet(&xFeetRightMid, PPM_1MS, PPM_1MS, PPM_1MS, FEET_RIGHT_MID_PWMNUM1, FEET_RIGHT_MID_PWMNUM2, FEET_RIGHT_MID_PWMNUM3, FEET_RIGHT_MID_TORNUM);
+		vInitFeet(&xFeetRightBack, PPM_1MS, PPM_1MS, PPM_1MS, FEET_RIGHT_BACK_PWMNUM1, FEET_RIGHT_BACK_PWMNUM2, FEET_RIGHT_BACK_PWMNUM3, FEET_RIGHT_BACK_TORNUM);
+		
+		vInitHead(&xHead, PPM_1MS, PPM_1MS, HEAD_PWMNUM1, HEAD_PWMNUM2);
+}
+
 /* TIMER0 HARD */
 void TIMER0_IRQHandler()
 {
@@ -75,17 +87,26 @@ void TIMER0_IRQHandler()
 }
 
 /* Tache Timer 20 pour réarmer la PWM */
-static portTASK_FUNCTION(vTimerTask, pvParameters) {	
+static portTASK_FUNCTION(vTimerPWMTask, pvParameters) {	
 	while (1) {
-	
-		vInitFeet(&xFeetLeftFront, PPM_1MS, PPM_1MS, PPM_1MS, FEET_LEFT_FRONT_PWMNUM1, FEET_LEFT_FRONT_PWMNUM2, FEET_LEFT_FRONT_PWMNUM3);
-		vInitFeet(&xFeetLeftMid, PPM_1MS, PPM_1MS, PPM_1MS, FEET_LEFT_MID_PWMNUM1, FEET_LEFT_MID_PWMNUM2, FEET_LEFT_MID_PWMNUM3);
-		vInitFeet(&xFeetLeftBack, PPM_1MS, PPM_1MS, PPM_1MS, FEET_LEFT_BACK_PWMNUM1, FEET_LEFT_BACK_PWMNUM2, FEET_LEFT_BACK_PWMNUM3);
-		vInitFeet(&xFeetRightFront, PPM_1MS, PPM_1MS, PPM_1MS, FEET_RIGHT_FRONT_PWMNUM1, FEET_RIGHT_FRONT_PWMNUM2, FEET_RIGHT_FRONT_PWMNUM3);
-		vInitFeet(&xFeetRightMid, PPM_1MS, PPM_1MS, PPM_1MS, FEET_RIGHT_MID_PWMNUM1, FEET_RIGHT_MID_PWMNUM2, FEET_RIGHT_MID_PWMNUM3);
-		vInitFeet(&xFeetRightBack, PPM_1MS, PPM_1MS, PPM_1MS, FEET_RIGHT_BACK_PWMNUM1, FEET_RIGHT_BACK_PWMNUM2, FEET_RIGHT_BACK_PWMNUM3);
+
+		vSetFeet(&xFeetLeftFront, PPM_1MS, PPM_1MS, PPM_1MS);
+		vSetFeet(&xFeetLeftMid, PPM_1MS, PPM_1MS, PPM_1MS);
+		vSetFeet(&xFeetLeftBack, PPM_1MS, PPM_1MS, PPM_1MS);
+		vSetFeet(&xFeetRightFront, PPM_1MS, PPM_1MS, PPM_1MS);
+		vSetFeet(&xFeetRightMid, PPM_1MS, PPM_1MS, PPM_1MS);
+		vSetFeet(&xFeetRightBack, PPM_1MS, PPM_1MS, PPM_1MS);
 		
-		vInitHead(&xHead, PPM_1MS, PPM_1MS, HEAD_PWMNUM1, HEAD_PWMNUM2);
+		vSetHead(&xHead, PPM_1MS, PPM_1MS);
+		
+		vTaskDelay(configTICK_RATE_HZ / TICKRATE2_HZ);
+	}
+}
+
+/* Tache Timer 20 pour réarmer la PWM */
+static portTASK_FUNCTION(vTimerTORTask, pvParameters) {	
+	while (1) {
+
 		
 		vTaskDelay(configTICK_RATE_HZ / TICKRATE2_HZ);
 	}
@@ -94,12 +115,19 @@ static portTASK_FUNCTION(vTimerTask, pvParameters) {
 int main()
 {
 	Board_Init();
+
+	vInit_Hexapode();
+
 	
 	vTIMER0_Init();
 
-	xTaskCreate(vTimerTask, (signed char *) "vTaskTimer",
+	xTaskCreate(vTimerPWMTask, (signed char *) "vTaskTimerPWM",
 				configMINIMAL_STACK_SIZE, NULL, (tskIDLE_PRIORITY + 1UL),
-				(xTaskHandle *) NULL);	
+				(xTaskHandle *) NULL);
+	
+	xTaskCreate(vTimerTORTask, (signed char *) "vTaskTimerTOR",
+				configMINIMAL_STACK_SIZE, NULL, (tskIDLE_PRIORITY + 1UL),
+				(xTaskHandle *) NULL);
 	
 	Board_LED_Set(0, false);
 	Board_LED_Set(1, false);

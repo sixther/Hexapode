@@ -74,6 +74,7 @@ void Board_UART_Init(LPC_USART_T *pUART);
 
 void Board_PWM_Set(uint8_t PWMNumber, bool On);
 
+uint32_t TOR_GetStatus(void);
 
 /**
  * @}
