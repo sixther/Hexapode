@@ -408,11 +408,6 @@
               <FilePath>.\src\servomoteur.c</FilePath>
             </File>
             <File>
-              <FileName>FeetHexapode.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\FeetHexapode.c</FilePath>
-            </File>
-            <File>
               <FileName>tor.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src\tor.c</FilePath>
@@ -423,14 +418,14 @@
               <FilePath>.\src\telemetre.c</FilePath>
             </File>
             <File>
-              <FileName>HeadHexapode.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\HeadHexapode.c</FilePath>
-            </File>
-            <File>
               <FileName>basic_io.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src\basic_io.c</FilePath>
+            </File>
+            <File>
+              <FileName>Hexapode.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\Hexapode.c</FilePath>
             </File>
           </Files>
         </Group>

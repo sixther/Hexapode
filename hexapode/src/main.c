@@ -10,14 +10,13 @@
  *
  * etc...
  */
- 
+#include "Hexapode.h"
 #include "board.h"
 #include "FreeRTOS.h"
 #include "task.h"
 #include "timer_17xx_40xx.h"
 #include "chip.h"
 #include "basic_io.h"
-#include "servomoteur.h"
 
 //define pour la fréquence du timer0 hard: 50µs
 #define TICKRATE1_HZ 20000
@@ -27,7 +26,13 @@
 unsigned char ucTemoin = 0;
 unsigned long ulTaskNumber[configEXPECTED_NO_RUNNING_TASKS];
 
-ServoMoteur xMyServo;
+FeetHexapode xFeetLeftFront;
+FeetHexapode xFeetLeftMid;
+FeetHexapode xFeetLeftBack;
+FeetHexapode xFeetRightFront;
+FeetHexapode xFeetRightMid;
+FeetHexapode xFeetRightBack;
+HeadHexapode xHead;
 
 void vTIMER0_Init()
 {
@@ -57,23 +62,30 @@ void TIMER0_IRQHandler()
 	{
 		Chip_TIMER_ClearMatch(LPC_TIMER0, 0);
 		
-		vSetPwm(&xMyServo, 1);
+		vMoveFeet(&xFeetLeftFront, 1, 1, 1);
+		vMoveFeet(&xFeetLeftMid, 1, 1, 1);
+		vMoveFeet(&xFeetLeftBack, 1, 1, 1);
+		vMoveFeet(&xFeetRightFront, 1, 1, 1);
+		vMoveFeet(&xFeetRightMid, 1, 1, 1);
+		vMoveFeet(&xFeetRightBack, 1, 1, 1);
 		
-		Board_LED_Set(1, xMyServo.ucGpio);
+		vMoveHead(&xHead, 1, 1);
+		
 	}
 }
 
 /* Tache Timer 20 pour réarmer la PWM */
-static portTASK_FUNCTION(vTimerTask, pvParameters) {
-	bool LedState = false;
-
+static portTASK_FUNCTION(vTimerTask, pvParameters) {	
 	while (1) {
-		Board_LED_Set(0, LedState);
-		LedState = (bool) !LedState;
+	
+		vInitFeet(&xFeetLeftFront, PPM_1MS, PPM_1MS, PPM_1MS, FEET_LEFT_FRONT_PWMNUM1, FEET_LEFT_FRONT_PWMNUM2, FEET_LEFT_FRONT_PWMNUM3);
+		vInitFeet(&xFeetLeftMid, PPM_1MS, PPM_1MS, PPM_1MS, FEET_LEFT_MID_PWMNUM1, FEET_LEFT_MID_PWMNUM2, FEET_LEFT_MID_PWMNUM3);
+		vInitFeet(&xFeetLeftBack, PPM_1MS, PPM_1MS, PPM_1MS, FEET_LEFT_BACK_PWMNUM1, FEET_LEFT_BACK_PWMNUM2, FEET_LEFT_BACK_PWMNUM3);
+		vInitFeet(&xFeetRightFront, PPM_1MS, PPM_1MS, PPM_1MS, FEET_RIGHT_FRONT_PWMNUM1, FEET_RIGHT_FRONT_PWMNUM2, FEET_RIGHT_FRONT_PWMNUM3);
+		vInitFeet(&xFeetRightMid, PPM_1MS, PPM_1MS, PPM_1MS, FEET_RIGHT_MID_PWMNUM1, FEET_RIGHT_MID_PWMNUM2, FEET_RIGHT_MID_PWMNUM3);
+		vInitFeet(&xFeetRightBack, PPM_1MS, PPM_1MS, PPM_1MS, FEET_RIGHT_BACK_PWMNUM1, FEET_RIGHT_BACK_PWMNUM2, FEET_RIGHT_BACK_PWMNUM3);
 		
-		vInitPwm(&xMyServo, 20);
-				
-		Board_LED_Set(1, xMyServo.ucGpio);
+		vInitHead(&xHead, PPM_1MS, PPM_1MS, HEAD_PWMNUM1, HEAD_PWMNUM2);
 		
 		vTaskDelay(configTICK_RATE_HZ / TICKRATE2_HZ);
 	}

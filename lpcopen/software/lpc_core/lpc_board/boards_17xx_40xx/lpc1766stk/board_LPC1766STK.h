@@ -55,10 +55,15 @@ extern "C" {
 #define LEDS_NO_LEDS        0x00
 
 /**
- * Button defines
+ * TOR defines
  */
-#define BUTTONS_BUTTON1     0x01
-#define NO_BUTTON_PRESSED   0x00
+#define TOR_TOR0     0x01
+#define TOR_TOR1     0x02
+#define TOR_TOR2     0x04
+#define TOR_TOR3     0x08
+#define TOR_TOR4     0x10
+#define TOR_TOR5     0x20
+#define NO_TOR_PRESSED   0x00
 
 /**
  * @brief	Initialize pin muxing for a UART
@@ -67,17 +72,7 @@ extern "C" {
  */
 void Board_UART_Init(LPC_USART_T *pUART);
 
-/**
- * @brief	Initialize buttons on the board
- * @return	Nothing
- */
-void Board_Buttons_Init(void);
-
-/**
- * @brief	Get button status
- * @return	status of button
- */
-uint32_t Buttons_GetStatus(void);
+void Board_PWM_Set(uint8_t PWMNumber, bool On);
 
 
 /**
