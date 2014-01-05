@@ -19,9 +19,11 @@
 #include "basic_io.h"
 
 //define pour la fréquence du timer0 hard: 50µs
-#define TICKRATE1_HZ 20000
+#define TICKRATE1_HZ		20000
 //define pour la fréquence de la tache réarmage de la PWM: 20ms
-#define TICKRATE2_HZ 50
+#define TICKRATE2_HZ 		50
+//define pour la fréquence de la tache lecture TOR et Telemetre: 500ms
+#define TICKRATE3_HZ		2
 
 unsigned char ucTemoin = 0;
 unsigned long ulTaskNumber[configEXPECTED_NO_RUNNING_TASKS];
@@ -57,14 +59,19 @@ void vTIMER0_Init()
 
 void vInit_Hexapode()
 {
+		//Initialisation des PPM et TOR
 		vInitFeet(&xFeetLeftFront, PPM_1MS, PPM_1MS, PPM_1MS, FEET_LEFT_FRONT_PWMNUM1, FEET_LEFT_FRONT_PWMNUM2, FEET_LEFT_FRONT_PWMNUM3, FEET_LEFT_FRONT_TORNUM);
 		vInitFeet(&xFeetLeftMid, PPM_1MS, PPM_1MS, PPM_1MS, FEET_LEFT_MID_PWMNUM1, FEET_LEFT_MID_PWMNUM2, FEET_LEFT_MID_PWMNUM3, FEET_LEFT_MID_TORNUM);
 		vInitFeet(&xFeetLeftBack, PPM_1MS, PPM_1MS, PPM_1MS, FEET_LEFT_BACK_PWMNUM1, FEET_LEFT_BACK_PWMNUM2, FEET_LEFT_BACK_PWMNUM3, FEET_LEFT_BACK_TORNUM);
 		vInitFeet(&xFeetRightFront, PPM_1MS, PPM_1MS, PPM_1MS, FEET_RIGHT_FRONT_PWMNUM1, FEET_RIGHT_FRONT_PWMNUM2, FEET_RIGHT_FRONT_PWMNUM3, FEET_RIGHT_FRONT_TORNUM);
 		vInitFeet(&xFeetRightMid, PPM_1MS, PPM_1MS, PPM_1MS, FEET_RIGHT_MID_PWMNUM1, FEET_RIGHT_MID_PWMNUM2, FEET_RIGHT_MID_PWMNUM3, FEET_RIGHT_MID_TORNUM);
 		vInitFeet(&xFeetRightBack, PPM_1MS, PPM_1MS, PPM_1MS, FEET_RIGHT_BACK_PWMNUM1, FEET_RIGHT_BACK_PWMNUM2, FEET_RIGHT_BACK_PWMNUM3, FEET_RIGHT_BACK_TORNUM);
-		
 		vInitHead(&xHead, PPM_1MS, PPM_1MS, HEAD_PWMNUM1, HEAD_PWMNUM2);
+
+		//Initialisation de l'ADC
+		
+		
+	
 }
 
 /* TIMER0 HARD */
@@ -103,12 +110,12 @@ static portTASK_FUNCTION(vTimerPWMTask, pvParameters) {
 	}
 }
 
-/* Tache Timer 20 pour réarmer la PWM */
+/* Tache pour la lecture des TOR et du telemetre */
 static portTASK_FUNCTION(vTimerTORTask, pvParameters) {	
 	while (1) {
 
 		
-		vTaskDelay(configTICK_RATE_HZ / TICKRATE2_HZ);
+		vTaskDelay(configTICK_RATE_HZ / TICKRATE3_HZ);
 	}
 }
 
