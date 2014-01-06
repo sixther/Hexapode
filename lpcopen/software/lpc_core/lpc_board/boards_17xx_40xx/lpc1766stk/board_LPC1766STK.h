@@ -66,6 +66,11 @@ extern "C" {
 #define NO_TOR_PRESSED   0x00
 
 /**
+ * TELEMETRE defines
+ */
+#define ADC_C	ADC_CH5
+
+/**
  * @brief	Initialize pin muxing for a UART
  * @param	pUART	: Pointer to UART register block for UART pins to init
  * @return	Nothing

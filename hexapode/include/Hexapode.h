@@ -56,9 +56,11 @@ typedef struct
 }FeetHexapode;
 
 void vInitHead(HeadHexapode *pxHead, unsigned char ucAngle1, unsigned char ucAngle2, 
-																	unsigned char ucPwmNum1, unsigned char ucPwmNum2);
+																	unsigned char ucPwmNum1, unsigned char ucPwmNum2, float SecuriteTelemetreCm);
 void vSetHead(HeadHexapode *pxHead, unsigned char ucAngle1, unsigned char ucAngle2);
 void vMoveHead(HeadHexapode *pxHead, unsigned char ucPasCount1, unsigned char ucPasCount2);
+void vCalculSecuriteTelemetre(HeadHexapode *pxHead);
+
 
 
 void vInitFeet(FeetHexapode *pxFeet, unsigned char ucAngle1, unsigned char ucAngle2, unsigned char ucAngle3, 
