@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Hexapode:  Fichier source de lpcopen/software/lpc_core/lpc_ip/sdc_001.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="IN7Robot.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Hexapode
+   &#160;<span id="projectnumber">Version 1.0</span>
+   </div>
+   <div id="projectbrief">Thomas Waquet &amp; Gauthier Dhalluin</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('sdc__001_8c_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Groupes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">sdc_001.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * @brief   SD Card Interface registers and control functions</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * @note</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Copyright(C) NXP Semiconductors, 2012</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * @par</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * Software that is described herein is for illustrative purposes only</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * which provides customers with programming information regarding the</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * LPC products.  This software is supplied &quot;AS IS&quot; without any warranties of</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * any kind, and NXP Semiconductors and its licensor disclaim any and</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * all warranties, express or implied, including all implied warranties of</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * merchantability, fitness for a particular purpose and non-infringement of</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * intellectual property rights.  NXP Semiconductors assumes no responsibility</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * or liability for the use of the software, conveys no license or rights under any</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * patent, copyright, mask work right, or any other intellectual property rights in</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * or to any products. NXP Semiconductors reserves the right to make changes</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * in the software without notification. NXP Semiconductors also makes no</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * representation or warranty that such application will be suitable for the</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * specified use without further testing or modification.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> * @par</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> * Permission to use, copy, modify, and distribute this software and its</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> * documentation is hereby granted, under NXP Semiconductors&#39; and its</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * licensor&#39;s relevant copyrights in the software, without fee, provided that it</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> * is used in conjunction with NXP Semiconductors microcontrollers.  This</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> * copyright, permission, and disclaimer notice must appear in all copies of</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> * this code.</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;sdc_001.h&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">/*****************************************************************************</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> * Private types/enumerations/variables</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"> ****************************************************************************/</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> writeDelay(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">volatile</span> uint8_t i;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">for</span> ( i = 0; i &lt; 0x10; i++ ) {  <span class="comment">/* delay 3MCLK + 2PCLK  */</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">/*****************************************************************************</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment"> * Public types/enumerations/variables</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment"> ****************************************************************************/</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">/*****************************************************************************</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"> * Private functions</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment"> ****************************************************************************/</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">/*****************************************************************************</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"> * Public functions</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment"> ****************************************************************************/</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">/* Set power state of SDC peripheral */</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="group___i_p___s_d_c__001.html#gad6f7b2bc2151ed38b0bd41586dc1baf4">   58</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i_p___s_d_c__001.html#gad6f7b2bc2151ed38b0bd41586dc1baf4">IP_SDC_PowerControl</a>(<a class="code" href="struct_i_p___s_d_c__001___t.html">IP_SDC_001_T</a> *pSDC, <a class="code" href="group___i_p___s_d_c__001.html#ga71af3828f85935aa736279f5b7fc1384">IP_SDC_001_PWR_CTRL_T</a> pwrMode, uint32_t flag)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    pSDC-&gt;<a class="code" href="struct_i_p___s_d_c__001___t.html#a65bff76f3af24c37708a1006d54720c7">POWER</a> = <a class="code" href="group___i_p___s_d_c__001.html#gaa87c824a74ee869af87af1f18fda613f">SDC_PWR_CTRL</a>(pwrMode) | flag;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    writeDelay();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">/* Set clock divider for SDC peripheral */</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="group___i_p___s_d_c__001.html#ga340f25ce5c607c6c91a543f7ded5a128">   65</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i_p___s_d_c__001.html#ga340f25ce5c607c6c91a543f7ded5a128">IP_SDC_SetClockDiv</a>(<a class="code" href="struct_i_p___s_d_c__001___t.html">IP_SDC_001_T</a> *pSDC, uint8_t div)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    uint32_t temp;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    temp = (pSDC-&gt;<a class="code" href="struct_i_p___s_d_c__001___t.html#ae883ef34c3cebbf0536f20bfa53e5c51">CLOCK</a> &amp; (~<a class="code" href="group___i_p___s_d_c__001.html#gabe221b4b096d34b12ab661a31b286b6f">SDC_CLOCK_CLKDIV_BITMASK</a>));</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    pSDC-&gt;<a class="code" href="struct_i_p___s_d_c__001___t.html#ae883ef34c3cebbf0536f20bfa53e5c51">CLOCK</a> = temp | (<a class="code" href="group___i_p___s_d_c__001.html#ga94d71d5d0b09fd1db890c8185369f36f">SDC_CLOCK_CLKDIV</a>(div));</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    writeDelay();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">/* Clock control for SDC peripheral*/</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="group___i_p___s_d_c__001.html#ga3c4489610d9931c9aedea4a0005daf1e">   74</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i_p___s_d_c__001.html#ga3c4489610d9931c9aedea4a0005daf1e">IP_SDC_ClockControl</a>(<a class="code" href="struct_i_p___s_d_c__001___t.html">IP_SDC_001_T</a> *pSDC, <a class="code" href="group___i_p___s_d_c__001.html#ga4a54d53654b61b225e886dcc7bdcd06b">IP_SDC_001_CLOCK_CTRL_T</a> ctrlType,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                         <a class="code" href="group___l_p_c___types___public___types.html#gac9a7e9a35d2513ec15c3b537aaa4fba1">FunctionalState</a> NewState)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">if</span> (NewState) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        pSDC-&gt;<a class="code" href="struct_i_p___s_d_c__001___t.html#ae883ef34c3cebbf0536f20bfa53e5c51">CLOCK</a> |= (1 &lt;&lt; ctrlType);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        pSDC-&gt;<a class="code" href="struct_i_p___s_d_c__001___t.html#ae883ef34c3cebbf0536f20bfa53e5c51">CLOCK</a> &amp;= (~(1 &lt;&lt; ctrlType));</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    writeDelay();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">/* Initialize SDC peripheral */</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="group___i_p___s_d_c__001.html#ga58cf8c2b09389b7af4b3dbc6508d2bc1">   87</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i_p___s_d_c__001.html#ga58cf8c2b09389b7af4b3dbc6508d2bc1">IP_SDC_Init</a>(<a class="code" href="struct_i_p___s_d_c__001___t.html">IP_SDC_001_T</a> *pSDC)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">/* Disable SD_CLK */</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="group___i_p___s_d_c__001.html#ga3c4489610d9931c9aedea4a0005daf1e">IP_SDC_ClockControl</a>(pSDC, <a class="code" href="group___i_p___s_d_c__001.html#gga5db2fad66b1c99658f4ee6669a0bd467a4f392780d0e54365ac3981931aaaec5e">SDC_CLOCK_ENABLE</a>, DISABLE);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">/* Power-off */</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="group___i_p___s_d_c__001.html#gad6f7b2bc2151ed38b0bd41586dc1baf4">IP_SDC_PowerControl</a>(pSDC, <a class="code" href="group___i_p___s_d_c__001.html#gga5f22057f3347cfce7c3800a7ee45299aa1f4d0646ccf634813b3947a6c137a730">SDC_POWER_OFF</a>, 0);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    writeDelay();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">/* Disable all interrupts */</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    pSDC-&gt;<a class="code" href="struct_i_p___s_d_c__001___t.html#ab3f06e2cb3a76edc6f3fc90af88671ba">MASK0</a> = 0;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">/*Setting for timeout problem */</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    pSDC-&gt;<a class="code" href="struct_i_p___s_d_c__001___t.html#ac8869578d7da9cae8b938c2259ec1f1b">DATATIMER</a> = 0x1FFFFFFF;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    pSDC-&gt;<a class="code" href="struct_i_p___s_d_c__001___t.html#a62ea8ae24beacb9fa203e50a9b4b0217">COMMAND</a> = 0;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    writeDelay();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    pSDC-&gt;<a class="code" href="struct_i_p___s_d_c__001___t.html#a311e58d6cb8bb20c3fb542fd4c551109">DATACTRL</a> = 0;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    writeDelay();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">/* clear all pending interrupts */</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    pSDC-&gt;<a class="code" href="struct_i_p___s_d_c__001___t.html#ae6824993be6a418332a17cbcfee04731">CLEAR</a> = <a class="code" href="group___i_p___s_d_c__001.html#gaf7f73817af54c6d2d9bb109dfbeca60a">SDC_CLEAR_ALL</a>;        </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">/* Set Command Info */</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="group___i_p___s_d_c__001.html#ga10a42f498444481dd4db58151fa7baa7">  113</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i_p___s_d_c__001.html#ga10a42f498444481dd4db58151fa7baa7">IP_SDC_SetCommand</a>(<a class="code" href="struct_i_p___s_d_c__001___t.html">IP_SDC_001_T</a> *pSDC, uint32_t Cmd, uint32_t Arg)</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;{</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="comment">/* Clear status register */</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    pSDC-&gt;<a class="code" href="struct_i_p___s_d_c__001___t.html#ae6824993be6a418332a17cbcfee04731">CLEAR</a> = <a class="code" href="group___i_p___s_d_c__001.html#gaf7f73817af54c6d2d9bb109dfbeca60a">SDC_CLEAR_ALL</a>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="comment">/* Set the argument first, finally command */</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    pSDC-&gt;<a class="code" href="struct_i_p___s_d_c__001___t.html#a8a97e7675f68b168e79931a0aea9e81a">ARGUMENT</a> = Arg;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="comment">/* Write command value, enable the command */</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    pSDC-&gt;<a class="code" href="struct_i_p___s_d_c__001___t.html#a62ea8ae24beacb9fa203e50a9b4b0217">COMMAND</a> = Cmd | <a class="code" href="group___i_p___s_d_c__001.html#ga26c83d50a9f14bdb16bf9f4d3dc7087e">SDC_COMMAND_ENABLE</a>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    writeDelay();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">/* Reset Command Info */</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="group___i_p___s_d_c__001.html#gaf1924dd38f1568f5cbecdcf17aae6e9e">  128</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i_p___s_d_c__001.html#gaf1924dd38f1568f5cbecdcf17aae6e9e">IP_SDC_ResetCommand</a>(<a class="code" href="struct_i_p___s_d_c__001___t.html">IP_SDC_001_T</a> *pSDC)</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;{</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    pSDC-&gt;<a class="code" href="struct_i_p___s_d_c__001___t.html#ae6824993be6a418332a17cbcfee04731">CLEAR</a> = <a class="code" href="group___i_p___s_d_c__001.html#gaf7f73817af54c6d2d9bb109dfbeca60a">SDC_CLEAR_ALL</a>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    pSDC-&gt;<a class="code" href="struct_i_p___s_d_c__001___t.html#a8a97e7675f68b168e79931a0aea9e81a">ARGUMENT</a> = 0xFFFFFFFF;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    pSDC-&gt;<a class="code" href="struct_i_p___s_d_c__001___t.html#a62ea8ae24beacb9fa203e50a9b4b0217">COMMAND</a> = 0;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    writeDelay();</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment">/* Get Command response */</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="group___i_p___s_d_c__001.html#ga4dfea113afdfd5c341c8dcc829afda72">  140</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i_p___s_d_c__001.html#ga4dfea113afdfd5c341c8dcc829afda72">IP_SDC_GetResp</a>(<a class="code" href="struct_i_p___s_d_c__001___t.html">IP_SDC_001_T</a> *pSDC, <a class="code" href="struct_i_p___s_d_c__001___r_e_s_p___t.html">IP_SDC_001_RESP_T</a> *pResp)</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;{</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    uint8_t i;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    pResp-&gt;<a class="code" href="struct_i_p___s_d_c__001___r_e_s_p___t.html#a249daa7ce76c4e6f2dab889dd4f4180e">CmdIndex</a> = <a class="code" href="group___i_p___s_d_c__001.html#ga80abaa7d0d6663a5b481eee8f7c62e89">SDC_RESPCOMMAND_VAL</a>(pSDC-&gt;<a class="code" href="struct_i_p___s_d_c__001___t.html#aad371db807e2db4a2edf05b3f2f4b6cd">RESPCMD</a>);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; SDC_CARDSTATUS_BYTENUM; i++) {</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        pResp-&gt;Data[i] = pSDC-&gt;<a class="code" href="struct_i_p___s_d_c__001___t.html#ac7fcb2d43c981f8cf047dd089a500db3">RESPONSE</a>[i];</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;}</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment">/* Setup Data Transfer Information */</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="group___i_p___s_d_c__001.html#gafe5127107a19f71f04d0d6efecb780d9">  150</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i_p___s_d_c__001.html#gafe5127107a19f71f04d0d6efecb780d9">IP_SDC_SetDataTransfer</a>(<a class="code" href="struct_i_p___s_d_c__001___t.html">IP_SDC_001_T</a> *pSDC, <a class="code" href="struct_i_p___s_d_c__001___d_a_t_a___t_r_a_n_s_f_e_r___t.html">IP_SDC_001_DATA_TRANSFER_T</a> *pTransfer)</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;{</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    uint32_t DataCtrl = 0;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    pSDC-&gt;<a class="code" href="struct_i_p___s_d_c__001___t.html#ac8869578d7da9cae8b938c2259ec1f1b">DATATIMER</a> = pTransfer-&gt;<a class="code" href="struct_i_p___s_d_c__001___d_a_t_a___t_r_a_n_s_f_e_r___t.html#ac32e3b19d6fb5d4056cebee773e128ed">Timeout</a>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    pSDC-&gt;<a class="code" href="struct_i_p___s_d_c__001___t.html#a2e788847d94a9fb9cacd6d4c379e3a63">DATALENGTH</a> = pTransfer-&gt;<a class="code" href="struct_i_p___s_d_c__001___d_a_t_a___t_r_a_n_s_f_e_r___t.html#a696df91dbde52bee0d70868eec206f6b">BlockNum</a> * <a class="code" href="group___i_p___s_d_c__001.html#gadc57e8c5c7ddfb67a39b934d04cfe02f">SDC_DATACTRL_BLOCKSIZE_VAL</a>(pTransfer-&gt;<a class="code" href="struct_i_p___s_d_c__001___d_a_t_a___t_r_a_n_s_f_e_r___t.html#a53d9903843822accfeb4848e3fb706a8">BlockSize</a>);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    DataCtrl = <a class="code" href="group___i_p___s_d_c__001.html#ga8b23b0c7b23818eddae530cc0473e093">SDC_DATACTRL_ENABLE</a>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    DataCtrl |= ((uint32_t)pTransfer-&gt;<a class="code" href="struct_i_p___s_d_c__001___d_a_t_a___t_r_a_n_s_f_e_r___t.html#a184b2ac979ecb93bfc5472204500a9b7">Dir</a>) | ((uint32_t)pTransfer-&gt;<a class="code" href="struct_i_p___s_d_c__001___d_a_t_a___t_r_a_n_s_f_e_r___t.html#a8d505bb26dfcdfcea685b508af01d0b9">Mode</a>) | <a class="code" href="group___i_p___s_d_c__001.html#gac9bb931b9ba51f336f5c6899963e6083">SDC_DATACTRL_BLOCKSIZE</a>(pTransfer-&gt;<a class="code" href="struct_i_p___s_d_c__001___d_a_t_a___t_r_a_n_s_f_e_r___t.html#a53d9903843822accfeb4848e3fb706a8">BlockSize</a>);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">if</span> (pTransfer-&gt;<a class="code" href="struct_i_p___s_d_c__001___d_a_t_a___t_r_a_n_s_f_e_r___t.html#ace2aa1ca3b18116020444bab0139e071">DMAUsed</a>) {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        DataCtrl |= <a class="code" href="group___i_p___s_d_c__001.html#ga2af3e468b8b797aa07f04e03463bc69a">SDC_DATACTRL_DMA_ENABLE</a>;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    pSDC-&gt;<a class="code" href="struct_i_p___s_d_c__001___t.html#a311e58d6cb8bb20c3fb542fd4c551109">DATACTRL</a> = DataCtrl;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    writeDelay();</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment">/* Write data to FIFO */</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="group___i_p___s_d_c__001.html#ga4d1466d1f8161f3afc5619eabbed79b8">  165</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i_p___s_d_c__001.html#ga4d1466d1f8161f3afc5619eabbed79b8">IP_SDC_WriteFIFO</a>(<a class="code" href="struct_i_p___s_d_c__001___t.html">IP_SDC_001_T</a> *pSDC, uint32_t *pSrc, <span class="keywordtype">bool</span> bFirstHalf)</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;{</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    uint8_t start = 0, end = 7;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">if</span> (!bFirstHalf) {</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        start += 8;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        end += 8;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordflow">for</span> (; start &lt;= end; start++) {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        pSDC-&gt;<a class="code" href="struct_i_p___s_d_c__001___t.html#af02a453ac91bf2bfb253cd10da27ea16">FIFO</a>[start] = *pSrc;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        pSrc++;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;}</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="comment">/* Read data from FIFO */</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="group___i_p___s_d_c__001.html#gae5c76e93283181c6775ddf6a070ef6cb">  179</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i_p___s_d_c__001.html#gae5c76e93283181c6775ddf6a070ef6cb">IP_SDC_ReadFIFO</a>(<a class="code" href="struct_i_p___s_d_c__001___t.html">IP_SDC_001_T</a> *pSDC, uint32_t *pDst, <span class="keywordtype">bool</span> bFirstHalf)</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;{</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    uint8_t start = 0, end = 7;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordflow">if</span> (!bFirstHalf) {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        start += 8;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        end += 8;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordflow">for</span> (; start &lt;= end; start++) {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        *pDst = pSDC-&gt;<a class="code" href="struct_i_p___s_d_c__001___t.html#af02a453ac91bf2bfb253cd10da27ea16">FIFO</a>[start];</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        pDst++;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;}</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
+<div class="ttc" id="struct_i_p___s_d_c__001___t_html_a311e58d6cb8bb20c3fb542fd4c551109"><div class="ttname"><a href="struct_i_p___s_d_c__001___t.html#a311e58d6cb8bb20c3fb542fd4c551109">IP_SDC_001_T::DATACTRL</a></div><div class="ttdeci">__IO uint32_t DATACTRL</div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00060">sdc_001.h:60</a></div></div>
+<div class="ttc" id="group___i_p___s_d_c__001_html_ga4d1466d1f8161f3afc5619eabbed79b8"><div class="ttname"><a href="group___i_p___s_d_c__001.html#ga4d1466d1f8161f3afc5619eabbed79b8">IP_SDC_WriteFIFO</a></div><div class="ttdeci">void IP_SDC_WriteFIFO(IP_SDC_001_T *pSDC, uint32_t *pSrc, bool bFirstHalf)</div><div class="ttdoc">Write Data to FIFO. </div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8c_source.html#l00165">sdc_001.c:165</a></div></div>
+<div class="ttc" id="group___i_p___s_d_c__001_html_gga5db2fad66b1c99658f4ee6669a0bd467a4f392780d0e54365ac3981931aaaec5e"><div class="ttname"><a href="group___i_p___s_d_c__001.html#gga5db2fad66b1c99658f4ee6669a0bd467a4f392780d0e54365ac3981931aaaec5e">SDC_CLOCK_ENABLE</a></div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00332">sdc_001.h:332</a></div></div>
+<div class="ttc" id="group___i_p___s_d_c__001_html_gga5f22057f3347cfce7c3800a7ee45299aa1f4d0646ccf634813b3947a6c137a730"><div class="ttname"><a href="group___i_p___s_d_c__001.html#gga5f22057f3347cfce7c3800a7ee45299aa1f4d0646ccf634813b3947a6c137a730">SDC_POWER_OFF</a></div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00323">sdc_001.h:323</a></div></div>
+<div class="ttc" id="group___i_p___s_d_c__001_html_ga71af3828f85935aa736279f5b7fc1384"><div class="ttname"><a href="group___i_p___s_d_c__001.html#ga71af3828f85935aa736279f5b7fc1384">IP_SDC_001_PWR_CTRL_T</a></div><div class="ttdeci">enum IP_SDC_001_PWR_CTRL IP_SDC_001_PWR_CTRL_T</div><div class="ttdoc">SDC Power Control Options. </div></div>
+<div class="ttc" id="group___i_p___s_d_c__001_html_ga4a54d53654b61b225e886dcc7bdcd06b"><div class="ttname"><a href="group___i_p___s_d_c__001.html#ga4a54d53654b61b225e886dcc7bdcd06b">IP_SDC_001_CLOCK_CTRL_T</a></div><div class="ttdeci">enum IP_SDC_001_CLOCK_CTRL IP_SDC_001_CLOCK_CTRL_T</div><div class="ttdoc">SDC Clock Control Options. </div></div>
+<div class="ttc" id="struct_i_p___s_d_c__001___d_a_t_a___t_r_a_n_s_f_e_r___t_html_a8d505bb26dfcdfcea685b508af01d0b9"><div class="ttname"><a href="struct_i_p___s_d_c__001___d_a_t_a___t_r_a_n_s_f_e_r___t.html#a8d505bb26dfcdfcea685b508af01d0b9">IP_SDC_001_DATA_TRANSFER_T::Mode</a></div><div class="ttdeci">IP_SDC_001_TRANSFER_MODE_T Mode</div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00396">sdc_001.h:396</a></div></div>
+<div class="ttc" id="group___i_p___s_d_c__001_html_ga2af3e468b8b797aa07f04e03463bc69a"><div class="ttname"><a href="group___i_p___s_d_c__001.html#ga2af3e468b8b797aa07f04e03463bc69a">SDC_DATACTRL_DMA_ENABLE</a></div><div class="ttdeci">#define SDC_DATACTRL_DMA_ENABLE</div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00147">sdc_001.h:147</a></div></div>
+<div class="ttc" id="struct_i_p___s_d_c__001___d_a_t_a___t_r_a_n_s_f_e_r___t_html_a696df91dbde52bee0d70868eec206f6b"><div class="ttname"><a href="struct_i_p___s_d_c__001___d_a_t_a___t_r_a_n_s_f_e_r___t.html#a696df91dbde52bee0d70868eec206f6b">IP_SDC_001_DATA_TRANSFER_T::BlockNum</a></div><div class="ttdeci">uint16_t BlockNum</div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00393">sdc_001.h:393</a></div></div>
+<div class="ttc" id="struct_i_p___s_d_c__001___t_html_ae883ef34c3cebbf0536f20bfa53e5c51"><div class="ttname"><a href="struct_i_p___s_d_c__001___t.html#ae883ef34c3cebbf0536f20bfa53e5c51">IP_SDC_001_T::CLOCK</a></div><div class="ttdeci">__IO uint32_t CLOCK</div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00053">sdc_001.h:53</a></div></div>
+<div class="ttc" id="struct_i_p___s_d_c__001___t_html_ac7fcb2d43c981f8cf047dd089a500db3"><div class="ttname"><a href="struct_i_p___s_d_c__001___t.html#ac7fcb2d43c981f8cf047dd089a500db3">IP_SDC_001_T::RESPONSE</a></div><div class="ttdeci">__I uint32_t RESPONSE[4]</div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00057">sdc_001.h:57</a></div></div>
+<div class="ttc" id="struct_i_p___s_d_c__001___d_a_t_a___t_r_a_n_s_f_e_r___t_html_ac32e3b19d6fb5d4056cebee773e128ed"><div class="ttname"><a href="struct_i_p___s_d_c__001___d_a_t_a___t_r_a_n_s_f_e_r___t.html#ac32e3b19d6fb5d4056cebee773e128ed">IP_SDC_001_DATA_TRANSFER_T::Timeout</a></div><div class="ttdeci">uint32_t Timeout</div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00398">sdc_001.h:398</a></div></div>
+<div class="ttc" id="struct_i_p___s_d_c__001___d_a_t_a___t_r_a_n_s_f_e_r___t_html_a53d9903843822accfeb4848e3fb706a8"><div class="ttname"><a href="struct_i_p___s_d_c__001___d_a_t_a___t_r_a_n_s_f_e_r___t.html#a53d9903843822accfeb4848e3fb706a8">IP_SDC_001_DATA_TRANSFER_T::BlockSize</a></div><div class="ttdeci">IP_SDC_001_BLOCK_SIZE_T BlockSize</div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00394">sdc_001.h:394</a></div></div>
+<div class="ttc" id="struct_i_p___s_d_c__001___t_html_af02a453ac91bf2bfb253cd10da27ea16"><div class="ttname"><a href="struct_i_p___s_d_c__001___t.html#af02a453ac91bf2bfb253cd10da27ea16">IP_SDC_001_T::FIFO</a></div><div class="ttdeci">__IO uint32_t FIFO[16]</div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00068">sdc_001.h:68</a></div></div>
+<div class="ttc" id="group___l_p_c___types___public___types_html_gac9a7e9a35d2513ec15c3b537aaa4fba1"><div class="ttname"><a href="group___l_p_c___types___public___types.html#gac9a7e9a35d2513ec15c3b537aaa4fba1">FunctionalState</a></div><div class="ttdeci">FunctionalState</div><div class="ttdoc">Functional State Definition. </div><div class="ttdef"><b>Definition:</b> <a href="lpc__types_8h_source.html#l00068">lpc_types.h:68</a></div></div>
+<div class="ttc" id="struct_i_p___s_d_c__001___d_a_t_a___t_r_a_n_s_f_e_r___t_html"><div class="ttname"><a href="struct_i_p___s_d_c__001___d_a_t_a___t_r_a_n_s_f_e_r___t.html">IP_SDC_001_DATA_TRANSFER_T</a></div><div class="ttdoc">SDC Data Transfer Setup structure. </div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00392">sdc_001.h:392</a></div></div>
+<div class="ttc" id="struct_i_p___s_d_c__001___t_html_ae6824993be6a418332a17cbcfee04731"><div class="ttname"><a href="struct_i_p___s_d_c__001___t.html#ae6824993be6a418332a17cbcfee04731">IP_SDC_001_T::CLEAR</a></div><div class="ttdeci">__O uint32_t CLEAR</div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00063">sdc_001.h:63</a></div></div>
+<div class="ttc" id="struct_i_p___s_d_c__001___d_a_t_a___t_r_a_n_s_f_e_r___t_html_a184b2ac979ecb93bfc5472204500a9b7"><div class="ttname"><a href="struct_i_p___s_d_c__001___d_a_t_a___t_r_a_n_s_f_e_r___t.html#a184b2ac979ecb93bfc5472204500a9b7">IP_SDC_001_DATA_TRANSFER_T::Dir</a></div><div class="ttdeci">IP_SDC_001_TRANSFER_DIR_T Dir</div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00395">sdc_001.h:395</a></div></div>
+<div class="ttc" id="struct_i_p___s_d_c__001___t_html_a62ea8ae24beacb9fa203e50a9b4b0217"><div class="ttname"><a href="struct_i_p___s_d_c__001___t.html#a62ea8ae24beacb9fa203e50a9b4b0217">IP_SDC_001_T::COMMAND</a></div><div class="ttdeci">__IO uint32_t COMMAND</div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00055">sdc_001.h:55</a></div></div>
+<div class="ttc" id="group___i_p___s_d_c__001_html_gaf1924dd38f1568f5cbecdcf17aae6e9e"><div class="ttname"><a href="group___i_p___s_d_c__001.html#gaf1924dd38f1568f5cbecdcf17aae6e9e">IP_SDC_ResetCommand</a></div><div class="ttdeci">void IP_SDC_ResetCommand(IP_SDC_001_T *pSDC)</div><div class="ttdoc">Reset SDC Command Information. </div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8c_source.html#l00128">sdc_001.c:128</a></div></div>
+<div class="ttc" id="group___i_p___s_d_c__001_html_ga4dfea113afdfd5c341c8dcc829afda72"><div class="ttname"><a href="group___i_p___s_d_c__001.html#ga4dfea113afdfd5c341c8dcc829afda72">IP_SDC_GetResp</a></div><div class="ttdeci">void IP_SDC_GetResp(IP_SDC_001_T *pSDC, IP_SDC_001_RESP_T *pResp)</div><div class="ttdoc">Get SDC Response. </div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8c_source.html#l00140">sdc_001.c:140</a></div></div>
+<div class="ttc" id="struct_i_p___s_d_c__001___t_html_aad371db807e2db4a2edf05b3f2f4b6cd"><div class="ttname"><a href="struct_i_p___s_d_c__001___t.html#aad371db807e2db4a2edf05b3f2f4b6cd">IP_SDC_001_T::RESPCMD</a></div><div class="ttdeci">__I uint32_t RESPCMD</div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00056">sdc_001.h:56</a></div></div>
+<div class="ttc" id="struct_i_p___s_d_c__001___t_html"><div class="ttname"><a href="struct_i_p___s_d_c__001___t.html">IP_SDC_001_T</a></div><div class="ttdoc">SD/MMC card Interface (SDC) register block structure. </div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00051">sdc_001.h:51</a></div></div>
+<div class="ttc" id="group___i_p___s_d_c__001_html_gaa87c824a74ee869af87af1f18fda613f"><div class="ttname"><a href="group___i_p___s_d_c__001.html#gaa87c824a74ee869af87af1f18fda613f">SDC_PWR_CTRL</a></div><div class="ttdeci">#define SDC_PWR_CTRL(n)</div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00079">sdc_001.h:79</a></div></div>
+<div class="ttc" id="group___i_p___s_d_c__001_html_ga94d71d5d0b09fd1db890c8185369f36f"><div class="ttname"><a href="group___i_p___s_d_c__001.html#ga94d71d5d0b09fd1db890c8185369f36f">SDC_CLOCK_CLKDIV</a></div><div class="ttdeci">#define SDC_CLOCK_CLKDIV(n)</div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00093">sdc_001.h:93</a></div></div>
+<div class="ttc" id="struct_i_p___s_d_c__001___r_e_s_p___t_html"><div class="ttname"><a href="struct_i_p___s_d_c__001___r_e_s_p___t.html">IP_SDC_001_RESP_T</a></div><div class="ttdoc">SDC Command Response structure. </div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00384">sdc_001.h:384</a></div></div>
+<div class="ttc" id="group___i_p___s_d_c__001_html_ga3c4489610d9931c9aedea4a0005daf1e"><div class="ttname"><a href="group___i_p___s_d_c__001.html#ga3c4489610d9931c9aedea4a0005daf1e">IP_SDC_ClockControl</a></div><div class="ttdeci">void IP_SDC_ClockControl(IP_SDC_001_T *pSDC, IP_SDC_001_CLOCK_CTRL_T ctrlType, FunctionalState NewState)</div><div class="ttdoc">Set or Reset clock control of SDC peripheral. </div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8c_source.html#l00074">sdc_001.c:74</a></div></div>
+<div class="ttc" id="group___i_p___s_d_c__001_html_ga8b23b0c7b23818eddae530cc0473e093"><div class="ttname"><a href="group___i_p___s_d_c__001.html#ga8b23b0c7b23818eddae530cc0473e093">SDC_DATACTRL_ENABLE</a></div><div class="ttdeci">#define SDC_DATACTRL_ENABLE</div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00137">sdc_001.h:137</a></div></div>
+<div class="ttc" id="group___i_p___s_d_c__001_html_ga340f25ce5c607c6c91a543f7ded5a128"><div class="ttname"><a href="group___i_p___s_d_c__001.html#ga340f25ce5c607c6c91a543f7ded5a128">IP_SDC_SetClockDiv</a></div><div class="ttdeci">void IP_SDC_SetClockDiv(IP_SDC_001_T *pSDC, uint8_t div)</div><div class="ttdoc">Set clock divider value for SDC peripheral. </div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8c_source.html#l00065">sdc_001.c:65</a></div></div>
+<div class="ttc" id="group___i_p___s_d_c__001_html_ga58cf8c2b09389b7af4b3dbc6508d2bc1"><div class="ttname"><a href="group___i_p___s_d_c__001.html#ga58cf8c2b09389b7af4b3dbc6508d2bc1">IP_SDC_Init</a></div><div class="ttdeci">void IP_SDC_Init(IP_SDC_001_T *pSDC)</div><div class="ttdoc">Initialize the SDC card controller. </div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8c_source.html#l00087">sdc_001.c:87</a></div></div>
+<div class="ttc" id="group___i_p___s_d_c__001_html_gadc57e8c5c7ddfb67a39b934d04cfe02f"><div class="ttname"><a href="group___i_p___s_d_c__001.html#gadc57e8c5c7ddfb67a39b934d04cfe02f">SDC_DATACTRL_BLOCKSIZE_VAL</a></div><div class="ttdeci">#define SDC_DATACTRL_BLOCKSIZE_VAL(n)</div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00151">sdc_001.h:151</a></div></div>
+<div class="ttc" id="struct_i_p___s_d_c__001___t_html_a8a97e7675f68b168e79931a0aea9e81a"><div class="ttname"><a href="struct_i_p___s_d_c__001___t.html#a8a97e7675f68b168e79931a0aea9e81a">IP_SDC_001_T::ARGUMENT</a></div><div class="ttdeci">__IO uint32_t ARGUMENT</div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00054">sdc_001.h:54</a></div></div>
+<div class="ttc" id="group___i_p___s_d_c__001_html_ga26c83d50a9f14bdb16bf9f4d3dc7087e"><div class="ttname"><a href="group___i_p___s_d_c__001.html#ga26c83d50a9f14bdb16bf9f4d3dc7087e">SDC_COMMAND_ENABLE</a></div><div class="ttdeci">#define SDC_COMMAND_ENABLE</div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00117">sdc_001.h:117</a></div></div>
+<div class="ttc" id="struct_i_p___s_d_c__001___t_html_ab3f06e2cb3a76edc6f3fc90af88671ba"><div class="ttname"><a href="struct_i_p___s_d_c__001___t.html#ab3f06e2cb3a76edc6f3fc90af88671ba">IP_SDC_001_T::MASK0</a></div><div class="ttdeci">__IO uint32_t MASK0</div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00064">sdc_001.h:64</a></div></div>
+<div class="ttc" id="group___i_p___s_d_c__001_html_gac9bb931b9ba51f336f5c6899963e6083"><div class="ttname"><a href="group___i_p___s_d_c__001.html#gac9bb931b9ba51f336f5c6899963e6083">SDC_DATACTRL_BLOCKSIZE</a></div><div class="ttdeci">#define SDC_DATACTRL_BLOCKSIZE(n)</div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00149">sdc_001.h:149</a></div></div>
+<div class="ttc" id="group___i_p___s_d_c__001_html_gae5c76e93283181c6775ddf6a070ef6cb"><div class="ttname"><a href="group___i_p___s_d_c__001.html#gae5c76e93283181c6775ddf6a070ef6cb">IP_SDC_ReadFIFO</a></div><div class="ttdeci">void IP_SDC_ReadFIFO(IP_SDC_001_T *pSDC, uint32_t *pDst, bool bFirstHalf)</div><div class="ttdoc">Write Data to FIFO. </div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8c_source.html#l00179">sdc_001.c:179</a></div></div>
+<div class="ttc" id="group___i_p___s_d_c__001_html_gafe5127107a19f71f04d0d6efecb780d9"><div class="ttname"><a href="group___i_p___s_d_c__001.html#gafe5127107a19f71f04d0d6efecb780d9">IP_SDC_SetDataTransfer</a></div><div class="ttdeci">void IP_SDC_SetDataTransfer(IP_SDC_001_T *pSDC, IP_SDC_001_DATA_TRANSFER_T *pTransfer)</div><div class="ttdoc">Set SDC Data Transfer Information. </div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8c_source.html#l00150">sdc_001.c:150</a></div></div>
+<div class="ttc" id="struct_i_p___s_d_c__001___t_html_ac8869578d7da9cae8b938c2259ec1f1b"><div class="ttname"><a href="struct_i_p___s_d_c__001___t.html#ac8869578d7da9cae8b938c2259ec1f1b">IP_SDC_001_T::DATATIMER</a></div><div class="ttdeci">__IO uint32_t DATATIMER</div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00058">sdc_001.h:58</a></div></div>
+<div class="ttc" id="group___i_p___s_d_c__001_html_ga80abaa7d0d6663a5b481eee8f7c62e89"><div class="ttname"><a href="group___i_p___s_d_c__001.html#ga80abaa7d0d6663a5b481eee8f7c62e89">SDC_RESPCOMMAND_VAL</a></div><div class="ttdeci">#define SDC_RESPCOMMAND_VAL(n)</div><div class="ttdoc">SDC Command Response Register bit definitions. </div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00123">sdc_001.h:123</a></div></div>
+<div class="ttc" id="struct_i_p___s_d_c__001___t_html_a65bff76f3af24c37708a1006d54720c7"><div class="ttname"><a href="struct_i_p___s_d_c__001___t.html#a65bff76f3af24c37708a1006d54720c7">IP_SDC_001_T::POWER</a></div><div class="ttdeci">__IO uint32_t POWER</div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00052">sdc_001.h:52</a></div></div>
+<div class="ttc" id="struct_i_p___s_d_c__001___d_a_t_a___t_r_a_n_s_f_e_r___t_html_ace2aa1ca3b18116020444bab0139e071"><div class="ttname"><a href="struct_i_p___s_d_c__001___d_a_t_a___t_r_a_n_s_f_e_r___t.html#ace2aa1ca3b18116020444bab0139e071">IP_SDC_001_DATA_TRANSFER_T::DMAUsed</a></div><div class="ttdeci">bool DMAUsed</div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00397">sdc_001.h:397</a></div></div>
+<div class="ttc" id="struct_i_p___s_d_c__001___r_e_s_p___t_html_a249daa7ce76c4e6f2dab889dd4f4180e"><div class="ttname"><a href="struct_i_p___s_d_c__001___r_e_s_p___t.html#a249daa7ce76c4e6f2dab889dd4f4180e">IP_SDC_001_RESP_T::CmdIndex</a></div><div class="ttdeci">uint8_t CmdIndex</div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00385">sdc_001.h:385</a></div></div>
+<div class="ttc" id="struct_i_p___s_d_c__001___t_html_a2e788847d94a9fb9cacd6d4c379e3a63"><div class="ttname"><a href="struct_i_p___s_d_c__001___t.html#a2e788847d94a9fb9cacd6d4c379e3a63">IP_SDC_001_T::DATALENGTH</a></div><div class="ttdeci">__IO uint32_t DATALENGTH</div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00059">sdc_001.h:59</a></div></div>
+<div class="ttc" id="group___i_p___s_d_c__001_html_gaf7f73817af54c6d2d9bb109dfbeca60a"><div class="ttname"><a href="group___i_p___s_d_c__001.html#gaf7f73817af54c6d2d9bb109dfbeca60a">SDC_CLEAR_ALL</a></div><div class="ttdeci">#define SDC_CLEAR_ALL</div><div class="ttdoc">SDC Clear Register bit definitions. </div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00223">sdc_001.h:223</a></div></div>
+<div class="ttc" id="group___i_p___s_d_c__001_html_gad6f7b2bc2151ed38b0bd41586dc1baf4"><div class="ttname"><a href="group___i_p___s_d_c__001.html#gad6f7b2bc2151ed38b0bd41586dc1baf4">IP_SDC_PowerControl</a></div><div class="ttdeci">void IP_SDC_PowerControl(IP_SDC_001_T *pSDC, IP_SDC_001_PWR_CTRL_T pwrMode, uint32_t flag)</div><div class="ttdoc">Set the power state of SDC peripheral. </div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8c_source.html#l00058">sdc_001.c:58</a></div></div>
+<div class="ttc" id="group___i_p___s_d_c__001_html_gabe221b4b096d34b12ab661a31b286b6f"><div class="ttname"><a href="group___i_p___s_d_c__001.html#gabe221b4b096d34b12ab661a31b286b6f">SDC_CLOCK_CLKDIV_BITMASK</a></div><div class="ttdeci">#define SDC_CLOCK_CLKDIV_BITMASK</div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8h_source.html#l00091">sdc_001.h:91</a></div></div>
+<div class="ttc" id="group___i_p___s_d_c__001_html_ga10a42f498444481dd4db58151fa7baa7"><div class="ttname"><a href="group___i_p___s_d_c__001.html#ga10a42f498444481dd4db58151fa7baa7">IP_SDC_SetCommand</a></div><div class="ttdeci">void IP_SDC_SetCommand(IP_SDC_001_T *pSDC, uint32_t Cmd, uint32_t Arg)</div><div class="ttdoc">Set SDC Command Information. </div><div class="ttdef"><b>Definition:</b> <a href="sdc__001_8c_source.html#l00113">sdc_001.c:113</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_e9967a62eb0adfb08d6da6a5b6090dce.html">lpcopen</a></li><li class="navelem"><a class="el" href="dir_9de244f5aef64593622a4e8655220356.html">software</a></li><li class="navelem"><a class="el" href="dir_31a1b7b0d37c21493df82ae7c333e639.html">lpc_core</a></li><li class="navelem"><a class="el" href="dir_b12cadcc2490a31864f50bfa129e234d.html">lpc_ip</a></li><li class="navelem"><b>sdc_001.c</b></li>
+    <li class="footer">Généré le Mardi Janvier 7 2014 11:23:04 pour Hexapode par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,817 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Hexapode: IP: CRC register block and driver</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="IN7Robot.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Hexapode
+   &#160;<span id="projectnumber">Version 1.0</span>
+   </div>
+   <div id="projectbrief">Thomas Waquet &amp; Gauthier Dhalluin</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('group___i_p___c_r_c__001.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Groupes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#enum-members">Énumérations</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">IP: CRC register block and driver</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC register block structure.  <a href="struct_i_p___c_r_c__001___t.html#details">Plus de détails...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:gac9a02f765e566cd99c4678a6f726b371"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gac9a02f765e566cd99c4678a6f726b371"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___c_r_c__001.html#gac9a02f765e566cd99c4678a6f726b371">CRC_MODE_POLY_BITMASK</a>&#160;&#160;&#160;((0x03))	/** CRC polynomial Bit mask */</td></tr>
+<tr class="memdesc:gac9a02f765e566cd99c4678a6f726b371"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC MODE register description. <br/></td></tr>
+<tr class="separator:gac9a02f765e566cd99c4678a6f726b371"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab299e9ceea3b4acdfbc88ba3c109fec9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gab299e9ceea3b4acdfbc88ba3c109fec9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CRC_MODE_POLY_CCITT</b>&#160;&#160;&#160;(0x00)		/** Select CRC-CCITT polynomial */</td></tr>
+<tr class="separator:gab299e9ceea3b4acdfbc88ba3c109fec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga195dadac2cf364a516d3a0ee6666667d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga195dadac2cf364a516d3a0ee6666667d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CRC_MODE_POLY_CRC16</b>&#160;&#160;&#160;(0x01)		/** Select CRC-16 polynomial */</td></tr>
+<tr class="separator:ga195dadac2cf364a516d3a0ee6666667d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6b3652e78fa38ec58fd0b7a8e6ea0466"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga6b3652e78fa38ec58fd0b7a8e6ea0466"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CRC_MODE_POLY_CRC32</b>&#160;&#160;&#160;(0x02)		/** Select CRC-32 polynomial */</td></tr>
+<tr class="separator:ga6b3652e78fa38ec58fd0b7a8e6ea0466"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac2dbf94b651eb429d601467f229edb16"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gac2dbf94b651eb429d601467f229edb16"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CRC_MODE_WRDATA_BITMASK</b>&#160;&#160;&#160;(0x03 &lt;&lt; 2)	/** CRC WR_Data Config Bit mask */</td></tr>
+<tr class="separator:gac2dbf94b651eb429d601467f229edb16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe61010ede7485002eeb94348292d37c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gafe61010ede7485002eeb94348292d37c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CRC_MODE_WRDATA_BIT_RVS</b>&#160;&#160;&#160;(1 &lt;&lt; 2)	/** Select Bit order reverse for WR_DATA (per byte) */</td></tr>
+<tr class="separator:gafe61010ede7485002eeb94348292d37c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaccdcfebb75c72c84e820acba825745dd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaccdcfebb75c72c84e820acba825745dd"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CRC_MODE_WRDATA_CMPL</b>&#160;&#160;&#160;(1 &lt;&lt; 3)	/** Select One's complement for WR_DATA */</td></tr>
+<tr class="separator:gaccdcfebb75c72c84e820acba825745dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga65b4f57b5bfcb9ce4657165b08414cc2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga65b4f57b5bfcb9ce4657165b08414cc2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CRC_MODE_SUM_BITMASK</b>&#160;&#160;&#160;(0x03 &lt;&lt; 4)	/** CRC Sum Config Bit mask */</td></tr>
+<tr class="separator:ga65b4f57b5bfcb9ce4657165b08414cc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0c91a7b3901fe9c4621d2ae649fd4109"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga0c91a7b3901fe9c4621d2ae649fd4109"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CRC_MODE_SUM_BIT_RVS</b>&#160;&#160;&#160;(1 &lt;&lt; 4)	/** Select Bit order reverse for CRC_SUM */</td></tr>
+<tr class="separator:ga0c91a7b3901fe9c4621d2ae649fd4109"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga09f593cc1cc47703b61b646d46129920"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga09f593cc1cc47703b61b646d46129920"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CRC_MODE_SUM_CMPL</b>&#160;&#160;&#160;(1 &lt;&lt; 5)	/** Select One's complement for CRC_SUM */</td></tr>
+<tr class="separator:ga09f593cc1cc47703b61b646d46129920"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga08609304b3c7b51bd3af753085dae2dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga08609304b3c7b51bd3af753085dae2dc"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MODE_CFG_CCITT</b>&#160;&#160;&#160;(0x00)	/** Pre-defined mode word for default CCITT setup */</td></tr>
+<tr class="separator:ga08609304b3c7b51bd3af753085dae2dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga842ae0297b24edbc699ff055b7eb82e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga842ae0297b24edbc699ff055b7eb82e6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MODE_CFG_CRC16</b>&#160;&#160;&#160;(0x15)	/** Pre-defined mode word for default CRC16 setup */</td></tr>
+<tr class="separator:ga842ae0297b24edbc699ff055b7eb82e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1e1b89a5979835492e92a8b60a3aaf86"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga1e1b89a5979835492e92a8b60a3aaf86"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MODE_CFG_CRC32</b>&#160;&#160;&#160;(0x36)	/** Pre-defined mode word for default CRC32 setup */</td></tr>
+<tr class="separator:ga1e1b89a5979835492e92a8b60a3aaf86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga79aef62a05eb501a399886faf8ba1724"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga79aef62a05eb501a399886faf8ba1724"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CRC_SEED_CCITT</b>&#160;&#160;&#160;(0x0000FFFF)/** Initial seed value for CCITT mode */</td></tr>
+<tr class="separator:ga79aef62a05eb501a399886faf8ba1724"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3c25d76665e516b5ad6275b6f0d476d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga3c25d76665e516b5ad6275b6f0d476d8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CRC_SEED_CRC16</b>&#160;&#160;&#160;(0x00000000)/** Initial seed value for CRC16 mode */</td></tr>
+<tr class="separator:ga3c25d76665e516b5ad6275b6f0d476d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5ac933f0a862d05b4ab4340dd953b1c4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga5ac933f0a862d05b4ab4340dd953b1c4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CRC_SEED_CRC32</b>&#160;&#160;&#160;(0xFFFFFFFF)/** Initial seed value for CRC32 mode */</td></tr>
+<tr class="separator:ga5ac933f0a862d05b4ab4340dd953b1c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:ga20e3ba975e0822248fcb229623d5e427"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga20e3ba975e0822248fcb229623d5e427"></a>
+typedef enum <a class="el" href="group___i_p___c_r_c__001.html#gaf696dc17eae6692193c1ae078ebab1d7">IP_CRC_001_POLY</a>&#160;</td><td class="memItemRight" valign="bottom"><b>IP_CRC_001_POLY_T</b></td></tr>
+<tr class="separator:ga20e3ba975e0822248fcb229623d5e427"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Énumérations</h2></td></tr>
+<tr class="memitem:gaf696dc17eae6692193c1ae078ebab1d7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___c_r_c__001.html#gaf696dc17eae6692193c1ae078ebab1d7">IP_CRC_001_POLY</a> { <a class="el" href="group___i_p___c_r_c__001.html#ggaf696dc17eae6692193c1ae078ebab1d7a8336ca140ef85551e01bb3e711640b74">CRC_POLY_CCITT</a> = CRC_MODE_POLY_CCITT, 
+<a class="el" href="group___i_p___c_r_c__001.html#ggaf696dc17eae6692193c1ae078ebab1d7a784e5a751f99ddfbcd4b39e37e3cf92f">CRC_POLY_CRC16</a> = CRC_MODE_POLY_CRC16, 
+<a class="el" href="group___i_p___c_r_c__001.html#ggaf696dc17eae6692193c1ae078ebab1d7acb1a0bddca1ca1b142862635cc2cde5a">CRC_POLY_CRC32</a> = CRC_MODE_POLY_CRC32, 
+<b>CRC_POLY_LAST</b>
+ }</td></tr>
+<tr class="separator:gaf696dc17eae6692193c1ae078ebab1d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ga5b1b7d7399d059759d364c912d8be97d"><td class="memItemLeft" align="right" valign="top">STATIC INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___c_r_c__001.html#ga5b1b7d7399d059759d364c912d8be97d">IP_CRC_Init</a> (<a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *pCRC)</td></tr>
+<tr class="memdesc:ga5b1b7d7399d059759d364c912d8be97d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the CRC Engine.  <a href="#ga5b1b7d7399d059759d364c912d8be97d">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ga5b1b7d7399d059759d364c912d8be97d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3579d0bf0d18b14523049ef00d6a58a6"><td class="memItemLeft" align="right" valign="top">STATIC INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___c_r_c__001.html#ga3579d0bf0d18b14523049ef00d6a58a6">IP_CRC_DeInit</a> (<a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *pCRC)</td></tr>
+<tr class="memdesc:ga3579d0bf0d18b14523049ef00d6a58a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">De-initializes the CRC Engine.  <a href="#ga3579d0bf0d18b14523049ef00d6a58a6">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ga3579d0bf0d18b14523049ef00d6a58a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf94cdbc9591c7419bfd396cde28557b0"><td class="memItemLeft" align="right" valign="top">STATIC INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___c_r_c__001.html#gaf94cdbc9591c7419bfd396cde28557b0">IP_CRC_SetPoly</a> (<a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *pCRC, IP_CRC_001_POLY_T poly, uint32_t flags)</td></tr>
+<tr class="memdesc:gaf94cdbc9591c7419bfd396cde28557b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select polynomial for CRC Engine.  <a href="#gaf94cdbc9591c7419bfd396cde28557b0">Plus de détails...</a><br/></td></tr>
+<tr class="separator:gaf94cdbc9591c7419bfd396cde28557b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga252c13be1269729064e6a8e83f39deef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___c_r_c__001.html#ga252c13be1269729064e6a8e83f39deef">IP_CRC_UseDefaultConfig</a> (<a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *pCRC, IP_CRC_001_POLY_T poly)</td></tr>
+<tr class="memdesc:ga252c13be1269729064e6a8e83f39deef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up the CRC engine with defaults based on the polynomial to be used.  <a href="#ga252c13be1269729064e6a8e83f39deef">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ga252c13be1269729064e6a8e83f39deef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad5a0b247402e46263268fd9f15a75508"><td class="memItemLeft" align="right" valign="top">STATIC INLINE uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___c_r_c__001.html#gad5a0b247402e46263268fd9f15a75508">IP_CRC_GetMode</a> (<a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *pCRC)</td></tr>
+<tr class="memdesc:gad5a0b247402e46263268fd9f15a75508"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get mode register of CRC Engine.  <a href="#gad5a0b247402e46263268fd9f15a75508">Plus de détails...</a><br/></td></tr>
+<tr class="separator:gad5a0b247402e46263268fd9f15a75508"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab2d6a131f2df5ea41b7cbf4bfaf69d9e"><td class="memItemLeft" align="right" valign="top">STATIC INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___c_r_c__001.html#gab2d6a131f2df5ea41b7cbf4bfaf69d9e">IP_CRC_SetMode</a> (<a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *pCRC, uint32_t mode)</td></tr>
+<tr class="memdesc:gab2d6a131f2df5ea41b7cbf4bfaf69d9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set mode register of CRC Engine.  <a href="#gab2d6a131f2df5ea41b7cbf4bfaf69d9e">Plus de détails...</a><br/></td></tr>
+<tr class="separator:gab2d6a131f2df5ea41b7cbf4bfaf69d9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8318df7199931a3f2668e3fe64992a72"><td class="memItemLeft" align="right" valign="top">STATIC INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___c_r_c__001.html#ga8318df7199931a3f2668e3fe64992a72">IP_CRC_SetSeed</a> (<a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *pCRC, uint32_t Seed)</td></tr>
+<tr class="memdesc:ga8318df7199931a3f2668e3fe64992a72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Seed value.  <a href="#ga8318df7199931a3f2668e3fe64992a72">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ga8318df7199931a3f2668e3fe64992a72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab327c5c0481c215d91dc84c778d1c36b"><td class="memItemLeft" align="right" valign="top">STATIC INLINE uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___c_r_c__001.html#gab327c5c0481c215d91dc84c778d1c36b">IP_CRC_GetSeed</a> (<a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *pCRC)</td></tr>
+<tr class="memdesc:gab327c5c0481c215d91dc84c778d1c36b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Seed value.  <a href="#gab327c5c0481c215d91dc84c778d1c36b">Plus de détails...</a><br/></td></tr>
+<tr class="separator:gab327c5c0481c215d91dc84c778d1c36b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0796cfe8fdb936e0ba01e7bcc98dff52"><td class="memItemLeft" align="right" valign="top">STATIC INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___c_r_c__001.html#ga0796cfe8fdb936e0ba01e7bcc98dff52">IP_CRC_Write8</a> (<a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *pCRC, uint8_t data)</td></tr>
+<tr class="memdesc:ga0796cfe8fdb936e0ba01e7bcc98dff52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write 8-bit data to CRC WR Data register.  <a href="#ga0796cfe8fdb936e0ba01e7bcc98dff52">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ga0796cfe8fdb936e0ba01e7bcc98dff52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6c05e24b0e21049fba6009bdfbeeeeec"><td class="memItemLeft" align="right" valign="top">STATIC INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___c_r_c__001.html#ga6c05e24b0e21049fba6009bdfbeeeeec">IP_CRC_Write16</a> (<a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *pCRC, uint16_t data)</td></tr>
+<tr class="memdesc:ga6c05e24b0e21049fba6009bdfbeeeeec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write 16-bit data to CRC WR Data register.  <a href="#ga6c05e24b0e21049fba6009bdfbeeeeec">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ga6c05e24b0e21049fba6009bdfbeeeeec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3f22f9151c227b6158bcd3afc3225fbb"><td class="memItemLeft" align="right" valign="top">STATIC INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___c_r_c__001.html#ga3f22f9151c227b6158bcd3afc3225fbb">IP_CRC_Write32</a> (<a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *pCRC, uint32_t data)</td></tr>
+<tr class="memdesc:ga3f22f9151c227b6158bcd3afc3225fbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write 32-bit data to CRC WR Data register.  <a href="#ga3f22f9151c227b6158bcd3afc3225fbb">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ga3f22f9151c227b6158bcd3afc3225fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga39cec18f5a1de8b374ddb3e16710b30e"><td class="memItemLeft" align="right" valign="top">STATIC INLINE uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___c_r_c__001.html#ga39cec18f5a1de8b374ddb3e16710b30e">IP_CRC_ReadSum</a> (<a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *pCRC)</td></tr>
+<tr class="memdesc:ga39cec18f5a1de8b374ddb3e16710b30e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read current calculated checksum from CRC Engine.  <a href="#ga39cec18f5a1de8b374ddb3e16710b30e">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ga39cec18f5a1de8b374ddb3e16710b30e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5880b519ad525d43494919bd7c95900c"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___c_r_c__001.html#ga5880b519ad525d43494919bd7c95900c">IP_CRC_CRC8</a> (<a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *pCRC, const uint8_t *data, uint32_t bytes)</td></tr>
+<tr class="memdesc:ga5880b519ad525d43494919bd7c95900c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience function for computing a standard CCITT checksum from an 8-bit data block.  <a href="#ga5880b519ad525d43494919bd7c95900c">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ga5880b519ad525d43494919bd7c95900c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3c7412bc246b84bfd1b628070d2c1470"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___c_r_c__001.html#ga3c7412bc246b84bfd1b628070d2c1470">IP_CRC_CRC16</a> (<a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *pCRC, const uint16_t *data, uint32_t hwords)</td></tr>
+<tr class="memdesc:ga3c7412bc246b84bfd1b628070d2c1470"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience function for computing a standard CRC16 checksum from 16-bit data block.  <a href="#ga3c7412bc246b84bfd1b628070d2c1470">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ga3c7412bc246b84bfd1b628070d2c1470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1beb57dacec0beaee62bd0acf20d4bd4"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___c_r_c__001.html#ga1beb57dacec0beaee62bd0acf20d4bd4">IP_CRC_CRC32</a> (<a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *pCRC, const uint32_t *data, uint32_t words)</td></tr>
+<tr class="memdesc:ga1beb57dacec0beaee62bd0acf20d4bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience function for computing a standard CRC32 checksum from 32-bit data block.  <a href="#ga1beb57dacec0beaee62bd0acf20d4bd4">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ga1beb57dacec0beaee62bd0acf20d4bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<h2 class="groupheader">Documentation du type de l'énumération</h2>
+<a class="anchor" id="gaf696dc17eae6692193c1ae078ebab1d7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___i_p___c_r_c__001.html#gaf696dc17eae6692193c1ae078ebab1d7">IP_CRC_001_POLY</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><em><a class="anchor" id="ggaf696dc17eae6692193c1ae078ebab1d7a8336ca140ef85551e01bb3e711640b74"></a>CRC_POLY_CCITT</em>&nbsp;</td><td class="fielddoc">
+<p>CRC-CCIT polynomial </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggaf696dc17eae6692193c1ae078ebab1d7a784e5a751f99ddfbcd4b39e37e3cf92f"></a>CRC_POLY_CRC16</em>&nbsp;</td><td class="fielddoc">
+<p>CRC-16 polynomial </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggaf696dc17eae6692193c1ae078ebab1d7acb1a0bddca1ca1b142862635cc2cde5a"></a>CRC_POLY_CRC32</em>&nbsp;</td><td class="fielddoc">
+<p>CRC-32 polynomial </p>
+</td></tr>
+</table>
+
+<p>Définition à la ligne <a class="el" href="crc__001_8h_source.html#l00087">87</a> du fichier <a class="el" href="crc__001_8h_source.html">crc_001.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a class="anchor" id="ga3c7412bc246b84bfd1b628070d2c1470"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t IP_CRC_CRC16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pCRC</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>hwords</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convenience function for computing a standard CRC16 checksum from 16-bit data block. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCRC</td><td>: Pointer to selected CRC Engine register block structure </td></tr>
+    <tr><td class="paramname">data</td><td>: Pointer to the block of 16-bit data </td></tr>
+    <tr><td class="paramname">hwords</td><td>: The number of halfword entries pointed to by data </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Computed checksum for the block </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="crc__001_8c_source.html#l00084">84</a> du fichier <a class="el" href="crc__001_8c_source.html">crc_001.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga1beb57dacec0beaee62bd0acf20d4bd4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t IP_CRC_CRC32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pCRC</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint32_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>words</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convenience function for computing a standard CRC32 checksum from 32-bit data block. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCRC</td><td>: Pointer to selected CRC Engine register block structure </td></tr>
+    <tr><td class="paramname">data</td><td>: Pointer to the block of 32-bit data </td></tr>
+    <tr><td class="paramname">words</td><td>: The number of 32-bit entries pointed to by data </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Computed checksum for the block </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="crc__001_8c_source.html#l00095">95</a> du fichier <a class="el" href="crc__001_8c_source.html">crc_001.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga5880b519ad525d43494919bd7c95900c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t IP_CRC_CRC8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pCRC</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>bytes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convenience function for computing a standard CCITT checksum from an 8-bit data block. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCRC</td><td>: Pointer to selected CRC Engine register block structure </td></tr>
+    <tr><td class="paramname">data</td><td>: Pointer to the block of 8 bit data </td></tr>
+    <tr><td class="paramname">bytes</td><td>: The number of bytes pointed to by data </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Computed checksum for the block </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="crc__001_8c_source.html#l00073">73</a> du fichier <a class="el" href="crc__001_8c_source.html">crc_001.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga3579d0bf0d18b14523049ef00d6a58a6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE void IP_CRC_DeInit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pCRC</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>De-initializes the CRC Engine. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCRC</td><td>: Pointer to selected CRC Engine register block structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Nothing </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="crc__001_8h_source.html#l00106">106</a> du fichier <a class="el" href="crc__001_8h_source.html">crc_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gad5a0b247402e46263268fd9f15a75508"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE uint32_t IP_CRC_GetMode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pCRC</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get mode register of CRC Engine. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCRC</td><td>: Pointer to selected CRC Engine register block structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Current CRC Mode register (Or-ed bits value of CRC_MODE_*) </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="crc__001_8h_source.html#l00136">136</a> du fichier <a class="el" href="crc__001_8h_source.html">crc_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gab327c5c0481c215d91dc84c778d1c36b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE uint32_t IP_CRC_GetSeed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pCRC</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get Seed value. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCRC</td><td>: Pointer to selected CRC Engine register block structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>current seed value </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="crc__001_8h_source.html#l00168">168</a> du fichier <a class="el" href="crc__001_8h_source.html">crc_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga5b1b7d7399d059759d364c912d8be97d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE void IP_CRC_Init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pCRC</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the CRC Engine. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCRC</td><td>: Pointer to selected CRC Engine register block structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Nothing </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="crc__001_8h_source.html#l00099">99</a> du fichier <a class="el" href="crc__001_8h_source.html">crc_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga39cec18f5a1de8b374ddb3e16710b30e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE uint32_t IP_CRC_ReadSum </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pCRC</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read current calculated checksum from CRC Engine. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCRC</td><td>: Pointer to selected CRC Engine register block structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Check sum value </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="crc__001_8h_source.html#l00211">211</a> du fichier <a class="el" href="crc__001_8h_source.html">crc_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gab2d6a131f2df5ea41b7cbf4bfaf69d9e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE void IP_CRC_SetMode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pCRC</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set mode register of CRC Engine. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCRC</td><td>: Pointer to selected CRC Engine register block structure </td></tr>
+    <tr><td class="paramname">mode</td><td>: mode value to be set in mode register </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Nothing </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="crc__001_8h_source.html#l00147">147</a> du fichier <a class="el" href="crc__001_8h_source.html">crc_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gaf94cdbc9591c7419bfd396cde28557b0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE void IP_CRC_SetPoly </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pCRC</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IP_CRC_001_POLY_T&#160;</td>
+          <td class="paramname"><em>poly</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Select polynomial for CRC Engine. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCRC</td><td>: Pointer to selected CRC Engine register block structure </td></tr>
+    <tr><td class="paramname">poly</td><td>: CRC polynomial selection </td></tr>
+    <tr><td class="paramname">flags</td><td>: An Or'ed value of flags that setup the mode </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Nothing </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Flags for setting up the mode word include CRC_MODE_WRDATA_BIT_RVS, CRC_MODE_WRDATA_CMPL, CRC_MODE_SUM_BIT_RVS, and CRC_MODE_SUM_CMPL. </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="crc__001_8h_source.html#l00117">117</a> du fichier <a class="el" href="crc__001_8h_source.html">crc_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga8318df7199931a3f2668e3fe64992a72"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE void IP_CRC_SetSeed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pCRC</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>Seed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set Seed value. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCRC</td><td>: Pointer to selected CRC Engine register block structure </td></tr>
+    <tr><td class="paramname">Seed</td><td>: selected seed value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Nothing </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="crc__001_8h_source.html#l00158">158</a> du fichier <a class="el" href="crc__001_8h_source.html">crc_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga252c13be1269729064e6a8e83f39deef"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IP_CRC_UseDefaultConfig </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pCRC</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IP_CRC_001_POLY_T&#160;</td>
+          <td class="paramname"><em>poly</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets up the CRC engine with defaults based on the polynomial to be used. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCRC</td><td>: Pointer to selected CRC Engine register block structure </td></tr>
+    <tr><td class="paramname">poly</td><td>: The enumerated polynomial to be used </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Nothing </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="crc__001_8c_source.html#l00051">51</a> du fichier <a class="el" href="crc__001_8c_source.html">crc_001.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga6c05e24b0e21049fba6009bdfbeeeeec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE void IP_CRC_Write16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pCRC</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write 16-bit data to CRC WR Data register. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCRC</td><td>: Pointer to selected CRC Engine register block structure </td></tr>
+    <tr><td class="paramname">data</td><td>: data to be written </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Nothing </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="crc__001_8h_source.html#l00190">190</a> du fichier <a class="el" href="crc__001_8h_source.html">crc_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga3f22f9151c227b6158bcd3afc3225fbb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE void IP_CRC_Write32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pCRC</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write 32-bit data to CRC WR Data register. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCRC</td><td>: Pointer to selected CRC Engine register block structure </td></tr>
+    <tr><td class="paramname">data</td><td>: data to be written </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Nothing </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="crc__001_8h_source.html#l00201">201</a> du fichier <a class="el" href="crc__001_8h_source.html">crc_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga0796cfe8fdb936e0ba01e7bcc98dff52"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE void IP_CRC_Write8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___c_r_c__001___t.html">IP_CRC_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pCRC</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write 8-bit data to CRC WR Data register. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCRC</td><td>: Pointer to selected CRC Engine register block structure </td></tr>
+    <tr><td class="paramname">data</td><td>: data to be written </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Nothing </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="crc__001_8h_source.html#l00179">179</a> du fichier <a class="el" href="crc__001_8h_source.html">crc_001.h</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré le Mardi Janvier 7 2014 11:23:08 pour Hexapode par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
+  </ul>
+</div>
+</body>
+</html>

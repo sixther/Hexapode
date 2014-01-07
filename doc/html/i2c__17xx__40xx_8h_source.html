@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Hexapode:  Fichier source de lpcopen/software/lpc_core/lpc_chip/chip_17xx_40xx/i2c_17xx_40xx.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="IN7Robot.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Hexapode
+   &#160;<span id="projectnumber">Version 1.0</span>
+   </div>
+   <div id="projectbrief">Thomas Waquet &amp; Gauthier Dhalluin</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('i2c__17xx__40xx_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Groupes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">i2c_17xx_40xx.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * @brief LPC17xx/40xx I2C driver</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * @note</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Copyright(C) NXP Semiconductors, 2012</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * @par</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * Software that is described herein is for illustrative purposes only</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * which provides customers with programming information regarding the</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * LPC products.  This software is supplied &quot;AS IS&quot; without any warranties of</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * any kind, and NXP Semiconductors and its licensor disclaim any and</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * all warranties, express or implied, including all implied warranties of</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * merchantability, fitness for a particular purpose and non-infringement of</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * intellectual property rights.  NXP Semiconductors assumes no responsibility</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * or liability for the use of the software, conveys no license or rights under any</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * patent, copyright, mask work right, or any other intellectual property rights in</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * or to any products. NXP Semiconductors reserves the right to make changes</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * in the software without notification. NXP Semiconductors also makes no</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * representation or warranty that such application will be suitable for the</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * specified use without further testing or modification.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> * @par</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> * Permission to use, copy, modify, and distribute this software and its</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> * documentation is hereby granted, under NXP Semiconductors&#39; and its</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * licensor&#39;s relevant copyrights in the software, without fee, provided that it</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> * is used in conjunction with NXP Semiconductors microcontrollers.  This</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> * copyright, permission, and disclaimer notice must appear in all copies of</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> * this code.</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#ifndef __I2C_17XX_40XX_H_</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __I2C_17XX_40XX_H_</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor"></span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="group___i2_c__17_x_x__40_x_x.html#gaec46000c6a1fe2c12c9a0c7ee3677626">   52</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="group___i2_c__17_x_x__40_x_x.html#gaec46000c6a1fe2c12c9a0c7ee3677626">I2C_ID</a> {</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="group___i2_c__17_x_x__40_x_x.html#ggaec46000c6a1fe2c12c9a0c7ee3677626a8b606b29817406621b85b78b1ee9e653">   53</a></span>&#160;    <a class="code" href="group___i2_c__17_x_x__40_x_x.html#ggaec46000c6a1fe2c12c9a0c7ee3677626a8b606b29817406621b85b78b1ee9e653">I2C0</a>,               </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="group___i2_c__17_x_x__40_x_x.html#ggaec46000c6a1fe2c12c9a0c7ee3677626aeb0f494c71f34592c5a4500ee98ab4a2">   54</a></span>&#160;    <a class="code" href="group___i2_c__17_x_x__40_x_x.html#ggaec46000c6a1fe2c12c9a0c7ee3677626aeb0f494c71f34592c5a4500ee98ab4a2">I2C1</a>,               </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="group___i2_c__17_x_x__40_x_x.html#ggaec46000c6a1fe2c12c9a0c7ee3677626ae2cc6f0481e798aedb5fd5c6a2bfc01b">   55</a></span>&#160;    <a class="code" href="group___i2_c__17_x_x__40_x_x.html#ggaec46000c6a1fe2c12c9a0c7ee3677626ae2cc6f0481e798aedb5fd5c6a2bfc01b">I2C2</a>,               </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="group___i2_c__17_x_x__40_x_x.html#ggaec46000c6a1fe2c12c9a0c7ee3677626a84f3a2e3885474dda12c3d223eef5304">   56</a></span>&#160;    <a class="code" href="group___i2_c__17_x_x__40_x_x.html#ggaec46000c6a1fe2c12c9a0c7ee3677626a84f3a2e3885474dda12c3d223eef5304">I2C_NUM_INTERFACE</a>   </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;} <a class="code" href="group___i2_c__17_x_x__40_x_x.html#ga957556a4d900506cd4cba8427afd81e6">I2C_ID_T</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="group___i2_c__17_x_x__40_x_x.html#gacb2cd4e03ea48339d327e4f387441bf3">   62</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="group___i2_c__17_x_x__40_x_x.html#ggacb2cd4e03ea48339d327e4f387441bf3a565d2f9e44285e1965deb390497f62ac">   63</a></span>&#160;    <a class="code" href="group___i2_c__17_x_x__40_x_x.html#ggacb2cd4e03ea48339d327e4f387441bf3a565d2f9e44285e1965deb390497f62ac">I2C_EVENT_WAIT</a> = 1, </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="group___i2_c__17_x_x__40_x_x.html#ggacb2cd4e03ea48339d327e4f387441bf3a43d00f7d92100d4af6df5514e4ccf1d1">   64</a></span>&#160;    <a class="code" href="group___i2_c__17_x_x__40_x_x.html#ggacb2cd4e03ea48339d327e4f387441bf3a43d00f7d92100d4af6df5514e4ccf1d1">I2C_EVENT_DONE</a>,     </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="group___i2_c__17_x_x__40_x_x.html#ggacb2cd4e03ea48339d327e4f387441bf3acec197aede70fe12008a68435bf5f339">   65</a></span>&#160;    <a class="code" href="group___i2_c__17_x_x__40_x_x.html#ggacb2cd4e03ea48339d327e4f387441bf3acec197aede70fe12008a68435bf5f339">I2C_EVENT_LOCK</a>,     </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="group___i2_c__17_x_x__40_x_x.html#ggacb2cd4e03ea48339d327e4f387441bf3aae6af45644ff5abf7016b5a8e8f41393">   66</a></span>&#160;    <a class="code" href="group___i2_c__17_x_x__40_x_x.html#ggacb2cd4e03ea48339d327e4f387441bf3aae6af45644ff5abf7016b5a8e8f41393">I2C_EVENT_UNLOCK</a>,   </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="group___i2_c__17_x_x__40_x_x.html#ggacb2cd4e03ea48339d327e4f387441bf3a290fcc1bb657102af26daa1b84472848">   67</a></span>&#160;    <a class="code" href="group___i2_c__17_x_x__40_x_x.html#ggacb2cd4e03ea48339d327e4f387441bf3a290fcc1bb657102af26daa1b84472848">I2C_EVENT_SLAVE_RX</a>, </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="group___i2_c__17_x_x__40_x_x.html#ggacb2cd4e03ea48339d327e4f387441bf3a3911d9b6505f77f0bed3f21b2710ca58">   68</a></span>&#160;    <a class="code" href="group___i2_c__17_x_x__40_x_x.html#ggacb2cd4e03ea48339d327e4f387441bf3a3911d9b6505f77f0bed3f21b2710ca58">I2C_EVENT_SLAVE_TX</a>, </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;} <a class="code" href="group___i2_c__17_x_x__40_x_x.html#gacb2cd4e03ea48339d327e4f387441bf3">I2C_EVENT_T</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="group___i2_c__17_x_x__40_x_x.html#ga932bfc2f55180a71b93427e88b6223e6">   74</a></span>&#160;<span class="keyword">typedef</span> void (*<a class="code" href="group___i2_c__17_x_x__40_x_x.html#ga932bfc2f55180a71b93427e88b6223e6">I2C_EVENTHANDLER_T</a>)(<a class="code" href="group___i2_c__17_x_x__40_x_x.html#ga957556a4d900506cd4cba8427afd81e6">I2C_ID_T</a>, <a class="code" href="group___i2_c__17_x_x__40_x_x.html#gacb2cd4e03ea48339d327e4f387441bf3">I2C_EVENT_T</a>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i2_c__17_x_x__40_x_x.html#gab79263d278814945df2cd44c5db7b514">Chip_I2C_Init</a>(I2C_ID_T <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i2_c__17_x_x__40_x_x.html#ga334c2c12edda443a7e949a1ea4a6a646">Chip_I2C_DeInit</a>(I2C_ID_T <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i2_c__17_x_x__40_x_x.html#ga17fac5d72058db8eed11d247e78b74ed">Chip_I2C_SetClockRate</a>(I2C_ID_T <span class="keywordtype">id</span>, uint32_t clockrate);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;uint32_t <a class="code" href="group___i2_c__17_x_x__40_x_x.html#ga6b13511432337d21b8cd325651cc5b63">Chip_I2C_GetClockRate</a>(I2C_ID_T <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group___i2_c__17_x_x__40_x_x.html#ga5f89391d66048894f4365d3b2b7df267">Chip_I2C_MasterTransfer</a>(I2C_ID_T <span class="keywordtype">id</span>, <a class="code" href="struct_i2_c___x_f_e_r___t.html">I2C_XFER_T</a> *xfer);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group___i2_c__17_x_x__40_x_x.html#ga9ff549bdb526786d313c141b11cab43e">Chip_I2C_MasterSend</a>(I2C_ID_T <span class="keywordtype">id</span>, uint8_t slaveAddr, <span class="keyword">const</span> uint8_t *buff, uint8_t len);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group___i2_c__17_x_x__40_x_x.html#ga4a875b456dfe68acbe8ce1fc74d88bd3">Chip_I2C_MasterCmdRead</a>(I2C_ID_T <span class="keywordtype">id</span>, uint8_t slaveAddr, uint8_t cmd, uint8_t *buff, <span class="keywordtype">int</span> len);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<a class="code" href="group___i2_c__17_x_x__40_x_x.html#ga932bfc2f55180a71b93427e88b6223e6">I2C_EVENTHANDLER_T</a> <a class="code" href="group___i2_c__17_x_x__40_x_x.html#gafad03b4f6c0ecb3f59f014ab63bfda5c">Chip_I2C_GetMasterEventHandler</a>(I2C_ID_T <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group___i2_c__17_x_x__40_x_x.html#ga1fc3fc0946344e9551d9eef0bbf610b9">Chip_I2C_SetMasterEventHandler</a>(I2C_ID_T <span class="keywordtype">id</span>, <a class="code" href="group___i2_c__17_x_x__40_x_x.html#ga932bfc2f55180a71b93427e88b6223e6">I2C_EVENTHANDLER_T</a> event);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group___i2_c__17_x_x__40_x_x.html#gae816049843eb162c803b5058ebd9a25c">Chip_I2C_MasterRead</a>(I2C_ID_T <span class="keywordtype">id</span>, uint8_t slaveAddr, uint8_t *buff, <span class="keywordtype">int</span> len);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i2_c__17_x_x__40_x_x.html#gaaa89a66d658a41325b3c5e56bc059401">Chip_I2C_EventHandlerPolling</a>(I2C_ID_T <span class="keywordtype">id</span>, <a class="code" href="group___i2_c__17_x_x__40_x_x.html#gacb2cd4e03ea48339d327e4f387441bf3">I2C_EVENT_T</a> event);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i2_c__17_x_x__40_x_x.html#ga06b84fe3fad7ffd4ccb93f2683781936">Chip_I2C_EventHandler</a>(I2C_ID_T <span class="keywordtype">id</span>, <a class="code" href="group___i2_c__17_x_x__40_x_x.html#gacb2cd4e03ea48339d327e4f387441bf3">I2C_EVENT_T</a> event);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i2_c__17_x_x__40_x_x.html#ga179362e42a3de931ff7f57ca698254fa">Chip_I2C_MasterStateHandler</a>(I2C_ID_T <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i2_c__17_x_x__40_x_x.html#ga68f1d630224edab35ba796373c5867c0">Chip_I2C_Disable</a>(I2C_ID_T <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group___i2_c__17_x_x__40_x_x.html#ga5fdf29aff7847c93373cf02da41285e1">Chip_I2C_IsMasterActive</a>(I2C_ID_T <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i2_c__17_x_x__40_x_x.html#gaf6ea40668dde26e406f76ff3ddeda527">Chip_I2C_SlaveSetup</a>(I2C_ID_T <span class="keywordtype">id</span>,</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                         <a class="code" href="group___i_p___i2_c__001.html#ga5fb1ba338fb3822bb6ca012adc4194bf">I2C_SLAVE_ID</a> sid,</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                         <a class="code" href="struct_i2_c___x_f_e_r___t.html">I2C_XFER_T</a> *xfer,</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                         <a class="code" href="group___i2_c__17_x_x__40_x_x.html#ga932bfc2f55180a71b93427e88b6223e6">I2C_EVENTHANDLER_T</a> event,</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                         uint8_t addrMask);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i2_c__17_x_x__40_x_x.html#ga650618a5f4717c46ae3ea304142ddc03">Chip_I2C_SlaveStateHandler</a>(I2C_ID_T <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group___i2_c__17_x_x__40_x_x.html#ga4240d03d5dda43ddc8afd527b3172318">Chip_I2C_IsStateChanged</a>(I2C_ID_T <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="preprocessor"></span>}</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __I2C_17XX_40XX_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_ggacb2cd4e03ea48339d327e4f387441bf3acec197aede70fe12008a68435bf5f339"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#ggacb2cd4e03ea48339d327e4f387441bf3acec197aede70fe12008a68435bf5f339">I2C_EVENT_LOCK</a></div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8h_source.html#l00065">i2c_17xx_40xx.h:65</a></div></div>
+<div class="ttc" id="struct_i2_c___x_f_e_r___t_html"><div class="ttname"><a href="struct_i2_c___x_f_e_r___t.html">I2C_XFER_T</a></div><div class="ttdoc">Master transfer data structure definitions. </div><div class="ttdef"><b>Definition:</b> <a href="i2c__001_8h_source.html#l00267">i2c_001.h:267</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_ga179362e42a3de931ff7f57ca698254fa"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#ga179362e42a3de931ff7f57ca698254fa">Chip_I2C_MasterStateHandler</a></div><div class="ttdeci">void Chip_I2C_MasterStateHandler(I2C_ID_T id)</div><div class="ttdoc">I2C Master transfer state change handler. </div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8c_source.html#l00241">i2c_17xx_40xx.c:241</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_ggacb2cd4e03ea48339d327e4f387441bf3a43d00f7d92100d4af6df5514e4ccf1d1"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#ggacb2cd4e03ea48339d327e4f387441bf3a43d00f7d92100d4af6df5514e4ccf1d1">I2C_EVENT_DONE</a></div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8h_source.html#l00064">i2c_17xx_40xx.h:64</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_ggacb2cd4e03ea48339d327e4f387441bf3a290fcc1bb657102af26daa1b84472848"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#ggacb2cd4e03ea48339d327e4f387441bf3a290fcc1bb657102af26daa1b84472848">I2C_EVENT_SLAVE_RX</a></div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8h_source.html#l00067">i2c_17xx_40xx.h:67</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_ggacb2cd4e03ea48339d327e4f387441bf3a3911d9b6505f77f0bed3f21b2710ca58"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#ggacb2cd4e03ea48339d327e4f387441bf3a3911d9b6505f77f0bed3f21b2710ca58">I2C_EVENT_SLAVE_TX</a></div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8h_source.html#l00068">i2c_17xx_40xx.h:68</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_ggaec46000c6a1fe2c12c9a0c7ee3677626ae2cc6f0481e798aedb5fd5c6a2bfc01b"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#ggaec46000c6a1fe2c12c9a0c7ee3677626ae2cc6f0481e798aedb5fd5c6a2bfc01b">I2C2</a></div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8h_source.html#l00055">i2c_17xx_40xx.h:55</a></div></div>
+<div class="ttc" id="group___i_p___i2_c__001_html_ga5fb1ba338fb3822bb6ca012adc4194bf"><div class="ttname"><a href="group___i_p___i2_c__001.html#ga5fb1ba338fb3822bb6ca012adc4194bf">I2C_SLAVE_ID</a></div><div class="ttdeci">I2C_SLAVE_ID</div><div class="ttdoc">I2C Slave Identifiers. </div><div class="ttdef"><b>Definition:</b> <a href="i2c__001_8h_source.html#l00244">i2c_001.h:244</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_ga932bfc2f55180a71b93427e88b6223e6"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#ga932bfc2f55180a71b93427e88b6223e6">I2C_EVENTHANDLER_T</a></div><div class="ttdeci">void(* I2C_EVENTHANDLER_T)(I2C_ID_T, I2C_EVENT_T)</div><div class="ttdoc">Event handler function type. </div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8h_source.html#l00074">i2c_17xx_40xx.h:74</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_ga6b13511432337d21b8cd325651cc5b63"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#ga6b13511432337d21b8cd325651cc5b63">Chip_I2C_GetClockRate</a></div><div class="ttdeci">uint32_t Chip_I2C_GetClockRate(I2C_ID_T id)</div><div class="ttdoc">Get current clock rate for LPC_I2C peripheral. </div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8c_source.html#l00148">i2c_17xx_40xx.c:148</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_ga68f1d630224edab35ba796373c5867c0"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#ga68f1d630224edab35ba796373c5867c0">Chip_I2C_Disable</a></div><div class="ttdeci">void Chip_I2C_Disable(I2C_ID_T id)</div><div class="ttdoc">Disable I2C peripheral&amp;#39;s operation. </div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8c_source.html#l00298">i2c_17xx_40xx.c:298</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_ga5f89391d66048894f4365d3b2b7df267"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#ga5f89391d66048894f4365d3b2b7df267">Chip_I2C_MasterTransfer</a></div><div class="ttdeci">int Chip_I2C_MasterTransfer(I2C_ID_T id, I2C_XFER_T *xfer)</div><div class="ttdoc">Transmit and Receive data in master mode. </div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8c_source.html#l00170">i2c_17xx_40xx.c:170</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_ga5fdf29aff7847c93373cf02da41285e1"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#ga5fdf29aff7847c93373cf02da41285e1">Chip_I2C_IsMasterActive</a></div><div class="ttdeci">int Chip_I2C_IsMasterActive(I2C_ID_T id)</div><div class="ttdoc">Checks if master xfer in progress. </div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8c_source.html#l00235">i2c_17xx_40xx.c:235</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_gaec46000c6a1fe2c12c9a0c7ee3677626"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#gaec46000c6a1fe2c12c9a0c7ee3677626">I2C_ID</a></div><div class="ttdeci">I2C_ID</div><div class="ttdoc">I2C interface IDs. </div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8h_source.html#l00052">i2c_17xx_40xx.h:52</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_ga1fc3fc0946344e9551d9eef0bbf610b9"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#ga1fc3fc0946344e9551d9eef0bbf610b9">Chip_I2C_SetMasterEventHandler</a></div><div class="ttdeci">int Chip_I2C_SetMasterEventHandler(I2C_ID_T id, I2C_EVENTHANDLER_T event)</div><div class="ttdoc">Set function that must handle I2C events. </div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8c_source.html#l00154">i2c_17xx_40xx.c:154</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_ga650618a5f4717c46ae3ea304142ddc03"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#ga650618a5f4717c46ae3ea304142ddc03">Chip_I2C_SlaveStateHandler</a></div><div class="ttdeci">void Chip_I2C_SlaveStateHandler(I2C_ID_T id)</div><div class="ttdoc">I2C Slave event handler. </div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8c_source.html#l00272">i2c_17xx_40xx.c:272</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_ga9ff549bdb526786d313c141b11cab43e"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#ga9ff549bdb526786d313c141b11cab43e">Chip_I2C_MasterSend</a></div><div class="ttdeci">int Chip_I2C_MasterSend(I2C_ID_T id, uint8_t slaveAddr, const uint8_t *buff, uint8_t len)</div><div class="ttdoc">Transmit data to I2C slave using I2C Master mode. </div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8c_source.html#l00198">i2c_17xx_40xx.c:198</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_ga957556a4d900506cd4cba8427afd81e6"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#ga957556a4d900506cd4cba8427afd81e6">I2C_ID_T</a></div><div class="ttdeci">enum I2C_ID I2C_ID_T</div><div class="ttdoc">I2C interface IDs. </div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_ga4240d03d5dda43ddc8afd527b3172318"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#ga4240d03d5dda43ddc8afd527b3172318">Chip_I2C_IsStateChanged</a></div><div class="ttdeci">int Chip_I2C_IsStateChanged(I2C_ID_T id)</div><div class="ttdoc">I2C peripheral state change checking. </div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8c_source.html#l00304">i2c_17xx_40xx.c:304</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_gab79263d278814945df2cd44c5db7b514"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#gab79263d278814945df2cd44c5db7b514">Chip_I2C_Init</a></div><div class="ttdeci">void Chip_I2C_Init(I2C_ID_T id)</div><div class="ttdoc">Initializes the LPC_I2C peripheral with specified parameter. </div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8c_source.html#l00124">i2c_17xx_40xx.c:124</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_gafad03b4f6c0ecb3f59f014ab63bfda5c"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#gafad03b4f6c0ecb3f59f014ab63bfda5c">Chip_I2C_GetMasterEventHandler</a></div><div class="ttdeci">I2C_EVENTHANDLER_T Chip_I2C_GetMasterEventHandler(I2C_ID_T id)</div><div class="ttdoc">Get pointer to current function handling the events. </div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8c_source.html#l00164">i2c_17xx_40xx.c:164</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_gacb2cd4e03ea48339d327e4f387441bf3"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#gacb2cd4e03ea48339d327e4f387441bf3">I2C_EVENT_T</a></div><div class="ttdeci">I2C_EVENT_T</div><div class="ttdoc">I2C master events. </div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8h_source.html#l00062">i2c_17xx_40xx.h:62</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_ga334c2c12edda443a7e949a1ea4a6a646"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#ga334c2c12edda443a7e949a1ea4a6a646">Chip_I2C_DeInit</a></div><div class="ttdeci">void Chip_I2C_DeInit(I2C_ID_T id)</div><div class="ttdoc">De-initializes the I2C peripheral registers to their default reset values. </div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8c_source.html#l00133">i2c_17xx_40xx.c:133</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_gaaa89a66d658a41325b3c5e56bc059401"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#gaaa89a66d658a41325b3c5e56bc059401">Chip_I2C_EventHandlerPolling</a></div><div class="ttdeci">void Chip_I2C_EventHandlerPolling(I2C_ID_T id, I2C_EVENT_T event)</div><div class="ttdoc">Default event handler for polling operation. </div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8c_source.html#l00104">i2c_17xx_40xx.c:104</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_ggacb2cd4e03ea48339d327e4f387441bf3aae6af45644ff5abf7016b5a8e8f41393"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#ggacb2cd4e03ea48339d327e4f387441bf3aae6af45644ff5abf7016b5a8e8f41393">I2C_EVENT_UNLOCK</a></div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8h_source.html#l00066">i2c_17xx_40xx.h:66</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_ggacb2cd4e03ea48339d327e4f387441bf3a565d2f9e44285e1965deb390497f62ac"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#ggacb2cd4e03ea48339d327e4f387441bf3a565d2f9e44285e1965deb390497f62ac">I2C_EVENT_WAIT</a></div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8h_source.html#l00063">i2c_17xx_40xx.h:63</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_ga06b84fe3fad7ffd4ccb93f2683781936"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#ga06b84fe3fad7ffd4ccb93f2683781936">Chip_I2C_EventHandler</a></div><div class="ttdeci">void Chip_I2C_EventHandler(I2C_ID_T id, I2C_EVENT_T event)</div><div class="ttdoc">Default event handler for interrupt base operation. </div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8c_source.html#l00088">i2c_17xx_40xx.c:88</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_ga4a875b456dfe68acbe8ce1fc74d88bd3"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#ga4a875b456dfe68acbe8ce1fc74d88bd3">Chip_I2C_MasterCmdRead</a></div><div class="ttdeci">int Chip_I2C_MasterCmdRead(I2C_ID_T id, uint8_t slaveAddr, uint8_t cmd, uint8_t *buff, int len)</div><div class="ttdoc">Transfer a command to slave and receive data from slave after a repeated start. </div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8c_source.html#l00211">i2c_17xx_40xx.c:211</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_gaf6ea40668dde26e406f76ff3ddeda527"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#gaf6ea40668dde26e406f76ff3ddeda527">Chip_I2C_SlaveSetup</a></div><div class="ttdeci">void Chip_I2C_SlaveSetup(I2C_ID_T id, I2C_SLAVE_ID sid, I2C_XFER_T *xfer, I2C_EVENTHANDLER_T event, uint8_t addrMask)</div><div class="ttdoc">Setup a slave I2C device. </div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8c_source.html#l00249">i2c_17xx_40xx.c:249</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_ggaec46000c6a1fe2c12c9a0c7ee3677626a84f3a2e3885474dda12c3d223eef5304"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#ggaec46000c6a1fe2c12c9a0c7ee3677626a84f3a2e3885474dda12c3d223eef5304">I2C_NUM_INTERFACE</a></div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8h_source.html#l00056">i2c_17xx_40xx.h:56</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_ga17fac5d72058db8eed11d247e78b74ed"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#ga17fac5d72058db8eed11d247e78b74ed">Chip_I2C_SetClockRate</a></div><div class="ttdeci">void Chip_I2C_SetClockRate(I2C_ID_T id, uint32_t clockrate)</div><div class="ttdoc">Set up clock rate for LPC_I2C peripheral. </div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8c_source.html#l00142">i2c_17xx_40xx.c:142</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_ggaec46000c6a1fe2c12c9a0c7ee3677626a8b606b29817406621b85b78b1ee9e653"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#ggaec46000c6a1fe2c12c9a0c7ee3677626a8b606b29817406621b85b78b1ee9e653">I2C0</a></div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8h_source.html#l00053">i2c_17xx_40xx.h:53</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_gae816049843eb162c803b5058ebd9a25c"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#gae816049843eb162c803b5058ebd9a25c">Chip_I2C_MasterRead</a></div><div class="ttdeci">int Chip_I2C_MasterRead(I2C_ID_T id, uint8_t slaveAddr, uint8_t *buff, int len)</div><div class="ttdoc">Set function that must handle I2C events. </div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8c_source.html#l00224">i2c_17xx_40xx.c:224</a></div></div>
+<div class="ttc" id="group___i2_c__17_x_x__40_x_x_html_ggaec46000c6a1fe2c12c9a0c7ee3677626aeb0f494c71f34592c5a4500ee98ab4a2"><div class="ttname"><a href="group___i2_c__17_x_x__40_x_x.html#ggaec46000c6a1fe2c12c9a0c7ee3677626aeb0f494c71f34592c5a4500ee98ab4a2">I2C1</a></div><div class="ttdef"><b>Definition:</b> <a href="i2c__17xx__40xx_8h_source.html#l00054">i2c_17xx_40xx.h:54</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_e9967a62eb0adfb08d6da6a5b6090dce.html">lpcopen</a></li><li class="navelem"><a class="el" href="dir_9de244f5aef64593622a4e8655220356.html">software</a></li><li class="navelem"><a class="el" href="dir_31a1b7b0d37c21493df82ae7c333e639.html">lpc_core</a></li><li class="navelem"><a class="el" href="dir_1830a61c0edc8cc1910f28c837699b39.html">lpc_chip</a></li><li class="navelem"><a class="el" href="dir_03ae23d041d1826573cfbc11ccc106a0.html">chip_17xx_40xx</a></li><li class="navelem"><b>i2c_17xx_40xx.h</b></li>
+    <li class="footer">Généré le Mardi Janvier 7 2014 11:23:03 pour Hexapode par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
+  </ul>
+</div>
+</body>
+</html>

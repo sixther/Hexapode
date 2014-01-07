@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Hexapode: La caméra</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="IN7Robot.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Hexapode
+   &#160;<span id="projectnumber">Version 1.0</span>
+   </div>
+   <div id="projectbrief">Thomas Waquet &amp; Gauthier Dhalluin</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li class="current"><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('md_doc_cmucam.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">La caméra </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2>Carte de vision CMUCAM2</h2>
+<h1><a class="anchor" id="Introduction"></a>
+Introduction</h1>
+<p>La carte CMUcam2 a été créés par l’institut de robotique de l’université Carnegie Mellon University.</p>
+<p>Elle est composée d’un microcontrolleur SX52 créé, à l’origine, par la la société Ubicom et maintenu, pour les quelques pièces qu’il reste, par la société Parallax. Le CPU est interfacé d’un coté, avec une caméra CMOS OV7620 de chez Omnivision. Il communique de l’autre coté avec l’hôte (type micro-contrôleur ou PC) au travers d’un port série RS-232 ou TTL (Les commandes disponibles sont détaillées dans la partie logiciel)</p>
+<div class="image">
+<img src="..\img\cmucam1.jpg"  alt="cmucam1" title="CMUCAM2"/>
+</div>
+<h1><a class="anchor" id="Fonctions"></a>
+Fonctions</h1>
+<ul>
+<li>Suivi d’un bloc de couleur jusqu’à 50 images/seconde (la fréquence dépend de la résolution de l’image et de la taille de la fenêtre)</li>
+<li>Suivi de mouvement en utilisant la différenciation image à 26 trames par seconde</li>
+<li>Trouve le barycentre des données de suivi</li>
+<li>Fournit des données de couleur et de variance</li>
+<li>Fournit l’histogramme jusqu’à 28 bins pour chaque canal de couleur</li>
+<li>Processus Horizontalement Edge images filtrées</li>
+<li>Transfert en temps réel de pixels traqués dans une image</li>
+<li>Possibilité de fenêtrage de l’image</li>
+<li>Régler les propriétés de l’image</li>
+<li>Dump une image brute (un ou plusieurs canaux)</li>
+<li>Résolution max 176 x 255</li>
+<li>Le port série supporte les vitesses :<ul>
+<li>115200</li>
+<li>57600</li>
+<li>38400</li>
+<li>19200</li>
+<li>9600</li>
+<li>4800</li>
+<li>2400</li>
+<li>1200</li>
+</ul>
+</li>
+<li>5 sorties pour le contrôle de servomoteurs</li>
+<li>Utilise automatiquement les servomoteurs de deux axes pour le suivi de la couleur</li>
+<li>Sortie vidéo Noir et Blanc analogique (PAL ou NTSC)</li>
+<li>Personnalisation de sortie de paquets</li>
+<li>Mode basse consommation (Power down)</li>
+<li>Traitement d’image multi-passe sur une image en mémoire.</li>
+</ul>
+<h1><a class="anchor" id="Atouts"></a>
+Atouts</h1>
+<p><b>Color Tracking :</b> La CMUcam2 permet le pistage de couleurs. Un mode facultatif "bitmap line" transmet une image bitmap des pixels d’un suivi. Il y a aussi un "line mode" qui fournit des statistiques de pixels suivi pour chaque ligne, y compris les positions moyennes, minimum et maximum des pixels d’un suivi. Ceci est très utile pour le suivi en ligne. Il y a aussi un mode où l’interprétation des limites de suivi peut être inversée. Dans ce cas les pixels en dehors des limites de suivi sont considérés comme "bons". Ceci est utile pour suivre un objet sur un fond homogène. Il est également utile pour détecter les bords quand le mode différenciation de pixels (décrit ci-dessous) est activé. L’option de filtrage du bruit permet le réglage de la quantité de filtrage pour les situations bruyantes.</p>
+<p><b>Détection de mouvement :</b> Les commandes de détection de mouvement (par différence d’image) permettent de capturer une version basse résolution de l’image courante et de la comparer en permanence les nouvelles images. La CMUcam 2 indique si une partie de l’image change plus que ce qui a été spécifié. Ces paquets peuvent décrire le centre de gravité ou fournir une image bitmap des blocs d’images qui ont changé. Ce mode peut aussi être combinée avec la différenciation de pixel (décrit ci-dessous) pour faire une détection de mouvement plus robuste aux changements d’illumination.</p>
+<p><b>Réduction des data à transmettre :</b> En mode d’échantillonnage, le logiciel de CMUcam2 réduit la résolution de l’image de la caméra avant son traitement. L’avantage est qu’il y a beaucoup moins de pixels à traiter et à transmettre. Comme c’est fait par le logiciel, la réduction de la fréquence d’échantillonnage engendre seulement une très faible augmentation de la vitesse de traitement. Le principal avantage est de réduire la quantité de données transmises. Dans le cas d’un sous-échantillonnage dans une image fenêtrée, on peut facilement réduire la taille des données et donc de réduire le temps de transmission d’un facteur de 2 à 4 ou plus. De même, lorsque les modes en ligne bitmap sont utilisées, la taille de l’image bitmap peut être considérablement réduite, diminuant la quantité de données que le processeur doit recevoir et traiter.</p>
+<p><b>Power Saving :</b> Entièrement nouveau dans le CMUcam2 sont les modes d’économie d’énergie. Dans certaines applications, la CMUcam2 n’est pas nécessaire pour traiter en permanence les données d’image. Dans ces cas, elle peut être commandé pour baisser sa consommation. Aucune commande de suivi ou d’asservissement qui se passera lorsque la CMUcam2 est dans un de ces modes. L’envoi d’une commande simple par la liaison série réveille la caméra en quelques millisecondes.</p>
+<h1><a class="anchor" id="Manuel"></a>
+Manuel</h1>
+<p>Le manuel d'utilisation est disponible sur le site <em>www.cs.cmu.edu</em>. Vous pouvez le consulter <a href="http://www.cs.cmu.edu/~cmucam2/CMUcam2_manual.pdf">ici</a> </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré le Vendredi Janvier 3 2014 12:16:56 pour Hexapode par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
+  </ul>
+</div>
+</body>
+</html>

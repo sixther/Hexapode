@@ -14,22 +14,35 @@
 #include "board.h"
 #include "FreeRTOS.h"
 #include "task.h"
+#include "queue.h"
 #include "timer_17xx_40xx.h"
 #include "chip.h"
 #include "basic_io.h"
 #include "Protopode.h"
+#include <string.h>
 
 //define pour la fréquence du timer0 hard: 50µs
 #define TICKRATE1_HZ		20000
 //define pour la fréquence de la tache réarmage de la PWM: 20ms
 #define TICKRATE2_HZ 		50
-//define pour la fréquence de la tache lecture TOR et Telemetre: 100ms
-#define TICKRATE3_HZ		10
+//define pour la fréquence de la tache lecture TOR et Telemetre: 500ms
+#define TICKRATE3_HZ		2
+//define pour la fréquence de la tache TX/RX de la com: 100ms
+#define TICKRATE4_HZ		10
 
 unsigned char ucTemoin = 0;
 unsigned long ulTaskNumber[configEXPECTED_NO_RUNNING_TASKS];
 
 static ADC_Clock_Setup_T ADCSetup;
+
+typedef struct
+{
+	char cData[50];
+}Message;
+
+
+xQueueHandle xQueue;
+Message xMessage;
 
 FeetHexapode xFeetLeftFront;
 FeetHexapode xFeetLeftMid;
@@ -39,6 +52,7 @@ FeetHexapode xFeetRightMid;
 FeetHexapode xFeetRightBack;
 HeadHexapode xHead;
 
+Trame xTrame;
 
 void vTIMER0_Init()
 {
@@ -120,16 +134,16 @@ static portTASK_FUNCTION(vTimerPWMTask, pvParameters) {
 }
 
 /* Tache pour la lecture des TOR et du telemetre */
-static portTASK_FUNCTION(vTimerTORTask, pvParameters) {	
+static portTASK_FUNCTION(vTORTask, pvParameters) {	
 
 	while (1) {
 		
-//		/* Start A/D conversion */
-//		Chip_ADC_Set_StartMode(LPC_ADC, ADC_START_NOW, ADC_TRIGGERMODE_RISING);
-//		/* Waiting for A/D conversion complete */
-//		while (Chip_ADC_Read_Status(LPC_ADC, ADC_C, ADC_DR_DONE_STAT) != SET) {}
-//		/* Read ADC value */
-//		Chip_ADC_Read_Value(LPC_ADC, ADC_C, &xHead.xTelemetre1.usAdcValue);
+		/* Start A/D conversion */
+		Chip_ADC_Set_StartMode(LPC_ADC, ADC_START_NOW, ADC_TRIGGERMODE_RISING);
+		/* Waiting for A/D conversion complete */
+		while (Chip_ADC_Read_Status(LPC_ADC, ADC_C, ADC_DR_DONE_STAT) != SET) {}
+		/* Read ADC value */
+		Chip_ADC_Read_Value(LPC_ADC, ADC_C, &xHead.xTelemetre1.usAdcValue);
 		
 		vCalculSecuriteTelemetre(&xHead);
 					
@@ -137,26 +151,73 @@ static portTASK_FUNCTION(vTimerTORTask, pvParameters) {
 	}
 }
 
+/* Tache pour TX/RX de la com: 100ms */
+static portTASK_FUNCTION(vComTask, pvParameters) {
+portBASE_TYPE xStatus;
+
+	
+	while (1) {
+		xStatus = xQueueReceive( xQueue, &xMessage, configTICK_RATE_HZ / TICKRATE4_HZ );
+
+		if( xStatus == pdPASS )
+		{
+			//Decodage de la trame
+			vDcdTrame(&xTrame, xMessage.cData);
+						
+			//En fonction du résultat on va remplir les ressources ciblées
+			//Feet
+			if(!strcmp(xTrame.cType,"F"))
+			{
+				
+			}
+			//Head
+			else if (!strcmp(xTrame.cType,"H"))
+			{
+				
+			}
+			//Telemetre
+			else if (!strcmp(xTrame.cType,"TELE"))
+			{
+
+			}
+			//TOR
+			else if (!strcmp(xTrame.cType,"TOR"))
+			{
+
+			}
+			//CMUCAM
+			else if (!strcmp(xTrame.cType,"CAM"))
+			{
+
+			}
+		}	
+	}
+}
+
 int main()
 {
-	
-//	Trame xTrame;
-//	
-//	vDcdTrame(&xTrame, "$F,L,F,1,45\n");
-	
 	Board_Init();
 
 	vInit_Hexapode();
-
 	
 	vTIMER0_Init();
 
+	xQueue = xQueueCreate( 50, sizeof( Message ) );
+	
+	//xQueueSendToBack( xQueue, "$F,L,M,1,45\n", 0 );
+	
+	
+	
 	xTaskCreate(vTimerPWMTask, (signed char *) "vTaskTimerPWM",
 				configMINIMAL_STACK_SIZE, NULL, 1,
 				(xTaskHandle *) NULL);
 	
-	xTaskCreate(vTimerTORTask, (signed char *) "vTaskTimerTOR",
+	xTaskCreate(vTORTask, (signed char *) "vTaskTOR",
 				configMINIMAL_STACK_SIZE, NULL, 5,
+				(xTaskHandle *) NULL);
+	
+	xTaskCreate(vComTask, (signed char *) "vTaskCom",
+				configMINIMAL_STACK_SIZE, NULL, 3,
 				(xTaskHandle *) NULL);
 	
 	Board_LED_Set(0, false);

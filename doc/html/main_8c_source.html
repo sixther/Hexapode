@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Hexapode:  Fichier source de hexapode/src/main.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="IN7Robot.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Hexapode
+   &#160;<span id="projectnumber">Version 1.0</span>
+   </div>
+   <div id="projectbrief">Thomas Waquet &amp; Gauthier Dhalluin</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- GÃ©nÃ©rÃ© par Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associÃ©es</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;donnÃ©es</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('main_8c_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de donnÃ©es</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>DÃ©finitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Ã‰numÃ©rations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs Ã©numÃ©rÃ©es</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Groupes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">main.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;Hexapode.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;board.h&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;FreeRTOS.h&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;task.h&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;queue.h&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;timer_17xx_40xx.h&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;chip.h&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;basic_io.h&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;Protopode.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//define pour la fréquence du timer0 hard: 50µs</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#define TICKRATE1_HZ        20000</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor"></span><span class="comment">//define pour la fréquence de la tache réarmage de la PWM: 20ms</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#define TICKRATE2_HZ        50</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor"></span><span class="comment">//define pour la fréquence de la tache lecture TOR et Telemetre: 500ms</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define TICKRATE3_HZ        2</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor"></span><span class="comment">//define pour la fréquence de la tache TX/RX de la com: 100ms</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define TICKRATE4_HZ        10</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> ucTemoin = 0;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> ulTaskNumber[configEXPECTED_NO_RUNNING_TASKS];</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">static</span> <a class="code" href="struct_a_d_c___clock___setup___t.html">ADC_Clock_Setup_T</a> ADCSetup;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="struct_message.html">   38</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">char</span> cData[50];</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}<a class="code" href="struct_message.html">Message</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;xQueueHandle xQueue;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<a class="code" href="struct_message.html">Message</a> xMessage;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<a class="code" href="struct_feet_hexapode.html">FeetHexapode</a> xFeetLeftFront;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<a class="code" href="struct_feet_hexapode.html">FeetHexapode</a> xFeetLeftMid;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<a class="code" href="struct_feet_hexapode.html">FeetHexapode</a> xFeetLeftBack;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<a class="code" href="struct_feet_hexapode.html">FeetHexapode</a> xFeetRightFront;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<a class="code" href="struct_feet_hexapode.html">FeetHexapode</a> xFeetRightMid;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<a class="code" href="struct_feet_hexapode.html">FeetHexapode</a> xFeetRightBack;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<a class="code" href="struct_head_hexapode.html">HeadHexapode</a> xHead;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<a class="code" href="struct_trame.html">Trame</a> xTrame;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">void</span> vTIMER0_Init()</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    uint32_t timerFreq;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="group___t_i_m_e_r__17_x_x__40_x_x.html#gac2ca0aff00ae8a651e129afba400c833">Chip_TIMER_Init</a>(LPC_TIMER0);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">/* on recupére la fréquence du périphérique */</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    timerFreq = <a class="code" href="group___c_l_o_c_k__17_x_x__40_x_x.html#ga9c2bc86c857119426aa6a724c12a6f42">Chip_Clock_GetPeripheralClockRate</a>(SYSCTL_PCLK_TIMER0);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="group___t_i_m_e_r__17_x_x__40_x_x.html#ga25d50a1a5219d51315e421fca27ecd93">Chip_TIMER_Reset</a>(LPC_TIMER0);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">/* on active l&#39;interruption sur match0 */</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="group___t_i_m_e_r__17_x_x__40_x_x.html#ga21daeb9b42a0f7fe57ec52f3815ab223">Chip_TIMER_MatchEnableInt</a>(LPC_TIMER0, 0);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">/* on défini la fréquence du timer */</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="group___t_i_m_e_r__17_x_x__40_x_x.html#gaff98bdf0254cd7783c7b42655fa43cd2">Chip_TIMER_SetMatch</a>(LPC_TIMER0, 0, (timerFreq / TICKRATE1_HZ));</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">/* on reset le timer quand match */</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="group___t_i_m_e_r__17_x_x__40_x_x.html#ga4b8a551b290e9f70ba8b8569e2937f58">Chip_TIMER_ResetOnMatchEnable</a>(LPC_TIMER0, 0);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">/* activation du timer */</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="group___t_i_m_e_r__17_x_x__40_x_x.html#gaff500707a8a397daf29cc84f454802b2">Chip_TIMER_Enable</a>(LPC_TIMER0);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">/* Enable timer interrupt */</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    NVIC_EnableIRQ(TIMER0_IRQn);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    NVIC_ClearPendingIRQ(TIMER0_IRQn);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keywordtype">void</span> vADC_Init()</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="group___a_d_c__17_x_x__40_x_x.html#ga9c3e36e83d27f02ccabcba7e5a9befd0">Chip_ADC_Init</a>(LPC_ADC, &amp;ADCSetup);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="group___a_d_c__17_x_x__40_x_x.html#gac16bb5474c843f941966e829d59d854e">Chip_ADC_Channel_Enable_Cmd</a>(LPC_ADC, <a class="code" href="group___b_o_a_r_d___l_p_c1766_s_t_k.html#ga3d93e08fca7e96f21082782613af6d74">ADC_C</a>, ENABLE);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="group___a_d_c__17_x_x__40_x_x.html#ga2888665f7a3eb813766e59dcdd62fc62">Chip_ADC_Burst_Cmd</a>(LPC_ADC, DISABLE);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keywordtype">void</span> vInit_Hexapode()</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="comment">//Initialisation des PPM et TOR</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        vInitFeet(&amp;xFeetLeftFront, PPM_1MS, PPM_1MS, PPM_1MS, FEET_LEFT_FRONT_PWMNUM1, FEET_LEFT_FRONT_PWMNUM2, FEET_LEFT_FRONT_PWMNUM3, FEET_LEFT_FRONT_TORNUM);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        vInitFeet(&amp;xFeetLeftMid, PPM_1MS, PPM_1MS, PPM_1MS, FEET_LEFT_MID_PWMNUM1, FEET_LEFT_MID_PWMNUM2, FEET_LEFT_MID_PWMNUM3, FEET_LEFT_MID_TORNUM);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        vInitFeet(&amp;xFeetLeftBack, PPM_1MS, PPM_1MS, PPM_1MS, FEET_LEFT_BACK_PWMNUM1, FEET_LEFT_BACK_PWMNUM2, FEET_LEFT_BACK_PWMNUM3, FEET_LEFT_BACK_TORNUM);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        vInitFeet(&amp;xFeetRightFront, PPM_1MS, PPM_1MS, PPM_1MS, FEET_RIGHT_FRONT_PWMNUM1, FEET_RIGHT_FRONT_PWMNUM2, FEET_RIGHT_FRONT_PWMNUM3, FEET_RIGHT_FRONT_TORNUM);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        vInitFeet(&amp;xFeetRightMid, PPM_1MS, PPM_1MS, PPM_1MS, FEET_RIGHT_MID_PWMNUM1, FEET_RIGHT_MID_PWMNUM2, FEET_RIGHT_MID_PWMNUM3, FEET_RIGHT_MID_TORNUM);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        vInitFeet(&amp;xFeetRightBack, PPM_1MS, PPM_1MS, PPM_1MS, FEET_RIGHT_BACK_PWMNUM1, FEET_RIGHT_BACK_PWMNUM2, FEET_RIGHT_BACK_PWMNUM3, FEET_RIGHT_BACK_TORNUM);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        vInitHead(&amp;xHead, PPM_1MS, PPM_1MS, HEAD_PWMNUM1, HEAD_PWMNUM2, 10.0);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">/* TIMER0 HARD */</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keywordtype">void</span> TIMER0_IRQHandler()</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="group___t_i_m_e_r__17_x_x__40_x_x.html#ga0d61fd61d18ba82d44f1b5fec2e48a76">Chip_TIMER_MatchPending</a>(LPC_TIMER0, 0)) </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <a class="code" href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#ga4beb63d516764b260e9798642fab0047">Board_LED_Set</a>(0, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <a class="code" href="group___t_i_m_e_r__17_x_x__40_x_x.html#gae9ad45169f0511d27696923acfd6a17e">Chip_TIMER_ClearMatch</a>(LPC_TIMER0, 0);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        vMoveFeet(&amp;xFeetLeftFront, 1, 1, 1);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        vMoveFeet(&amp;xFeetLeftMid, 1, 1, 1);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        vMoveFeet(&amp;xFeetLeftBack, 1, 1, 1);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        vMoveFeet(&amp;xFeetRightFront, 1, 1, 1);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        vMoveFeet(&amp;xFeetRightMid, 1, 1, 1);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        vMoveFeet(&amp;xFeetRightBack, 1, 1, 1);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        vMoveHead(&amp;xHead, 1, 1);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <a class="code" href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#ga4beb63d516764b260e9798642fab0047">Board_LED_Set</a>(0, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">/* Tache Timer 20 pour réarmer la PWM */</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keyword">static</span> portTASK_FUNCTION(vTimerPWMTask, pvParameters) { </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">while</span> (1) {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        vSetFeet(&amp;xFeetLeftFront, PPM_1MS, PPM_1MS, PPM_1MS);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        vSetFeet(&amp;xFeetLeftMid, PPM_1MS, PPM_1MS, PPM_1MS);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        vSetFeet(&amp;xFeetLeftBack, PPM_1MS, PPM_1MS, PPM_1MS);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        vSetFeet(&amp;xFeetRightFront, PPM_1MS, PPM_1MS, PPM_1MS);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        vSetFeet(&amp;xFeetRightMid, PPM_1MS, PPM_1MS, PPM_1MS);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        vSetFeet(&amp;xFeetRightBack, PPM_1MS, PPM_1MS, PPM_1MS);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        vSetHead(&amp;xHead, PPM_1MS, PPM_1MS);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        vTaskDelay(configTICK_RATE_HZ / TICKRATE2_HZ);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">/* Tache pour la lecture des TOR et du telemetre */</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keyword">static</span> portTASK_FUNCTION(vTORTask, pvParameters) {  </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordflow">while</span> (1) {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment">//      /* Start A/D conversion */</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment">//      Chip_ADC_Set_StartMode(LPC_ADC, ADC_START_NOW, ADC_TRIGGERMODE_RISING);</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">//      /* Waiting for A/D conversion complete */</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">//      while (Chip_ADC_Read_Status(LPC_ADC, ADC_C, ADC_DR_DONE_STAT) != SET) {}</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">//      /* Read ADC value */</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">//      Chip_ADC_Read_Value(LPC_ADC, ADC_C, &amp;xHead.xTelemetre1.usAdcValue);</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        vCalculSecuriteTelemetre(&amp;xHead);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                    </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        vTaskDelay(configTICK_RATE_HZ / TICKRATE3_HZ);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;}</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment">/* Tache pour TX/RX de la com: 100ms */</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="keyword">static</span> portTASK_FUNCTION(vComTask, pvParameters) {</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;portBASE_TYPE xStatus;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">while</span> (1) {</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        xStatus = xQueueReceive( xQueue, &amp;xMessage, configTICK_RATE_HZ / TICKRATE4_HZ );</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">if</span>( xStatus == pdPASS )</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <span class="comment">//Decodage de la trame</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            vDcdTrame(&amp;xTrame, xMessage.cData);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                        </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="comment">//En fonction du résultat on va remplir les ressources ciblées</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            <span class="comment">//Feet</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keywordflow">if</span>(!strcmp(xTrame.cType,<span class="stringliteral">&quot;F&quot;</span>))</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            {</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="comment">//Head</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!strcmp(xTrame.cType,<span class="stringliteral">&quot;H&quot;</span>))</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <span class="comment">//Telemetre</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!strcmp(xTrame.cType,<span class="stringliteral">&quot;TELE&quot;</span>))</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            }</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <span class="comment">//TOR</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!strcmp(xTrame.cType,<span class="stringliteral">&quot;TOR&quot;</span>))</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <span class="comment">//CMUCAM</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!strcmp(xTrame.cType,<span class="stringliteral">&quot;CAM&quot;</span>))</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        }   </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;}</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="keywordtype">int</span> main()</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;{</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <a class="code" href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#gae8d2d761b984f48c3dbb27dd32a8c119">Board_Init</a>();</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    vInit_Hexapode();</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    vTIMER0_Init();</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    xQueue = xQueueCreate( 50, <span class="keyword">sizeof</span>( <a class="code" href="struct_message.html">Message</a> ) );</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="comment">//xQueueSendToBack( xQueue, &quot;$F,L,M,1,45\n&quot;, 0 );</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    xTaskCreate(vTimerPWMTask, (<span class="keywordtype">signed</span> <span class="keywordtype">char</span> *) <span class="stringliteral">&quot;vTaskTimerPWM&quot;</span>,</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                configMINIMAL_STACK_SIZE, NULL, 1,</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                (xTaskHandle *) NULL);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    xTaskCreate(vTORTask, (<span class="keywordtype">signed</span> <span class="keywordtype">char</span> *) <span class="stringliteral">&quot;vTaskTOR&quot;</span>,</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                configMINIMAL_STACK_SIZE, NULL, 5,</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                (xTaskHandle *) NULL);</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    xTaskCreate(vComTask, (<span class="keywordtype">signed</span> <span class="keywordtype">char</span> *) <span class="stringliteral">&quot;vTaskCom&quot;</span>,</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                configMINIMAL_STACK_SIZE, NULL, 3,</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                (xTaskHandle *) NULL);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <a class="code" href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#ga4beb63d516764b260e9798642fab0047">Board_LED_Set</a>(0, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <a class="code" href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#ga4beb63d516764b260e9798642fab0047">Board_LED_Set</a>(1, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    </div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="comment">/* Start the scheduler */</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    vTaskStartScheduler();</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordflow">while</span>(1);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;}</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
+<div class="ttc" id="struct_trame_html"><div class="ttname"><a href="struct_trame.html">Trame</a></div><div class="ttdef"><b>Definition:</b> <a href="_protopode_8h_source.html#l00033">Protopode.h:33</a></div></div>
+<div class="ttc" id="group___t_i_m_e_r__17_x_x__40_x_x_html_gae9ad45169f0511d27696923acfd6a17e"><div class="ttname"><a href="group___t_i_m_e_r__17_x_x__40_x_x.html#gae9ad45169f0511d27696923acfd6a17e">Chip_TIMER_ClearMatch</a></div><div class="ttdeci">STATIC INLINE void Chip_TIMER_ClearMatch(LPC_TIMER_T *pTMR, int8_t matchnum)</div><div class="ttdoc">Clears a (pending) match interrupt. </div><div class="ttdef"><b>Definition:</b> <a href="timer__17xx__40xx_8h_source.html#l00077">timer_17xx_40xx.h:77</a></div></div>
+<div class="ttc" id="group___t_i_m_e_r__17_x_x__40_x_x_html_gaff500707a8a397daf29cc84f454802b2"><div class="ttname"><a href="group___t_i_m_e_r__17_x_x__40_x_x.html#gaff500707a8a397daf29cc84f454802b2">Chip_TIMER_Enable</a></div><div class="ttdeci">STATIC INLINE void Chip_TIMER_Enable(LPC_TIMER_T *pTMR)</div><div class="ttdoc">Enables the timer (starts count) </div><div class="ttdef"><b>Definition:</b> <a href="timer__17xx__40xx_8h_source.html#l00100">timer_17xx_40xx.h:100</a></div></div>
+<div class="ttc" id="group___t_i_m_e_r__17_x_x__40_x_x_html_ga21daeb9b42a0f7fe57ec52f3815ab223"><div class="ttname"><a href="group___t_i_m_e_r__17_x_x__40_x_x.html#ga21daeb9b42a0f7fe57ec52f3815ab223">Chip_TIMER_MatchEnableInt</a></div><div class="ttdeci">STATIC INLINE void Chip_TIMER_MatchEnableInt(LPC_TIMER_T *pTMR, int8_t matchnum)</div><div class="ttdoc">Enables a match interrupt that fires when the terminal count matches the match counter value...</div><div class="ttdef"><b>Definition:</b> <a href="timer__17xx__40xx_8h_source.html#l00192">timer_17xx_40xx.h:192</a></div></div>
+<div class="ttc" id="group___t_i_m_e_r__17_x_x__40_x_x_html_gac2ca0aff00ae8a651e129afba400c833"><div class="ttname"><a href="group___t_i_m_e_r__17_x_x__40_x_x.html#gac2ca0aff00ae8a651e129afba400c833">Chip_TIMER_Init</a></div><div class="ttdeci">void Chip_TIMER_Init(LPC_TIMER_T *pTMR)</div><div class="ttdoc">Initialize a timer. </div><div class="ttdef"><b>Definition:</b> <a href="timer__17xx__40xx_8c_source.html#l00072">timer_17xx_40xx.c:72</a></div></div>
+<div class="ttc" id="group___b_o_a_r_d___l_p_c1766_s_t_k_html_ga3d93e08fca7e96f21082782613af6d74"><div class="ttname"><a href="group___b_o_a_r_d___l_p_c1766_s_t_k.html#ga3d93e08fca7e96f21082782613af6d74">ADC_C</a></div><div class="ttdeci">#define ADC_C</div><div class="ttdef"><b>Definition:</b> <a href="board___l_p_c1766_s_t_k_8h_source.html#l00071">board_LPC1766STK.h:71</a></div></div>
+<div class="ttc" id="group___t_i_m_e_r__17_x_x__40_x_x_html_ga0d61fd61d18ba82d44f1b5fec2e48a76"><div class="ttname"><a href="group___t_i_m_e_r__17_x_x__40_x_x.html#ga0d61fd61d18ba82d44f1b5fec2e48a76">Chip_TIMER_MatchPending</a></div><div class="ttdeci">STATIC INLINE bool Chip_TIMER_MatchPending(LPC_TIMER_T *pTMR, int8_t matchnum)</div><div class="ttdoc">Determine if a match interrupt is pending. </div><div class="ttdef"><b>Definition:</b> <a href="timer__17xx__40xx_8h_source.html#l00052">timer_17xx_40xx.h:52</a></div></div>
+<div class="ttc" id="group___c_l_o_c_k__17_x_x__40_x_x_html_ga9c2bc86c857119426aa6a724c12a6f42"><div class="ttname"><a href="group___c_l_o_c_k__17_x_x__40_x_x.html#ga9c2bc86c857119426aa6a724c12a6f42">Chip_Clock_GetPeripheralClockRate</a></div><div class="ttdeci">uint32_t Chip_Clock_GetPeripheralClockRate(CHIP_SYSCTL_PCLK_T clk)</div><div class="ttdoc">Returns clock rate for a peripheral (from peripheral clock) </div></div>
+<div class="ttc" id="group___a_d_c__17_x_x__40_x_x_html_ga9c3e36e83d27f02ccabcba7e5a9befd0"><div class="ttname"><a href="group___a_d_c__17_x_x__40_x_x.html#ga9c3e36e83d27f02ccabcba7e5a9befd0">Chip_ADC_Init</a></div><div class="ttdeci">void Chip_ADC_Init(LPC_ADC_T *pADC, ADC_Clock_Setup_T *ADCSetup)</div><div class="ttdoc">Initialize the ADC peripheral and the ADC setup structure to default value. </div><div class="ttdef"><b>Definition:</b> <a href="adc__17xx__40xx_8c_source.html#l00084">adc_17xx_40xx.c:84</a></div></div>
+<div class="ttc" id="struct_message_html"><div class="ttname"><a href="struct_message.html">Message</a></div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00038">main.c:38</a></div></div>
+<div class="ttc" id="group___a_d_c__17_x_x__40_x_x_html_ga2888665f7a3eb813766e59dcdd62fc62"><div class="ttname"><a href="group___a_d_c__17_x_x__40_x_x.html#ga2888665f7a3eb813766e59dcdd62fc62">Chip_ADC_Burst_Cmd</a></div><div class="ttdeci">void Chip_ADC_Burst_Cmd(LPC_ADC_T *pADC, FunctionalState NewState)</div><div class="ttdoc">Enable burst mode. </div><div class="ttdef"><b>Definition:</b> <a href="adc__17xx__40xx_8c_source.html#l00122">adc_17xx_40xx.c:122</a></div></div>
+<div class="ttc" id="struct_a_d_c___clock___setup___t_html"><div class="ttname"><a href="struct_a_d_c___clock___setup___t.html">ADC_Clock_Setup_T</a></div><div class="ttdoc">Clock setup structure for ADC controller passed to the initialize function. </div><div class="ttdef"><b>Definition:</b> <a href="adc__17xx__40xx_8h_source.html#l00087">adc_17xx_40xx.h:87</a></div></div>
+<div class="ttc" id="group___t_i_m_e_r__17_x_x__40_x_x_html_ga4b8a551b290e9f70ba8b8569e2937f58"><div class="ttname"><a href="group___t_i_m_e_r__17_x_x__40_x_x.html#ga4b8a551b290e9f70ba8b8569e2937f58">Chip_TIMER_ResetOnMatchEnable</a></div><div class="ttdeci">STATIC INLINE void Chip_TIMER_ResetOnMatchEnable(LPC_TIMER_T *pTMR, int8_t matchnum)</div><div class="ttdoc">For the specific match counter, enables reset of the terminal count register when a match occurs...</div><div class="ttdef"><b>Definition:</b> <a href="timer__17xx__40xx_8h_source.html#l00214">timer_17xx_40xx.h:214</a></div></div>
+<div class="ttc" id="group___t_i_m_e_r__17_x_x__40_x_x_html_gaff98bdf0254cd7783c7b42655fa43cd2"><div class="ttname"><a href="group___t_i_m_e_r__17_x_x__40_x_x.html#gaff98bdf0254cd7783c7b42655fa43cd2">Chip_TIMER_SetMatch</a></div><div class="ttdeci">STATIC INLINE void Chip_TIMER_SetMatch(LPC_TIMER_T *pTMR, int8_t matchnum, uint32_t matchval)</div><div class="ttdoc">Sets a timer match value. </div><div class="ttdef"><b>Definition:</b> <a href="timer__17xx__40xx_8h_source.html#l00158">timer_17xx_40xx.h:158</a></div></div>
+<div class="ttc" id="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i_html_ga4beb63d516764b260e9798642fab0047"><div class="ttname"><a href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#ga4beb63d516764b260e9798642fab0047">Board_LED_Set</a></div><div class="ttdeci">void Board_LED_Set(uint8_t LEDNumber, bool State)</div><div class="ttdoc">Sets the state of a board LED to on or off. </div><div class="ttdef"><b>Definition:</b> <a href="board___l_p_c1766_s_t_k_8c_source.html#l00309">board_LPC1766STK.c:309</a></div></div>
+<div class="ttc" id="group___a_d_c__17_x_x__40_x_x_html_gac16bb5474c843f941966e829d59d854e"><div class="ttname"><a href="group___a_d_c__17_x_x__40_x_x.html#gac16bb5474c843f941966e829d59d854e">Chip_ADC_Channel_Enable_Cmd</a></div><div class="ttdeci">void Chip_ADC_Channel_Enable_Cmd(LPC_ADC_T *pADC, CHIP_ADC_CHANNEL_T channel, FunctionalState NewState)</div><div class="ttdoc">Enable or disable the ADC channel on ADC peripheral. </div><div class="ttdef"><b>Definition:</b> <a href="adc__17xx__40xx_8c_source.html#l00116">adc_17xx_40xx.c:116</a></div></div>
+<div class="ttc" id="struct_feet_hexapode_html"><div class="ttname"><a href="struct_feet_hexapode.html">FeetHexapode</a></div><div class="ttdef"><b>Definition:</b> <a href="_hexapode_8h_source.html#l00050">Hexapode.h:50</a></div></div>
+<div class="ttc" id="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i_html_gae8d2d761b984f48c3dbb27dd32a8c119"><div class="ttname"><a href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#gae8d2d761b984f48c3dbb27dd32a8c119">Board_Init</a></div><div class="ttdeci">void Board_Init(void)</div><div class="ttdoc">Set up and initialize all required blocks and functions related to the board hardware. </div><div class="ttdef"><b>Definition:</b> <a href="board___l_p_c1766_s_t_k_8c_source.html#l00334">board_LPC1766STK.c:334</a></div></div>
+<div class="ttc" id="group___t_i_m_e_r__17_x_x__40_x_x_html_ga25d50a1a5219d51315e421fca27ecd93"><div class="ttname"><a href="group___t_i_m_e_r__17_x_x__40_x_x.html#ga25d50a1a5219d51315e421fca27ecd93">Chip_TIMER_Reset</a></div><div class="ttdeci">STATIC INLINE void Chip_TIMER_Reset(LPC_TIMER_T *pTMR)</div><div class="ttdoc">Resets the timer terminal and prescale counts to 0. </div><div class="ttdef"><b>Definition:</b> <a href="timer__17xx__40xx_8h_source.html#l00180">timer_17xx_40xx.h:180</a></div></div>
+<div class="ttc" id="struct_head_hexapode_html"><div class="ttname"><a href="struct_head_hexapode.html">HeadHexapode</a></div><div class="ttdef"><b>Definition:</b> <a href="_hexapode_8h_source.html#l00043">Hexapode.h:43</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_f3dd28c5c1acdf88b85bfbd5ab0a0760.html">hexapode</a></li><li class="navelem"><a class="el" href="dir_8a7e0f67293cc0265c3fde99da7a0490.html">src</a></li><li class="navelem"><b>main.c</b></li>
+    <li class="footer">GÃ©nÃ©rÃ© le Mardi Janvier 7 2014 11:23:01 pour Hexapode par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
+  </ul>
+</div>
+</body>
+</html>

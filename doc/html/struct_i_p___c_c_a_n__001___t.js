@@ -1,0 +1,26 @@
+var struct_i_p___c_c_a_n__001___t =
+[
+    [ "BRPE", "struct_i_p___c_c_a_n__001___t.html#a36b5bb69b2c273aa0fefe8e0c852d270", null ],
+    [ "BT", "struct_i_p___c_c_a_n__001___t.html#a1b9452a1b62004b6e1e81efd18704630", null ],
+    [ "CLKDIV", "struct_i_p___c_c_a_n__001___t.html#a2a33dba1349d1ebe45133cb2789a5307", null ],
+    [ "CNTL", "struct_i_p___c_c_a_n__001___t.html#aaea1cf878c3e7ab37309e673eb50101b", null ],
+    [ "EC", "struct_i_p___c_c_a_n__001___t.html#ae9c79ec17ace363c54ee59581274ede5", null ],
+    [ "IF", "struct_i_p___c_c_a_n__001___t.html#a4590f0fa23560b439ae7457b4855bb61", null ],
+    [ "INT", "struct_i_p___c_c_a_n__001___t.html#a6029b46f9633a968124bfbd9e67992ca", null ],
+    [ "IR1", "struct_i_p___c_c_a_n__001___t.html#a5c28010084f84d7fe78919318b756102", null ],
+    [ "IR2", "struct_i_p___c_c_a_n__001___t.html#a88cf12ce48ba72c3ee5c5922d21a8b0f", null ],
+    [ "MSGV1", "struct_i_p___c_c_a_n__001___t.html#a709e6d05a057c93effc398f74dbe0ff1", null ],
+    [ "MSGV2", "struct_i_p___c_c_a_n__001___t.html#ab4528d1ef41869057b53d3c68074802a", null ],
+    [ "ND1", "struct_i_p___c_c_a_n__001___t.html#a65f32ab732a63e8469680b75ba8fd690", null ],
+    [ "ND2", "struct_i_p___c_c_a_n__001___t.html#a7cdfd206e6aee18d476f1494b788283e", null ],
+    [ "RESERVED0", "struct_i_p___c_c_a_n__001___t.html#ad06839c5382047f4f9f2c74cc61db942", null ],
+    [ "RESERVED2", "struct_i_p___c_c_a_n__001___t.html#a05d028eb06656a3055efdf2949c42708", null ],
+    [ "RESERVED3", "struct_i_p___c_c_a_n__001___t.html#a56ebfb64490f6461d0383a743ee6d8c5", null ],
+    [ "RESERVED4", "struct_i_p___c_c_a_n__001___t.html#a5be6ee872a56ca3d4796d6bb287ec307", null ],
+    [ "RESERVED5", "struct_i_p___c_c_a_n__001___t.html#a0b685e50644e53d4b7c6fa9ed6c93fc8", null ],
+    [ "RESERVED6", "struct_i_p___c_c_a_n__001___t.html#a656b237e614b6d241574604849d86b8b", null ],
+    [ "STAT", "struct_i_p___c_c_a_n__001___t.html#aa90c98b3b95ed1374dbcf018c74aef79", null ],
+    [ "TEST", "struct_i_p___c_c_a_n__001___t.html#a071509075a20265b5c09b13d91247a9c", null ],
+    [ "TXREQ1", "struct_i_p___c_c_a_n__001___t.html#a3dc7ce173845d25334a5f36b4206951a", null ],
+    [ "TXREQ2", "struct_i_p___c_c_a_n__001___t.html#ac6c3024f82207c167ab06e0939060129", null ]
+];

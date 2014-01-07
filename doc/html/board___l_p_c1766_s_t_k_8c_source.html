@@ -1,0 +1,501 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Hexapode:  Fichier source de lpcopen/software/lpc_core/lpc_board/boards_17xx_40xx/lpc1766stk/board_LPC1766STK.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="IN7Robot.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Hexapode
+   &#160;<span id="projectnumber">Version 1.0</span>
+   </div>
+   <div id="projectbrief">Thomas Waquet &amp; Gauthier Dhalluin</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('board___l_p_c1766_s_t_k_8c_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Groupes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">board_LPC1766STK.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * @brief NXP lpc1766stk board file</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * @note</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Copyright(C) NXP Semiconductors, 2012</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * @par</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * Software that is described herein is for illustrative purposes only</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * which provides customers with programming information regarding the</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * LPC products.  This software is supplied &quot;AS IS&quot; without any warranties of</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * any kind, and NXP Semiconductors and its licensor disclaim any and</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * all warranties, express or implied, including all implied warranties of</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * merchantability, fitness for a particular purpose and non-infringement of</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * intellectual property rights.  NXP Semiconductors assumes no responsibility</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * or liability for the use of the software, conveys no license or rights under any</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * patent, copyright, mask work right, or any other intellectual property rights in</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * or to any products. NXP Semiconductors reserves the right to make changes</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * in the software without notification. NXP Semiconductors also makes no</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * representation or warranty that such application will be suitable for the</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * specified use without further testing or modification.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> * @par</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> * Permission to use, copy, modify, and distribute this software and its</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> * documentation is hereby granted, under NXP Semiconductors&#39; and its</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * licensor&#39;s relevant copyrights in the software, without fee, provided that it</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> * is used in conjunction with NXP Semiconductors microcontrollers.  This</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> * copyright, permission, and disclaimer notice must appear in all copies of</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> * this code.</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;board.h&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;string.h&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;retarget.c&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">/*****************************************************************************</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"> * Private types/enumerations/variables</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"> ****************************************************************************/</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#define LED0_GPIO_PORT_NUM                      1</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define LED0_GPIO_BIT_NUM                       25</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define LED1_GPIO_PORT_NUM                                          0</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define LED1_GPIO_BIT_NUM                                               4</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#define PWM0_GPIO_PORT_NUM                                          1</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PWM0_GPIO_BIT_NUM                                               0</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#define PWM1_GPIO_PORT_NUM                                          1</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PWM1_GPIO_BIT_NUM                                               1</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#define PWM2_GPIO_PORT_NUM                                          1</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PWM2_GPIO_BIT_NUM                                               4</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#define PWM3_GPIO_PORT_NUM                                          1</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PWM3_GPIO_BIT_NUM                                               8</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#define PWM4_GPIO_PORT_NUM                                          1</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PWM4_GPIO_BIT_NUM                                               9</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#define PWM5_GPIO_PORT_NUM                                          1</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PWM5_GPIO_BIT_NUM                                               10</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#define PWM6_GPIO_PORT_NUM                                          1</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PWM6_GPIO_BIT_NUM                                               14</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#define PWM7_GPIO_PORT_NUM                                          1</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PWM7_GPIO_BIT_NUM                                               15</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#define PWM8_GPIO_PORT_NUM                                          1</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PWM8_GPIO_BIT_NUM                                               16</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#define PWM9_GPIO_PORT_NUM                                          1</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PWM9_GPIO_BIT_NUM                                               17</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#define PWM10_GPIO_PORT_NUM                                         1</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PWM10_GPIO_BIT_NUM                                          18</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#define PWM11_GPIO_PORT_NUM                                         1</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PWM11_GPIO_BIT_NUM                                          19</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#define PWM12_GPIO_PORT_NUM                                         1</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PWM12_GPIO_BIT_NUM                                          20</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#define PWM13_GPIO_PORT_NUM                                         1</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PWM13_GPIO_BIT_NUM                                          21</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#define PWM14_GPIO_PORT_NUM                                         1</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PWM14_GPIO_BIT_NUM                                          22</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#define PWM15_GPIO_PORT_NUM                                         1</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PWM15_GPIO_BIT_NUM                                          23</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#define PWM16_GPIO_PORT_NUM                                         1</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PWM16_GPIO_BIT_NUM                                          24</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#define PWM17_GPIO_PORT_NUM                                         1</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PWM17_GPIO_BIT_NUM                                          25</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#define PWM18_GPIO_PORT_NUM                                         1</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PWM18_GPIO_BIT_NUM                                          26</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#define PWM19_GPIO_PORT_NUM                                         1</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PWM19_GPIO_BIT_NUM                                          27</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#define TOR0_GPIO_PORT_NUM                                          1</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define TOR0_GPIO_BIT_NUM                                               28</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">#define TOR1_GPIO_PORT_NUM                                          1</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define TOR1_GPIO_BIT_NUM                                               29</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#define TOR2_GPIO_PORT_NUM                                          1</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define TOR2_GPIO_BIT_NUM                                               30</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">#define TOR3_GPIO_PORT_NUM                                          2</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define TOR3_GPIO_BIT_NUM                                               0</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#define TOR4_GPIO_PORT_NUM                                          2</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define TOR4_GPIO_BIT_NUM                                               1</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#define TOR5_GPIO_PORT_NUM                                          2</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define TOR5_GPIO_BIT_NUM                                               7</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">#define TELE0_ADC_PORT_NUM                                          1</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define TELE0_ADC_BIT_NUM                                               31</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor"></span><span class="comment">/*****************************************************************************</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment"> * Public types/enumerations/variables</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment"> ****************************************************************************/</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="group___b_o_a_r_d___l_p_c1766_s_t_k.html#gaa3cd3e43291e81e795d642b79b6088e6">  134</a></span>&#160;uint32_t <a class="code" href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#gaa3cd3e43291e81e795d642b79b6088e6">SystemCoreClock</a>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">/*****************************************************************************</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment"> * Private functions</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment"> ****************************************************************************/</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment">/* Initializes board LED(s) */</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> Board_LED_Init(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;{</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="comment">/* Pin PIO0_22 is configured as GPIO pin during SystemInit */</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="comment">/* Set the PIO_22 as output */</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, LED0_GPIO_PORT_NUM, LED0_GPIO_BIT_NUM, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, LED1_GPIO_PORT_NUM, LED1_GPIO_BIT_NUM, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;}</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment">/*****************************************************************************</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment"> * Public functions</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment"> ****************************************************************************/</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment">/* Update system core clock rate, should be called if the system has</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment">   a clock rate change */</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="group___b_o_a_r_d___l_p_c1766_s_t_k.html#gae0c36a9591fe6e9c45ecb21a794f0f0f">  155</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#gae0c36a9591fe6e9c45ecb21a794f0f0f">SystemCoreClockUpdate</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;{</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="comment">/* CPU core speed */</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <a class="code" href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#gaa3cd3e43291e81e795d642b79b6088e6">SystemCoreClock</a> = <a class="code" href="group___c_l_o_c_k__17_x_x__40_x_x.html#gaf3dd97239f9db511dbc71c531132cc08">Chip_Clock_GetSystemClockRate</a>();</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="comment">/* Initialize UART pins */</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="group___b_o_a_r_d___l_p_c1766_s_t_k.html#gad9a7067de5694c1615c4814bcec03b34">  162</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___b_o_a_r_d___l_p_c1766_s_t_k.html#gad9a7067de5694c1615c4814bcec03b34">Board_UART_Init</a>(<a class="code" href="struct_i_p___u_s_a_r_t__001___t.html">LPC_USART_T</a> *pUART)</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;{</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="comment">/* Pin Muxing has already been done during SystemInit */</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;}</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="comment">/* Initialize debug output via UART for board */</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="group___b_o_a_r_d___l_p_c1766_s_t_k.html#gabcba073f50ad637ee6bc852f64ea2ce6">  168</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#gabcba073f50ad637ee6bc852f64ea2ce6">Board_Debug_Init</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;{</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="preprocessor">#if defined(DEBUG_ENABLE)</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="preprocessor"></span>    <a class="code" href="group___b_o_a_r_d___l_p_c1766_s_t_k.html#gad9a7067de5694c1615c4814bcec03b34">Board_UART_Init</a>(DEBUG_UART);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="comment">/* Setup UART for 115.2K8N1 */</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="group___x_x__40_x_x.html#gaf024084be4068e407aab7c30e105f7af">Chip_UART_Init</a>(DEBUG_UART);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <a class="code" href="group___x_x__40_x_x.html#ga50b8e06360eb6fad35886bc50e067366">Chip_UART_SetBaud</a>(DEBUG_UART, 115200);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="group___x_x__40_x_x.html#gabda1dfc6600fca4abf6b1c25a1eab38e">Chip_UART_ConfigData</a>(DEBUG_UART, <a class="code" href="group___i_p___u_s_a_r_t__001.html#ggacb800ef0b2d3c4331a07f0e96bf6f853a5a1857edfe041a41ef5e7f098be8ead2">UART_DATABIT_8</a>, <a class="code" href="group___i_p___u_s_a_r_t__001.html#gga71b21760b0fbf7bfb9b5a2471bd59732aa80d2d8ea61454045ebe71d155e85b3d">UART_PARITY_NONE</a>, <a class="code" href="group___i_p___u_s_a_r_t__001.html#gga3a981abd255469dad426402e6e1f4849ab9c26fe02b2f4407d7106ea4da1f74ab">UART_STOPBIT_1</a>);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="comment">/* Enable UART Transmit */</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <a class="code" href="group___x_x__40_x_x.html#gaae74d94c72863065c271aaffb29a0e01">Chip_UART_TxCmd</a>(DEBUG_UART, ENABLE);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="preprocessor"></span>}</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="comment">/* Sends a character on the UART */</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="group___b_o_a_r_d___l_p_c1766_s_t_k.html#gada2a79f4fcd7cd730317fc34291bf08e">  184</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#gada2a79f4fcd7cd730317fc34291bf08e">Board_UARTPutChar</a>(<span class="keywordtype">char</span> ch)</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;{</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="preprocessor">#if defined(DEBUG_ENABLE)</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="preprocessor"></span>    <span class="keywordflow">while</span> (<a class="code" href="group___x_x__40_x_x.html#gab7eade83907b4ef9e03835e2fb332659">Chip_UART_SendByte</a>(DEBUG_UART, (uint8_t) ch) == ERROR) {}</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="preprocessor"></span>}</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment">/* Gets a character from the UART, returns EOF if no character is ready */</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="group___b_o_a_r_d___l_p_c1766_s_t_k.html#ga4cffd2ff35f970b7dfad4fdf6419ecf6">  192</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#ga4cffd2ff35f970b7dfad4fdf6419ecf6">Board_UARTGetChar</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;{</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="preprocessor">#if defined(DEBUG_ENABLE)</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="preprocessor"></span>    uint8_t data;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="group___x_x__40_x_x.html#ga352bc06a2e7e99c13fc5f10f40212643">Chip_UART_ReceiveByte</a>(DEBUG_UART, &amp;data) == SUCCESS) {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) data;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    }</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="preprocessor"></span>    <span class="keywordflow">return</span> EOF;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;}</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="comment">/* Outputs a string on the debug UART */</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="group___b_o_a_r_d___l_p_c1766_s_t_k.html#ga26211607542af1bb2a867d6641a8d4f3">  205</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#ga26211607542af1bb2a867d6641a8d4f3">Board_UARTPutSTR</a>(<span class="keywordtype">char</span> *str)</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;{</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="preprocessor">#if defined(DEBUG_ENABLE)</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="preprocessor"></span>    <span class="keywordflow">while</span> (*str != <span class="charliteral">&#39;\0&#39;</span>) {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <a class="code" href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#gada2a79f4fcd7cd730317fc34291bf08e">Board_UARTPutChar</a>(*str++);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="preprocessor"></span>}</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="keywordtype">void</span> Board_TELE_Init(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;{</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;}</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="comment">/*Initializes board GPIO TOR */</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="keywordtype">void</span> Board_TOR_Init(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;{</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, TOR0_GPIO_PORT_NUM, TOR0_GPIO_BIT_NUM, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, TOR1_GPIO_PORT_NUM, TOR1_GPIO_BIT_NUM, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, TOR2_GPIO_PORT_NUM, TOR2_GPIO_BIT_NUM, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, TOR3_GPIO_PORT_NUM, TOR3_GPIO_BIT_NUM, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, TOR4_GPIO_PORT_NUM, TOR4_GPIO_BIT_NUM, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, TOR5_GPIO_PORT_NUM, TOR5_GPIO_BIT_NUM, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;}</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="comment">/* Initializes board GPIO PWM */</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="keywordtype">void</span> Board_PWM_Init(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;{</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, PWM0_GPIO_PORT_NUM, PWM0_GPIO_BIT_NUM, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, PWM1_GPIO_PORT_NUM, PWM1_GPIO_BIT_NUM, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, PWM2_GPIO_PORT_NUM, PWM2_GPIO_BIT_NUM, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, PWM3_GPIO_PORT_NUM, PWM3_GPIO_BIT_NUM, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, PWM4_GPIO_PORT_NUM, PWM4_GPIO_BIT_NUM, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, PWM5_GPIO_PORT_NUM, PWM5_GPIO_BIT_NUM, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, PWM6_GPIO_PORT_NUM, PWM6_GPIO_BIT_NUM, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, PWM7_GPIO_PORT_NUM, PWM7_GPIO_BIT_NUM, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, PWM8_GPIO_PORT_NUM, PWM8_GPIO_BIT_NUM, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, PWM9_GPIO_PORT_NUM, PWM9_GPIO_BIT_NUM, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, PWM10_GPIO_PORT_NUM, PWM10_GPIO_BIT_NUM, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, PWM11_GPIO_PORT_NUM, PWM11_GPIO_BIT_NUM, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, PWM12_GPIO_PORT_NUM, PWM12_GPIO_BIT_NUM, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, PWM13_GPIO_PORT_NUM, PWM13_GPIO_BIT_NUM, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, PWM14_GPIO_PORT_NUM, PWM14_GPIO_BIT_NUM, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, PWM15_GPIO_PORT_NUM, PWM15_GPIO_BIT_NUM, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, PWM16_GPIO_PORT_NUM, PWM16_GPIO_BIT_NUM, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, PWM17_GPIO_PORT_NUM, PWM17_GPIO_BIT_NUM, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, PWM18_GPIO_PORT_NUM, PWM18_GPIO_BIT_NUM, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(LPC_GPIO, PWM19_GPIO_PORT_NUM, PWM19_GPIO_BIT_NUM, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;}</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="keywordtype">void</span> Board_PWM_Set(uint8_t PWMNumber, <span class="keywordtype">bool</span> On)</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;{</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordflow">switch</span>(PWMNumber)</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    {</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="keywordflow">case</span> 0: <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga769258ead822b26f77ea567456f58e2f">Chip_GPIO_WritePortBit</a>(LPC_GPIO, PWM0_GPIO_PORT_NUM, PWM0_GPIO_BIT_NUM, On); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="keywordflow">case</span> 1: <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga769258ead822b26f77ea567456f58e2f">Chip_GPIO_WritePortBit</a>(LPC_GPIO, PWM1_GPIO_PORT_NUM, PWM1_GPIO_BIT_NUM, On); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="keywordflow">case</span> 2: <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga769258ead822b26f77ea567456f58e2f">Chip_GPIO_WritePortBit</a>(LPC_GPIO, PWM2_GPIO_PORT_NUM, PWM2_GPIO_BIT_NUM, On); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="keywordflow">case</span> 3: <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga769258ead822b26f77ea567456f58e2f">Chip_GPIO_WritePortBit</a>(LPC_GPIO, PWM3_GPIO_PORT_NUM, PWM3_GPIO_BIT_NUM, On); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keywordflow">case</span> 4: <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga769258ead822b26f77ea567456f58e2f">Chip_GPIO_WritePortBit</a>(LPC_GPIO, PWM4_GPIO_PORT_NUM, PWM4_GPIO_BIT_NUM, On); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="keywordflow">case</span> 5: <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga769258ead822b26f77ea567456f58e2f">Chip_GPIO_WritePortBit</a>(LPC_GPIO, PWM5_GPIO_PORT_NUM, PWM5_GPIO_BIT_NUM, On); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="keywordflow">case</span> 6: <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga769258ead822b26f77ea567456f58e2f">Chip_GPIO_WritePortBit</a>(LPC_GPIO, PWM6_GPIO_PORT_NUM, PWM6_GPIO_BIT_NUM, On); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="keywordflow">case</span> 7: <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga769258ead822b26f77ea567456f58e2f">Chip_GPIO_WritePortBit</a>(LPC_GPIO, PWM7_GPIO_PORT_NUM, PWM7_GPIO_BIT_NUM, On); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="keywordflow">case</span> 8: <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga769258ead822b26f77ea567456f58e2f">Chip_GPIO_WritePortBit</a>(LPC_GPIO, PWM8_GPIO_PORT_NUM, PWM8_GPIO_BIT_NUM, On); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        <span class="keywordflow">case</span> 9: <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga769258ead822b26f77ea567456f58e2f">Chip_GPIO_WritePortBit</a>(LPC_GPIO, PWM9_GPIO_PORT_NUM, PWM9_GPIO_BIT_NUM, On); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordflow">case</span> 10: <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga769258ead822b26f77ea567456f58e2f">Chip_GPIO_WritePortBit</a>(LPC_GPIO, PWM10_GPIO_PORT_NUM, PWM10_GPIO_BIT_NUM, On); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="keywordflow">case</span> 11: <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga769258ead822b26f77ea567456f58e2f">Chip_GPIO_WritePortBit</a>(LPC_GPIO, PWM11_GPIO_PORT_NUM, PWM11_GPIO_BIT_NUM, On); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordflow">case</span> 12: <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga769258ead822b26f77ea567456f58e2f">Chip_GPIO_WritePortBit</a>(LPC_GPIO, PWM12_GPIO_PORT_NUM, PWM12_GPIO_BIT_NUM, On); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <span class="keywordflow">case</span> 13: <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga769258ead822b26f77ea567456f58e2f">Chip_GPIO_WritePortBit</a>(LPC_GPIO, PWM13_GPIO_PORT_NUM, PWM13_GPIO_BIT_NUM, On); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="keywordflow">case</span> 14: <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga769258ead822b26f77ea567456f58e2f">Chip_GPIO_WritePortBit</a>(LPC_GPIO, PWM14_GPIO_PORT_NUM, PWM14_GPIO_BIT_NUM, On); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keywordflow">case</span> 15: <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga769258ead822b26f77ea567456f58e2f">Chip_GPIO_WritePortBit</a>(LPC_GPIO, PWM15_GPIO_PORT_NUM, PWM15_GPIO_BIT_NUM, On); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="keywordflow">case</span> 16: <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga769258ead822b26f77ea567456f58e2f">Chip_GPIO_WritePortBit</a>(LPC_GPIO, PWM16_GPIO_PORT_NUM, PWM16_GPIO_BIT_NUM, On); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordflow">case</span> 17: <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga769258ead822b26f77ea567456f58e2f">Chip_GPIO_WritePortBit</a>(LPC_GPIO, PWM17_GPIO_PORT_NUM, PWM17_GPIO_BIT_NUM, On); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keywordflow">case</span> 18: <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga769258ead822b26f77ea567456f58e2f">Chip_GPIO_WritePortBit</a>(LPC_GPIO, PWM18_GPIO_PORT_NUM, PWM18_GPIO_BIT_NUM, On); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="keywordflow">case</span> 19: <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga769258ead822b26f77ea567456f58e2f">Chip_GPIO_WritePortBit</a>(LPC_GPIO, PWM19_GPIO_PORT_NUM, PWM19_GPIO_BIT_NUM, On); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordflow">default</span>: <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    }</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;}</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;uint32_t TOR_GetStatus(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;{</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    uint8_t ret = NO_TOR_PRESSED;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    </div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga308a1d5a5e79e6a988e30dbb2131236d">Chip_GPIO_ReadPortBit</a>(LPC_GPIO, TOR0_GPIO_PORT_NUM, TOR0_GPIO_BIT_NUM) == 0x00) {</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        ret |= <a class="code" href="group___b_o_a_r_d___l_p_c1766_s_t_k.html#gaf9d5425fb588f547eec622d3cdd8a796">TOR_TOR0</a>;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    }</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga308a1d5a5e79e6a988e30dbb2131236d">Chip_GPIO_ReadPortBit</a>(LPC_GPIO, TOR1_GPIO_PORT_NUM, TOR1_GPIO_BIT_NUM) == 0x00) {</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        ret |= TOR_TOR1;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    }</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga308a1d5a5e79e6a988e30dbb2131236d">Chip_GPIO_ReadPortBit</a>(LPC_GPIO, TOR2_GPIO_PORT_NUM, TOR2_GPIO_BIT_NUM) == 0x00) {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        ret |= TOR_TOR2;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    }</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga308a1d5a5e79e6a988e30dbb2131236d">Chip_GPIO_ReadPortBit</a>(LPC_GPIO, TOR3_GPIO_PORT_NUM, TOR3_GPIO_BIT_NUM) == 0x00) {</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        ret |= TOR_TOR3;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    }</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga308a1d5a5e79e6a988e30dbb2131236d">Chip_GPIO_ReadPortBit</a>(LPC_GPIO, TOR4_GPIO_PORT_NUM, TOR4_GPIO_BIT_NUM) == 0x00) {</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        ret |= TOR_TOR4;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    }</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga308a1d5a5e79e6a988e30dbb2131236d">Chip_GPIO_ReadPortBit</a>(LPC_GPIO, TOR5_GPIO_PORT_NUM, TOR5_GPIO_BIT_NUM) == 0x00) {</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        ret |= TOR_TOR5;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    }   </div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    </div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;}</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="comment">/* Sets the state of a board LED to on or off */</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno"><a class="line" href="group___b_o_a_r_d___l_p_c1766_s_t_k.html#gaa527d877bfe43c7b230b868832157132">  309</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#ga4beb63d516764b260e9798642fab0047">Board_LED_Set</a>(uint8_t LEDNumber, <span class="keywordtype">bool</span> On)</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;{</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="comment">/* There is only one LED */</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="keywordflow">if</span> (LEDNumber == 0) {</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga769258ead822b26f77ea567456f58e2f">Chip_GPIO_WritePortBit</a>(LPC_GPIO, LED0_GPIO_PORT_NUM, LED0_GPIO_BIT_NUM, On);</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    }</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordflow">if</span> (LEDNumber == 1) {</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga769258ead822b26f77ea567456f58e2f">Chip_GPIO_WritePortBit</a>(LPC_GPIO, LED1_GPIO_PORT_NUM, LED1_GPIO_BIT_NUM, On);</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    }</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;}</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="comment">/* Returns the current state of a board LED */</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno"><a class="line" href="group___b_o_a_r_d___l_p_c1766_s_t_k.html#ga8e79f51947703de384c34bc86908bd9e">  321</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#ga8e79f51947703de384c34bc86908bd9e">Board_LED_Test</a>(uint8_t LEDNumber)</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;{</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordflow">if</span> (LEDNumber == 0) {</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga308a1d5a5e79e6a988e30dbb2131236d">Chip_GPIO_ReadPortBit</a>(LPC_GPIO, LED0_GPIO_PORT_NUM, LED0_GPIO_BIT_NUM);</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    }</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordflow">if</span> (LEDNumber == 1) {</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga308a1d5a5e79e6a988e30dbb2131236d">Chip_GPIO_ReadPortBit</a>(LPC_GPIO, LED1_GPIO_PORT_NUM, LED1_GPIO_BIT_NUM);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    }</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;}</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="comment">/* Set up and initialize all required blocks and functions related to the</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="comment">   board hardware */</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno"><a class="line" href="group___b_o_a_r_d___l_p_c1766_s_t_k.html#gae8d2d761b984f48c3dbb27dd32a8c119">  334</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#gae8d2d761b984f48c3dbb27dd32a8c119">Board_Init</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;{</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <span class="comment">/* Sets up DEBUG UART */</span></div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    DEBUGINIT();</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="comment">/* Updates SystemCoreClock global var with current clock speed */</span></div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <a class="code" href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#gae0c36a9591fe6e9c45ecb21a794f0f0f">SystemCoreClockUpdate</a>();</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="comment">/* Initializes GPIO */</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#gaeaca39372c8ff9f288243a20dd2259ce">Chip_GPIO_Init</a>(LPC_GPIO);</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <a class="code" href="group___i_o_c_o_n__17_x_x__40_x_x.html#ga40283d81f5ad91ba8b47647059721c9d">Chip_IOCON_Init</a>(LPC_IOCON);</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="comment">/* Initialize LEDs */</span></div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    Board_LED_Init();</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    </div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    Board_TOR_Init();</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    </div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    Board_PWM_Init();</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;}</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160; <span class="comment">//THOMAS WAQUET</span></div>
+<div class="ttc" id="group___x_x__40_x_x_html_ga50b8e06360eb6fad35886bc50e067366"><div class="ttname"><a href="group___x_x__40_x_x.html#ga50b8e06360eb6fad35886bc50e067366">Chip_UART_SetBaud</a></div><div class="ttdeci">Status Chip_UART_SetBaud(LPC_USART_T *pUART, uint32_t baudrate)</div><div class="ttdoc">Determines best dividers to get a target baud rate. </div><div class="ttdef"><b>Definition:</b> <a href="uart__17xx__40xx_8c_source.html#l00145">uart_17xx_40xx.c:145</a></div></div>
+<div class="ttc" id="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i_html_gabcba073f50ad637ee6bc852f64ea2ce6"><div class="ttname"><a href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#gabcba073f50ad637ee6bc852f64ea2ce6">Board_Debug_Init</a></div><div class="ttdeci">void Board_Debug_Init(void)</div><div class="ttdoc">Initializes board UART for output, required for printf redirection. </div><div class="ttdef"><b>Definition:</b> <a href="board___l_p_c1766_s_t_k_8c_source.html#l00168">board_LPC1766STK.c:168</a></div></div>
+<div class="ttc" id="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i_html_gaa3cd3e43291e81e795d642b79b6088e6"><div class="ttname"><a href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#gaa3cd3e43291e81e795d642b79b6088e6">SystemCoreClock</a></div><div class="ttdeci">uint32_t SystemCoreClock</div><div class="ttdoc">Current system clock rate, mainly used for sysTick. </div><div class="ttdef"><b>Definition:</b> <a href="board___l_p_c1766_s_t_k_8c_source.html#l00134">board_LPC1766STK.c:134</a></div></div>
+<div class="ttc" id="group___g_p_i_o__17_x_x__40_x_x_html_gaeaca39372c8ff9f288243a20dd2259ce"><div class="ttname"><a href="group___g_p_i_o__17_x_x__40_x_x.html#gaeaca39372c8ff9f288243a20dd2259ce">Chip_GPIO_Init</a></div><div class="ttdeci">STATIC INLINE void Chip_GPIO_Init(LPC_GPIO_T *pGPIO)</div><div class="ttdoc">Initialize GPIO block. </div><div class="ttdef"><b>Definition:</b> <a href="gpio__17xx__40xx_8h_source.html#l00049">gpio_17xx_40xx.h:49</a></div></div>
+<div class="ttc" id="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i_html_gae0c36a9591fe6e9c45ecb21a794f0f0f"><div class="ttname"><a href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#gae0c36a9591fe6e9c45ecb21a794f0f0f">SystemCoreClockUpdate</a></div><div class="ttdeci">void SystemCoreClockUpdate(void)</div><div class="ttdoc">Update system core clock rate, should be called if the system has a clock rate change. </div><div class="ttdef"><b>Definition:</b> <a href="board___l_p_c1766_s_t_k_8c_source.html#l00155">board_LPC1766STK.c:155</a></div></div>
+<div class="ttc" id="group___g_p_i_o__17_x_x__40_x_x_html_ga4b726d64407e21f40d4fc23f16da04ab"><div class="ttname"><a href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a></div><div class="ttdeci">STATIC INLINE void Chip_GPIO_WriteDirBit(LPC_GPIO_T *pGPIO, uint8_t port, uint8_t bit, bool setting)</div><div class="ttdoc">Set a GPIO direction. </div><div class="ttdef"><b>Definition:</b> <a href="gpio__17xx__40xx_8h_source.html#l00073">gpio_17xx_40xx.h:73</a></div></div>
+<div class="ttc" id="group___x_x__40_x_x_html_gaae74d94c72863065c271aaffb29a0e01"><div class="ttname"><a href="group___x_x__40_x_x.html#gaae74d94c72863065c271aaffb29a0e01">Chip_UART_TxCmd</a></div><div class="ttdeci">void Chip_UART_TxCmd(LPC_USART_T *pUART, FunctionalState NewState)</div><div class="ttdoc">Enable/Disable transmission on UART TxD pin. </div><div class="ttdef"><b>Definition:</b> <a href="uart__17xx__40xx_8c_source.html#l00156">uart_17xx_40xx.c:156</a></div></div>
+<div class="ttc" id="group___i_p___u_s_a_r_t__001_html_gga71b21760b0fbf7bfb9b5a2471bd59732aa80d2d8ea61454045ebe71d155e85b3d"><div class="ttname"><a href="group___i_p___u_s_a_r_t__001.html#gga71b21760b0fbf7bfb9b5a2471bd59732aa80d2d8ea61454045ebe71d155e85b3d">UART_PARITY_NONE</a></div><div class="ttdef"><b>Definition:</b> <a href="usart__001_8h_source.html#l00410">usart_001.h:410</a></div></div>
+<div class="ttc" id="group___g_p_i_o__17_x_x__40_x_x_html_ga308a1d5a5e79e6a988e30dbb2131236d"><div class="ttname"><a href="group___g_p_i_o__17_x_x__40_x_x.html#ga308a1d5a5e79e6a988e30dbb2131236d">Chip_GPIO_ReadPortBit</a></div><div class="ttdeci">STATIC INLINE bool Chip_GPIO_ReadPortBit(LPC_GPIO_T *pGPIO, uint32_t port, uint8_t bit)</div><div class="ttdoc">Read a GPIO state. </div><div class="ttdef"><b>Definition:</b> <a href="gpio__17xx__40xx_8h_source.html#l00085">gpio_17xx_40xx.h:85</a></div></div>
+<div class="ttc" id="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i_html_ga4cffd2ff35f970b7dfad4fdf6419ecf6"><div class="ttname"><a href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#ga4cffd2ff35f970b7dfad4fdf6419ecf6">Board_UARTGetChar</a></div><div class="ttdeci">int Board_UARTGetChar(void)</div><div class="ttdoc">Get a single character from the UART, required for scanf input. </div><div class="ttdef"><b>Definition:</b> <a href="board___l_p_c1766_s_t_k_8c_source.html#l00192">board_LPC1766STK.c:192</a></div></div>
+<div class="ttc" id="struct_i_p___u_s_a_r_t__001___t_html"><div class="ttname"><a href="struct_i_p___u_s_a_r_t__001___t.html">IP_USART_001_T</a></div><div class="ttdoc">USART register block structure. </div><div class="ttdef"><b>Definition:</b> <a href="usart__001_8h_source.html#l00050">usart_001.h:50</a></div></div>
+<div class="ttc" id="group___x_x__40_x_x_html_gaf024084be4068e407aab7c30e105f7af"><div class="ttname"><a href="group___x_x__40_x_x.html#gaf024084be4068e407aab7c30e105f7af">Chip_UART_Init</a></div><div class="ttdeci">void Chip_UART_Init(LPC_USART_T *pUART)</div><div class="ttdoc">Initializes the pUART peripheral. </div><div class="ttdef"><b>Definition:</b> <a href="uart__17xx__40xx_8c_source.html#l00123">uart_17xx_40xx.c:123</a></div></div>
+<div class="ttc" id="group___x_x__40_x_x_html_gab7eade83907b4ef9e03835e2fb332659"><div class="ttname"><a href="group___x_x__40_x_x.html#gab7eade83907b4ef9e03835e2fb332659">Chip_UART_SendByte</a></div><div class="ttdeci">STATIC INLINE Status Chip_UART_SendByte(LPC_USART_T *pUART, uint8_t data)</div><div class="ttdoc">Transmit a single data through UART peripheral. </div><div class="ttdef"><b>Definition:</b> <a href="uart__17xx__40xx_8h_source.html#l00194">uart_17xx_40xx.h:194</a></div></div>
+<div class="ttc" id="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i_html_ga4beb63d516764b260e9798642fab0047"><div class="ttname"><a href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#ga4beb63d516764b260e9798642fab0047">Board_LED_Set</a></div><div class="ttdeci">void Board_LED_Set(uint8_t LEDNumber, bool State)</div><div class="ttdoc">Sets the state of a board LED to on or off. </div><div class="ttdef"><b>Definition:</b> <a href="board___l_p_c1766_s_t_k_8c_source.html#l00309">board_LPC1766STK.c:309</a></div></div>
+<div class="ttc" id="group___i_o_c_o_n__17_x_x__40_x_x_html_ga40283d81f5ad91ba8b47647059721c9d"><div class="ttname"><a href="group___i_o_c_o_n__17_x_x__40_x_x.html#ga40283d81f5ad91ba8b47647059721c9d">Chip_IOCON_Init</a></div><div class="ttdeci">STATIC INLINE void Chip_IOCON_Init(LPC_IOCON_T *pIOCON)</div><div class="ttdoc">Initialize the IOCON peripheral. </div><div class="ttdef"><b>Definition:</b> <a href="iocon__17xx__40xx_8h_source.html#l00142">iocon_17xx_40xx.h:142</a></div></div>
+<div class="ttc" id="group___c_l_o_c_k__17_x_x__40_x_x_html_gaf3dd97239f9db511dbc71c531132cc08"><div class="ttname"><a href="group___c_l_o_c_k__17_x_x__40_x_x.html#gaf3dd97239f9db511dbc71c531132cc08">Chip_Clock_GetSystemClockRate</a></div><div class="ttdeci">uint32_t Chip_Clock_GetSystemClockRate(void)</div><div class="ttdoc">Return system clock rate. </div><div class="ttdef"><b>Definition:</b> <a href="clock__17xx__40xx_8c_source.html#l00401">clock_17xx_40xx.c:401</a></div></div>
+<div class="ttc" id="group___b_o_a_r_d___l_p_c1766_s_t_k_html_gaf9d5425fb588f547eec622d3cdd8a796"><div class="ttname"><a href="group___b_o_a_r_d___l_p_c1766_s_t_k.html#gaf9d5425fb588f547eec622d3cdd8a796">TOR_TOR0</a></div><div class="ttdeci">#define TOR_TOR0</div><div class="ttdef"><b>Definition:</b> <a href="board___l_p_c1766_s_t_k_8h_source.html#l00060">board_LPC1766STK.h:60</a></div></div>
+<div class="ttc" id="group___i_p___u_s_a_r_t__001_html_ggacb800ef0b2d3c4331a07f0e96bf6f853a5a1857edfe041a41ef5e7f098be8ead2"><div class="ttname"><a href="group___i_p___u_s_a_r_t__001.html#ggacb800ef0b2d3c4331a07f0e96bf6f853a5a1857edfe041a41ef5e7f098be8ead2">UART_DATABIT_8</a></div><div class="ttdef"><b>Definition:</b> <a href="usart__001_8h_source.html#l00442">usart_001.h:442</a></div></div>
+<div class="ttc" id="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i_html_gada2a79f4fcd7cd730317fc34291bf08e"><div class="ttname"><a href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#gada2a79f4fcd7cd730317fc34291bf08e">Board_UARTPutChar</a></div><div class="ttdeci">void Board_UARTPutChar(char ch)</div><div class="ttdoc">Sends a single character on the UART, required for printf redirection. </div><div class="ttdef"><b>Definition:</b> <a href="board___l_p_c1766_s_t_k_8c_source.html#l00184">board_LPC1766STK.c:184</a></div></div>
+<div class="ttc" id="group___i_p___u_s_a_r_t__001_html_gga3a981abd255469dad426402e6e1f4849ab9c26fe02b2f4407d7106ea4da1f74ab"><div class="ttname"><a href="group___i_p___u_s_a_r_t__001.html#gga3a981abd255469dad426402e6e1f4849ab9c26fe02b2f4407d7106ea4da1f74ab">UART_STOPBIT_1</a></div><div class="ttdef"><b>Definition:</b> <a href="usart__001_8h_source.html#l00431">usart_001.h:431</a></div></div>
+<div class="ttc" id="group___x_x__40_x_x_html_gabda1dfc6600fca4abf6b1c25a1eab38e"><div class="ttname"><a href="group___x_x__40_x_x.html#gabda1dfc6600fca4abf6b1c25a1eab38e">Chip_UART_ConfigData</a></div><div class="ttdeci">STATIC INLINE void Chip_UART_ConfigData(LPC_USART_T *pUART, IP_UART_DATABIT_T Databits, IP_UART_PARITY_T Parity, IP_UART_STOPBIT_T Stopbits)</div><div class="ttdoc">Configure data width, parity mode and stop bits. </div><div class="ttdef"><b>Definition:</b> <a href="uart__17xx__40xx_8h_source.html#l00063">uart_17xx_40xx.h:63</a></div></div>
+<div class="ttc" id="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i_html_ga8e79f51947703de384c34bc86908bd9e"><div class="ttname"><a href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#ga8e79f51947703de384c34bc86908bd9e">Board_LED_Test</a></div><div class="ttdeci">bool Board_LED_Test(uint8_t LEDNumber)</div><div class="ttdoc">Returns the current state of a board LED. </div><div class="ttdef"><b>Definition:</b> <a href="board___l_p_c1766_s_t_k_8c_source.html#l00321">board_LPC1766STK.c:321</a></div></div>
+<div class="ttc" id="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i_html_gae8d2d761b984f48c3dbb27dd32a8c119"><div class="ttname"><a href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#gae8d2d761b984f48c3dbb27dd32a8c119">Board_Init</a></div><div class="ttdeci">void Board_Init(void)</div><div class="ttdoc">Set up and initialize all required blocks and functions related to the board hardware. </div><div class="ttdef"><b>Definition:</b> <a href="board___l_p_c1766_s_t_k_8c_source.html#l00334">board_LPC1766STK.c:334</a></div></div>
+<div class="ttc" id="group___g_p_i_o__17_x_x__40_x_x_html_ga769258ead822b26f77ea567456f58e2f"><div class="ttname"><a href="group___g_p_i_o__17_x_x__40_x_x.html#ga769258ead822b26f77ea567456f58e2f">Chip_GPIO_WritePortBit</a></div><div class="ttdeci">STATIC INLINE void Chip_GPIO_WritePortBit(LPC_GPIO_T *pGPIO, uint32_t port, uint8_t bit, bool setting)</div><div class="ttdoc">Set a GPIO port/bit state. </div><div class="ttdef"><b>Definition:</b> <a href="gpio__17xx__40xx_8h_source.html#l00060">gpio_17xx_40xx.h:60</a></div></div>
+<div class="ttc" id="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i_html_ga26211607542af1bb2a867d6641a8d4f3"><div class="ttname"><a href="group___b_o_a_r_d___c_o_m_m_o_n___a_p_i.html#ga26211607542af1bb2a867d6641a8d4f3">Board_UARTPutSTR</a></div><div class="ttdeci">void Board_UARTPutSTR(char *str)</div><div class="ttdoc">Prints a string to the UART. </div><div class="ttdef"><b>Definition:</b> <a href="board___l_p_c1766_s_t_k_8c_source.html#l00205">board_LPC1766STK.c:205</a></div></div>
+<div class="ttc" id="group___b_o_a_r_d___l_p_c1766_s_t_k_html_gad9a7067de5694c1615c4814bcec03b34"><div class="ttname"><a href="group___b_o_a_r_d___l_p_c1766_s_t_k.html#gad9a7067de5694c1615c4814bcec03b34">Board_UART_Init</a></div><div class="ttdeci">void Board_UART_Init(LPC_USART_T *pUART)</div><div class="ttdoc">Initialize pin muxing for a UART. </div><div class="ttdef"><b>Definition:</b> <a href="board___l_p_c1766_s_t_k_8c_source.html#l00162">board_LPC1766STK.c:162</a></div></div>
+<div class="ttc" id="group___x_x__40_x_x_html_ga352bc06a2e7e99c13fc5f10f40212643"><div class="ttname"><a href="group___x_x__40_x_x.html#ga352bc06a2e7e99c13fc5f10f40212643">Chip_UART_ReceiveByte</a></div><div class="ttdeci">STATIC INLINE Status Chip_UART_ReceiveByte(LPC_USART_T *pUART, uint8_t *Data)</div><div class="ttdoc">Receive a single data from UART peripheral. </div><div class="ttdef"><b>Definition:</b> <a href="uart__17xx__40xx_8h_source.html#l00205">uart_17xx_40xx.h:205</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_e9967a62eb0adfb08d6da6a5b6090dce.html">lpcopen</a></li><li class="navelem"><a class="el" href="dir_9de244f5aef64593622a4e8655220356.html">software</a></li><li class="navelem"><a class="el" href="dir_31a1b7b0d37c21493df82ae7c333e639.html">lpc_core</a></li><li class="navelem"><a class="el" href="dir_acafed25b871b05fdf21ba488eb5a017.html">lpc_board</a></li><li class="navelem"><a class="el" href="dir_e9025211933a8a11d5df721ca15606d3.html">boards_17xx_40xx</a></li><li class="navelem"><a class="el" href="dir_65d289d6c99a7c26105861234d8dad64.html">lpc1766stk</a></li><li class="navelem"><b>board_LPC1766STK.c</b></li>
+    <li class="footer">Généré le Mardi Janvier 7 2014 11:23:02 pour Hexapode par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
+  </ul>
+</div>
+</body>
+</html>

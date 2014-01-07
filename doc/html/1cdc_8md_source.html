@@ -1,0 +1,523 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Hexapode:  Fichier source de doc/1cdc.md</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="IN7Robot.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Hexapode
+   &#160;<span id="projectnumber">Version 1.0</span>
+   </div>
+   <div id="projectbrief">Thomas Waquet &amp; Gauthier Dhalluin</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('1cdc_8md.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Groupes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">doc/1cdc.md</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor"># Rapport - Manuel d&#39;utilisation #</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span>[Page d<span class="stringliteral">&#39;accueil](../Rapport_Waquet-Dhalluin.html)</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="stringliteral">\section Sommaire</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="stringliteral">&lt;A HREF=&quot;#Concept&quot;&gt;Conception&lt;/A&gt;&lt;BR&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="stringliteral">- &lt;A HREF=&quot;#Intro&quot;&gt;1. Introduction&lt;/A&gt;&lt;BR&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="stringliteral">- &lt;A HREF=&quot;#Architecture&quot;&gt;2. Architecture du projet&lt;/A&gt;&lt;BR&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="stringliteral">- &lt;A HREF=&quot;#GestFeet&quot;&gt;3. La gestion des pattes&lt;/A&gt;&lt;BR&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="stringliteral">- &lt;A HREF=&quot;#GestHead&quot;&gt;4. La gestion de la tête&lt;/A&gt;&lt;BR&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="stringliteral">- &lt;A HREF=&quot;#Capteur&quot;&gt;5. Les capteurs&lt;/A&gt;&lt;BR&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="stringliteral">- &lt;A HREF=&quot;#Ordo&quot;&gt;6. L&#39;</span>ordonnancement&lt;/A&gt;&lt;BR&gt;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;- &lt;A HREF=<span class="stringliteral">&quot;#Comm&quot;</span>&gt;7. La communication&lt;/A&gt;&lt;BR&gt;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;- &lt;A HREF=<span class="stringliteral">&quot;#IHM&quot;</span>&gt;8. L<span class="stringliteral">&#39;Interface Homme-Machine&lt;/A&gt;&lt;BR&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="stringliteral">&lt;A HREF=&quot;#Doc&quot;&gt;Documentation&lt;/A&gt;&lt;BR&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="stringliteral">&lt;HR&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="stringliteral">\section Développement</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="stringliteral">&lt;A NAME=&quot;Concept&quot;&gt;&lt;/A&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="stringliteral">\subsection Conception</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="stringliteral">### &lt;A NAME=&quot;Intro&quot;&gt;1. Introduction&lt;/A&gt; ### </span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="stringliteral">&lt;p&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="stringliteral">Pour réaliser ce mini-projet, l&#39;</span>équipe de concepteur a tout d<span class="stringliteral">&#39;abord analyser la demande du client, c&#39;</span>est à dire de concevoir un </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;robot à __six pattes__ pouvant être __autonome__ et aussi diriger par un opérateur via une liaison sans fil, __Zigbee__ (demande du client). </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;De plus, ce robot sera muni d<span class="stringliteral">&#39;une carte NXP pouvant accueillir un système temps réel, __FreeRTOS__ (demande du client). </span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="stringliteral">Ce robot sera équipé aussi d&#39;</span>une caméra __CMUCAM2__ (demande du client) qui aura pour rôle de guider le robot pour <span class="stringliteral">&quot;tracker&quot;</span> une couleur.</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;&lt;/p&gt;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;&lt;p&gt;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;Chaque patte est équipée de trois servo-moteurs permettant de réaliser les mouvements nécessaires pour faire marcher le robot. Un télémètre</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;sera installé sur le devant du robot. Il aura pour but de faire éviter un obstacle au robot lorsqu<span class="stringliteral">&#39;il sera en train de se déplacer.</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="stringliteral">&lt;/p&gt;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="stringliteral">&lt;p&gt;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="stringliteral">Nous avons établi un ordre dans la conception du programme :</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="stringliteral">1. Création d&#39;</span>une PWM</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;2. Création de toute les PWM</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;3. Création d<span class="stringliteral">&#39;un module pour l&#39;</span>UART</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;4. Gestion des PWM via l<span class="stringliteral">&#39;UART (création de protocoles)</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="stringliteral">5. Mise en place des capteurs TOR</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="stringliteral">6. Utilisation et mise en place du télémètre</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="stringliteral">7. Mise en place de la CMUCAM2 (choix des modes, mise en place du protocole de la caméra)</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="stringliteral">8. Création d&#39;</span>une IHM permettant de visualiser la flux vidéo et la gestion du robot.</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;9. Mise en place d<span class="stringliteral">&#39;algorithmes de marches</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="stringliteral">10. Mise en place d&#39;</span>un suivi d<span class="stringliteral">&#39;objet</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="stringliteral">&lt;/p&gt;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="stringliteral">### &lt;A NAME=&quot;Architecture&quot;&gt;2. Architecture du projet&lt;/A&gt; ###</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="stringliteral"> &lt;p&gt;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="stringliteral"> Dans une idée de développer du bas vers le haut, nous avons donc utilisé plusieurs structures afin d&#39;</span>organiser notre code. Chaque</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; éléments du robot est représenté par une structure. Nous nous sommes inspirés des développements réalisés en langage objet. De </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; cette manière, il est plus facile de ce repérer. De plus, chaque éléments (telementre,cmucam, servo-moteurs, ...) <span class="stringliteral">&quot;possède&quot;</span> un</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; fichier .c et un fichier .h où sont déclarés les structures. Voici un schéma qui permet de représenter le système :</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; &lt;/p&gt;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; ![archi]</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; [archi]:..\img\archi.png <span class="stringliteral">&quot;Architecture du projet&quot;</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;&lt;p&gt;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;Ensuite, l<span class="stringliteral">&#39;équipe d&#39;</span>_Insset Robotics_ chargée de la conception logicielle de ce projet est parti dans le principe de découper</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;le robot en deux grandes parties:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;&lt;/p&gt;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;-   La tête</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    +   La caméra CMUCAM2</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    +   Le télémètre </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    +   Le servo-moteur Axe X</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    +   Le servo-moteur Axe Y</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;-   Les pattes</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    +   Patte Avant Gauche (Feet Left Font)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    +   Patte Avant Droite (Feet Right Font)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    +   Patte Milieu Gauche (Feet Left Middle)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    +   Patte Milieu Droite (Feet Right Middle)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    +   Patte Arrière Gauche (Feet Left Back)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    +   Patte Arrière Droite (Feet Right Back)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;Dont chaque patte est inspirée sur ce modèle suivant : </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;-   Patte X</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    +   Le servo-moteur Axe X</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    +   Le servo-moteur Axe Y</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    +   Le servo-moteur Axe Z</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    +   Le capteur Tout-Ou-Rien</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">### &lt;A NAME=&quot;GestFeet&quot;&gt;3. La gestion des pattes&lt;/A&gt; ###</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#### 3.1 La reflexion ####</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;&lt;p&gt;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;L<span class="stringliteral">&#39;équipe d&#39;</span>_Insset Robotics_ a décidé d<span class="stringliteral">&#39;utiliser deux timers hardware pour gérer les 20 __PWM__ (Pulse Width Modulation) des 20 servo-</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="stringliteral">moteurs, dont 2 sont intégrés dans la tête du robot permettant de faire pivoter la tête chercheuse sur deux axes différents. Un Timer</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="stringliteral">sera utilisé pour gérer les toutes les PWM dans la même période de timer, donc dans une période de 20ms. L&#39;</span>autre timer permet quant à </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;lui de mettre la sortie à l<span class="stringliteral">&#39;état haut le temps voulu ( _t_ compris entre 1 et 2ms - _cf. Onglet Servo-moteurs_).</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="stringliteral">&lt;/p&gt;</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="stringliteral">#### 3.2 Le protocole #### </span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="stringliteral">&lt;p&gt;</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="stringliteral">Dans le cahier des charges, il est stipulé que les pattes doivent être diriger dans un premier temps manuellement par l&#39;</span>intermédiaire</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;d<span class="stringliteral">&#39;une liaison série entre un ordinateur et le robot. Pour ce faire, l&#39;</span>équipe d<span class="stringliteral">&#39;_Insset Robotics_ a conçu un protocole de communication</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="stringliteral">permettant de changer la valeur de l&#39;</span>angle des servo-moteurs via une commande dans un terminal. Voici un exemple de trame pouvant être</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;envoyer au robot via le terminal. </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;&lt;/p&gt;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;~~~~~~~~~~~~~~~~~~~~~~</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;$F,L,F,1,18\n</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;~~~~~~~~~~~~~~~~~~~~~~</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;&gt; &lt;B&gt;$&lt;/B&gt; correspond au début de la trame</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;&gt;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;&gt; &lt;B&gt;L&lt;/B&gt; correspond au coté du robot. Peut prendre comme valeur &lt;B&gt;L&lt;/B&gt; pour _Left_ ou &lt;B&gt;R&lt;/B&gt; pour _Right_</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;&gt;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;&gt; &lt;B&gt;F&lt;/B&gt; correspond à la position de la patte. Peut prendre comme valeur &lt;B&gt;F&lt;/B&gt; pour _Font_ ou &lt;B&gt;M&lt;/B&gt; pour _Middle_ ou  &lt;B&gt;B&lt;/B&gt; pour _Back_</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;&gt;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;&gt; &lt;B&gt;1&lt;/B&gt; correspond au numéro du servo-moteur de la patte. Peut prendre comme valeur &lt;B&gt;1&lt;/B&gt;,&lt;B&gt;2&lt;/B&gt; ou &lt;B&gt;3&lt;/B&gt;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;&gt;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;&gt; &lt;B&gt;18&lt;/B&gt; correspond à l<span class="stringliteral">&#39;angle en degrès. Peut prendre comme valeur un chiffre compris en chiffre compris entre 0 et 180. (* _uniquement des multiples de 9_)</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="stringliteral">&lt;B&gt;* Informations :&lt;/B&gt; Nous avons décidé que le pas en degrés serait 9° par soucis de compatibilité avec notre configuration (seulement 2 timers utilisés)</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="stringliteral">~~~~~~~~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="stringliteral">$TOR,L,F,5\n</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="stringliteral">~~~~~~~~~~~~~~~~~~~~~~ </span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="stringliteral">&gt; &lt;B&gt;$&lt;/B&gt; correspond au début de la trame</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="stringliteral">&gt;</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="stringliteral">&gt; &lt;B&gt;TOR&lt;/B&gt; correspond aux trames des capteurs TOR</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="stringliteral">&gt;</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="stringliteral">&gt; &lt;B&gt;L&lt;/B&gt; correspond au coté du robot. Les valeurs comprises sont L ou R pour _Left_ ou _Right_</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="stringliteral">&gt;</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="stringliteral">&gt; &lt;B&gt;F&lt;/B&gt; correspond à l&#39;</span>emplacement de la pate. Les valeurs comprises sont F, M ou B pour _Font_, _Middle_ ou _Back_</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;&gt;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;&gt; &lt;B&gt;5&lt;/B&gt; correspond à la valeur du Time Out en seconde.</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;#### 3.3 Programmation ####</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;&lt;p&gt;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;Comme nous l<span class="stringliteral">&#39;avons expliqué ci-dessus, chaque élément est représenté par une structure de données. Les 6 pattes qui composent </span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="stringliteral">le robot sont représentées par cette structure :</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="stringliteral">~~~~~~~~~~~~~~~{.c}</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="stringliteral">typedef struct</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="stringliteral">{</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="stringliteral">    ServoMoteur xServo1;</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="stringliteral">    ServoMoteur xServo2;</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="stringliteral">    ServoMoteur xServo3;</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="stringliteral">    Tor xTor1;</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="stringliteral">    </span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="stringliteral">}FeetHexapode;</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="stringliteral">~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="stringliteral">Dans cette structure une patte est représentée par 3 servo-moteurs, ici avec la structure _ServoMoteur_. De plus, chaque patte </span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="stringliteral">est composée d&#39;</span>un capteur Tout-Ou-Rien permettant de savoir si la patte est en liaison avec le sol, d<span class="stringliteral">&#39;où la variable de type Tor</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="stringliteral">qui est une structure représentant un capteur TOR. Voici, les deux structures évoquées ci-dessus : </span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="stringliteral">&lt;/p&gt;</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="stringliteral">~~~~~~~~~~~~~~~{.c}</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="stringliteral">typedef struct</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="stringliteral">{</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="stringliteral">    unsigned char ucTorValue;</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="stringliteral">    unsigned char ucTorNum;</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="stringliteral">    </span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="stringliteral">}Tor;</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="stringliteral">~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="stringliteral">&gt; &lt;B&gt;ucTorValue&lt;/B&gt; correspond à la valeur du capteur (1 ou 0)</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="stringliteral">&gt;</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="stringliteral">&gt; &lt;B&gt;ucTorNum&lt;/B&gt; correspond au masque du capteur (0x02, 0x04, 0x08, 0x10, 0x20)</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="stringliteral">~~~~~~~~~~~~~~~{.c}</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="stringliteral">typedef struct</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="stringliteral">{</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="stringliteral">    unsigned int ucAngle;</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="stringliteral">    unsigned int ucCount;</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="stringliteral">    unsigned char ucPwmNum;</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="stringliteral">    </span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="stringliteral">}ServoMoteur;</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="stringliteral">~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="stringliteral">&gt; &lt;B&gt;ucAngle&lt;/B&gt; correspond à la valeur de l&#39;</span>angle du servo-moteur</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;&gt;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;&gt; &lt;B&gt;ucCount&lt;/B&gt; correspond au compteur de pas</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;&gt;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;&gt; &lt;B&gt;ucPwmNum&lt;/B&gt; correspond au numéro de la PWM qui correspond au un servo-moteur (de 0 à 19)</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="preprocessor">### &lt;A NAME=&quot;GestHead&quot;&gt;4. La gestion de la tête&lt;/A&gt; ###</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="preprocessor">#### 4.1 Réflexion ####</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;&lt;p&gt;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;Dans le même esprit que pour les pattes, nous avons décidé de représenter la tête du robot sous forme d<span class="stringliteral">&#39;une structure. La tête </span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="stringliteral">du robot est composé deux servo-moteurs permettant de la faire pivoter et bouger de droite à gauche et de haut en bas. Ensuite,</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="stringliteral">nous avons décidé d&#39;</span>intégrer dans la structure le télémètre IR de Sharp (_cf. Onglet Télémètre_). Pour la gestion des PWM des 2</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;servo-moteurs, elles sont gérées comme pour les pattes, par 2 timers hardware. La tête du robot est équipé d<span class="stringliteral">&#39;une caméra de vision</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="stringliteral">CMUCAM2 permettant d&#39;</span>avoir un flux vidéo pour diriger le robot à distance ou de traquer une couleur par exemple (_cf. Onglet Caméra_)</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;&lt;/p&gt;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="preprocessor">#### 4.2 Le protocole ####</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;&lt;p&gt;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;Dans le but de vérifier le bon fonctionnement de notre programme, nous testons via l<span class="stringliteral">&#39;UART en simulant la valeur du télémètre par</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="stringliteral">exemple. Pour cela, nous faisions exactement pour la gestion des pattes par l&#39;</span>intermédiaire de trames.</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;~~~~~~~~~~~~~~~~~~~~~~</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;$TELE,x,10\n</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;~~~~~~~~~~~~~~~~~~~~~~ </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;&gt; &lt;B&gt;$&lt;/B&gt; correspond au début de la trame</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;&gt;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;&gt; &lt;B&gt;TELE&lt;/B&gt; correspond aux trame des Telemètres. Dans notre cas, il n<span class="stringliteral">&#39;y a qu&#39;</span>un mais nous avons penser à en rajouter pour l<span class="stringliteral">&#39;évolution du produit</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="stringliteral">&gt;</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="stringliteral">&gt; &lt;B&gt;X&lt;/B&gt; correspond au numéro du télémètre. Ici, 0 par défaut </span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="stringliteral">&gt;</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="stringliteral">&gt; &lt;B&gt;10&lt;/B&gt; correspond à la distance de sécurité à ne pas dépasser pour pouvoir éviter l&#39;</span>objet.</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;~~~~~~~~~~~~~~~~~~~~~~</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;$CAM,MODE,R,G,B\n</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;~~~~~~~~~~~~~~~~~~~~~~</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;&gt; &lt;B&gt;$&lt;/B&gt; correspond au début de la trame</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;&gt;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;&gt; &lt;B&gt;CAM&lt;/B&gt; correspond à une trame de configuration pour la caméra</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;&gt;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;&gt; &lt;B&gt;MODE&lt;/B&gt; correspond aux modes de la caméra</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;&gt;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;&gt; &lt;B&gt;R,G,B&lt;/B&gt; correspond aux valeurs des 3 couleurs qui compose la couleur souhaité (uniquement pour le mode de <span class="stringliteral">&quot;Color Tracking&quot;</span>)</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;&lt;/p&gt;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="preprocessor">#### 4.3 Programmation ####</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;&lt;p&gt;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;Pour la gestion de la tête du robot, nous avons penser à une structure contenant les deux servo-moteurs ainsi que le télémètre.</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;Pour des raisons de temps, nous n<span class="stringliteral">&#39;avons pas encore intégrer les variables pour la caméra. Mais nous avons déjà penser à la </span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="stringliteral">manière dont nous allons l&#39;</span>intégrer. Plusieurs variables seront utiles selon l<span class="stringliteral">&#39;utilisation de la caméra, mode tracking par exemple.</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="stringliteral">&lt;/p&gt;</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="stringliteral"> </span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="stringliteral">~~~~~~~~~~~~~~~{.c}</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="stringliteral">typedef struct</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="stringliteral">{</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="stringliteral">    ServoMoteur xServo1;</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="stringliteral">    ServoMoteur xServo2;</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="stringliteral">    Telemetre xTelemetre1;</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="stringliteral">    </span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="stringliteral">}HeadHexapode;</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="stringliteral">~~~~~~~~~~~~~~~ </span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="stringliteral">&gt; &lt;B&gt;xServo1&lt;/B&gt; correspond au servo-moteur de l&#39;</span>axe X</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;&gt;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;&gt; &lt;B&gt;xServo2&lt;/B&gt; correspond au servo-moteur de l<span class="stringliteral">&#39;axe Y</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="stringliteral">&gt;</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="stringliteral">&gt; &lt;B&gt;xTelemetre1&lt;/B&gt; correspond au télémètre numéro 1.</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="stringliteral">Avec les modifications pour l&#39;</span>ajout de la caméra, voici à quoi pourrait ressembler la structure de la tête :</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;~~~~~~~~~~~~~~~{.c}</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;{</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <a class="code" href="struct_servo_moteur.html">ServoMoteur</a> xServo1;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <a class="code" href="struct_servo_moteur.html">ServoMoteur</a> xServo2;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <a class="code" href="struct_telemetre.html">Telemetre</a> xTelemetre1;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    Color xColorTrack; <span class="comment">//</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> ucMode;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    Flux xFluxCMUCAM;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;}<a class="code" href="struct_head_hexapode.html">HeadHexapode</a>;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;~~~~~~~~~~~~~~~ </div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;&gt; &lt;B&gt;xColorTrack&lt;/B&gt; correspond aux valeurs des couleurs (Rouge, Vert et Bleu) de l<span class="stringliteral">&#39;objet à &quot;tracker&quot;</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="stringliteral">&gt;</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="stringliteral">&gt; &lt;B&gt;ucMode&lt;/B&gt; correspond au mode que nous voulons pour la caméra (_cf. Onglet Caméra_)</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="stringliteral">&gt;</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="stringliteral">&gt; &lt;B&gt;xFluxCMUCAM&lt;/B&gt; correspond au flux vidéo de la caméra.</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="stringliteral">La structure __Color__ permettrait de mettre les valeurs, de 0 à 255, des couleurs composant la couleur à suivre.</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="stringliteral">~~~~~~~~~~~~~~~{.c}</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="stringliteral">typedef struct</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="stringliteral">{</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="stringliteral">    unsigned int Red;</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="stringliteral">    unsigned int Green;</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="stringliteral">    unsigned int Blue;</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="stringliteral">    </span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="stringliteral">}Color;</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="stringliteral">~~~~~~~~~~~~~~~</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="stringliteral">### &lt;A NAME=&quot;Capteur&quot;&gt;5. Les capteurs&lt;/A&gt; ###</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="stringliteral">Plusieurs capteurs équipent le robot : </span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="stringliteral">-   Les capteurs TOR</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="stringliteral">-   Le (ou les) télémètre(s) IR Sharp GP2D12</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="stringliteral">#### 5.1 Capteurs TOR ####</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="stringliteral">&lt;p&gt;</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="stringliteral">Pour l&#39;</span>utilisation de ces capteurs peut de choses sont à mettre en place. Il suffit de lire l<span class="stringliteral">&#39;état présent sur la broche </span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="stringliteral">qui est reliée à capteur TOR pour avoir l&#39;</span>information :</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;&lt;/p&gt;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;-   Si la patte est en contact avec le sol, la valeur présente sur la broche vaut 1 (état logique haut).</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;-   Si la patte n<span class="stringliteral">&#39;est pas en contact avec le sol, la valeur présente sur la broche vaut alors 0 (état logique bas).</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="stringliteral">&lt;p&gt;</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="stringliteral">Dans le second cas, après un certains temps (&quot;Le Time Out&quot; - _cf. 3.2 Protocole &amp; Onglet Capteur TOR_) nous estimons qu&#39;</span>il y</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;a présence d<span class="stringliteral">&#39;une erreur.</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="stringliteral">&lt;/p&gt;</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="stringliteral">#### 5.2 Télémètre IR Sharp GP2D12 ####</span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="stringliteral">&lt;p&gt;</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="stringliteral">Pour l&#39;</span>utiliser un tel capteur, il est nécessaire de mettre en place un convertisseur Analogique-Numérique (ADC). La valeur </div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;retournée par le télémètre est une valeur analogique comprise entre 0,6V et 3,1V correspondant respectivement à 80cm et à 10cm.</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;Le principe de fonctionnement est expliqué dans l<span class="stringliteral">&#39;onglet _Le télémètre_. D&#39;</span>après la documentation du constructeur, qui est aussi </div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;disponible dans l<span class="stringliteral">&#39;ongler _Le télémètre_, la courbe représentative du capteur est celle d&#39;</span>un système non-linéraire ce qui rend la</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;convertion plus difficile. Cela est du au phénomène du cône qui est formé par le faisceau InfraRouge. Dans ce cas nous avons simplifier</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;par mesure de simplicité et de temps et aussi par le manque du télémètre, linéariser le système. Le risque d<span class="stringliteral">&#39;une telle manipulation</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="stringliteral">est de changer la précision, qui d&#39;</span>après nous serait au millimètre. Dans notre cas, la précision au millimètre près n<span class="stringliteral">&#39;est pas forcément</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="stringliteral">utile car il est important d&#39;</span>esquiver un obstable bien avant d<span class="stringliteral">&#39;arriver sur lui.</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="stringliteral">&lt;/p&gt;</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="stringliteral">### &lt;A NAME=&quot;Ordo&quot;&gt;6. L&#39;</span>ordonnancement&lt;/A&gt; ###</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;&lt;p&gt;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;Le corps de ce projet est que le robot ne fonctionne pas sur un simple microcontrolleur. Nous utilisons un microcontrolleur ARM</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;Cortex M3 de chez NXP avec un système temps réel. Qui dit temps réel insinue le temps exact que prends une tâche ainsi qu<span class="stringliteral">&#39;une notion</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="stringliteral">d&#39;</span>ordonnancement de tâches diverses. La difficulté d<span class="stringliteral">&#39;un système dit temps réel est le nombre de tâche à executer. Plus le nombre</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="stringliteral">est grand plus la difficulté à ordonnancer est grande. C&#39;</span>est pour cela que l<span class="stringliteral">&#39;équipe d&#39;</span>_Insset Robotics_ a essayer de minimiser ce</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;nombre de tâches tout en remplissant les demandes du client. Dans la configuration sans la caméra, nous n<span class="stringliteral">&#39;avons que 3 tâches :</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="stringliteral">&lt;/p&gt;</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="stringliteral">1. Tâche 1 : Lecture des différents capteurs (télémètre [__ADC__], TOR)</span></div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<span class="stringliteral">2. Tâche 2 : Gestion des PWM</span></div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="stringliteral">3. Tâche 3 : Gestion des files de messages de la communication et le décodage des trames</span></div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<span class="stringliteral">&lt;p&gt;</span></div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="stringliteral">Pour ordonnancer et définir les tâches prioritaires nous avons donc utiliser la méthode RM (__Rate Monotonic__) qui consiste  </span></div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<span class="stringliteral">a attribuer la priorité la plus forte à la tâche qui possède la plus petite période. La tâche la plus prioritaire de notre </span></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="stringliteral">système est la tâche 2 ensuite la tâche 1 et la tâche la moins prioritaire est la tâche 3. Les priorités sont figées et ne varient</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;<span class="stringliteral">pas dans le temps ce qui serait incompatible avec la méthode d&#39;</span>ordonnancement choisie.</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;&lt;/p&gt;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="preprocessor">### &lt;A NAME=&quot;Comm&quot;&gt;7. La communication&lt;/A&gt; ###</span></div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;&lt;p&gt;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;La communication qui a été choisi par le client afin de communiquer avec le robot depuis un ordinateur sous un OS de son choix est</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;une solution sans fil, le Zigbee. Le Zigbee est un protocole haut niveau de communication sans fil à très basse consommation. Ce</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;facteur a tout son importance pour un système qui doit être indépendant. Pour la mise en place d<span class="stringliteral">&#39;un tel réseau sans fil, nous avons</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<span class="stringliteral">besoin d&#39;</span>initialiser un port de communication à l<span class="stringliteral">&#39;aide de l&#39;</span>UART qui est un des périphériques présents de la carte NXP LCP1761.</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;&lt;/p&gt;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="preprocessor">#### 7.1 L&#39;émission ####</span></div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;&lt;p&gt;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;Pour l<span class="stringliteral">&#39;émission des messages vers le PC qui commande le robot, l&#39;</span>équipe de développeur a décidé de mettre en place une pile FIFO (First</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;In First Out) qui permettra de stocker les messages à envoyer et se videra au fûr et à mesure que l<span class="stringliteral">&#39;ordonnanceur donne la main à</span></div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;<span class="stringliteral">la tâche s&#39;</span>occupant de l<span class="stringliteral">&#39;envoi.</span></div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="stringliteral">&lt;/p&gt;</span></div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="stringliteral">#### 7.2 La reception ####</span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="stringliteral">&lt;p&gt;</span></div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="stringliteral">Pour la réception des messages provenant du PC qui commande le robot, nous avons choisi de mettre également une queue de message</span></div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="stringliteral">de type FIFO (First In First Out) qui stockera les message reçus et videra cette pile quand le message aura été décripté et traité.</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="stringliteral">&lt;/p&gt;</span></div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="stringliteral">#### 7.3 Schématisation ####</span></div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;<span class="stringliteral">&lt;p&gt;</span></div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="stringliteral">Voici à quoi ressemble le principe des files de messages que nous allons mettre en place au sein du projet.</span></div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="stringliteral">&lt;/p&gt;</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<span class="stringliteral">&lt;/br&gt;</span></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="stringliteral">![queue]</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="stringliteral">[queue]:../img/queue.png &quot;Files de messages&quot;</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="stringliteral">### &lt;A NAME=&quot;IHM&quot;&gt;8. L&#39;</span>Interface Homme-Machine&lt;/A&gt; ###</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;Afin de garantir un confort d<span class="stringliteral">&#39;utilisation, une IHM (_Interface Homme-Machine_) doit être réalisé. Cette IHM permettra à l&#39;</span>utilisateur</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;de configurer le robot, le choix du mode (Autonome ou Manuel), les choix pour la caméra (exemple : _tracking_ de couleur) mais aussi</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;de diriger le robot à l<span class="stringliteral">&#39;aide de flèches permettant de faire avancer, reculer, se diriger vers la gauche ou la droite. Sur cette IHM,</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="stringliteral">nous pourrons aussi trouver, par exemple la présence ou non d&#39;</span>un obstable et de la distance qui sépare la tête du robot à ce dernier.</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;Lorsque le développement de la caméra sera achevé, l<span class="stringliteral">&#39;interface donnera la possibilité de voir le flux vidéo de la caméra qui sera</span></div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="stringliteral">une aide pour se déplacer avec le robot. Lorsque les algorithmes de marches seront réalisés ainsi que testés, il sera possible à</span></div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;<span class="stringliteral">l&#39;</span>utilisateur de saisir le type de marche voulu, en crabe, 3 pattes par 3 pattes (en triangle), ...</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;Voici à quoi pourrait ressembler l<span class="stringliteral">&#39;interface graphique :</span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;<span class="stringliteral">![IHM]</span></div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="stringliteral">[IHM]:../img/IHM.png &quot;Interface graphique du logiciel HexaControl&quot;</span></div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<span class="stringliteral">&lt;A NAME=&quot;#Doc&quot;&gt;&lt;/A&gt;</span></div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;<span class="stringliteral">\section Documentation</span></div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;<span class="stringliteral"></span></div>
+<div class="ttc" id="struct_telemetre_html"><div class="ttname"><a href="struct_telemetre.html">Telemetre</a></div><div class="ttdef"><b>Definition:</b> <a href="telemetre_8h_source.html#l00012">telemetre.h:12</a></div></div>
+<div class="ttc" id="struct_servo_moteur_html"><div class="ttname"><a href="struct_servo_moteur.html">ServoMoteur</a></div><div class="ttdef"><b>Definition:</b> <a href="servomoteur_8h_source.html#l00001">servomoteur.h:1</a></div></div>
+<div class="ttc" id="struct_head_hexapode_html"><div class="ttname"><a href="struct_head_hexapode.html">HeadHexapode</a></div><div class="ttdef"><b>Definition:</b> <a href="_hexapode_8h_source.html#l00043">Hexapode.h:43</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>1cdc.md</b></li>
+    <li class="footer">Généré le Mardi Janvier 7 2014 11:23:01 pour Hexapode par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
+  </ul>
+</div>
+</body>
+</html>

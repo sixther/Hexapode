@@ -1,5 +1,5 @@
 Dependencies for Project 'hexapode', Target 'Hexapode': (DO NOT MODIFY !)
-F (.\src\main.c)(0x52C9E548)(-c --cpu Cortex-M3 -D__EVAL -g -O3 --apcs=interwork --split_sections -I..\lpcopen\software\lpc_core\lpc_chip\chip_17xx_40xx -I..\lpcopen\software\lpc_core\lpc_ip -I..\lpcopen\software\lpc_core\lpc_chip\chip_common -I..\lpcopen\software\lpc_core\lpc_board\board_common -I..\lpcopen\software\freertos\freertos\Source\include -I..\lpcopen\software\freertos\freertos\Source\portable\RVDS\ARM_CM3 -I.\include -I..\lpcopen\software\lpc_core\lpc_board\boards_17xx_40xx\lpc1766stk-I C:\Keil4.7\ARM\RV31\INC-I C:\Keil4.7\ARM\CMSIS\Include-I C:\Keil4.7\ARM\Inc\NXP\LPC17xx-DCORE_M3 -o ..\output\main.o --omf_browse ..\output\main.crf --depend ..\output\main.d)
+F (.\src\main.c)(0x52CB2D4D)(-c --cpu Cortex-M3 -D__EVAL -g -O3 --apcs=interwork --split_sections -I..\lpcopen\software\lpc_core\lpc_chip\chip_17xx_40xx -I..\lpcopen\software\lpc_core\lpc_ip -I..\lpcopen\software\lpc_core\lpc_chip\chip_common -I..\lpcopen\software\lpc_core\lpc_board\board_common -I..\lpcopen\software\freertos\freertos\Source\include -I..\lpcopen\software\freertos\freertos\Source\portable\RVDS\ARM_CM3 -I.\include -I..\lpcopen\software\lpc_core\lpc_board\boards_17xx_40xx\lpc1766stk-I C:\Keil4.7\ARM\RV31\INC-I C:\Keil4.7\ARM\CMSIS\Include-I C:\Keil4.7\ARM\Inc\NXP\LPC17xx-DCORE_M3 -o ..\output\main.o --omf_browse ..\output\main.crf --depend ..\output\main.d)
 I (E:\GitHub\Hexapode\hexapode\include\Hexapode.h)(0x52C998F4)
 I (E:\GitHub\Hexapode\hexapode\include\servomoteur.h)(0x52C83743)
 I (E:\GitHub\Hexapode\hexapode\include\telemetre.h)(0x52C99A14)
@@ -66,7 +66,10 @@ I (E:\GitHub\Hexapode\lpcopen\software\freertos\freertos\Source\portable\RVDS\AR
 I (E:\GitHub\Hexapode\lpcopen\software\freertos\freertos\Source\include\mpu_wrappers.h)(0x527CC7C2)
 I (E:\GitHub\Hexapode\lpcopen\software\freertos\freertos\Source\include\task.h)(0x527CC7EA)
 I (E:\GitHub\Hexapode\lpcopen\software\freertos\freertos\Source\include\list.h)(0x527CC7C2)
+I (E:\GitHub\Hexapode\lpcopen\software\freertos\freertos\Source\include\queue.h)(0x52827F5F)
 I (E:\GitHub\Hexapode\hexapode\include\basic_io.h)(0x52B1BE02)
+I (E:\GitHub\Hexapode\hexapode\include\Protopode.h)(0x52C9F84C)
+I (C:\Keil4.7\ARM\ARMCC\include\string.h)(0x51C80BA4)
 F (..\lpcopen\software\freertos\startup_code\keil_freertos_startup_lpc17xx40xx.s)(0x518B9EF0)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I..\lpcopen\software\lpc_core\lpc_board\boards_17xx_40xx\lpc1766stk --cpreproc-I C:\Keil4.7\ARM\RV31\INC-I C:\Keil4.7\ARM\CMSIS\Include-I C:\Keil4.7\ARM\Inc\NXP\LPC17xx--pd "CORE_M3 SETA 1" --list .\keil_freertos_startup_lpc17xx40xx.lst --xref -o ..\output\keil_freertos_startup_lpc17xx40xx.o --depend ..\output\keil_freertos_startup_lpc17xx40xx.d)
 F (.\src\servomoteur.c)(0x52C83745)(-c --cpu Cortex-M3 -D__EVAL -g -O3 --apcs=interwork --split_sections -I..\lpcopen\software\lpc_core\lpc_chip\chip_17xx_40xx -I..\lpcopen\software\lpc_core\lpc_ip -I..\lpcopen\software\lpc_core\lpc_chip\chip_common -I..\lpcopen\software\lpc_core\lpc_board\board_common -I..\lpcopen\software\freertos\freertos\Source\include -I..\lpcopen\software\freertos\freertos\Source\portable\RVDS\ARM_CM3 -I.\include -I..\lpcopen\software\lpc_core\lpc_board\boards_17xx_40xx\lpc1766stk-I C:\Keil4.7\ARM\RV31\INC-I C:\Keil4.7\ARM\CMSIS\Include-I C:\Keil4.7\ARM\Inc\NXP\LPC17xx-DCORE_M3 -o ..\output\servomoteur.o --omf_browse ..\output\servomoteur.crf --depend ..\output\servomoteur.d)
 I (E:\GitHub\Hexapode\hexapode\include\servomoteur.h)(0x52C83743)
@@ -248,8 +251,11 @@ I (E:\GitHub\Hexapode\hexapode\include\Hexapode.h)(0x52C998F4)
 I (E:\GitHub\Hexapode\hexapode\include\servomoteur.h)(0x52C83743)
 I (E:\GitHub\Hexapode\hexapode\include\telemetre.h)(0x52C99A14)
 I (E:\GitHub\Hexapode\hexapode\include\tor.h)(0x52C835C7)
-F (.\src\Protopode.c)(0x52C9E4B7)()
-I (E:\GitHub\Hexapode\hexapode\include\Protopode.h)(0x52C9C83C)
+F (.\src\Protopode.c)(0x52C9F8C4)(-c --cpu Cortex-M3 -D__EVAL -g -O3 --apcs=interwork --split_sections -I..\lpcopen\software\lpc_core\lpc_chip\chip_17xx_40xx -I..\lpcopen\software\lpc_core\lpc_ip -I..\lpcopen\software\lpc_core\lpc_chip\chip_common -I..\lpcopen\software\lpc_core\lpc_board\board_common -I..\lpcopen\software\freertos\freertos\Source\include -I..\lpcopen\software\freertos\freertos\Source\portable\RVDS\ARM_CM3 -I.\include -I..\lpcopen\software\lpc_core\lpc_board\boards_17xx_40xx\lpc1766stk-I C:\Keil4.7\ARM\RV31\INC-I C:\Keil4.7\ARM\CMSIS\Include-I C:\Keil4.7\ARM\Inc\NXP\LPC17xx-DCORE_M3 -o ..\output\protopode.o --omf_browse ..\output\protopode.crf --depend ..\output\protopode.d)
+I (E:\GitHub\Hexapode\hexapode\include\Protopode.h)(0x52C9F84C)
+I (C:\Keil4.7\ARM\ARMCC\include\stdio.h)(0x51C80BA4)
+I (C:\Keil4.7\ARM\ARMCC\include\stdlib.h)(0x51C80BA4)
+I (C:\Keil4.7\ARM\ARMCC\include\string.h)(0x51C80BA4)
 F (..\lpcopen\software\freertos\freertos\Source\portable\RVDS\ARM_CM3\port.c)(0x527CC7C3)(-c --cpu Cortex-M3 -D__EVAL -g -O3 --apcs=interwork --split_sections -I..\lpcopen\software\lpc_core\lpc_chip\chip_17xx_40xx -I..\lpcopen\software\lpc_core\lpc_ip -I..\lpcopen\software\lpc_core\lpc_chip\chip_common -I..\lpcopen\software\lpc_core\lpc_board\board_common -I..\lpcopen\software\freertos\freertos\Source\include -I..\lpcopen\software\freertos\freertos\Source\portable\RVDS\ARM_CM3 -I.\include -I..\lpcopen\software\lpc_core\lpc_board\boards_17xx_40xx\lpc1766stk-I C:\Keil4.7\ARM\RV31\INC-I C:\Keil4.7\ARM\CMSIS\Include-I C:\Keil4.7\ARM\Inc\NXP\LPC17xx-DCORE_M3 -o ..\output\port.o --omf_browse ..\output\port.crf --depend ..\output\port.d)
 I (E:\GitHub\Hexapode\lpcopen\software\freertos\freertos\Source\include\FreeRTOS.h)(0x527CC7C2)
 I (C:\Keil4.7\ARM\ARMCC\include\stddef.h)(0x51C80BA4)

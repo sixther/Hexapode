@@ -1,0 +1,412 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Hexapode:  Fichier source de lpcopen/software/lpc_core/lpc_ip/ccan_001.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="IN7Robot.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Hexapode
+   &#160;<span id="projectnumber">Version 1.0</span>
+   </div>
+   <div id="projectbrief">Thomas Waquet &amp; Gauthier Dhalluin</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('ccan__001_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Groupes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ccan_001.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * @brief CCAN registers and control functions</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * @note</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Copyright(C) NXP Semiconductors, 2012</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * @par</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * Software that is described herein is for illustrative purposes only</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * which provides customers with programming information regarding the</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * LPC products.  This software is supplied &quot;AS IS&quot; without any warranties of</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * any kind, and NXP Semiconductors and its licensor disclaim any and</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * all warranties, express or implied, including all implied warranties of</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * merchantability, fitness for a particular purpose and non-infringement of</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * intellectual property rights.  NXP Semiconductors assumes no responsibility</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * or liability for the use of the software, conveys no license or rights under any</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * patent, copyright, mask work right, or any other intellectual property rights in</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * or to any products. NXP Semiconductors reserves the right to make changes</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * in the software without notification. NXP Semiconductors also makes no</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * representation or warranty that such application will be suitable for the</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * specified use without further testing or modification.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> * @par</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> * Permission to use, copy, modify, and distribute this software and its</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> * documentation is hereby granted, under NXP Semiconductors&#39; and its</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * licensor&#39;s relevant copyrights in the software, without fee, provided that it</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> * is used in conjunction with NXP Semiconductors microcontrollers.  This</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> * copyright, permission, and disclaimer notice must appear in all copies of</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> * this code.</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#ifndef __CCAN_001_H_</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __CCAN_001_H_</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;sys_config.h&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;cmsis.h&quot;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor"></span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___i_f___t.html">   50</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{    </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___i_f___t.html#a5315ee38d5c9971d5dd77de08bc75c40">   51</a></span>&#160;    __IO uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___i_f___t.html#a5315ee38d5c9971d5dd77de08bc75c40">IF_CMDREQ</a>;            </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">union </span>{</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___i_f___t.html#ae2ff3565ebdb3c7f39879dace55a2669">   53</a></span>&#160;        __IO uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___i_f___t.html#ae2ff3565ebdb3c7f39879dace55a2669">IF_CMDMSK_R</a>;      </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___i_f___t.html#ad7a6f4fa314f64c74cdcba88ba8850ff">   54</a></span>&#160;        __IO uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___i_f___t.html#ad7a6f4fa314f64c74cdcba88ba8850ff">IF_CMDMSK_W</a>;      </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    };</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___i_f___t.html#a6477a18fb57055ab11cad3df38fe0dd7">   57</a></span>&#160;    __IO uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___i_f___t.html#a6477a18fb57055ab11cad3df38fe0dd7">IF_MSK1</a>;              </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___i_f___t.html#a457cf85114a05c0460c6b4de3cc1c3ce">   58</a></span>&#160;    __IO uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___i_f___t.html#a457cf85114a05c0460c6b4de3cc1c3ce">IF_MSK2</a>;              </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___i_f___t.html#ab80359f2ec21b4ca3e9336797f00e38d">   59</a></span>&#160;    __IO uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___i_f___t.html#ab80359f2ec21b4ca3e9336797f00e38d">IF_ARB1</a>;              </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___i_f___t.html#ae492c7379dea406012ed541c7dac7583">   60</a></span>&#160;    __IO uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___i_f___t.html#ae492c7379dea406012ed541c7dac7583">IF_ARB2</a>;              </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___i_f___t.html#a3cb3835d6b203564b4bde6f7f550f130">   61</a></span>&#160;    __IO uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___i_f___t.html#a3cb3835d6b203564b4bde6f7f550f130">IF_MCTRL</a>;         </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___i_f___t.html#a48726cde15c438406e48154401829048">   62</a></span>&#160;    __IO uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___i_f___t.html#a48726cde15c438406e48154401829048">IF_DA1</a>;               </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___i_f___t.html#ad25614db043c3ad38c7f1caf615b0fdf">   63</a></span>&#160;    __IO uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___i_f___t.html#ad25614db043c3ad38c7f1caf615b0fdf">IF_DA2</a>;               </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___i_f___t.html#acdf30356b7103ec9f4a740eb10706e03">   64</a></span>&#160;    __IO uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___i_f___t.html#acdf30356b7103ec9f4a740eb10706e03">IF_DB1</a>;               </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___i_f___t.html#a1977b43a6efffd0b484975b8402b080d">   65</a></span>&#160;    __IO uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___i_f___t.html#a1977b43a6efffd0b484975b8402b080d">IF_DB2</a>;               </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    __I  uint32_t  RESERVED[13];</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;} <a class="code" href="struct_i_p___c_c_a_n__001___i_f___t.html">IP_CCAN_001_IF_T</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___t.html">   72</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{                        </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___t.html#aaea1cf878c3e7ab37309e673eb50101b">   73</a></span>&#160;    __IO uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___t.html#aaea1cf878c3e7ab37309e673eb50101b">CNTL</a>;                 </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___t.html#aa90c98b3b95ed1374dbcf018c74aef79">   74</a></span>&#160;    __IO uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___t.html#aa90c98b3b95ed1374dbcf018c74aef79">STAT</a>;                 </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___t.html#ae9c79ec17ace363c54ee59581274ede5">   75</a></span>&#160;    __I  uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___t.html#ae9c79ec17ace363c54ee59581274ede5">EC</a>;                   </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___t.html#a1b9452a1b62004b6e1e81efd18704630">   76</a></span>&#160;    __IO uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___t.html#a1b9452a1b62004b6e1e81efd18704630">BT</a>;                   </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___t.html#a6029b46f9633a968124bfbd9e67992ca">   77</a></span>&#160;    __I  uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___t.html#a6029b46f9633a968124bfbd9e67992ca">INT</a>;                  </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___t.html#a071509075a20265b5c09b13d91247a9c">   78</a></span>&#160;    __IO uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___t.html#a071509075a20265b5c09b13d91247a9c">TEST</a>;                 </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___t.html#a36b5bb69b2c273aa0fefe8e0c852d270">   79</a></span>&#160;    __IO uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___t.html#a36b5bb69b2c273aa0fefe8e0c852d270">BRPE</a>;                 </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    __I  uint32_t  RESERVED0;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="struct_i_p___c_c_a_n__001___i_f___t.html">IP_CCAN_001_IF_T</a> IF[2];</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    __I  uint32_t  RESERVED2[8];</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___t.html#a3dc7ce173845d25334a5f36b4206951a">   83</a></span>&#160;    __I  uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___t.html#a3dc7ce173845d25334a5f36b4206951a">TXREQ1</a>;               </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___t.html#ac6c3024f82207c167ab06e0939060129">   84</a></span>&#160;    __I  uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___t.html#ac6c3024f82207c167ab06e0939060129">TXREQ2</a>;               </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    __I  uint32_t  RESERVED3[6];</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___t.html#a65f32ab732a63e8469680b75ba8fd690">   86</a></span>&#160;    __I  uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___t.html#a65f32ab732a63e8469680b75ba8fd690">ND1</a>;                  </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___t.html#a7cdfd206e6aee18d476f1494b788283e">   87</a></span>&#160;    __I  uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___t.html#a7cdfd206e6aee18d476f1494b788283e">ND2</a>;                  </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    __I  uint32_t  RESERVED4[6];</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___t.html#a5c28010084f84d7fe78919318b756102">   89</a></span>&#160;    __I  uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___t.html#a5c28010084f84d7fe78919318b756102">IR1</a>;                  </div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___t.html#a88cf12ce48ba72c3ee5c5922d21a8b0f">   90</a></span>&#160;    __I  uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___t.html#a88cf12ce48ba72c3ee5c5922d21a8b0f">IR2</a>;                  </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    __I  uint32_t  RESERVED5[6];</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___t.html#a709e6d05a057c93effc398f74dbe0ff1">   92</a></span>&#160;    __I  uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___t.html#a709e6d05a057c93effc398f74dbe0ff1">MSGV1</a>;                </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___t.html#ab4528d1ef41869057b53d3c68074802a">   93</a></span>&#160;    __I  uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___t.html#ab4528d1ef41869057b53d3c68074802a">MSGV2</a>;                </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    __I  uint32_t  RESERVED6[6];</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="struct_i_p___c_c_a_n__001___t.html#a2a33dba1349d1ebe45133cb2789a5307">   95</a></span>&#160;    __IO uint32_t <a class="code" href="struct_i_p___c_c_a_n__001___t.html#a2a33dba1349d1ebe45133cb2789a5307">CLKDIV</a>;               </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;} <a class="code" href="struct_i_p___c_c_a_n__001___t.html">IP_CCAN_001_T</a>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> IP_CCAN_TEST_MODE {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    CCAN_BASIC_TEST_MODE = 1 &lt;&lt; 2,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    CCAN_SILENT_TEST_MODE = 1 &lt;&lt; 3,</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    CCAN_LOOPBACK_TEST_MODE = 1 &lt;&lt; 4</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;} IP_CCAN_TEST_MODE_T;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> IP_CCAN_INT {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    CCAN_MODULE_INT = 1 &lt;&lt; 1,</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    CCAN_STATUS_CHANGE_INT = 1 &lt;&lt; 2,</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    CCAN_ERR_INT = 1 &lt;&lt; 3</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;} IP_CCAN_INT_T;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="structmessage__object.html">  113</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="structmessage__object.html#abaabdc509cdaba7df9f56c6c76f3ae19">  114</a></span>&#160;    uint32_t    <a class="code" href="structmessage__object.html#abaabdc509cdaba7df9f56c6c76f3ae19">id</a>;     </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="structmessage__object.html#a811fbb0cb2c2263b1a7440a7e9d78239">  115</a></span>&#160;    uint32_t    <a class="code" href="structmessage__object.html#a811fbb0cb2c2263b1a7440a7e9d78239">dlc</a>;    </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="structmessage__object.html#afb87d045bbf32b236fc425efe02bdc7b">  116</a></span>&#160;    uint8_t data[8];    </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;} <a class="code" href="structmessage__object.html">message_object</a>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> IP_CCAN_MSG_INTERFACE {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    IF1 = 0x00,</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    IF2 = 1,</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;} IP_CCAN_MSG_INTERFACE_T;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> IP_CCAN_STATUS {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    CCAN_STAT_LEC       = (0x7 &lt;&lt; 0),</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    CCAN_STAT_TXOK      = (1 &lt;&lt; 3),</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    CCAN_STAT_RXOK      = (1 &lt;&lt; 4),</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    CCAN_STAT_EPASS = (1 &lt;&lt; 5),</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    CCAN_STAT_EWARN = (1 &lt;&lt; 6),</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    CCAN_STAT_BOFF      = (1 &lt;&lt; 7)</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;} IP_CCAN_STATUS_T;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="group___i_p___c_c_a_n__001.html#ga130049996e7d106f4aaab03a5c0ba161">  134</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="group___i_p___c_c_a_n__001.html#ga130049996e7d106f4aaab03a5c0ba161">IP_CCAN_TRX_MODE</a> {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    CCAN_TX_MODE,</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    CCAN_RX_MODE,</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;} <a class="code" href="group___i_p___c_c_a_n__001.html#gabb9b7e63ba2c896e87322c46d4ee6004">IP_CCAN_TRX_MODE_T</a>;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment">/* Private Macros ---------------------------------------------------------- */</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#ifndef __GNUC__</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="preprocessor"></span><span class="comment">/* Macro for reading and writing to CCAN IF registers */</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="preprocessor">#define CCAN_IF_Read(LPCx, reg, IFsel) (( ## LPCx ## -&gt;IF ## [IFsel] ## . ## IF ## _ ## reg))</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_IF_Write(LPCx, reg, IFsel, val) (( ## LPCx ## -&gt;IF ## [IFsel] ## . ## IF ## _ ## reg) = (val))</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_IF_Read(LPCx, reg, IFsel) (LPCx-&gt;IF[IFsel].IF ## _ ## reg)</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_IF_Write(LPCx, reg, IFsel, val) (LPCx-&gt;IF[IFsel].IF ## _ ## reg = val)</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor">#define CCAN_STATUS_INT 0x8000</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="preprocessor">#define CCAN_TX_DIR 1UL</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_RX_DIR 0UL</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment">/* bit field of IF command mask register */</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="preprocessor">#define CCAN_DATAB      (1 &lt;&lt; 0)    </span><span class="comment">/* 1 is transfer data byte 4-7 to message object, 0 is not */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_DATAA      (1 &lt;&lt; 1)    </span><span class="comment">/* 1 is transfer data byte 0-3 to message object, 0 is not */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_NEWDAT     (1 &lt;&lt; 2)    </span><span class="comment">/* Clear NEWDAT bit in the message object */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_CLRINTPND  (1 &lt;&lt; 3)</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_CTRL       (1 &lt;&lt; 4)    </span><span class="comment">/* 1 is transfer the CTRL bit to the message object, 0 is not */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_ARB        (1 &lt;&lt; 5)    </span><span class="comment">/* 1 is transfer the ARB bits to the message object, 0 is not */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_MASK       (1 &lt;&lt; 6)    </span><span class="comment">/* 1 is transfer the MASK bit to the message object, 0 is not */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_RW(n)      (((n) &amp; 1UL) &lt;&lt; 7)  </span><span class="comment">/* 0 is READ, 1 is WRITE */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_WR 1UL</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_RD 0UL</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment">/* bit field of IF mask 2 register */</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="preprocessor">#define CCAN_MASK_MXTD  (1 &lt;&lt; 15)       </span><span class="comment">/* 1 extended identifier bit is used in the RX filter unit, 0 is not */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_MASK_MDIR(n)   (((n) &amp; 0x01) &lt;&lt;  14)       </span><span class="comment">/* 1 direction bit is used in the RX filter unit, 0 is not */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="comment">/* bit field of IF identifier 2 register */</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="preprocessor">#define CCAN_ID_MVAL    (1 &lt;&lt; 15)       </span><span class="comment">/* Message valid bit, 1 is valid in the MO handler, 0 is ignored */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_ID_MTD     (1 &lt;&lt; 14)       </span><span class="comment">/* 1 extended identifier bit is used in the RX filter unit, 0 is not */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_ID_DIR(n)  (((n) &amp; 0x01) &lt;&lt; 13)    </span><span class="comment">/* 1 direction bit is used in the RX filter unit, 0 is not */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment">/* bit field of IF message control register */</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="preprocessor">#define CCAN_NEWD       (1 &lt;&lt; 15)       </span><span class="comment">/* 1 indicates new data is in the message buffer.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_MLST       (1 &lt;&lt; 14)       </span><span class="comment">/* 1 indicates a message loss. */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_INTP       (1 &lt;&lt; 13)       </span><span class="comment">/* 1 indicates message object is an interrupt source */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_UMSK       (1 &lt;&lt; 12)       </span><span class="comment">/* 1 is to use the mask for the receive filter mask. */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_TXIE       (1 &lt;&lt; 11)       </span><span class="comment">/* 1 is TX interrupt enabled */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_RXIE       (1 &lt;&lt; 10)       </span><span class="comment">/* 1 is RX interrupt enabled */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="preprocessor">#define CCAN_RMTEN(n)       (((n) &amp; 1UL) &lt;&lt; 9)  </span><span class="comment">/* 1 is remote frame enabled */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="preprocessor">#define CCAN_TXRQ       (1 &lt;&lt; 8)        </span><span class="comment">/* 1 is TxRqst enabled */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_EOB        (1 &lt;&lt; 7)        </span><span class="comment">/* End of buffer, always write to 1 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_DLC        0x000F          </span><span class="comment">/* bit mask for DLC */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="preprocessor">#define CCAN_ID_STD_MASK    0x07FF</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_ID_EXT_MASK    0x1FFFFFFF</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_DLC_MASK       0x0F</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment">/* bit field of IF command request n register */</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="preprocessor">#define CCAN_IFCREQ_BUSY               0x8000   </span><span class="comment">/* 1 is writing is progress, cleared when</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="comment">                                                   RD/WR done */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="preprocessor"></span><span class="comment">/* CAN CTRL register */</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="preprocessor">#define CCAN_CTRL_INIT      (1 &lt;&lt; 0)</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_CTRL_IE            (1 &lt;&lt; 1)</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_CTRL_SIE       (1 &lt;&lt; 2)</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_CTRL_EIE       (1 &lt;&lt; 3)</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_CTRL_DAR       (1 &lt;&lt; 5)</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_CTRL_CCE       (1 &lt;&lt; 6)</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CCAN_CTRL_TEST      (1 &lt;&lt; 7)</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i_p___c_c_a_n__001.html#gaf1ddfaa88e592c490269026d4919de9d">IP_CCAN_TimingCfg</a> (<a class="code" href="struct_i_p___c_c_a_n__001___t.html">IP_CCAN_001_T</a> *pCCAN,</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                        uint32_t ClkDiv,</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                        uint32_t BaudRatePrescaler,</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                        uint8_t SynJumpWidth,</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                        uint8_t Tseg1,</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                        uint8_t Tseg2);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i_p___c_c_a_n__001.html#gabced0915f35dc1086e0e8a9fc4907e65">IP_CCAN_SWInit</a> (<a class="code" href="struct_i_p___c_c_a_n__001___t.html">IP_CCAN_001_T</a> *pCCAN, <a class="code" href="group___l_p_c___types___public___types.html#gac9a7e9a35d2513ec15c3b537aaa4fba1">FunctionalState</a> NewState);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i_p___c_c_a_n__001.html#ga029980709d92ac040335ea65fa9fa8aa">IP_CCAN_IntEnable</a> (<a class="code" href="struct_i_p___c_c_a_n__001___t.html">IP_CCAN_001_T</a> *pCCAN, IP_CCAN_INT_T Int_type, <a class="code" href="group___l_p_c___types___public___types.html#gac9a7e9a35d2513ec15c3b537aaa4fba1">FunctionalState</a> NewState);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i_p___c_c_a_n__001.html#ga1d1102fd39dc6c0540863ad26d43391f">IP_CCAN_AutoRetransmitEnable</a> (<a class="code" href="struct_i_p___c_c_a_n__001___t.html">IP_CCAN_001_T</a> *pCCAN, <a class="code" href="group___l_p_c___types___public___types.html#gac9a7e9a35d2513ec15c3b537aaa4fba1">FunctionalState</a> NewState);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;uint8_t <a class="code" href="group___i_p___c_c_a_n__001.html#gaf382c2e39f39e6899be1f722e5437b5b">IP_CCAN_GetErrCounter</a> (<a class="code" href="struct_i_p___c_c_a_n__001___t.html">IP_CCAN_001_T</a> *pCCAN, <a class="code" href="group___i_p___c_c_a_n__001.html#gabb9b7e63ba2c896e87322c46d4ee6004">IP_CCAN_TRX_MODE_T</a> TRMode);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;uint32_t <a class="code" href="group___i_p___c_c_a_n__001.html#ga1e1a68fc211bdf3aa7847f0b30ffc733">IP_CCAN_GetStatus</a> (<a class="code" href="struct_i_p___c_c_a_n__001___t.html">IP_CCAN_001_T</a> *pCCAN);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i_p___c_c_a_n__001.html#ga6a9aa2ea61ebd260b107d969797e9584">IP_CCAN_SetStatus</a> (<a class="code" href="struct_i_p___c_c_a_n__001___t.html">IP_CCAN_001_T</a> *pCCAN, uint32_t val);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;uint32_t <a class="code" href="group___i_p___c_c_a_n__001.html#gade39e72d2f5e51928bb28ae48397373a">IP_CCAN_Get_IntID</a> (<a class="code" href="struct_i_p___c_c_a_n__001___t.html">IP_CCAN_001_T</a> *pCCAN);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i_p___c_c_a_n__001.html#gaa2134d33dead47e5f1d4f1e004bb226a">IP_CCAN_TestModeEnable</a>(<a class="code" href="struct_i_p___c_c_a_n__001___t.html">IP_CCAN_001_T</a> *pCCAN, IP_CCAN_TEST_MODE_T test_mode, <a class="code" href="group___l_p_c___types___public___types.html#gac9a7e9a35d2513ec15c3b537aaa4fba1">FunctionalState</a> NewState);</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i_p___c_c_a_n__001.html#gaa3ff3978a132a5c0064b4e65fae6f64c">IP_CCAN_ClearIntPend</a> (<a class="code" href="struct_i_p___c_c_a_n__001___t.html">IP_CCAN_001_T</a> *pCCAN, IP_CCAN_MSG_INTERFACE_T IFsel, uint8_t msg_num);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i_p___c_c_a_n__001.html#ga37f1ca7c5333e37d214afdde724f0e14">IP_CCAN_Clear_NewDataFlag</a> (<a class="code" href="struct_i_p___c_c_a_n__001___t.html">IP_CCAN_001_T</a> *pCCAN, IP_CCAN_MSG_INTERFACE_T IFsel, uint8_t msg_num);</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i_p___c_c_a_n__001.html#gacd7f2aa538b8e89cc4b2e9bd1d4dc2ab">IP_CCAN_SetValidMsg</a>(<a class="code" href="struct_i_p___c_c_a_n__001___t.html">IP_CCAN_001_T</a> *pCCAN, IP_CCAN_MSG_INTERFACE_T IFsel, uint8_t msg_num, <a class="code" href="group___l_p_c___types___public___types.html#gac9a7e9a35d2513ec15c3b537aaa4fba1">FunctionalState</a> NewState);</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;uint32_t <a class="code" href="group___i_p___c_c_a_n__001.html#gae6ca52b7867c14523bdc3443bce8e3d4">IP_CCAN_GetValidMsg</a>(<a class="code" href="struct_i_p___c_c_a_n__001___t.html">IP_CCAN_001_T</a> *pCCAN);</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;uint32_t <a class="code" href="group___i_p___c_c_a_n__001.html#ga66f94948e6a8f52c2a2fb42fe1ea0abc">IP_CCAN_GetTxRQST</a>(<a class="code" href="struct_i_p___c_c_a_n__001___t.html">IP_CCAN_001_T</a> *pCCAN);</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i_p___c_c_a_n__001.html#gab2378868a70056b42a9e8e3d98c02869">IP_CCAN_SetMsgObject</a> (<a class="code" href="struct_i_p___c_c_a_n__001___t.html">IP_CCAN_001_T</a> *pCCAN,</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                           IP_CCAN_MSG_INTERFACE_T IFsel,</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                           uint8_t direction,</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                           uint32_t RemoteEnable,</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                           uint8_t msg_num,</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                           <span class="keyword">const</span> <a class="code" href="structmessage__object.html">message_object</a> *msg_ptr);</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___i_p___c_c_a_n__001.html#ga428f85261dd2488d9af6e2f7c5e9875e">IP_CCAN_GetMsgObject</a> (<a class="code" href="struct_i_p___c_c_a_n__001___t.html">IP_CCAN_001_T</a> *pCCAN,</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                           IP_CCAN_MSG_INTERFACE_T IFsel,</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                           uint8_t msg_num,</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                           <a class="code" href="structmessage__object.html">message_object</a> *msg_buf);</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="preprocessor"></span>}</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __CCAN_001_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___i_f___t_html_a48726cde15c438406e48154401829048"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___i_f___t.html#a48726cde15c438406e48154401829048">IP_CCAN_001_IF_T::IF_DA1</a></div><div class="ttdeci">__IO uint32_t IF_DA1</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00062">ccan_001.h:62</a></div></div>
+<div class="ttc" id="group___i_p___c_c_a_n__001_html_gade39e72d2f5e51928bb28ae48397373a"><div class="ttname"><a href="group___i_p___c_c_a_n__001.html#gade39e72d2f5e51928bb28ae48397373a">IP_CCAN_Get_IntID</a></div><div class="ttdeci">uint32_t IP_CCAN_Get_IntID(IP_CCAN_001_T *pCCAN)</div><div class="ttdoc">Get the source ID of an interrupt. </div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8c_source.html#l00131">ccan_001.c:131</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___i_f___t_html_ae2ff3565ebdb3c7f39879dace55a2669"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___i_f___t.html#ae2ff3565ebdb3c7f39879dace55a2669">IP_CCAN_001_IF_T::IF_CMDMSK_R</a></div><div class="ttdeci">__IO uint32_t IF_CMDMSK_R</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00053">ccan_001.h:53</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___t_html_aaea1cf878c3e7ab37309e673eb50101b"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___t.html#aaea1cf878c3e7ab37309e673eb50101b">IP_CCAN_001_T::CNTL</a></div><div class="ttdeci">__IO uint32_t CNTL</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00073">ccan_001.h:73</a></div></div>
+<div class="ttc" id="group___i_p___c_c_a_n__001_html_gaa3ff3978a132a5c0064b4e65fae6f64c"><div class="ttname"><a href="group___i_p___c_c_a_n__001.html#gaa3ff3978a132a5c0064b4e65fae6f64c">IP_CCAN_ClearIntPend</a></div><div class="ttdeci">void IP_CCAN_ClearIntPend(IP_CCAN_001_T *pCCAN, IP_CCAN_MSG_INTERFACE_T IFsel, uint8_t msg_num)</div><div class="ttdoc">Clear interrupt pending bit in the message object. </div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8c_source.html#l00150">ccan_001.c:150</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___t_html_a709e6d05a057c93effc398f74dbe0ff1"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___t.html#a709e6d05a057c93effc398f74dbe0ff1">IP_CCAN_001_T::MSGV1</a></div><div class="ttdeci">__I uint32_t MSGV1</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00092">ccan_001.h:92</a></div></div>
+<div class="ttc" id="group___i_p___c_c_a_n__001_html_gaf1ddfaa88e592c490269026d4919de9d"><div class="ttname"><a href="group___i_p___c_c_a_n__001.html#gaf1ddfaa88e592c490269026d4919de9d">IP_CCAN_TimingCfg</a></div><div class="ttdeci">void IP_CCAN_TimingCfg(IP_CCAN_001_T *pCCAN, uint32_t ClkDiv, uint32_t BaudRatePrescaler, uint8_t SynJumpWidth, uint8_t Tseg1, uint8_t Tseg2)</div><div class="ttdoc">Configure the bit timing for CCAN bus. </div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8c_source.html#l00074">ccan_001.c:74</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___t_html"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___t.html">IP_CCAN_001_T</a></div><div class="ttdoc">CCAN Controller Area Network register block structure. </div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00072">ccan_001.h:72</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___t_html_a36b5bb69b2c273aa0fefe8e0c852d270"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___t.html#a36b5bb69b2c273aa0fefe8e0c852d270">IP_CCAN_001_T::BRPE</a></div><div class="ttdeci">__IO uint32_t BRPE</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00079">ccan_001.h:79</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___t_html_a3dc7ce173845d25334a5f36b4206951a"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___t.html#a3dc7ce173845d25334a5f36b4206951a">IP_CCAN_001_T::TXREQ1</a></div><div class="ttdeci">__I uint32_t TXREQ1</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00083">ccan_001.h:83</a></div></div>
+<div class="ttc" id="structmessage__object_html_abaabdc509cdaba7df9f56c6c76f3ae19"><div class="ttname"><a href="structmessage__object.html#abaabdc509cdaba7df9f56c6c76f3ae19">message_object::id</a></div><div class="ttdeci">uint32_t id</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00114">ccan_001.h:114</a></div></div>
+<div class="ttc" id="group___i_p___c_c_a_n__001_html_gabb9b7e63ba2c896e87322c46d4ee6004"><div class="ttname"><a href="group___i_p___c_c_a_n__001.html#gabb9b7e63ba2c896e87322c46d4ee6004">IP_CCAN_TRX_MODE_T</a></div><div class="ttdeci">enum IP_CCAN_TRX_MODE IP_CCAN_TRX_MODE_T</div><div class="ttdoc">I2S transmit/receive mode for configuration. </div></div>
+<div class="ttc" id="group___l_p_c___types___public___types_html_gac9a7e9a35d2513ec15c3b537aaa4fba1"><div class="ttname"><a href="group___l_p_c___types___public___types.html#gac9a7e9a35d2513ec15c3b537aaa4fba1">FunctionalState</a></div><div class="ttdeci">FunctionalState</div><div class="ttdoc">Functional State Definition. </div><div class="ttdef"><b>Definition:</b> <a href="lpc__types_8h_source.html#l00068">lpc_types.h:68</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___i_f___t_html_ab80359f2ec21b4ca3e9336797f00e38d"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___i_f___t.html#ab80359f2ec21b4ca3e9336797f00e38d">IP_CCAN_001_IF_T::IF_ARB1</a></div><div class="ttdeci">__IO uint32_t IF_ARB1</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00059">ccan_001.h:59</a></div></div>
+<div class="ttc" id="group___i_p___c_c_a_n__001_html_gae6ca52b7867c14523bdc3443bce8e3d4"><div class="ttname"><a href="group___i_p___c_c_a_n__001.html#gae6ca52b7867c14523bdc3443bce8e3d4">IP_CCAN_GetValidMsg</a></div><div class="ttdeci">uint32_t IP_CCAN_GetValidMsg(IP_CCAN_001_T *pCCAN)</div><div class="ttdoc">Check the message objects is valid or not. </div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8c_source.html#l00186">ccan_001.c:186</a></div></div>
+<div class="ttc" id="group___i_p___c_c_a_n__001_html_ga66f94948e6a8f52c2a2fb42fe1ea0abc"><div class="ttname"><a href="group___i_p___c_c_a_n__001.html#ga66f94948e6a8f52c2a2fb42fe1ea0abc">IP_CCAN_GetTxRQST</a></div><div class="ttdeci">uint32_t IP_CCAN_GetTxRQST(IP_CCAN_001_T *pCCAN)</div><div class="ttdoc">Get the transmit repuest bit in all message objects. </div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8c_source.html#l00192">ccan_001.c:192</a></div></div>
+<div class="ttc" id="group___i_p___c_c_a_n__001_html_ga37f1ca7c5333e37d214afdde724f0e14"><div class="ttname"><a href="group___i_p___c_c_a_n__001.html#ga37f1ca7c5333e37d214afdde724f0e14">IP_CCAN_Clear_NewDataFlag</a></div><div class="ttdeci">void IP_CCAN_Clear_NewDataFlag(IP_CCAN_001_T *pCCAN, IP_CCAN_MSG_INTERFACE_T IFsel, uint8_t msg_num)</div><div class="ttdoc">Clear new data flag bit in the message object. </div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8c_source.html#l00159">ccan_001.c:159</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___t_html_ac6c3024f82207c167ab06e0939060129"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___t.html#ac6c3024f82207c167ab06e0939060129">IP_CCAN_001_T::TXREQ2</a></div><div class="ttdeci">__I uint32_t TXREQ2</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00084">ccan_001.h:84</a></div></div>
+<div class="ttc" id="group___i_p___c_c_a_n__001_html_gaf382c2e39f39e6899be1f722e5437b5b"><div class="ttname"><a href="group___i_p___c_c_a_n__001.html#gaf382c2e39f39e6899be1f722e5437b5b">IP_CCAN_GetErrCounter</a></div><div class="ttdeci">uint8_t IP_CCAN_GetErrCounter(IP_CCAN_001_T *pCCAN, IP_CCAN_TRX_MODE_T TRMode)</div><div class="ttdoc">Get the current value of the transmit/receive error counter. </div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8c_source.html#l00113">ccan_001.c:113</a></div></div>
+<div class="ttc" id="group___i_p___c_c_a_n__001_html_ga029980709d92ac040335ea65fa9fa8aa"><div class="ttname"><a href="group___i_p___c_c_a_n__001.html#ga029980709d92ac040335ea65fa9fa8aa">IP_CCAN_IntEnable</a></div><div class="ttdeci">void IP_CCAN_IntEnable(IP_CCAN_001_T *pCCAN, IP_CCAN_INT_T Int_type, FunctionalState NewState)</div><div class="ttdoc">Enable/Disable CCAN Interrupts. </div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8c_source.html#l00091">ccan_001.c:91</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___i_f___t_html_a3cb3835d6b203564b4bde6f7f550f130"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___i_f___t.html#a3cb3835d6b203564b4bde6f7f550f130">IP_CCAN_001_IF_T::IF_MCTRL</a></div><div class="ttdeci">__IO uint32_t IF_MCTRL</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00061">ccan_001.h:61</a></div></div>
+<div class="ttc" id="structmessage__object_html"><div class="ttname"><a href="structmessage__object.html">message_object</a></div><div class="ttdoc">CAN message object structure. </div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00113">ccan_001.h:113</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___t_html_a7cdfd206e6aee18d476f1494b788283e"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___t.html#a7cdfd206e6aee18d476f1494b788283e">IP_CCAN_001_T::ND2</a></div><div class="ttdeci">__I uint32_t ND2</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00087">ccan_001.h:87</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___i_f___t_html_a6477a18fb57055ab11cad3df38fe0dd7"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___i_f___t.html#a6477a18fb57055ab11cad3df38fe0dd7">IP_CCAN_001_IF_T::IF_MSK1</a></div><div class="ttdeci">__IO uint32_t IF_MSK1</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00057">ccan_001.h:57</a></div></div>
+<div class="ttc" id="structmessage__object_html_a811fbb0cb2c2263b1a7440a7e9d78239"><div class="ttname"><a href="structmessage__object.html#a811fbb0cb2c2263b1a7440a7e9d78239">message_object::dlc</a></div><div class="ttdeci">uint32_t dlc</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00115">ccan_001.h:115</a></div></div>
+<div class="ttc" id="group___i_p___c_c_a_n__001_html_ga6a9aa2ea61ebd260b107d969797e9584"><div class="ttname"><a href="group___i_p___c_c_a_n__001.html#ga6a9aa2ea61ebd260b107d969797e9584">IP_CCAN_SetStatus</a></div><div class="ttdeci">void IP_CCAN_SetStatus(IP_CCAN_001_T *pCCAN, uint32_t val)</div><div class="ttdoc">Set the CCAN status. </div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8c_source.html#l00125">ccan_001.c:125</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___t_html_a65f32ab732a63e8469680b75ba8fd690"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___t.html#a65f32ab732a63e8469680b75ba8fd690">IP_CCAN_001_T::ND1</a></div><div class="ttdeci">__I uint32_t ND1</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00086">ccan_001.h:86</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___t_html_a88cf12ce48ba72c3ee5c5922d21a8b0f"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___t.html#a88cf12ce48ba72c3ee5c5922d21a8b0f">IP_CCAN_001_T::IR2</a></div><div class="ttdeci">__I uint32_t IR2</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00090">ccan_001.h:90</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___i_f___t_html_ad25614db043c3ad38c7f1caf615b0fdf"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___i_f___t.html#ad25614db043c3ad38c7f1caf615b0fdf">IP_CCAN_001_IF_T::IF_DA2</a></div><div class="ttdeci">__IO uint32_t IF_DA2</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00063">ccan_001.h:63</a></div></div>
+<div class="ttc" id="group___i_p___c_c_a_n__001_html_gabced0915f35dc1086e0e8a9fc4907e65"><div class="ttname"><a href="group___i_p___c_c_a_n__001.html#gabced0915f35dc1086e0e8a9fc4907e65">IP_CCAN_SWInit</a></div><div class="ttdeci">void IP_CCAN_SWInit(IP_CCAN_001_T *pCCAN, FunctionalState NewState)</div><div class="ttdoc">Initialize the CAN controller. </div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8c_source.html#l00062">ccan_001.c:62</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___i_f___t_html_ad7a6f4fa314f64c74cdcba88ba8850ff"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___i_f___t.html#ad7a6f4fa314f64c74cdcba88ba8850ff">IP_CCAN_001_IF_T::IF_CMDMSK_W</a></div><div class="ttdeci">__IO uint32_t IF_CMDMSK_W</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00054">ccan_001.h:54</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___t_html_ae9c79ec17ace363c54ee59581274ede5"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___t.html#ae9c79ec17ace363c54ee59581274ede5">IP_CCAN_001_T::EC</a></div><div class="ttdeci">__I uint32_t EC</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00075">ccan_001.h:75</a></div></div>
+<div class="ttc" id="group___i_p___c_c_a_n__001_html_ga1e1a68fc211bdf3aa7847f0b30ffc733"><div class="ttname"><a href="group___i_p___c_c_a_n__001.html#ga1e1a68fc211bdf3aa7847f0b30ffc733">IP_CCAN_GetStatus</a></div><div class="ttdeci">uint32_t IP_CCAN_GetStatus(IP_CCAN_001_T *pCCAN)</div><div class="ttdoc">Get the CCAN status register. </div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8c_source.html#l00119">ccan_001.c:119</a></div></div>
+<div class="ttc" id="group___i_p___c_c_a_n__001_html_ga130049996e7d106f4aaab03a5c0ba161"><div class="ttname"><a href="group___i_p___c_c_a_n__001.html#ga130049996e7d106f4aaab03a5c0ba161">IP_CCAN_TRX_MODE</a></div><div class="ttdeci">IP_CCAN_TRX_MODE</div><div class="ttdoc">I2S transmit/receive mode for configuration. </div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00134">ccan_001.h:134</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___t_html_a6029b46f9633a968124bfbd9e67992ca"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___t.html#a6029b46f9633a968124bfbd9e67992ca">IP_CCAN_001_T::INT</a></div><div class="ttdeci">__I uint32_t INT</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00077">ccan_001.h:77</a></div></div>
+<div class="ttc" id="group___i_p___c_c_a_n__001_html_ga428f85261dd2488d9af6e2f7c5e9875e"><div class="ttname"><a href="group___i_p___c_c_a_n__001.html#ga428f85261dd2488d9af6e2f7c5e9875e">IP_CCAN_GetMsgObject</a></div><div class="ttdeci">void IP_CCAN_GetMsgObject(IP_CCAN_001_T *pCCAN, IP_CCAN_MSG_INTERFACE_T IFsel, uint8_t msg_num, message_object *msg_buf)</div><div class="ttdoc">Get a message object in message RAM into the message buffer. </div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8c_source.html#l00251">ccan_001.c:251</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___t_html_a2a33dba1349d1ebe45133cb2789a5307"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___t.html#a2a33dba1349d1ebe45133cb2789a5307">IP_CCAN_001_T::CLKDIV</a></div><div class="ttdeci">__IO uint32_t CLKDIV</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00095">ccan_001.h:95</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___i_f___t_html"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___i_f___t.html">IP_CCAN_001_IF_T</a></div><div class="ttdoc">CCAN message interface register block structure. </div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00050">ccan_001.h:50</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___t_html_ab4528d1ef41869057b53d3c68074802a"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___t.html#ab4528d1ef41869057b53d3c68074802a">IP_CCAN_001_T::MSGV2</a></div><div class="ttdeci">__I uint32_t MSGV2</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00093">ccan_001.h:93</a></div></div>
+<div class="ttc" id="group___i_p___c_c_a_n__001_html_gacd7f2aa538b8e89cc4b2e9bd1d4dc2ab"><div class="ttname"><a href="group___i_p___c_c_a_n__001.html#gacd7f2aa538b8e89cc4b2e9bd1d4dc2ab">IP_CCAN_SetValidMsg</a></div><div class="ttdeci">void IP_CCAN_SetValidMsg(IP_CCAN_001_T *pCCAN, IP_CCAN_MSG_INTERFACE_T IFsel, uint8_t msg_num, FunctionalState NewState)</div><div class="ttdoc">Enable/Disable the message object to valid. </div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8c_source.html#l00168">ccan_001.c:168</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___i_f___t_html_acdf30356b7103ec9f4a740eb10706e03"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___i_f___t.html#acdf30356b7103ec9f4a740eb10706e03">IP_CCAN_001_IF_T::IF_DB1</a></div><div class="ttdeci">__IO uint32_t IF_DB1</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00064">ccan_001.h:64</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___i_f___t_html_a457cf85114a05c0460c6b4de3cc1c3ce"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___i_f___t.html#a457cf85114a05c0460c6b4de3cc1c3ce">IP_CCAN_001_IF_T::IF_MSK2</a></div><div class="ttdeci">__IO uint32_t IF_MSK2</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00058">ccan_001.h:58</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___t_html_a071509075a20265b5c09b13d91247a9c"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___t.html#a071509075a20265b5c09b13d91247a9c">IP_CCAN_001_T::TEST</a></div><div class="ttdeci">__IO uint32_t TEST</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00078">ccan_001.h:78</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___t_html_aa90c98b3b95ed1374dbcf018c74aef79"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___t.html#aa90c98b3b95ed1374dbcf018c74aef79">IP_CCAN_001_T::STAT</a></div><div class="ttdeci">__IO uint32_t STAT</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00074">ccan_001.h:74</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___t_html_a1b9452a1b62004b6e1e81efd18704630"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___t.html#a1b9452a1b62004b6e1e81efd18704630">IP_CCAN_001_T::BT</a></div><div class="ttdeci">__IO uint32_t BT</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00076">ccan_001.h:76</a></div></div>
+<div class="ttc" id="group___i_p___c_c_a_n__001_html_gaa2134d33dead47e5f1d4f1e004bb226a"><div class="ttname"><a href="group___i_p___c_c_a_n__001.html#gaa2134d33dead47e5f1d4f1e004bb226a">IP_CCAN_TestModeEnable</a></div><div class="ttdeci">void IP_CCAN_TestModeEnable(IP_CCAN_001_T *pCCAN, IP_CCAN_TEST_MODE_T test_mode, FunctionalState NewState)</div><div class="ttdoc">Enable/Disable test mode in CCAN. </div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8c_source.html#l00137">ccan_001.c:137</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___i_f___t_html_ae492c7379dea406012ed541c7dac7583"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___i_f___t.html#ae492c7379dea406012ed541c7dac7583">IP_CCAN_001_IF_T::IF_ARB2</a></div><div class="ttdeci">__IO uint32_t IF_ARB2</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00060">ccan_001.h:60</a></div></div>
+<div class="ttc" id="group___i_p___c_c_a_n__001_html_gab2378868a70056b42a9e8e3d98c02869"><div class="ttname"><a href="group___i_p___c_c_a_n__001.html#gab2378868a70056b42a9e8e3d98c02869">IP_CCAN_SetMsgObject</a></div><div class="ttdeci">void IP_CCAN_SetMsgObject(IP_CCAN_001_T *pCCAN, IP_CCAN_MSG_INTERFACE_T IFsel, uint8_t direction, uint32_t RemoteEnable, uint8_t msg_num, const message_object *msg_ptr)</div><div class="ttdoc">Set a message into the message object in message RAM. </div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8c_source.html#l00198">ccan_001.c:198</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___i_f___t_html_a5315ee38d5c9971d5dd77de08bc75c40"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___i_f___t.html#a5315ee38d5c9971d5dd77de08bc75c40">IP_CCAN_001_IF_T::IF_CMDREQ</a></div><div class="ttdeci">__IO uint32_t IF_CMDREQ</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00051">ccan_001.h:51</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___t_html_a5c28010084f84d7fe78919318b756102"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___t.html#a5c28010084f84d7fe78919318b756102">IP_CCAN_001_T::IR1</a></div><div class="ttdeci">__I uint32_t IR1</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00089">ccan_001.h:89</a></div></div>
+<div class="ttc" id="group___i_p___c_c_a_n__001_html_ga1d1102fd39dc6c0540863ad26d43391f"><div class="ttname"><a href="group___i_p___c_c_a_n__001.html#ga1d1102fd39dc6c0540863ad26d43391f">IP_CCAN_AutoRetransmitEnable</a></div><div class="ttdeci">void IP_CCAN_AutoRetransmitEnable(IP_CCAN_001_T *pCCAN, FunctionalState NewState)</div><div class="ttdoc">Enable/Disable automatic retransmission. </div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8c_source.html#l00102">ccan_001.c:102</a></div></div>
+<div class="ttc" id="struct_i_p___c_c_a_n__001___i_f___t_html_a1977b43a6efffd0b484975b8402b080d"><div class="ttname"><a href="struct_i_p___c_c_a_n__001___i_f___t.html#a1977b43a6efffd0b484975b8402b080d">IP_CCAN_001_IF_T::IF_DB2</a></div><div class="ttdeci">__IO uint32_t IF_DB2</div><div class="ttdef"><b>Definition:</b> <a href="ccan__001_8h_source.html#l00065">ccan_001.h:65</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_e9967a62eb0adfb08d6da6a5b6090dce.html">lpcopen</a></li><li class="navelem"><a class="el" href="dir_9de244f5aef64593622a4e8655220356.html">software</a></li><li class="navelem"><a class="el" href="dir_31a1b7b0d37c21493df82ae7c333e639.html">lpc_core</a></li><li class="navelem"><a class="el" href="dir_b12cadcc2490a31864f50bfa129e234d.html">lpc_ip</a></li><li class="navelem"><b>ccan_001.h</b></li>
+    <li class="footer">Généré le Mardi Janvier 7 2014 11:23:03 pour Hexapode par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
+  </ul>
+</div>
+</body>
+</html>

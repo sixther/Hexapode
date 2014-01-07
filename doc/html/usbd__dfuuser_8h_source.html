@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Hexapode:  Fichier source de lpcopen/software/lpc_core/lpc_ip/usbd_rom/usbd_dfuuser.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="IN7Robot.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Hexapode
+   &#160;<span id="projectnumber">Version 1.0</span>
+   </div>
+   <div id="projectbrief">Thomas Waquet &amp; Gauthier Dhalluin</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('usbd__dfuuser_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Groupes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">usbd_dfuuser.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="usbd__dfuuser_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/***********************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">* $Id: mw_usbd_dfuuser.h.rca 1.2 Tue Nov  1 11:45:07 2011 nlv09221 Experimental $</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">* Project: USB device ROM Stack</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">* Description:</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">*     Device Firmware Upgrade Class Custom User Module Definitions.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">***********************************************************************</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">*   Copyright(C) 2011, NXP Semiconductor</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">*   All rights reserved.</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">* Software that is described herein is for illustrative purposes only</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">* which provides customers with programming information regarding the</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">* products. This software is supplied &quot;AS IS&quot; without any warranties.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">* NXP Semiconductors assumes no responsibility or liability for the</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">* use of the software, conveys no license or title under any patent,</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">* copyright, or mask work right to the product. NXP Semiconductors</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">* reserves the right to make changes in the software without</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">* notification. NXP Semiconductors also make no representation or</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">* warranty that such application will be suitable for the specified</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">* use without further testing or modification.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">**********************************************************************/</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef __DFUUSER_H__</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __DFUUSER_H__</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="usbd_8h.html">usbd.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="usbd__dfu_8h.html">usbd_dfu.h</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="usbd__core_8h.html">usbd_core.h</a>&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html">   62</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html">USBD_DFU_INIT_PARAM</a></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="comment">/* memory allocation params */</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html#a5ba2f6f78705b63f0788f9b85f7f104c">   65</a></span>&#160;  uint32_t <a class="code" href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html#a5ba2f6f78705b63f0788f9b85f7f104c">mem_base</a>;  </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html#a3f6a3b0b58cbdacf4ce9a0c9b3d64794">   70</a></span>&#160;  uint32_t <a class="code" href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html#a3f6a3b0b58cbdacf4ce9a0c9b3d64794">mem_size</a>;  </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="comment">/* DFU paramas */</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html#abf7c6492df9b515329616580afb383d2">   74</a></span>&#160;  uint16_t <a class="code" href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html#abf7c6492df9b515329616580afb383d2">wTransferSize</a>; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  uint16_t pad;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html#a4333b8418a39b34b08fb044640a10fae">   85</a></span>&#160;  uint8_t* <a class="code" href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html#a4333b8418a39b34b08fb044640a10fae">intf_desc</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="comment">/* user defined functions */</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html#ae2ebb0e39b4ca2c47cee637d0b7d7f65">  106</a></span>&#160;  uint8_t (*<a class="code" href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html#ae2ebb0e39b4ca2c47cee637d0b7d7f65">DFU_Write</a>)( uint32_t block_num, uint8_t** src, uint32_t length, uint8_t* bwPollTimeout);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html#aaab0e9c6d5a8502620d2b9b789498390">  121</a></span>&#160;  uint32_t (*<a class="code" href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html#aaab0e9c6d5a8502620d2b9b789498390">DFU_Read</a>)( uint32_t block_num, uint8_t** dst, uint32_t length);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html#a4e364f9a54fc5eefa7da71ac47fcedfb">  132</a></span>&#160;  void (*<a class="code" href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html#a4e364f9a54fc5eefa7da71ac47fcedfb">DFU_Done</a>)(void);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html#ad3275d7f52fff110584bbb2f79e5eb6c">  150</a></span>&#160;  void (*<a class="code" href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html#ad3275d7f52fff110584bbb2f79e5eb6c">DFU_Detach</a>)(<a class="code" href="group___u_s_b_d___core.html#gafdbb2204d929cb9d75736bd2b42342ac">USBD_HANDLE_T</a> hUsb);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html#a235bd33ad84da84f830730adf9d471ed">  171</a></span>&#160;  ErrorCode_t (*<a class="code" href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html#a235bd33ad84da84f830730adf9d471ed">DFU_Ep0_Hdlr</a>) (<a class="code" href="group___u_s_b_d___core.html#gafdbb2204d929cb9d75736bd2b42342ac">USBD_HANDLE_T</a> hUsb, <span class="keywordtype">void</span>* data, uint32_t event);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;} <a class="code" href="group___u_s_b_d___d_f_u.html#ga8506b43ae2bda83cc8c459114fd3fc82">USBD_DFU_INIT_PARAM_T</a>;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="struct_u_s_b_d___d_f_u___a_p_i.html">  182</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct_u_s_b_d___d_f_u___a_p_i.html">USBD_DFU_API</a></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;{</div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="struct_u_s_b_d___d_f_u___a_p_i.html#a048df985da6f33c0a5c911b50c9f8e75">  195</a></span>&#160;  uint32_t (*<a class="code" href="struct_u_s_b_d___d_f_u___a_p_i.html#a048df985da6f33c0a5c911b50c9f8e75">GetMemSize</a>)(<a class="code" href="struct_____u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m___t.html">USBD_DFU_INIT_PARAM_T</a>* param);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="struct_u_s_b_d___d_f_u___a_p_i.html#aee4ae3f6c361340cbb7affe2d29d69e2">  217</a></span>&#160;  ErrorCode_t (*<a class="code" href="struct_u_s_b_d___d_f_u___a_p_i.html#aee4ae3f6c361340cbb7affe2d29d69e2">init</a>)(<a class="code" href="group___u_s_b_d___core.html#gafdbb2204d929cb9d75736bd2b42342ac">USBD_HANDLE_T</a> hUsb, <a class="code" href="struct_____u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m___t.html">USBD_DFU_INIT_PARAM_T</a>* param, uint32_t init_state);</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;} <a class="code" href="group___u_s_b_d___d_f_u.html#gadf9281f8af1223053e3ccf48e26ac80d">USBD_DFU_API_T</a>;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="comment">/*-----------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="comment"> *  Private functions &amp; structures prototypes</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="comment"> *-----------------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_USBD_DFU_CTRL_T</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;{</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  <span class="comment">/*ALIGNED(4)*/</span> <a class="code" href="struct___d_f_u___s_t_a_t_u_s.html">DFU_STATUS_T</a> dfu_req_get_status;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  uint16_t pad;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  uint8_t dfu_state;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  uint8_t dfu_status;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  uint8_t download_done;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  uint8_t if_num;                  <span class="comment">/* interface number */</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  uint8_t* xfr_buf;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <a class="code" href="struct___u_s_b___d_f_u___f_u_n_c___d_e_s_c_r_i_p_t_o_r.html">USB_DFU_FUNC_DESCRIPTOR</a>* dfu_desc;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  USB_CORE_CTRL_T*  pUsbCtrl;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="comment">/* user defined functions */</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <span class="comment">/* return DFU_STATUS_ values defined in mw_usbd_dfu.h */</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  uint8_t (*DFU_Write)( uint32_t block_num, uint8_t** src, uint32_t length, uint8_t* bwPollTimeout);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  <span class="comment">/* return </span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="comment">  * DFU_STATUS_ : values defined in mw_usbd_dfu.h in case of errors</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="comment">  * 0 : If end of memory reached</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="comment">  * length : Amount of data copied to destination buffer</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="comment">  */</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  uint32_t (*DFU_Read)( uint32_t block_num, uint8_t** dst, uint32_t length);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  <span class="comment">/* callback called after download is finished */</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  void (*DFU_Done)(void);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  <span class="comment">/* callback called after USB_REQ_DFU_DETACH is recived */</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  void (*DFU_Detach)(<a class="code" href="group___u_s_b_d___core.html#gafdbb2204d929cb9d75736bd2b42342ac">USBD_HANDLE_T</a> hUsb);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;} USBD_DFU_CTRL_T;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;uint32_t mwDFU_GetMemSize(<a class="code" href="struct_____u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m___t.html">USBD_DFU_INIT_PARAM_T</a>* param);</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="keyword">extern</span> ErrorCode_t mwDFU_init(<a class="code" href="group___u_s_b_d___core.html#gafdbb2204d929cb9d75736bd2b42342ac">USBD_HANDLE_T</a> hUsb, <a class="code" href="struct_____u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m___t.html">USBD_DFU_INIT_PARAM_T</a>* param, uint32_t init_state);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* __DFUUSER_H__ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="usbd__dfu_8h_html"><div class="ttname"><a href="usbd__dfu_8h.html">usbd_dfu.h</a></div><div class="ttdoc">Device Firmware Upgrade (DFU) calss descriptors. </div></div>
+<div class="ttc" id="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m_html"><div class="ttname"><a href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html">USBD_DFU_INIT_PARAM</a></div><div class="ttdoc">USB descriptors data structure. </div><div class="ttdef"><b>Definition:</b> <a href="usbd__dfuuser_8h_source.html#l00062">usbd_dfuuser.h:62</a></div></div>
+<div class="ttc" id="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m_html_a4e364f9a54fc5eefa7da71ac47fcedfb"><div class="ttname"><a href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html#a4e364f9a54fc5eefa7da71ac47fcedfb">USBD_DFU_INIT_PARAM::DFU_Done</a></div><div class="ttdeci">void(* DFU_Done)(void)</div><div class="ttdef"><b>Definition:</b> <a href="usbd__dfuuser_8h_source.html#l00132">usbd_dfuuser.h:132</a></div></div>
+<div class="ttc" id="struct_____u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m___t_html"><div class="ttname"><a href="struct_____u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m___t.html">__USBD_DFU_INIT_PARAM_T</a></div><div class="ttdef"><b>Definition:</b> <a href="usbd__api_8h_source.html#l00144">usbd_api.h:144</a></div></div>
+<div class="ttc" id="struct_u_s_b_d___d_f_u___a_p_i_html"><div class="ttname"><a href="struct_u_s_b_d___d_f_u___a_p_i.html">USBD_DFU_API</a></div><div class="ttdoc">DFU class API functions structure.This module exposes functions which interact directly with USB devi...</div><div class="ttdef"><b>Definition:</b> <a href="usbd__dfuuser_8h_source.html#l00182">usbd_dfuuser.h:182</a></div></div>
+<div class="ttc" id="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m_html_aaab0e9c6d5a8502620d2b9b789498390"><div class="ttname"><a href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html#aaab0e9c6d5a8502620d2b9b789498390">USBD_DFU_INIT_PARAM::DFU_Read</a></div><div class="ttdeci">uint32_t(* DFU_Read)(uint32_t block_num, uint8_t **dst, uint32_t length)</div><div class="ttdef"><b>Definition:</b> <a href="usbd__dfuuser_8h_source.html#l00121">usbd_dfuuser.h:121</a></div></div>
+<div class="ttc" id="group___u_s_b_d___d_f_u_html_ga8506b43ae2bda83cc8c459114fd3fc82"><div class="ttname"><a href="group___u_s_b_d___d_f_u.html#ga8506b43ae2bda83cc8c459114fd3fc82">USBD_DFU_INIT_PARAM_T</a></div><div class="ttdeci">struct USBD_DFU_INIT_PARAM USBD_DFU_INIT_PARAM_T</div><div class="ttdoc">USB descriptors data structure. </div></div>
+<div class="ttc" id="group___u_s_b_d___d_f_u_html_gadf9281f8af1223053e3ccf48e26ac80d"><div class="ttname"><a href="group___u_s_b_d___d_f_u.html#gadf9281f8af1223053e3ccf48e26ac80d">USBD_DFU_API_T</a></div><div class="ttdeci">struct USBD_DFU_API USBD_DFU_API_T</div><div class="ttdoc">DFU class API functions structure.This module exposes functions which interact directly with USB devi...</div></div>
+<div class="ttc" id="struct_u_s_b_d___d_f_u___a_p_i_html_aee4ae3f6c361340cbb7affe2d29d69e2"><div class="ttname"><a href="struct_u_s_b_d___d_f_u___a_p_i.html#aee4ae3f6c361340cbb7affe2d29d69e2">USBD_DFU_API::init</a></div><div class="ttdeci">ErrorCode_t(* init)(USBD_HANDLE_T hUsb, USBD_DFU_INIT_PARAM_T *param, uint32_t init_state)</div><div class="ttdef"><b>Definition:</b> <a href="usbd__dfuuser_8h_source.html#l00217">usbd_dfuuser.h:217</a></div></div>
+<div class="ttc" id="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m_html_ae2ebb0e39b4ca2c47cee637d0b7d7f65"><div class="ttname"><a href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html#ae2ebb0e39b4ca2c47cee637d0b7d7f65">USBD_DFU_INIT_PARAM::DFU_Write</a></div><div class="ttdeci">uint8_t(* DFU_Write)(uint32_t block_num, uint8_t **src, uint32_t length, uint8_t *bwPollTimeout)</div><div class="ttdef"><b>Definition:</b> <a href="usbd__dfuuser_8h_source.html#l00106">usbd_dfuuser.h:106</a></div></div>
+<div class="ttc" id="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m_html_a4333b8418a39b34b08fb044640a10fae"><div class="ttname"><a href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html#a4333b8418a39b34b08fb044640a10fae">USBD_DFU_INIT_PARAM::intf_desc</a></div><div class="ttdeci">uint8_t * intf_desc</div><div class="ttdef"><b>Definition:</b> <a href="usbd__dfuuser_8h_source.html#l00085">usbd_dfuuser.h:85</a></div></div>
+<div class="ttc" id="struct_u_s_b_d___d_f_u___a_p_i_html_a048df985da6f33c0a5c911b50c9f8e75"><div class="ttname"><a href="struct_u_s_b_d___d_f_u___a_p_i.html#a048df985da6f33c0a5c911b50c9f8e75">USBD_DFU_API::GetMemSize</a></div><div class="ttdeci">uint32_t(* GetMemSize)(USBD_DFU_INIT_PARAM_T *param)</div><div class="ttdef"><b>Definition:</b> <a href="usbd__dfuuser_8h_source.html#l00195">usbd_dfuuser.h:195</a></div></div>
+<div class="ttc" id="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m_html_a235bd33ad84da84f830730adf9d471ed"><div class="ttname"><a href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html#a235bd33ad84da84f830730adf9d471ed">USBD_DFU_INIT_PARAM::DFU_Ep0_Hdlr</a></div><div class="ttdeci">ErrorCode_t(* DFU_Ep0_Hdlr)(USBD_HANDLE_T hUsb, void *data, uint32_t event)</div><div class="ttdef"><b>Definition:</b> <a href="usbd__dfuuser_8h_source.html#l00171">usbd_dfuuser.h:171</a></div></div>
+<div class="ttc" id="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m_html_a3f6a3b0b58cbdacf4ce9a0c9b3d64794"><div class="ttname"><a href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html#a3f6a3b0b58cbdacf4ce9a0c9b3d64794">USBD_DFU_INIT_PARAM::mem_size</a></div><div class="ttdeci">uint32_t mem_size</div><div class="ttdef"><b>Definition:</b> <a href="usbd__dfuuser_8h_source.html#l00070">usbd_dfuuser.h:70</a></div></div>
+<div class="ttc" id="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m_html_abf7c6492df9b515329616580afb383d2"><div class="ttname"><a href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html#abf7c6492df9b515329616580afb383d2">USBD_DFU_INIT_PARAM::wTransferSize</a></div><div class="ttdeci">uint16_t wTransferSize</div><div class="ttdef"><b>Definition:</b> <a href="usbd__dfuuser_8h_source.html#l00074">usbd_dfuuser.h:74</a></div></div>
+<div class="ttc" id="usbd__core_8h_html"><div class="ttname"><a href="usbd__core_8h.html">usbd_core.h</a></div><div class="ttdoc">ROM API for USB device stack. </div></div>
+<div class="ttc" id="group___u_s_b_d___core_html_gafdbb2204d929cb9d75736bd2b42342ac"><div class="ttname"><a href="group___u_s_b_d___core.html#gafdbb2204d929cb9d75736bd2b42342ac">USBD_HANDLE_T</a></div><div class="ttdeci">void * USBD_HANDLE_T</div><div class="ttdef"><b>Definition:</b> <a href="usbd_8h_source.html#l00648">usbd.h:648</a></div></div>
+<div class="ttc" id="struct___u_s_b___d_f_u___f_u_n_c___d_e_s_c_r_i_p_t_o_r_html"><div class="ttname"><a href="struct___u_s_b___d_f_u___f_u_n_c___d_e_s_c_r_i_p_t_o_r.html">_USB_DFU_FUNC_DESCRIPTOR</a></div><div class="ttdef"><b>Definition:</b> <a href="usbd__dfu_8h_source.html#l00098">usbd_dfu.h:98</a></div></div>
+<div class="ttc" id="struct___d_f_u___s_t_a_t_u_s_html"><div class="ttname"><a href="struct___d_f_u___s_t_a_t_u_s.html">_DFU_STATUS</a></div><div class="ttdef"><b>Definition:</b> <a href="usbd__dfu_8h_source.html#l00108">usbd_dfu.h:108</a></div></div>
+<div class="ttc" id="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m_html_a5ba2f6f78705b63f0788f9b85f7f104c"><div class="ttname"><a href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html#a5ba2f6f78705b63f0788f9b85f7f104c">USBD_DFU_INIT_PARAM::mem_base</a></div><div class="ttdeci">uint32_t mem_base</div><div class="ttdef"><b>Definition:</b> <a href="usbd__dfuuser_8h_source.html#l00065">usbd_dfuuser.h:65</a></div></div>
+<div class="ttc" id="usbd_8h_html"><div class="ttname"><a href="usbd_8h.html">usbd.h</a></div><div class="ttdoc">Common definitions and declarations for the USB stack. </div></div>
+<div class="ttc" id="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m_html_ad3275d7f52fff110584bbb2f79e5eb6c"><div class="ttname"><a href="struct_u_s_b_d___d_f_u___i_n_i_t___p_a_r_a_m.html#ad3275d7f52fff110584bbb2f79e5eb6c">USBD_DFU_INIT_PARAM::DFU_Detach</a></div><div class="ttdeci">void(* DFU_Detach)(USBD_HANDLE_T hUsb)</div><div class="ttdef"><b>Definition:</b> <a href="usbd__dfuuser_8h_source.html#l00150">usbd_dfuuser.h:150</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_e9967a62eb0adfb08d6da6a5b6090dce.html">lpcopen</a></li><li class="navelem"><a class="el" href="dir_9de244f5aef64593622a4e8655220356.html">software</a></li><li class="navelem"><a class="el" href="dir_31a1b7b0d37c21493df82ae7c333e639.html">lpc_core</a></li><li class="navelem"><a class="el" href="dir_b12cadcc2490a31864f50bfa129e234d.html">lpc_ip</a></li><li class="navelem"><a class="el" href="dir_d929be9bcc305a4f458178d22a7630dc.html">usbd_rom</a></li><li class="navelem"><a class="el" href="usbd__dfuuser_8h.html">usbd_dfuuser.h</a></li>
+    <li class="footer">Généré le Mardi Janvier 7 2014 11:23:05 pour Hexapode par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
+  </ul>
+</div>
+</body>
+</html>

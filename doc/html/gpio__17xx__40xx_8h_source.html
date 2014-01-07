@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Hexapode:  Fichier source de lpcopen/software/lpc_core/lpc_chip/chip_17xx_40xx/gpio_17xx_40xx.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="IN7Robot.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Hexapode
+   &#160;<span id="projectnumber">Version 1.0</span>
+   </div>
+   <div id="projectbrief">Thomas Waquet &amp; Gauthier Dhalluin</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('gpio__17xx__40xx_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Groupes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">gpio_17xx_40xx.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * @brief LPC17xx/40xx GPIO registers and control functions</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * @note</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Copyright(C) NXP Semiconductors, 2012</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * @par</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * Software that is described herein is for illustrative purposes only</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * which provides customers with programming information regarding the</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * LPC products.  This software is supplied &quot;AS IS&quot; without any warranties of</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * any kind, and NXP Semiconductors and its licensor disclaim any and</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * all warranties, express or implied, including all implied warranties of</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * merchantability, fitness for a particular purpose and non-infringement of</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * intellectual property rights.  NXP Semiconductors assumes no responsibility</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * or liability for the use of the software, conveys no license or rights under any</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * patent, copyright, mask work right, or any other intellectual property rights in</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * or to any products. NXP Semiconductors reserves the right to make changes</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * in the software without notification. NXP Semiconductors also makes no</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * representation or warranty that such application will be suitable for the</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * specified use without further testing or modification.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> * @par</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> * Permission to use, copy, modify, and distribute this software and its</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> * documentation is hereby granted, under NXP Semiconductors&#39; and its</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * licensor&#39;s relevant copyrights in the software, without fee, provided that it</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> * is used in conjunction with NXP Semiconductors microcontrollers.  This</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> * copyright, permission, and disclaimer notice must appear in all copies of</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> * this code.</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#ifndef __GPIO_17XX_40XX_H_</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __GPIO_17XX_40XX_H_</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor"></span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="group___g_p_i_o__17_x_x__40_x_x.html#gaeaca39372c8ff9f288243a20dd2259ce">   49</a></span>&#160;STATIC INLINE <span class="keywordtype">void</span> <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#gaeaca39372c8ff9f288243a20dd2259ce">Chip_GPIO_Init</a>(<a class="code" href="struct_i_p___g_p_i_o__002___t.html">LPC_GPIO_T</a> *pGPIO)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="group___g_p_i_o__17_x_x__40_x_x.html#ga769258ead822b26f77ea567456f58e2f">   60</a></span>&#160;STATIC INLINE <span class="keywordtype">void</span> <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga769258ead822b26f77ea567456f58e2f">Chip_GPIO_WritePortBit</a>(<a class="code" href="struct_i_p___g_p_i_o__002___t.html">LPC_GPIO_T</a> *pGPIO, uint32_t port, uint8_t bit, <span class="keywordtype">bool</span> setting)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="group___i_p___g_p_i_o__001.html#ga1f69a860f90e19e82966901e5d6f56d3">IP_GPIO_WritePortBit</a>((<a class="code" href="struct_i_p___g_p_i_o__002___t.html">LPC_GPIO_T</a> *) (LPC_GPIO + port), bit, setting);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">   73</a></span>&#160;STATIC INLINE <span class="keywordtype">void</span> <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a>(<a class="code" href="struct_i_p___g_p_i_o__002___t.html">LPC_GPIO_T</a> *pGPIO, uint8_t port, uint8_t bit, <span class="keywordtype">bool</span> setting)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="group___i_p___g_p_i_o__001.html#gac3e4e05bcc93a632e62ff64e4878c6ae">IP_GPIO_WriteDirBit</a>((<a class="code" href="struct_i_p___g_p_i_o__002___t.html">LPC_GPIO_T</a> *) (pGPIO + port), bit, setting);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="group___g_p_i_o__17_x_x__40_x_x.html#ga308a1d5a5e79e6a988e30dbb2131236d">   85</a></span>&#160;STATIC INLINE <span class="keywordtype">bool</span> <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga308a1d5a5e79e6a988e30dbb2131236d">Chip_GPIO_ReadPortBit</a>(<a class="code" href="struct_i_p___g_p_i_o__002___t.html">LPC_GPIO_T</a> *pGPIO, uint32_t port, uint8_t bit)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group___i_p___g_p_i_o__001.html#ga26fda09b465ff5ece24cab6bd3f4fbfd">IP_GPIO_ReadPortBit</a>((<a class="code" href="struct_i_p___g_p_i_o__002___t.html">LPC_GPIO_T</a> *) (pGPIO + port), bit);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="group___g_p_i_o__17_x_x__40_x_x.html#ga8f436d49d7737db583aa4e71bc21937b">   97</a></span>&#160;STATIC INLINE <span class="keywordtype">bool</span> <a class="code" href="group___g_p_i_o__17_x_x__40_x_x.html#ga8f436d49d7737db583aa4e71bc21937b">Chip_GPIO_ReadDirBit</a>(<a class="code" href="struct_i_p___g_p_i_o__002___t.html">LPC_GPIO_T</a> *pGPIO, uint32_t port, uint8_t bit)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;{</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group___i_p___g_p_i_o__001.html#ga0dded2c09fa11c4b0c37e43aa2601663">IP_GPIO_ReadDirBit</a>((<a class="code" href="struct_i_p___g_p_i_o__002___t.html">LPC_GPIO_T</a> *) (pGPIO + port), bit);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor"></span>}</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __GPIO_17XX_40XX_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="group___i_p___g_p_i_o__001_html_gac3e4e05bcc93a632e62ff64e4878c6ae"><div class="ttname"><a href="group___i_p___g_p_i_o__001.html#gac3e4e05bcc93a632e62ff64e4878c6ae">IP_GPIO_WriteDirBit</a></div><div class="ttdeci">STATIC INLINE void IP_GPIO_WriteDirBit(IP_GPIO_001_T *pGPIO, uint32_t Port, uint8_t Bit, bool Setting)</div><div class="ttdoc">Set a GPIO direction. </div><div class="ttdef"><b>Definition:</b> <a href="gpio__001_8h_source.html#l00091">gpio_001.h:91</a></div></div>
+<div class="ttc" id="group___i_p___g_p_i_o__001_html_ga0dded2c09fa11c4b0c37e43aa2601663"><div class="ttname"><a href="group___i_p___g_p_i_o__001.html#ga0dded2c09fa11c4b0c37e43aa2601663">IP_GPIO_ReadDirBit</a></div><div class="ttdeci">STATIC INLINE bool IP_GPIO_ReadDirBit(IP_GPIO_001_T *pGPIO, uint32_t Port, uint8_t Bit)</div><div class="ttdoc">Read a GPIO direction (out or in) </div><div class="ttdef"><b>Definition:</b> <a href="gpio__001_8h_source.html#l00120">gpio_001.h:120</a></div></div>
+<div class="ttc" id="group___g_p_i_o__17_x_x__40_x_x_html_gaeaca39372c8ff9f288243a20dd2259ce"><div class="ttname"><a href="group___g_p_i_o__17_x_x__40_x_x.html#gaeaca39372c8ff9f288243a20dd2259ce">Chip_GPIO_Init</a></div><div class="ttdeci">STATIC INLINE void Chip_GPIO_Init(LPC_GPIO_T *pGPIO)</div><div class="ttdoc">Initialize GPIO block. </div><div class="ttdef"><b>Definition:</b> <a href="gpio__17xx__40xx_8h_source.html#l00049">gpio_17xx_40xx.h:49</a></div></div>
+<div class="ttc" id="group___g_p_i_o__17_x_x__40_x_x_html_ga4b726d64407e21f40d4fc23f16da04ab"><div class="ttname"><a href="group___g_p_i_o__17_x_x__40_x_x.html#ga4b726d64407e21f40d4fc23f16da04ab">Chip_GPIO_WriteDirBit</a></div><div class="ttdeci">STATIC INLINE void Chip_GPIO_WriteDirBit(LPC_GPIO_T *pGPIO, uint8_t port, uint8_t bit, bool setting)</div><div class="ttdoc">Set a GPIO direction. </div><div class="ttdef"><b>Definition:</b> <a href="gpio__17xx__40xx_8h_source.html#l00073">gpio_17xx_40xx.h:73</a></div></div>
+<div class="ttc" id="group___g_p_i_o__17_x_x__40_x_x_html_ga308a1d5a5e79e6a988e30dbb2131236d"><div class="ttname"><a href="group___g_p_i_o__17_x_x__40_x_x.html#ga308a1d5a5e79e6a988e30dbb2131236d">Chip_GPIO_ReadPortBit</a></div><div class="ttdeci">STATIC INLINE bool Chip_GPIO_ReadPortBit(LPC_GPIO_T *pGPIO, uint32_t port, uint8_t bit)</div><div class="ttdoc">Read a GPIO state. </div><div class="ttdef"><b>Definition:</b> <a href="gpio__17xx__40xx_8h_source.html#l00085">gpio_17xx_40xx.h:85</a></div></div>
+<div class="ttc" id="group___g_p_i_o__17_x_x__40_x_x_html_ga8f436d49d7737db583aa4e71bc21937b"><div class="ttname"><a href="group___g_p_i_o__17_x_x__40_x_x.html#ga8f436d49d7737db583aa4e71bc21937b">Chip_GPIO_ReadDirBit</a></div><div class="ttdeci">STATIC INLINE bool Chip_GPIO_ReadDirBit(LPC_GPIO_T *pGPIO, uint32_t port, uint8_t bit)</div><div class="ttdoc">Read a GPIO direction (out or in) </div><div class="ttdef"><b>Definition:</b> <a href="gpio__17xx__40xx_8h_source.html#l00097">gpio_17xx_40xx.h:97</a></div></div>
+<div class="ttc" id="struct_i_p___g_p_i_o__002___t_html"><div class="ttname"><a href="struct_i_p___g_p_i_o__002___t.html">IP_GPIO_002_T</a></div><div class="ttdoc">GPIO port (GPIO_PORT) for LPC175x_6x, LPC177x_8x and LPC407x_8x. </div><div class="ttdef"><b>Definition:</b> <a href="gpio__002_8h_source.html#l00054">gpio_002.h:54</a></div></div>
+<div class="ttc" id="group___g_p_i_o__17_x_x__40_x_x_html_ga769258ead822b26f77ea567456f58e2f"><div class="ttname"><a href="group___g_p_i_o__17_x_x__40_x_x.html#ga769258ead822b26f77ea567456f58e2f">Chip_GPIO_WritePortBit</a></div><div class="ttdeci">STATIC INLINE void Chip_GPIO_WritePortBit(LPC_GPIO_T *pGPIO, uint32_t port, uint8_t bit, bool setting)</div><div class="ttdoc">Set a GPIO port/bit state. </div><div class="ttdef"><b>Definition:</b> <a href="gpio__17xx__40xx_8h_source.html#l00060">gpio_17xx_40xx.h:60</a></div></div>
+<div class="ttc" id="group___i_p___g_p_i_o__001_html_ga1f69a860f90e19e82966901e5d6f56d3"><div class="ttname"><a href="group___i_p___g_p_i_o__001.html#ga1f69a860f90e19e82966901e5d6f56d3">IP_GPIO_WritePortBit</a></div><div class="ttdeci">STATIC INLINE void IP_GPIO_WritePortBit(IP_GPIO_001_T *pGPIO, uint32_t Port, uint8_t Bit, bool Setting)</div><div class="ttdoc">Set a GPIO port/bit state. </div><div class="ttdef"><b>Definition:</b> <a href="gpio__001_8h_source.html#l00078">gpio_001.h:78</a></div></div>
+<div class="ttc" id="group___i_p___g_p_i_o__001_html_ga26fda09b465ff5ece24cab6bd3f4fbfd"><div class="ttname"><a href="group___i_p___g_p_i_o__001.html#ga26fda09b465ff5ece24cab6bd3f4fbfd">IP_GPIO_ReadPortBit</a></div><div class="ttdeci">STATIC INLINE bool IP_GPIO_ReadPortBit(IP_GPIO_001_T *pGPIO, uint32_t Port, uint8_t Bit)</div><div class="ttdoc">Read a GPIO state. </div><div class="ttdef"><b>Definition:</b> <a href="gpio__001_8h_source.html#l00108">gpio_001.h:108</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_e9967a62eb0adfb08d6da6a5b6090dce.html">lpcopen</a></li><li class="navelem"><a class="el" href="dir_9de244f5aef64593622a4e8655220356.html">software</a></li><li class="navelem"><a class="el" href="dir_31a1b7b0d37c21493df82ae7c333e639.html">lpc_core</a></li><li class="navelem"><a class="el" href="dir_1830a61c0edc8cc1910f28c837699b39.html">lpc_chip</a></li><li class="navelem"><a class="el" href="dir_03ae23d041d1826573cfbc11ccc106a0.html">chip_17xx_40xx</a></li><li class="navelem"><b>gpio_17xx_40xx.h</b></li>
+    <li class="footer">Généré le Mardi Janvier 7 2014 11:23:03 pour Hexapode par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
+  </ul>
+</div>
+</body>
+</html>

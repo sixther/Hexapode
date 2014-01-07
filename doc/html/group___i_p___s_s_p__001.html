@@ -1,0 +1,1488 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Hexapode: IP: SSP register block and driver</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="IN7Robot.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Hexapode
+   &#160;<span id="projectnumber">Version 1.0</span>
+   </div>
+   <div id="projectbrief">Thomas Waquet &amp; Gauthier Dhalluin</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('group___i_p___s_s_p__001.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Groupes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#enum-members">Énumérations</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">IP: SSP register block and driver</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">SSP register block structure.  <a href="struct_i_p___s_s_p__001___t.html#details">Plus de détails...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga691ba9dbc6a0722a81ed4734c7f7ac8f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#ga691ba9dbc6a0722a81ed4734c7f7ac8f">SSP_CR0_DSS</a>(n)&#160;&#160;&#160;((uint32_t) ((n) &amp; 0xF))</td></tr>
+<tr class="separator:ga691ba9dbc6a0722a81ed4734c7f7ac8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4f0f58a8f4b87af0f18e84b981c31a74"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#ga4f0f58a8f4b87af0f18e84b981c31a74">SSP_CR0_FRF_SPI</a>&#160;&#160;&#160;((uint32_t) (0 &lt;&lt; 4))</td></tr>
+<tr class="separator:ga4f0f58a8f4b87af0f18e84b981c31a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga54c718a1a75a1e5e06417b9f8267ee27"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#ga54c718a1a75a1e5e06417b9f8267ee27">SSP_CR0_FRF_TI</a>&#160;&#160;&#160;((uint32_t) (1 &lt;&lt; 4))</td></tr>
+<tr class="separator:ga54c718a1a75a1e5e06417b9f8267ee27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7ca858fcf0f529a38e1e1bf0a69d4486"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#ga7ca858fcf0f529a38e1e1bf0a69d4486">SSP_CR0_FRF_MICROWIRE</a>&#160;&#160;&#160;((uint32_t) (2 &lt;&lt; 4))</td></tr>
+<tr class="separator:ga7ca858fcf0f529a38e1e1bf0a69d4486"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab4353fed07ef845a3796e154397f7e76"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#gab4353fed07ef845a3796e154397f7e76">SSP_CR0_CPOL_LO</a>&#160;&#160;&#160;((uint32_t) (0))</td></tr>
+<tr class="separator:gab4353fed07ef845a3796e154397f7e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga36d7ad75edb14d318d710f964384f466"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga36d7ad75edb14d318d710f964384f466"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SSP_CR0_CPOL_HI</b>&#160;&#160;&#160;((uint32_t) (1 &lt;&lt; 6))</td></tr>
+<tr class="separator:ga36d7ad75edb14d318d710f964384f466"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaee3465bdb33add1970f6ce7f7bc638c4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#gaee3465bdb33add1970f6ce7f7bc638c4">SSP_CR0_CPHA_FIRST</a>&#160;&#160;&#160;((uint32_t) (0))</td></tr>
+<tr class="separator:gaee3465bdb33add1970f6ce7f7bc638c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae4150d0b2513ff70568be15c2170c9ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gae4150d0b2513ff70568be15c2170c9ea"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SSP_CR0_CPHA_SECOND</b>&#160;&#160;&#160;((uint32_t) (1 &lt;&lt; 7))</td></tr>
+<tr class="separator:gae4150d0b2513ff70568be15c2170c9ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga10f56047b6024ff848675f9463f1b989"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#ga10f56047b6024ff848675f9463f1b989">SSP_CR0_SCR</a>(n)&#160;&#160;&#160;((uint32_t) ((n &amp; 0xFF) &lt;&lt; 8))</td></tr>
+<tr class="separator:ga10f56047b6024ff848675f9463f1b989"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga10f56047b6024ff848675f9463f1b989"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#ga10f56047b6024ff848675f9463f1b989">SSP_CR0_SCR</a>(n)&#160;&#160;&#160;((uint32_t) ((n &amp; 0xFF) &lt;&lt; 8))</td></tr>
+<tr class="separator:ga10f56047b6024ff848675f9463f1b989"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga90be93bebdbdfee011d90ea6e054260a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#ga90be93bebdbdfee011d90ea6e054260a">SSP_CR0_BITMASK</a>&#160;&#160;&#160;((uint32_t) (0xFFFF))</td></tr>
+<tr class="separator:ga90be93bebdbdfee011d90ea6e054260a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga90be93bebdbdfee011d90ea6e054260a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#ga90be93bebdbdfee011d90ea6e054260a">SSP_CR0_BITMASK</a>&#160;&#160;&#160;((uint32_t) (0xFFFF))</td></tr>
+<tr class="separator:ga90be93bebdbdfee011d90ea6e054260a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac0e5bef37b94df5ad96bf270aa802dcd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#gac0e5bef37b94df5ad96bf270aa802dcd">SSP_CR1_LBM_EN</a>&#160;&#160;&#160;((uint32_t) (1 &lt;&lt; 0))</td></tr>
+<tr class="separator:gac0e5bef37b94df5ad96bf270aa802dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaad500ed8cec6c1734a12a7f55ff6ec26"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#gaad500ed8cec6c1734a12a7f55ff6ec26">SSP_CR1_SSP_EN</a>&#160;&#160;&#160;((uint32_t) (1 &lt;&lt; 1))</td></tr>
+<tr class="separator:gaad500ed8cec6c1734a12a7f55ff6ec26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga483d570ffc25bc917c99b3e8ece75649"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#ga483d570ffc25bc917c99b3e8ece75649">SSP_CR1_SLAVE_EN</a>&#160;&#160;&#160;((uint32_t) (1 &lt;&lt; 2))</td></tr>
+<tr class="separator:ga483d570ffc25bc917c99b3e8ece75649"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa8e064b00be6db00e597ad2509a633c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa8e064b00be6db00e597ad2509a633c3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SSP_CR1_MASTER_EN</b>&#160;&#160;&#160;((uint32_t) (0))</td></tr>
+<tr class="separator:gaa8e064b00be6db00e597ad2509a633c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf8cd75ca0bf07a236b992cca4769b4dc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#gaf8cd75ca0bf07a236b992cca4769b4dc">SSP_CR1_SO_DISABLE</a>&#160;&#160;&#160;((uint32_t) (1 &lt;&lt; 3))</td></tr>
+<tr class="separator:gaf8cd75ca0bf07a236b992cca4769b4dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad90a9c1c97a5c4e19e048e9686a4d8fa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#gad90a9c1c97a5c4e19e048e9686a4d8fa">SSP_CR1_BITMASK</a>&#160;&#160;&#160;((uint32_t) (0x0F))</td></tr>
+<tr class="separator:gad90a9c1c97a5c4e19e048e9686a4d8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad90cbeb91495d457ae2dd8bda909a2a9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#gad90cbeb91495d457ae2dd8bda909a2a9">SSP_CPSR_BITMASK</a>&#160;&#160;&#160;((uint32_t) (0xFF))</td></tr>
+<tr class="separator:gad90cbeb91495d457ae2dd8bda909a2a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaca7cab2d530cc7dbaa9e9d3e9dc61b53"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#gaca7cab2d530cc7dbaa9e9d3e9dc61b53">SSP_DR_BITMASK</a>(n)&#160;&#160;&#160;((n) &amp; 0xFFFF)</td></tr>
+<tr class="separator:gaca7cab2d530cc7dbaa9e9d3e9dc61b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0fe66130dd87296b6e16cd9fbcf7daf1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#ga0fe66130dd87296b6e16cd9fbcf7daf1">SSP_SR_BITMASK</a>&#160;&#160;&#160;((uint32_t) (0x1F))</td></tr>
+<tr class="separator:ga0fe66130dd87296b6e16cd9fbcf7daf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5ce108586bfd5b77c849aa9969c8973c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#ga5ce108586bfd5b77c849aa9969c8973c">SSP_ICR_BITMASK</a>&#160;&#160;&#160;((uint32_t) (0x03))</td></tr>
+<tr class="separator:ga5ce108586bfd5b77c849aa9969c8973c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:gaca7b82d182b6418ad4ca4904e578488d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaca7b82d182b6418ad4ca4904e578488d"></a>
+typedef enum <a class="el" href="group___i_p___s_s_p__001.html#gadf567651e5cfbfff7912263481645193">IP_SSP_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#gaca7b82d182b6418ad4ca4904e578488d">IP_SSP_STATUS_T</a></td></tr>
+<tr class="memdesc:gaca7b82d182b6418ad4ca4904e578488d"><td class="mdescLeft">&#160;</td><td class="mdescRight">SSP Type of Status. <br/></td></tr>
+<tr class="separator:gaca7b82d182b6418ad4ca4904e578488d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga45547130ce7160448f7aa8d40f481c4d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga45547130ce7160448f7aa8d40f481c4d"></a>
+typedef enum <a class="el" href="group___i_p___s_s_p__001.html#gaa51c1906e35f1792e02f496f7fe862ad">IP_SSP_INTMASK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#ga45547130ce7160448f7aa8d40f481c4d">IP_SSP_INTMASK_T</a></td></tr>
+<tr class="memdesc:ga45547130ce7160448f7aa8d40f481c4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">SSP Type of Interrupt Mask. <br/></td></tr>
+<tr class="separator:ga45547130ce7160448f7aa8d40f481c4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae2436c89ef80dd4b350b31f3e748d572"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gae2436c89ef80dd4b350b31f3e748d572"></a>
+typedef enum <a class="el" href="group___i_p___s_s_p__001.html#gaec820960c9ec62bf15162a9a4af78e45">IP_SSP_MASKINTSTATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#gae2436c89ef80dd4b350b31f3e748d572">IP_SSP_MASKINTSTATUS_T</a></td></tr>
+<tr class="memdesc:gae2436c89ef80dd4b350b31f3e748d572"><td class="mdescLeft">&#160;</td><td class="mdescRight">SSP Type of Mask Interrupt Status. <br/></td></tr>
+<tr class="separator:gae2436c89ef80dd4b350b31f3e748d572"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaad3a947bd84e8dce24a9ec02ed464853"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaad3a947bd84e8dce24a9ec02ed464853"></a>
+typedef enum <a class="el" href="group___i_p___s_s_p__001.html#ga23033ccebb71d84a04b01384d4af6857">IP_SSP_RAWINTSTATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#gaad3a947bd84e8dce24a9ec02ed464853">IP_SSP_RAWINTSTATUS_T</a></td></tr>
+<tr class="memdesc:gaad3a947bd84e8dce24a9ec02ed464853"><td class="mdescLeft">&#160;</td><td class="mdescRight">SSP Type of Raw Interrupt Status. <br/></td></tr>
+<tr class="separator:gaad3a947bd84e8dce24a9ec02ed464853"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab9ca1277ccf99fad05cadb9ca2316826"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gab9ca1277ccf99fad05cadb9ca2316826"></a>
+typedef enum IP_SSP_INTCLEAR&#160;</td><td class="memItemRight" valign="bottom"><b>IP_SSP_INTCLEAR_T</b></td></tr>
+<tr class="separator:gab9ca1277ccf99fad05cadb9ca2316826"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga45b2f7291ca9eef4347818f515738177"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga45b2f7291ca9eef4347818f515738177"></a>
+typedef enum <a class="el" href="group___i_p___s_s_p__001.html#gab86db2cee5f3447bd91640c433eb9d77">IP_SSP_DMA</a>&#160;</td><td class="memItemRight" valign="bottom"><b>IP_SSP_DMA_T</b></td></tr>
+<tr class="separator:ga45b2f7291ca9eef4347818f515738177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Énumérations</h2></td></tr>
+<tr class="memitem:gadf567651e5cfbfff7912263481645193"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#gadf567651e5cfbfff7912263481645193">IP_SSP_STATUS</a> { <br/>
+&#160;&#160;<a class="el" href="group___i_p___s_s_p__001.html#ggadf567651e5cfbfff7912263481645193af2476dad0360373ccb5896f6f4283569">SSP_STAT_TFE</a> = ((uint32_t)(1 &lt;&lt; 0)), 
+<a class="el" href="group___i_p___s_s_p__001.html#ggadf567651e5cfbfff7912263481645193a895067b502eeae3c476190e309abde1a">SSP_STAT_TNF</a> = ((uint32_t)(1 &lt;&lt; 1)), 
+<a class="el" href="group___i_p___s_s_p__001.html#ggadf567651e5cfbfff7912263481645193a82f15e0720cc2b0dc53e90b7546fb96b">SSP_STAT_RNE</a> = ((uint32_t)(1 &lt;&lt; 2)), 
+<a class="el" href="group___i_p___s_s_p__001.html#ggadf567651e5cfbfff7912263481645193ad10671a086364beb55efad01f2c3688f">SSP_STAT_RFF</a> = ((uint32_t)(1 &lt;&lt; 3)), 
+<br/>
+&#160;&#160;<a class="el" href="group___i_p___s_s_p__001.html#ggadf567651e5cfbfff7912263481645193a5129659a9c16fdda33b925f07cf8ef52">SSP_STAT_BSY</a> = ((uint32_t)(1 &lt;&lt; 4))
+<br/>
+ }</td></tr>
+<tr class="memdesc:gadf567651e5cfbfff7912263481645193"><td class="mdescLeft">&#160;</td><td class="mdescRight">SSP Type of Status.  <a href="group___i_p___s_s_p__001.html#gadf567651e5cfbfff7912263481645193">Plus de détails...</a><br/></td></tr>
+<tr class="separator:gadf567651e5cfbfff7912263481645193"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa51c1906e35f1792e02f496f7fe862ad"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#gaa51c1906e35f1792e02f496f7fe862ad">IP_SSP_INTMASK</a> { <br/>
+&#160;&#160;<a class="el" href="group___i_p___s_s_p__001.html#ggaa51c1906e35f1792e02f496f7fe862ada891bf6d7622b4f6f010396f08a51adbf">SSP_RORIM</a> = ((uint32_t)(1 &lt;&lt; 0)), 
+<a class="el" href="group___i_p___s_s_p__001.html#ggaa51c1906e35f1792e02f496f7fe862adaabb6398ce8ef5db95fc47fc2bd525f13">SSP_RTIM</a> = ((uint32_t)(1 &lt;&lt; 1)), 
+<a class="el" href="group___i_p___s_s_p__001.html#ggaa51c1906e35f1792e02f496f7fe862ada2fff5a42799aae53c7a4bf3e3a900448">SSP_RXIM</a> = ((uint32_t)(1 &lt;&lt; 2)), 
+<a class="el" href="group___i_p___s_s_p__001.html#ggaa51c1906e35f1792e02f496f7fe862ada34e61a5c1d77d3763e4f8e1bfacbdcc4">SSP_TXIM</a> = ((uint32_t)(1 &lt;&lt; 3)), 
+<br/>
+&#160;&#160;<b>SSP_INT_MASK_BITMASK</b> = ((uint32_t)(0xF))
+<br/>
+ }</td></tr>
+<tr class="memdesc:gaa51c1906e35f1792e02f496f7fe862ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">SSP Type of Interrupt Mask.  <a href="group___i_p___s_s_p__001.html#gaa51c1906e35f1792e02f496f7fe862ad">Plus de détails...</a><br/></td></tr>
+<tr class="separator:gaa51c1906e35f1792e02f496f7fe862ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaec820960c9ec62bf15162a9a4af78e45"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#gaec820960c9ec62bf15162a9a4af78e45">IP_SSP_MASKINTSTATUS</a> { <br/>
+&#160;&#160;<a class="el" href="group___i_p___s_s_p__001.html#ggaec820960c9ec62bf15162a9a4af78e45a05e1bf0ddb0306501fcb234c6e885082">SSP_RORMIS</a> = ((uint32_t)(1 &lt;&lt; 0)), 
+<a class="el" href="group___i_p___s_s_p__001.html#ggaec820960c9ec62bf15162a9a4af78e45a86603f74ba22232e10e325e2f0242308">SSP_RTMIS</a> = ((uint32_t)(1 &lt;&lt; 1)), 
+<a class="el" href="group___i_p___s_s_p__001.html#ggaec820960c9ec62bf15162a9a4af78e45a07742f0e285a6bf09099e3298fac1184">SSP_RXMIS</a> = ((uint32_t)(1 &lt;&lt; 2)), 
+<a class="el" href="group___i_p___s_s_p__001.html#ggaec820960c9ec62bf15162a9a4af78e45a8ad9ea51c1cde0cd518cdea049710093">SSP_TXMIS</a> = ((uint32_t)(1 &lt;&lt; 3)), 
+<br/>
+&#160;&#160;<b>SSP_MASK_INT_STAT_BITMASK</b> = ((uint32_t)(0xF))
+<br/>
+ }</td></tr>
+<tr class="memdesc:gaec820960c9ec62bf15162a9a4af78e45"><td class="mdescLeft">&#160;</td><td class="mdescRight">SSP Type of Mask Interrupt Status.  <a href="group___i_p___s_s_p__001.html#gaec820960c9ec62bf15162a9a4af78e45">Plus de détails...</a><br/></td></tr>
+<tr class="separator:gaec820960c9ec62bf15162a9a4af78e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga23033ccebb71d84a04b01384d4af6857"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#ga23033ccebb71d84a04b01384d4af6857">IP_SSP_RAWINTSTATUS</a> { <br/>
+&#160;&#160;<a class="el" href="group___i_p___s_s_p__001.html#gga23033ccebb71d84a04b01384d4af6857ad112fd53fe6238566db3b86badca3643">SSP_RORRIS</a> = ((uint32_t)(1 &lt;&lt; 0)), 
+<a class="el" href="group___i_p___s_s_p__001.html#gga23033ccebb71d84a04b01384d4af6857acadb0b951bbe2b20da961f4a55b775c2">SSP_RTRIS</a> = ((uint32_t)(1 &lt;&lt; 1)), 
+<a class="el" href="group___i_p___s_s_p__001.html#gga23033ccebb71d84a04b01384d4af6857af284137785b0311fdf9ffd06dd91022f">SSP_RXRIS</a> = ((uint32_t)(1 &lt;&lt; 2)), 
+<a class="el" href="group___i_p___s_s_p__001.html#gga23033ccebb71d84a04b01384d4af6857a0f19a960fdb1f4e1e41c2d3f391ab2a1">SSP_TXRIS</a> = ((uint32_t)(1 &lt;&lt; 3)), 
+<br/>
+&#160;&#160;<b>SSP_RAW_INT_STAT_BITMASK</b> = ((uint32_t)(0xF))
+<br/>
+ }</td></tr>
+<tr class="memdesc:ga23033ccebb71d84a04b01384d4af6857"><td class="mdescLeft">&#160;</td><td class="mdescRight">SSP Type of Raw Interrupt Status.  <a href="group___i_p___s_s_p__001.html#ga23033ccebb71d84a04b01384d4af6857">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ga23033ccebb71d84a04b01384d4af6857"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1826246a51d50bbcd171c72924792a66"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>IP_SSP_INTCLEAR</b> { <b>SSP_RORIC</b> = 0x0, 
+<b>SSP_RTIC</b> = 0x1, 
+<b>SSP_INT_CLEAR_BITMASK</b> = 0x3
+ }</td></tr>
+<tr class="separator:ga1826246a51d50bbcd171c72924792a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab86db2cee5f3447bd91640c433eb9d77"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#gab86db2cee5f3447bd91640c433eb9d77">IP_SSP_DMA</a> { <a class="el" href="group___i_p___s_s_p__001.html#ggab86db2cee5f3447bd91640c433eb9d77ae51f79e5713056c61aadb8d5ddfc335a">SSP_DMA_RX</a> = (1u), 
+<a class="el" href="group___i_p___s_s_p__001.html#ggab86db2cee5f3447bd91640c433eb9d77a5925a5061635b0742605b6bb4b434ce4">SSP_DMA_TX</a> = (1u &lt;&lt; 1), 
+<b>SSP_DMA_BITMASK</b> = ((uint32_t)(0x3))
+ }</td></tr>
+<tr class="separator:gab86db2cee5f3447bd91640c433eb9d77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:gafa3f4d71d36c326302523f7117722432"><td class="memItemLeft" align="right" valign="top">STATIC INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#gafa3f4d71d36c326302523f7117722432">IP_SSP_DeInit</a> (<a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *pSSP)</td></tr>
+<tr class="memdesc:gafa3f4d71d36c326302523f7117722432"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable SSP operation.  <a href="#gafa3f4d71d36c326302523f7117722432">Plus de détails...</a><br/></td></tr>
+<tr class="separator:gafa3f4d71d36c326302523f7117722432"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga426b4ac19362552988922f35a1ccddc4"><td class="memItemLeft" align="right" valign="top">STATIC INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#ga426b4ac19362552988922f35a1ccddc4">IP_SSP_Enable</a> (<a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *pSSP)</td></tr>
+<tr class="memdesc:ga426b4ac19362552988922f35a1ccddc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable SSP operation.  <a href="#ga426b4ac19362552988922f35a1ccddc4">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ga426b4ac19362552988922f35a1ccddc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga37c73f27b389b51d6e58e082b1a42c23"><td class="memItemLeft" align="right" valign="top">STATIC INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#ga37c73f27b389b51d6e58e082b1a42c23">IP_SSP_Disable</a> (<a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *pSSP)</td></tr>
+<tr class="memdesc:ga37c73f27b389b51d6e58e082b1a42c23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable SSP operation.  <a href="#ga37c73f27b389b51d6e58e082b1a42c23">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ga37c73f27b389b51d6e58e082b1a42c23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga93d70f2ed6b65bb57c578a580c7a3880"><td class="memItemLeft" align="right" valign="top">STATIC INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#ga93d70f2ed6b65bb57c578a580c7a3880">IP_SSP_EnableLoopBack</a> (<a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *pSSP)</td></tr>
+<tr class="memdesc:ga93d70f2ed6b65bb57c578a580c7a3880"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable loopback mode.  <a href="#ga93d70f2ed6b65bb57c578a580c7a3880">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ga93d70f2ed6b65bb57c578a580c7a3880"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5c82046a166090064696ba298483d6d6"><td class="memItemLeft" align="right" valign="top">STATIC INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#ga5c82046a166090064696ba298483d6d6">IP_SSP_DisableLoopBack</a> (<a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *pSSP)</td></tr>
+<tr class="memdesc:ga5c82046a166090064696ba298483d6d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable loopback mode.  <a href="#ga5c82046a166090064696ba298483d6d6">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ga5c82046a166090064696ba298483d6d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafc1ef0085aa2b14ceab0bcb133ae4d3b"><td class="memItemLeft" align="right" valign="top">STATIC INLINE <a class="el" href="group___l_p_c___types___public___types.html#ga89136caac2e14c55151f527ac02daaff">FlagStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#gafc1ef0085aa2b14ceab0bcb133ae4d3b">IP_SSP_GetStatus</a> (<a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *pSSP, <a class="el" href="group___i_p___s_s_p__001.html#gaca7b82d182b6418ad4ca4904e578488d">IP_SSP_STATUS_T</a> Stat)</td></tr>
+<tr class="memdesc:gafc1ef0085aa2b14ceab0bcb133ae4d3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current status of SSP controller.  <a href="#gafc1ef0085aa2b14ceab0bcb133ae4d3b">Plus de détails...</a><br/></td></tr>
+<tr class="separator:gafc1ef0085aa2b14ceab0bcb133ae4d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga43083abb439ca3e3379e10e6385057b4"><td class="memItemLeft" align="right" valign="top">STATIC INLINE uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#ga43083abb439ca3e3379e10e6385057b4">IP_SSP_GetIntStatus</a> (<a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *pSSP)</td></tr>
+<tr class="memdesc:ga43083abb439ca3e3379e10e6385057b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the masked interrupt status.  <a href="#ga43083abb439ca3e3379e10e6385057b4">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ga43083abb439ca3e3379e10e6385057b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa62a76572d00625bd2b02f91770c1ef0"><td class="memItemLeft" align="right" valign="top">STATIC INLINE IntStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#gaa62a76572d00625bd2b02f91770c1ef0">IP_SSP_GetRawIntStatus</a> (<a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *pSSP, <a class="el" href="group___i_p___s_s_p__001.html#gaad3a947bd84e8dce24a9ec02ed464853">IP_SSP_RAWINTSTATUS_T</a> RawInt)</td></tr>
+<tr class="memdesc:gaa62a76572d00625bd2b02f91770c1ef0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the raw interrupt status.  <a href="#gaa62a76572d00625bd2b02f91770c1ef0">Plus de détails...</a><br/></td></tr>
+<tr class="separator:gaa62a76572d00625bd2b02f91770c1ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1aed25db365e4de75d73abe5f3df5c9c"><td class="memItemLeft" align="right" valign="top">STATIC INLINE uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#ga1aed25db365e4de75d73abe5f3df5c9c">IP_SSP_GetDataSize</a> (<a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *pSSP)</td></tr>
+<tr class="memdesc:ga1aed25db365e4de75d73abe5f3df5c9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of bits transferred in each frame.  <a href="#ga1aed25db365e4de75d73abe5f3df5c9c">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ga1aed25db365e4de75d73abe5f3df5c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0c51106ed912a8041eb3b6d59cdad705"><td class="memItemLeft" align="right" valign="top">STATIC INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#ga0c51106ed912a8041eb3b6d59cdad705">IP_SSP_ClearIntPending</a> (<a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *pSSP, IP_SSP_INTCLEAR_T IntClear)</td></tr>
+<tr class="memdesc:ga0c51106ed912a8041eb3b6d59cdad705"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the corresponding interrupt condition(s) in the SSP controller.  <a href="#ga0c51106ed912a8041eb3b6d59cdad705">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ga0c51106ed912a8041eb3b6d59cdad705"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga65d2c1706451ddccc1935fcd9e976741"><td class="memItemLeft" align="right" valign="top">STATIC INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#ga65d2c1706451ddccc1935fcd9e976741">IP_SSP_Int_Enable</a> (<a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *pSSP, <a class="el" href="group___i_p___s_s_p__001.html#ga45547130ce7160448f7aa8d40f481c4d">IP_SSP_INTMASK_T</a> IntType)</td></tr>
+<tr class="memdesc:ga65d2c1706451ddccc1935fcd9e976741"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable interrupt for the SSP.  <a href="#ga65d2c1706451ddccc1935fcd9e976741">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ga65d2c1706451ddccc1935fcd9e976741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga95a01a485d482a4855b7e0f4fa706cf8"><td class="memItemLeft" align="right" valign="top">STATIC INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#ga95a01a485d482a4855b7e0f4fa706cf8">IP_SSP_Int_Disable</a> (<a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *pSSP, <a class="el" href="group___i_p___s_s_p__001.html#ga45547130ce7160448f7aa8d40f481c4d">IP_SSP_INTMASK_T</a> IntType)</td></tr>
+<tr class="memdesc:ga95a01a485d482a4855b7e0f4fa706cf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable interrupt for the SSP.  <a href="#ga95a01a485d482a4855b7e0f4fa706cf8">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ga95a01a485d482a4855b7e0f4fa706cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab37727d8962cc845822d4c6655675903"><td class="memItemLeft" align="right" valign="top">STATIC INLINE uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#gab37727d8962cc845822d4c6655675903">IP_SSP_ReceiveFrame</a> (<a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *pSSP)</td></tr>
+<tr class="memdesc:gab37727d8962cc845822d4c6655675903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get received SSP data.  <a href="#gab37727d8962cc845822d4c6655675903">Plus de détails...</a><br/></td></tr>
+<tr class="separator:gab37727d8962cc845822d4c6655675903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0dd1c86629e3ec5891a54dfd227312f9"><td class="memItemLeft" align="right" valign="top">STATIC INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#ga0dd1c86629e3ec5891a54dfd227312f9">IP_SSP_SendFrame</a> (<a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *pSSP, uint16_t tx_data)</td></tr>
+<tr class="memdesc:ga0dd1c86629e3ec5891a54dfd227312f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send SSP 16-bit data.  <a href="#ga0dd1c86629e3ec5891a54dfd227312f9">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ga0dd1c86629e3ec5891a54dfd227312f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaacc52cce04c74ef4fe78ef0387ba11cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#gaacc52cce04c74ef4fe78ef0387ba11cb">IP_SSP_Set_ClockRate</a> (<a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *pSSP, uint32_t clk_rate, uint32_t prescale)</td></tr>
+<tr class="memdesc:gaacc52cce04c74ef4fe78ef0387ba11cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up output clocks per bit for SSP bus.  <a href="#gaacc52cce04c74ef4fe78ef0387ba11cb">Plus de détails...</a><br/></td></tr>
+<tr class="separator:gaacc52cce04c74ef4fe78ef0387ba11cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga91afe8f403621723bb3112da95b4e280"><td class="memItemLeft" align="right" valign="top">STATIC INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#ga91afe8f403621723bb3112da95b4e280">IP_SSP_SetFormat</a> (<a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *pSSP, uint32_t bits, uint32_t frameFormat, uint32_t clockMode)</td></tr>
+<tr class="memdesc:ga91afe8f403621723bb3112da95b4e280"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up the SSP frame format.  <a href="#ga91afe8f403621723bb3112da95b4e280">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ga91afe8f403621723bb3112da95b4e280"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7045ecbaf144e20cd3e36e7905b3588a"><td class="memItemLeft" align="right" valign="top">STATIC INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#ga7045ecbaf144e20cd3e36e7905b3588a">IP_SSP_Set_Mode</a> (<a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *pSSP, uint32_t mode)</td></tr>
+<tr class="memdesc:ga7045ecbaf144e20cd3e36e7905b3588a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the SSP working as master or slave mode.  <a href="#ga7045ecbaf144e20cd3e36e7905b3588a">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ga7045ecbaf144e20cd3e36e7905b3588a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga849de51a2969f15ac59ab061fb98233f"><td class="memItemLeft" align="right" valign="top">STATIC INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#ga849de51a2969f15ac59ab061fb98233f">IP_SSP_DMA_Enable</a> (<a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *pSSP, IP_SSP_DMA_T flag)</td></tr>
+<tr class="memdesc:ga849de51a2969f15ac59ab061fb98233f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable DMA for SSP.  <a href="#ga849de51a2969f15ac59ab061fb98233f">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ga849de51a2969f15ac59ab061fb98233f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4886d19af8dbc95a986ad297899cb434"><td class="memItemLeft" align="right" valign="top">STATIC INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_p___s_s_p__001.html#ga4886d19af8dbc95a986ad297899cb434">IP_SSP_DMA_Disable</a> (<a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *pSSP, IP_SSP_DMA_T flag)</td></tr>
+<tr class="memdesc:ga4886d19af8dbc95a986ad297899cb434"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable DMA for SSP.  <a href="#ga4886d19af8dbc95a986ad297899cb434">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ga4886d19af8dbc95a986ad297899cb434"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<h2 class="groupheader">Documentation des macros</h2>
+<a class="anchor" id="gad90cbeb91495d457ae2dd8bda909a2a9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SSP_CPSR_BITMASK&#160;&#160;&#160;((uint32_t) (0xFF))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SSP CPSR bit mask </p>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00115">115</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga90be93bebdbdfee011d90ea6e054260a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SSP_CR0_BITMASK&#160;&#160;&#160;((uint32_t) (0xFFFF))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SSP CR0 bit mask </p>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00092">92</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga90be93bebdbdfee011d90ea6e054260a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SSP_CR0_BITMASK&#160;&#160;&#160;((uint32_t) (0xFFFF))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SSP CR0 bit mask </p>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00092">92</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gaee3465bdb33add1970f6ce7f7bc638c4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SSP_CR0_CPHA_FIRST&#160;&#160;&#160;((uint32_t) (0))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SPI clock out phase bit (used in SPI mode only), (1) = captures data on the second clock transition of the frame, (0) = first </p>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00084">84</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gab4353fed07ef845a3796e154397f7e76"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SSP_CR0_CPOL_LO&#160;&#160;&#160;((uint32_t) (0))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SPI clock polarity bit (used in SPI mode only), (1) = maintains the bus clock high between frames, (0) = low </p>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00080">80</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga691ba9dbc6a0722a81ed4734c7f7ac8f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SSP_CR0_DSS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n</td><td>)</td>
+          <td>&#160;&#160;&#160;((uint32_t) ((n) &amp; 0xF))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Macro defines for CR0 registerSSP data size select, must be 4 bits to 16 bits </p>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00071">71</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga7ca858fcf0f529a38e1e1bf0a69d4486"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SSP_CR0_FRF_MICROWIRE&#160;&#160;&#160;((uint32_t) (2 &lt;&lt; 4))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SSP control 0 National Micro-wire mode </p>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00077">77</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga4f0f58a8f4b87af0f18e84b981c31a74"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SSP_CR0_FRF_SPI&#160;&#160;&#160;((uint32_t) (0 &lt;&lt; 4))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SSP control 0 Motorola SPI mode </p>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00073">73</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga54c718a1a75a1e5e06417b9f8267ee27"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SSP_CR0_FRF_TI&#160;&#160;&#160;((uint32_t) (1 &lt;&lt; 4))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SSP control 0 TI synchronous serial mode </p>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00075">75</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga10f56047b6024ff848675f9463f1b989"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SSP_CR0_SCR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n</td><td>)</td>
+          <td>&#160;&#160;&#160;((uint32_t) ((n &amp; 0xFF) &lt;&lt; 8))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SSP serial clock rate value load macro, divider rate is PERIPH_CLK / (cpsr * (SCR + 1)) </p>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00095">95</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga10f56047b6024ff848675f9463f1b989"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SSP_CR0_SCR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n</td><td>)</td>
+          <td>&#160;&#160;&#160;((uint32_t) ((n &amp; 0xFF) &lt;&lt; 8))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SSP serial clock rate value load macro, divider rate is PERIPH_CLK / (cpsr * (SCR + 1)) </p>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00095">95</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gad90a9c1c97a5c4e19e048e9686a4d8fa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SSP_CR1_BITMASK&#160;&#160;&#160;((uint32_t) (0x0F))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SSP CR1 bit mask </p>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00112">112</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gac0e5bef37b94df5ad96bf270aa802dcd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SSP_CR1_LBM_EN&#160;&#160;&#160;((uint32_t) (1 &lt;&lt; 0))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Macro defines for CR1 registerSSP control 1 loopback mode enable bit </p>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00102">102</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga483d570ffc25bc917c99b3e8ece75649"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SSP_CR1_SLAVE_EN&#160;&#160;&#160;((uint32_t) (1 &lt;&lt; 2))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SSP control 1 slave enable </p>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00106">106</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gaf8cd75ca0bf07a236b992cca4769b4dc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SSP_CR1_SO_DISABLE&#160;&#160;&#160;((uint32_t) (1 &lt;&lt; 3))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SSP control 1 slave out disable bit, disables transmit line in slave mode </p>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00110">110</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gaad500ed8cec6c1734a12a7f55ff6ec26"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SSP_CR1_SSP_EN&#160;&#160;&#160;((uint32_t) (1 &lt;&lt; 1))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SSP control 1 enable bit </p>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00104">104</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gaca7cab2d530cc7dbaa9e9d3e9dc61b53"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SSP_DR_BITMASK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n</td><td>)</td>
+          <td>&#160;&#160;&#160;((n) &amp; 0xFFFF)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Macro defines for DR registerSSP data bit mask </p>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00121">121</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga5ce108586bfd5b77c849aa9969c8973c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SSP_ICR_BITMASK&#160;&#160;&#160;((uint32_t) (0x03))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ICR bit mask </p>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00131">131</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga0fe66130dd87296b6e16cd9fbcf7daf1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SSP_SR_BITMASK&#160;&#160;&#160;((uint32_t) (0x1F))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Macro defines for SR registerSSP SR bit mask </p>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00128">128</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation du type de l'énumération</h2>
+<a class="anchor" id="gab86db2cee5f3447bd91640c433eb9d77"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___i_p___s_s_p__001.html#gab86db2cee5f3447bd91640c433eb9d77">IP_SSP_DMA</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><em><a class="anchor" id="ggab86db2cee5f3447bd91640c433eb9d77ae51f79e5713056c61aadb8d5ddfc335a"></a>SSP_DMA_RX</em>&nbsp;</td><td class="fielddoc">
+<p>DMA RX Enable </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggab86db2cee5f3447bd91640c433eb9d77a5925a5061635b0742605b6bb4b434ce4"></a>SSP_DMA_TX</em>&nbsp;</td><td class="fielddoc">
+<p>DMA TX Enable </p>
+</td></tr>
+</table>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00183">183</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gaa51c1906e35f1792e02f496f7fe862ad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___i_p___s_s_p__001.html#gaa51c1906e35f1792e02f496f7fe862ad">IP_SSP_INTMASK</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SSP Type of Interrupt Mask. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><em><a class="anchor" id="ggaa51c1906e35f1792e02f496f7fe862ada891bf6d7622b4f6f010396f08a51adbf"></a>SSP_RORIM</em>&nbsp;</td><td class="fielddoc">
+<p>Overun </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggaa51c1906e35f1792e02f496f7fe862adaabb6398ce8ef5db95fc47fc2bd525f13"></a>SSP_RTIM</em>&nbsp;</td><td class="fielddoc">
+<p>TimeOut </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggaa51c1906e35f1792e02f496f7fe862ada2fff5a42799aae53c7a4bf3e3a900448"></a>SSP_RXIM</em>&nbsp;</td><td class="fielddoc">
+<p>Rx FIFO is at least half full </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggaa51c1906e35f1792e02f496f7fe862ada34e61a5c1d77d3763e4f8e1bfacbdcc4"></a>SSP_TXIM</em>&nbsp;</td><td class="fielddoc">
+<p>Tx FIFO is at least half empty </p>
+</td></tr>
+</table>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00147">147</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gaec820960c9ec62bf15162a9a4af78e45"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___i_p___s_s_p__001.html#gaec820960c9ec62bf15162a9a4af78e45">IP_SSP_MASKINTSTATUS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SSP Type of Mask Interrupt Status. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><em><a class="anchor" id="ggaec820960c9ec62bf15162a9a4af78e45a05e1bf0ddb0306501fcb234c6e885082"></a>SSP_RORMIS</em>&nbsp;</td><td class="fielddoc">
+<p>Overun </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggaec820960c9ec62bf15162a9a4af78e45a86603f74ba22232e10e325e2f0242308"></a>SSP_RTMIS</em>&nbsp;</td><td class="fielddoc">
+<p>TimeOut </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggaec820960c9ec62bf15162a9a4af78e45a07742f0e285a6bf09099e3298fac1184"></a>SSP_RXMIS</em>&nbsp;</td><td class="fielddoc">
+<p>Rx FIFO is at least half full </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggaec820960c9ec62bf15162a9a4af78e45a8ad9ea51c1cde0cd518cdea049710093"></a>SSP_TXMIS</em>&nbsp;</td><td class="fielddoc">
+<p>Tx FIFO is at least half empty </p>
+</td></tr>
+</table>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00158">158</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga23033ccebb71d84a04b01384d4af6857"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___i_p___s_s_p__001.html#ga23033ccebb71d84a04b01384d4af6857">IP_SSP_RAWINTSTATUS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SSP Type of Raw Interrupt Status. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><em><a class="anchor" id="gga23033ccebb71d84a04b01384d4af6857ad112fd53fe6238566db3b86badca3643"></a>SSP_RORRIS</em>&nbsp;</td><td class="fielddoc">
+<p>Overun </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga23033ccebb71d84a04b01384d4af6857acadb0b951bbe2b20da961f4a55b775c2"></a>SSP_RTRIS</em>&nbsp;</td><td class="fielddoc">
+<p>TimeOut </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga23033ccebb71d84a04b01384d4af6857af284137785b0311fdf9ffd06dd91022f"></a>SSP_RXRIS</em>&nbsp;</td><td class="fielddoc">
+<p>Rx FIFO is at least half full </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="gga23033ccebb71d84a04b01384d4af6857a0f19a960fdb1f4e1e41c2d3f391ab2a1"></a>SSP_TXRIS</em>&nbsp;</td><td class="fielddoc">
+<p>Tx FIFO is at least half empty </p>
+</td></tr>
+</table>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00169">169</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gadf567651e5cfbfff7912263481645193"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___i_p___s_s_p__001.html#gadf567651e5cfbfff7912263481645193">IP_SSP_STATUS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SSP Type of Status. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><em><a class="anchor" id="ggadf567651e5cfbfff7912263481645193af2476dad0360373ccb5896f6f4283569"></a>SSP_STAT_TFE</em>&nbsp;</td><td class="fielddoc">
+<p>TX FIFO Empty </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggadf567651e5cfbfff7912263481645193a895067b502eeae3c476190e309abde1a"></a>SSP_STAT_TNF</em>&nbsp;</td><td class="fielddoc">
+<p>TX FIFO not full </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggadf567651e5cfbfff7912263481645193a82f15e0720cc2b0dc53e90b7546fb96b"></a>SSP_STAT_RNE</em>&nbsp;</td><td class="fielddoc">
+<p>RX FIFO not empty </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggadf567651e5cfbfff7912263481645193ad10671a086364beb55efad01f2c3688f"></a>SSP_STAT_RFF</em>&nbsp;</td><td class="fielddoc">
+<p>RX FIFO full </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ggadf567651e5cfbfff7912263481645193a5129659a9c16fdda33b925f07cf8ef52"></a>SSP_STAT_BSY</em>&nbsp;</td><td class="fielddoc">
+<p>SSP Busy </p>
+</td></tr>
+</table>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00136">136</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a class="anchor" id="ga0c51106ed912a8041eb3b6d59cdad705"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE void IP_SSP_ClearIntPending </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pSSP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IP_SSP_INTCLEAR_T&#160;</td>
+          <td class="paramname"><em>IntClear</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clear the corresponding interrupt condition(s) in the SSP controller. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSSP</td><td>: The base of SSP peripheral on the chip </td></tr>
+    <tr><td class="paramname">IntClear,:</td><td>Type of cleared interrupt, should be :<ul>
+<li>SSP_RORIC</li>
+<li>SSP_RTIC </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Nothing </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Software can clear one or more interrupt condition(s) in the SSP controller </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00307">307</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gafa3f4d71d36c326302523f7117722432"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE void IP_SSP_DeInit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pSSP</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disable SSP operation. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSSP</td><td>: The base of SSP peripheral on the chip </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Nothing </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The SSP controller is disabled </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00195">195</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga37c73f27b389b51d6e58e082b1a42c23"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE void IP_SSP_Disable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pSSP</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disable SSP operation. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSSP</td><td>: The base of SSP peripheral on the chip </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Nothing </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00215">215</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga5c82046a166090064696ba298483d6d6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE void IP_SSP_DisableLoopBack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pSSP</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disable loopback mode. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSSP</td><td>: The base of SSP peripheral on the chip </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Nothing </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Serial input is taken from the serial output (MOSI or MISO) rather than the serial input pin </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00239">239</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga4886d19af8dbc95a986ad297899cb434"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE void IP_SSP_DMA_Disable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pSSP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IP_SSP_DMA_T&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disable DMA for SSP. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSSP</td><td>: The base of SSP peripheral on the chip </td></tr>
+    <tr><td class="paramname">flag</td><td>: DMA flag for transmit/receive SSP, should be<ul>
+<li>SSP_DMA_RX</li>
+<li>SSP_DMA_TX </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Nothing </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00430">430</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga849de51a2969f15ac59ab061fb98233f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE void IP_SSP_DMA_Enable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pSSP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IP_SSP_DMA_T&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable DMA for SSP. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSSP</td><td>: The base of SSP peripheral on the chip </td></tr>
+    <tr><td class="paramname">flag</td><td>: DMA flag for transmit/receive SSP, should be<ul>
+<li>SSP_DMA_RX</li>
+<li>SSP_DMA_TX </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Nothing </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00417">417</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga426b4ac19362552988922f35a1ccddc4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE void IP_SSP_Enable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pSSP</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable SSP operation. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSSP</td><td>: The base of SSP peripheral on the chip </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Nothing </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00205">205</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga93d70f2ed6b65bb57c578a580c7a3880"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE void IP_SSP_EnableLoopBack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pSSP</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable loopback mode. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSSP</td><td>: The base of SSP peripheral on the chip </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Nothing </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Serial input is taken from the serial output (MOSI or MISO) rather than the serial input pin </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00227">227</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga1aed25db365e4de75d73abe5f3df5c9c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE uint8_t IP_SSP_GetDataSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pSSP</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the number of bits transferred in each frame. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSSP</td><td>: The base of SSP peripheral on the chip </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>the number of bits transferred in each frame minus one </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The return value is 0x03 -&gt; 0xF corresponding to 4bit -&gt; 16bit transfer </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00293">293</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga43083abb439ca3e3379e10e6385057b4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE uint32_t IP_SSP_GetIntStatus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pSSP</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the masked interrupt status. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSSP</td><td>: The base of SSP peripheral on the chip </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>SSP Masked Interrupt Status Register value </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The return value contains a 1 for each interrupt condition that is asserted and enabled (masked) </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00266">266</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gaa62a76572d00625bd2b02f91770c1ef0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE IntStatus IP_SSP_GetRawIntStatus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pSSP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___i_p___s_s_p__001.html#gaad3a947bd84e8dce24a9ec02ed464853">IP_SSP_RAWINTSTATUS_T</a>&#160;</td>
+          <td class="paramname"><em>RawInt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the raw interrupt status. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSSP</td><td>: The base of SSP peripheral on the chip </td></tr>
+    <tr><td class="paramname">RawInt</td><td>: Interrupt condition to be get status, shoud be :<ul>
+<li>SSP_RORRIS</li>
+<li>SSP_RTRIS</li>
+<li>SSP_RXRIS</li>
+<li>SSP_TXRIS </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Raw interrupt status corresponding to interrupt condition , SET or RESET </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Get the status of each interrupt condition ,regardless of whether or not the interrupt is enabled </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00282">282</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gafc1ef0085aa2b14ceab0bcb133ae4d3b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE <a class="el" href="group___l_p_c___types___public___types.html#ga89136caac2e14c55151f527ac02daaff">FlagStatus</a> IP_SSP_GetStatus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pSSP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___i_p___s_s_p__001.html#gaca7b82d182b6418ad4ca4904e578488d">IP_SSP_STATUS_T</a>&#160;</td>
+          <td class="paramname"><em>Stat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current status of SSP controller. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSSP</td><td>: The base of SSP peripheral on the chip </td></tr>
+    <tr><td class="paramname">Stat</td><td>: Type of status, should be :<ul>
+<li>SSP_STAT_TFE</li>
+<li>SSP_STAT_TNF</li>
+<li>SSP_STAT_RNE</li>
+<li>SSP_STAT_RFF</li>
+<li>SSP_STAT_BSY </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>SSP controller status, SET or RESET </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00255">255</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga95a01a485d482a4855b7e0f4fa706cf8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE void IP_SSP_Int_Disable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pSSP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___i_p___s_s_p__001.html#ga45547130ce7160448f7aa8d40f481c4d">IP_SSP_INTMASK_T</a>&#160;</td>
+          <td class="paramname"><em>IntType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disable interrupt for the SSP. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSSP</td><td>: The base of SSP peripheral on the chip </td></tr>
+    <tr><td class="paramname">IntType</td><td>: Type of interrupt condition to be enable/disable, should be :<ul>
+<li>SSP_RORIM</li>
+<li>SSP_RTIM</li>
+<li>SSP_RXIM</li>
+<li>SSP_TXIM </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Nothing </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00337">337</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga65d2c1706451ddccc1935fcd9e976741"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE void IP_SSP_Int_Enable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pSSP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___i_p___s_s_p__001.html#ga45547130ce7160448f7aa8d40f481c4d">IP_SSP_INTMASK_T</a>&#160;</td>
+          <td class="paramname"><em>IntType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable interrupt for the SSP. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSSP</td><td>: The base of SSP peripheral on the chip </td></tr>
+    <tr><td class="paramname">IntType</td><td>: Type of interrupt condition to be enable/disable, should be :<ul>
+<li>SSP_RORIM</li>
+<li>SSP_RTIM</li>
+<li>SSP_RXIM</li>
+<li>SSP_TXIM </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Nothing </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00322">322</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gab37727d8962cc845822d4c6655675903"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE uint16_t IP_SSP_ReceiveFrame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pSSP</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get received SSP data. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSSP</td><td>: The base of SSP peripheral on the chip </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>SSP 16-bit data received </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00347">347</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga0dd1c86629e3ec5891a54dfd227312f9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE void IP_SSP_SendFrame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pSSP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>tx_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Send SSP 16-bit data. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSSP</td><td>: The base of SSP peripheral on the chip </td></tr>
+    <tr><td class="paramname">tx_data</td><td>: SSP 16-bit data to be transmited </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Nothing </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00358">358</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gaacc52cce04c74ef4fe78ef0387ba11cb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IP_SSP_Set_ClockRate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pSSP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>clk_rate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>prescale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set up output clocks per bit for SSP bus. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSSP</td><td>: The base of SSP peripheral on the chip </td></tr>
+    <tr><td class="paramname">clk_rate</td><td>fs: The number of prescaler-output clocks per bit on the bus, minus one </td></tr>
+    <tr><td class="paramname">prescale</td><td>: The factor by which the Prescaler divides the SSP peripheral clock PCLK </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Nothing </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The bit frequency is PCLK / (prescale x[clk_rate+1]) </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8c_source.html#l00051">51</a> du fichier <a class="el" href="ssp__001_8c_source.html">ssp_001.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga7045ecbaf144e20cd3e36e7905b3588a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE void IP_SSP_Set_Mode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pSSP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the SSP working as master or slave mode. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSSP</td><td>: The base of SSP peripheral on the chip </td></tr>
+    <tr><td class="paramname">mode</td><td>: Operating mode, should be<ul>
+<li>SSP_MODE_MASTER</li>
+<li>SSP_MODE_SLAVE </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Nothing </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00402">402</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga91afe8f403621723bb3112da95b4e280"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">STATIC INLINE void IP_SSP_SetFormat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_i_p___s_s_p__001___t.html">IP_SSP_001_T</a> *&#160;</td>
+          <td class="paramname"><em>pSSP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>bits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>frameFormat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>clockMode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set up the SSP frame format. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSSP</td><td>: The base of SSP peripheral on the chip </td></tr>
+    <tr><td class="paramname">bits</td><td>: The number of bits transferred in each frame, should be SSP_BITS_4 to SSP_BITS_16 </td></tr>
+    <tr><td class="paramname">frameFormat</td><td>: Frame format, should be :<ul>
+<li>SSP_FRAMEFORMAT_SPI</li>
+<li>SSP_FRAME_FORMAT_TI</li>
+<li>SSP_FRAMEFORMAT_MICROWIRE </li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">clockMode</td><td>: Select Clock polarity and Clock phase, should be :<ul>
+<li>SSP_CLOCK_CPHA0_CPOL0</li>
+<li>SSP_CLOCK_CPHA0_CPOL1</li>
+<li>SSP_CLOCK_CPHA1_CPOL0</li>
+<li>SSP_CLOCK_CPHA1_CPOL1 </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Nothing </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Note: The clockFormat is only used in SPI mode </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="ssp__001_8h_source.html#l00389">389</a> du fichier <a class="el" href="ssp__001_8h_source.html">ssp_001.h</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré le Mardi Janvier 7 2014 11:23:09 pour Hexapode par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
+  </ul>
+</div>
+</body>
+</html>

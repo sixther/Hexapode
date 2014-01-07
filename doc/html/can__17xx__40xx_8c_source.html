@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Hexapode:  Fichier source de lpcopen/software/lpc_core/lpc_chip/chip_17xx_40xx/can_17xx_40xx.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="IN7Robot.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Hexapode
+   &#160;<span id="projectnumber">Version 1.0</span>
+   </div>
+   <div id="projectbrief">Thomas Waquet &amp; Gauthier Dhalluin</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('can__17xx__40xx_8c_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Groupes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">can_17xx_40xx.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * @brief LPC17xx/40xx CAN driver</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * @note</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Copyright(C) NXP Semiconductors, 2012</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * @par</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * Software that is described herein is for illustrative purposes only</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * which provides customers with programming information regarding the</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * LPC products.  This software is supplied &quot;AS IS&quot; without any warranties of</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * any kind, and NXP Semiconductors and its licensor disclaim any and</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * all warranties, express or implied, including all implied warranties of</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * merchantability, fitness for a particular purpose and non-infringement of</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * intellectual property rights.  NXP Semiconductors assumes no responsibility</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * or liability for the use of the software, conveys no license or rights under any</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * patent, copyright, mask work right, or any other intellectual property rights in</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * or to any products. NXP Semiconductors reserves the right to make changes</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * in the software without notification. NXP Semiconductors also makes no</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * representation or warranty that such application will be suitable for the</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * specified use without further testing or modification.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> * @par</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> * Permission to use, copy, modify, and distribute this software and its</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> * documentation is hereby granted, under NXP Semiconductors&#39; and its</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * licensor&#39;s relevant copyrights in the software, without fee, provided that it</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> * is used in conjunction with NXP Semiconductors microcontrollers.  This</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> * copyright, permission, and disclaimer notice must appear in all copies of</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> * this code.</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;chip.h&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">/*****************************************************************************</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> * Private types/enumerations/variables</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"> ****************************************************************************/</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">/*****************************************************************************</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"> * Public types/enumerations/variables</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"> ****************************************************************************/</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">/*****************************************************************************</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"> * Private functions</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"> ****************************************************************************/</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">/* Determine clock for CAN Peripheral */</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">static</span> <a class="code" href="group___c_l_o_c_k__17_x_x__40_x_x.html#ga82e75cbe777e79f448fec3987ddd978e">CHIP_SYSCTL_CLOCK_T</a> Chip_CAN_DetermineClk(<a class="code" href="struct_i_p___c_a_n__001___t.html">LPC_CAN_T</a> *pCAN) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="group___c_l_o_c_k__17_x_x__40_x_x.html#ga82e75cbe777e79f448fec3987ddd978e">CHIP_SYSCTL_CLOCK_T</a> CanClk;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">if</span> (pCAN == LPC_CAN1) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        CanClk = <a class="code" href="group___c_l_o_c_k__17_x_x__40_x_x.html#gga16115d41e6af3d543d4c5457d8d8343ca3b2121b4604dda5ba85332c6f855192c">SYSCTL_CLOCK_CAN1</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        CanClk = <a class="code" href="group___c_l_o_c_k__17_x_x__40_x_x.html#gga16115d41e6af3d543d4c5457d8d8343ca87fcb2dcc94fa2a6532820e016d19d72">SYSCTL_CLOCK_CAN2</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> CanClk;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">/* Get CAN Clock Rate */</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">static</span> uint32_t Chip_CAN_GetClockRate(<a class="code" href="struct_i_p___c_a_n__001___t.html">LPC_CAN_T</a> *pCAN) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#if !defined(CHIP_LPC175X_6X)</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor"></span>    <span class="keywordflow">return</span> <a class="code" href="group___c_l_o_c_k__17_x_x__40_x_x.html#ga9c2bc86c857119426aa6a724c12a6f42">Chip_Clock_GetPeripheralClockRate</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor"></span>    <span class="keywordflow">if</span> (pCAN == LPC_CAN1) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="group___c_l_o_c_k__17_x_x__40_x_x.html#ga9c2bc86c857119426aa6a724c12a6f42">Chip_Clock_GetPeripheralClockRate</a>(SYSCTL_PCLK_CAN1);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="group___c_l_o_c_k__17_x_x__40_x_x.html#ga9c2bc86c857119426aa6a724c12a6f42">Chip_Clock_GetPeripheralClockRate</a>(SYSCTL_PCLK_CAN2);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor"></span>}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#if !defined(CHIP_LPC175X_6X)</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor"></span><span class="comment">/* Determine CAN peripheral for reset*/</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">static</span> <a class="code" href="group___s_y_s_c_t_l__17_x_x__40_x_x.html#gaecf57441c240b2e654da2a7de6da0f7b">CHIP_SYSCTL_RESET_T</a> Chip_CAN_DetermineReset(<a class="code" href="struct_i_p___c_a_n__001___t.html">LPC_CAN_T</a> *pCAN) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="group___s_y_s_c_t_l__17_x_x__40_x_x.html#gaecf57441c240b2e654da2a7de6da0f7b">CHIP_SYSCTL_RESET_T</a> CanRst;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">if</span> (pCAN == LPC_CAN1) {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        CanRst = <a class="code" href="group___s_y_s_c_t_l__17_x_x__40_x_x.html#ggaecf57441c240b2e654da2a7de6da0f7ba4bc1982378a526a7ab1b9bab4513233e">SYSCTL_RESET_CAN1</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        CanRst = <a class="code" href="group___s_y_s_c_t_l__17_x_x__40_x_x.html#ggaecf57441c240b2e654da2a7de6da0f7ba16f62d8235af020ae6ea4b5288ff15b0">SYSCTL_RESET_CAN2</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">return</span> CanRst;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*#if !defined(CHIP_LPC175X_6X)*/</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">/*****************************************************************************</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment"> * Public functions</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment"> ****************************************************************************/</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">/* Initialize CAN Interface */</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="group___c_a_n__17_x_x__40_x_x.html#gabed86ed8fec53abc0f99f1fa18564c7c">   98</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___c_a_n__17_x_x__40_x_x.html#gabed86ed8fec53abc0f99f1fa18564c7c">Chip_CAN_Init</a>(<a class="code" href="struct_i_p___c_a_n__001___t.html">LPC_CAN_T</a> *pCAN)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="comment">/* Enable CAN Clock */</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="group___c_l_o_c_k__17_x_x__40_x_x.html#gac63024a1f928ba359c4f4cac7e48fe39">Chip_Clock_EnablePeriphClock</a>(Chip_CAN_DetermineClk(pCAN));</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#if !defined(CHIP_LPC175X_6X)</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor"></span>    <a class="code" href="group___s_y_s_c_t_l__17_x_x__40_x_x.html#ga94ee3796eba43742e11809eacb88269b">Chip_SYSCTL_PeriphReset</a>(Chip_CAN_DetermineReset(pCAN));</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="comment">/* Initialize CAN Peripheral */</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="group___i_p___c_a_n__001.html#gae6761f4601ca40bdc15a6224131443cf">IP_CAN_Init</a>(pCAN);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="comment">/* Initiialize Acceptance filter */</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="group___i_p___c_a_n__001.html#gad8cdfeb06deebcc77dde65a92da6fba9">IP_CAN_AF_Init</a>(LPC_CANAF, LPC_CANAF_RAM);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">/* De-Initialize CAN Interface */</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="group___c_a_n__17_x_x__40_x_x.html#ga7f490bb9d12b30243264cd06feb795db">  114</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___c_a_n__17_x_x__40_x_x.html#ga7f490bb9d12b30243264cd06feb795db">Chip_CAN_DeInit</a>(<a class="code" href="struct_i_p___c_a_n__001___t.html">LPC_CAN_T</a> *pCAN)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;{</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="group___i_p___c_a_n__001.html#ga880ab3bc9ad2522fa56c44606496cd6e">IP_CAN_DeInit</a>(pCAN);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="group___c_l_o_c_k__17_x_x__40_x_x.html#ga1bcb3f29f3cfbe896517e7bb6ebeaf03">Chip_Clock_DisablePeriphClock</a>(Chip_CAN_DetermineClk(pCAN));</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">/* Set CAN Bit Rate */</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="group___c_a_n__17_x_x__40_x_x.html#ga269c61b9e26af6f207632993274b04e5">  121</a></span>&#160;<a class="code" href="group___l_p_c___types___public___types.html#ga67a0db04d321a74b7e7fcfd3f1a3f70b">Status</a> <a class="code" href="group___c_a_n__17_x_x__40_x_x.html#ga269c61b9e26af6f207632993274b04e5">Chip_CAN_SetBitRate</a>(<a class="code" href="struct_i_p___c_a_n__001___t.html">LPC_CAN_T</a> *pCAN, uint32_t BitRate)</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;{</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <a class="code" href="struct_i_p___c_a_n___b_u_s___t_i_m_i_n_g___t.html">IP_CAN_BUS_TIMING_T</a> BusTiming;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    uint32_t result = 0;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    uint8_t NT, TSEG1 = 0, TSEG2 = 0;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    uint32_t CANPclk = 0;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    uint32_t BRP = 0;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    CANPclk = Chip_CAN_GetClockRate(pCAN);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    result = CANPclk / BitRate;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="comment">/* Calculate suitable nominal time value</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">     * NT (nominal time) = (TSEG1 + TSEG2 + 3)</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment">     * NT &lt;= 24</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment">     * TSEG1 &gt;= 2*TSEG2</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">for</span> (NT = 24; NT &gt; 0; NT = NT - 2) {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordflow">if</span> ((result % NT) == 0) {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            BRP = result / NT - 1;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            NT--;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            TSEG2 = (NT / 3) - 1;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            TSEG1 = NT - (NT / 3) - 1;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">if</span> (NT == 0) {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">return</span> ERROR;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    BusTiming.<a class="code" href="struct_i_p___c_a_n___b_u_s___t_i_m_i_n_g___t.html#afe33f427a836d5e628a78ca63dcf73a7">TESG1</a> = TSEG1;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    BusTiming.<a class="code" href="struct_i_p___c_a_n___b_u_s___t_i_m_i_n_g___t.html#af7210564805b78e9c3f7f83350021bba">TESG2</a> = TSEG2;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    BusTiming.<a class="code" href="struct_i_p___c_a_n___b_u_s___t_i_m_i_n_g___t.html#ae2795899c21bf1714eda7bdb76f21af7">BRP</a> = BRP;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    BusTiming.<a class="code" href="struct_i_p___c_a_n___b_u_s___t_i_m_i_n_g___t.html#a4d6ba0ef5491d849f6498386a65f612e">SJW</a> = 3;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    BusTiming.<a class="code" href="struct_i_p___c_a_n___b_u_s___t_i_m_i_n_g___t.html#af40ced1b0bae614c0eccb95acf33c051">SAM</a> = 0;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <a class="code" href="group___i_p___c_a_n__001.html#gaf9dcb45fda3768c0f0872ee248a98bcb">IP_CAN_SetBusTiming</a>(pCAN, &amp;BusTiming);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">return</span> SUCCESS;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;}</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment">/* Get Free TxBuf */</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="group___c_a_n__17_x_x__40_x_x.html#gaf8e81d164c031968b62428b7d58fe32b">  164</a></span>&#160;<a class="code" href="group___c_a_n__17_x_x__40_x_x.html#ga542d6d75b1ef828004521351264644a2">CAN_BUFFER_ID</a> <a class="code" href="group___c_a_n__17_x_x__40_x_x.html#gaf8e81d164c031968b62428b7d58fe32b">Chip_CAN_GetFreeTxBuf</a>(<a class="code" href="struct_i_p___c_a_n__001___t.html">LPC_CAN_T</a> *pCAN)</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;{</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <a class="code" href="group___i_p___c_a_n__001.html#gaad8d114ee16009bf68631d03dd0818de">IP_CAN_BUFFER_ID_T</a> TxBufID = <a class="code" href="group___i_p___c_a_n__001.html#ggac3403cda09fabfb8a9cc7a191229b370a4676dbb752485410e03d6b995983faf9">CAN_BUFFER_1</a>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="comment">/* Select a free buffer */</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">for</span> (TxBufID = (<a class="code" href="group___i_p___c_a_n__001.html#gaad8d114ee16009bf68631d03dd0818de">IP_CAN_BUFFER_ID_T</a>) 0; TxBufID &lt; <a class="code" href="group___i_p___c_a_n__001.html#ggac3403cda09fabfb8a9cc7a191229b370a636fb6eb431d35079351e9ac16b3b8a8">CAN_BUFFER_LAST</a>; TxBufID++) {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="group___i_p___c_a_n__001.html#ga246c208c49d5c33106a1cd564acb9652">IP_CAN_GetStatus</a>(pCAN) &amp; <a class="code" href="group___i_p___c_a_n__001.html#ga19e3372539198200b71d6bbcb7e6deb2">CAN_SR_TBS</a>(TxBufID)) {</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordflow">return</span> TxBufID;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;}</div>
+<div class="ttc" id="group___i_p___c_a_n__001_html_gaf9dcb45fda3768c0f0872ee248a98bcb"><div class="ttname"><a href="group___i_p___c_a_n__001.html#gaf9dcb45fda3768c0f0872ee248a98bcb">IP_CAN_SetBusTiming</a></div><div class="ttdeci">void IP_CAN_SetBusTiming(IP_CAN_001_T *pCAN, IP_CAN_BUS_TIMING_T *pBusTiming)</div><div class="ttdoc">Set Bus Timing for the CAN Controller. </div><div class="ttdef"><b>Definition:</b> <a href="can__001_8c_source.html#l00381">can_001.c:381</a></div></div>
+<div class="ttc" id="group___c_a_n__17_x_x__40_x_x_html_ga7f490bb9d12b30243264cd06feb795db"><div class="ttname"><a href="group___c_a_n__17_x_x__40_x_x.html#ga7f490bb9d12b30243264cd06feb795db">Chip_CAN_DeInit</a></div><div class="ttdeci">void Chip_CAN_DeInit(LPC_CAN_T *pCAN)</div><div class="ttdoc">De-Initialize CAN Interface. </div><div class="ttdef"><b>Definition:</b> <a href="can__17xx__40xx_8c_source.html#l00114">can_17xx_40xx.c:114</a></div></div>
+<div class="ttc" id="group___i_p___c_a_n__001_html_gaad8d114ee16009bf68631d03dd0818de"><div class="ttname"><a href="group___i_p___c_a_n__001.html#gaad8d114ee16009bf68631d03dd0818de">IP_CAN_BUFFER_ID_T</a></div><div class="ttdeci">enum IP_CAN_BUFFER_ID IP_CAN_BUFFER_ID_T</div><div class="ttdoc">CAN Buffer ID definition. </div></div>
+<div class="ttc" id="group___c_l_o_c_k__17_x_x__40_x_x_html_ga1bcb3f29f3cfbe896517e7bb6ebeaf03"><div class="ttname"><a href="group___c_l_o_c_k__17_x_x__40_x_x.html#ga1bcb3f29f3cfbe896517e7bb6ebeaf03">Chip_Clock_DisablePeriphClock</a></div><div class="ttdeci">void Chip_Clock_DisablePeriphClock(CHIP_SYSCTL_CLOCK_T clk)</div><div class="ttdoc">Disables power and clocking for a peripheral. </div><div class="ttdef"><b>Definition:</b> <a href="clock__17xx__40xx_8c_source.html#l00108">clock_17xx_40xx.c:108</a></div></div>
+<div class="ttc" id="group___i_p___c_a_n__001_html_ga880ab3bc9ad2522fa56c44606496cd6e"><div class="ttname"><a href="group___i_p___c_a_n__001.html#ga880ab3bc9ad2522fa56c44606496cd6e">IP_CAN_DeInit</a></div><div class="ttdeci">STATIC INLINE void IP_CAN_DeInit(IP_CAN_001_T *pCAN)</div><div class="ttdoc">De-initialize the CAN peripheral. </div><div class="ttdef"><b>Definition:</b> <a href="can__001_8h_source.html#l00737">can_001.h:737</a></div></div>
+<div class="ttc" id="struct_i_p___c_a_n___b_u_s___t_i_m_i_n_g___t_html_afe33f427a836d5e628a78ca63dcf73a7"><div class="ttname"><a href="struct_i_p___c_a_n___b_u_s___t_i_m_i_n_g___t.html#afe33f427a836d5e628a78ca63dcf73a7">IP_CAN_BUS_TIMING_T::TESG1</a></div><div class="ttdeci">uint8_t TESG1</div><div class="ttdef"><b>Definition:</b> <a href="can__001_8h_source.html#l00678">can_001.h:678</a></div></div>
+<div class="ttc" id="group___c_a_n__17_x_x__40_x_x_html_gabed86ed8fec53abc0f99f1fa18564c7c"><div class="ttname"><a href="group___c_a_n__17_x_x__40_x_x.html#gabed86ed8fec53abc0f99f1fa18564c7c">Chip_CAN_Init</a></div><div class="ttdeci">void Chip_CAN_Init(LPC_CAN_T *pCAN)</div><div class="ttdoc">Initialize CAN Interface. </div><div class="ttdef"><b>Definition:</b> <a href="can__17xx__40xx_8c_source.html#l00098">can_17xx_40xx.c:98</a></div></div>
+<div class="ttc" id="group___c_a_n__17_x_x__40_x_x_html_ga269c61b9e26af6f207632993274b04e5"><div class="ttname"><a href="group___c_a_n__17_x_x__40_x_x.html#ga269c61b9e26af6f207632993274b04e5">Chip_CAN_SetBitRate</a></div><div class="ttdeci">Status Chip_CAN_SetBitRate(LPC_CAN_T *pCAN, uint32_t BitRate)</div><div class="ttdoc">Set CAN bitrate. </div><div class="ttdef"><b>Definition:</b> <a href="can__17xx__40xx_8c_source.html#l00121">can_17xx_40xx.c:121</a></div></div>
+<div class="ttc" id="group___c_l_o_c_k__17_x_x__40_x_x_html_gac63024a1f928ba359c4f4cac7e48fe39"><div class="ttname"><a href="group___c_l_o_c_k__17_x_x__40_x_x.html#gac63024a1f928ba359c4f4cac7e48fe39">Chip_Clock_EnablePeriphClock</a></div><div class="ttdeci">void Chip_Clock_EnablePeriphClock(CHIP_SYSCTL_CLOCK_T clk)</div><div class="ttdoc">Enables power and clocking for a peripheral. </div><div class="ttdef"><b>Definition:</b> <a href="clock__17xx__40xx_8c_source.html#l00092">clock_17xx_40xx.c:92</a></div></div>
+<div class="ttc" id="group___l_p_c___types___public___types_html_ga67a0db04d321a74b7e7fcfd3f1a3f70b"><div class="ttname"><a href="group___l_p_c___types___public___types.html#ga67a0db04d321a74b7e7fcfd3f1a3f70b">Status</a></div><div class="ttdeci">Status</div><div class="ttdef"><b>Definition:</b> <a href="lpc__types_8h_source.html#l00074">lpc_types.h:74</a></div></div>
+<div class="ttc" id="group___i_p___c_a_n__001_html_ggac3403cda09fabfb8a9cc7a191229b370a636fb6eb431d35079351e9ac16b3b8a8"><div class="ttname"><a href="group___i_p___c_a_n__001.html#ggac3403cda09fabfb8a9cc7a191229b370a636fb6eb431d35079351e9ac16b3b8a8">CAN_BUFFER_LAST</a></div><div class="ttdef"><b>Definition:</b> <a href="can__001_8h_source.html#l00657">can_001.h:657</a></div></div>
+<div class="ttc" id="group___s_y_s_c_t_l__17_x_x__40_x_x_html_ggaecf57441c240b2e654da2a7de6da0f7ba16f62d8235af020ae6ea4b5288ff15b0"><div class="ttname"><a href="group___s_y_s_c_t_l__17_x_x__40_x_x.html#ggaecf57441c240b2e654da2a7de6da0f7ba16f62d8235af020ae6ea4b5288ff15b0">SYSCTL_RESET_CAN2</a></div><div class="ttdef"><b>Definition:</b> <a href="sysctl__17xx__40xx_8h_source.html#l00288">sysctl_17xx_40xx.h:288</a></div></div>
+<div class="ttc" id="group___c_a_n__17_x_x__40_x_x_html_gaf8e81d164c031968b62428b7d58fe32b"><div class="ttname"><a href="group___c_a_n__17_x_x__40_x_x.html#gaf8e81d164c031968b62428b7d58fe32b">Chip_CAN_GetFreeTxBuf</a></div><div class="ttdeci">CAN_BUFFER_ID Chip_CAN_GetFreeTxBuf(LPC_CAN_T *pCAN)</div><div class="ttdoc">Get Free TxBuffer. </div><div class="ttdef"><b>Definition:</b> <a href="can__17xx__40xx_8c_source.html#l00164">can_17xx_40xx.c:164</a></div></div>
+<div class="ttc" id="group___c_l_o_c_k__17_x_x__40_x_x_html_ga82e75cbe777e79f448fec3987ddd978e"><div class="ttname"><a href="group___c_l_o_c_k__17_x_x__40_x_x.html#ga82e75cbe777e79f448fec3987ddd978e">CHIP_SYSCTL_CLOCK_T</a></div><div class="ttdeci">enum CHIP_SYSCTL_CLOCK CHIP_SYSCTL_CLOCK_T</div></div>
+<div class="ttc" id="group___c_l_o_c_k__17_x_x__40_x_x_html_ga9c2bc86c857119426aa6a724c12a6f42"><div class="ttname"><a href="group___c_l_o_c_k__17_x_x__40_x_x.html#ga9c2bc86c857119426aa6a724c12a6f42">Chip_Clock_GetPeripheralClockRate</a></div><div class="ttdeci">uint32_t Chip_Clock_GetPeripheralClockRate(CHIP_SYSCTL_PCLK_T clk)</div><div class="ttdoc">Returns clock rate for a peripheral (from peripheral clock) </div></div>
+<div class="ttc" id="group___s_y_s_c_t_l__17_x_x__40_x_x_html_ga94ee3796eba43742e11809eacb88269b"><div class="ttname"><a href="group___s_y_s_c_t_l__17_x_x__40_x_x.html#ga94ee3796eba43742e11809eacb88269b">Chip_SYSCTL_PeriphReset</a></div><div class="ttdeci">void Chip_SYSCTL_PeriphReset(CHIP_SYSCTL_RESET_T periph)</div><div class="ttdoc">Resets a peripheral. </div><div class="ttdef"><b>Definition:</b> <a href="sysctl__17xx__40xx_8c_source.html#l00057">sysctl_17xx_40xx.c:57</a></div></div>
+<div class="ttc" id="struct_i_p___c_a_n___b_u_s___t_i_m_i_n_g___t_html_ae2795899c21bf1714eda7bdb76f21af7"><div class="ttname"><a href="struct_i_p___c_a_n___b_u_s___t_i_m_i_n_g___t.html#ae2795899c21bf1714eda7bdb76f21af7">IP_CAN_BUS_TIMING_T::BRP</a></div><div class="ttdeci">uint16_t BRP</div><div class="ttdef"><b>Definition:</b> <a href="can__001_8h_source.html#l00676">can_001.h:676</a></div></div>
+<div class="ttc" id="struct_i_p___c_a_n__001___t_html"><div class="ttname"><a href="struct_i_p___c_a_n__001___t.html">IP_CAN_001_T</a></div><div class="ttdoc">CAN register block structure. </div><div class="ttdef"><b>Definition:</b> <a href="can__001_8h_source.html#l00123">can_001.h:123</a></div></div>
+<div class="ttc" id="struct_i_p___c_a_n___b_u_s___t_i_m_i_n_g___t_html_af40ced1b0bae614c0eccb95acf33c051"><div class="ttname"><a href="struct_i_p___c_a_n___b_u_s___t_i_m_i_n_g___t.html#af40ced1b0bae614c0eccb95acf33c051">IP_CAN_BUS_TIMING_T::SAM</a></div><div class="ttdeci">uint8_t SAM</div><div class="ttdef"><b>Definition:</b> <a href="can__001_8h_source.html#l00680">can_001.h:680</a></div></div>
+<div class="ttc" id="group___i_p___c_a_n__001_html_ga19e3372539198200b71d6bbcb7e6deb2"><div class="ttname"><a href="group___i_p___c_a_n__001.html#ga19e3372539198200b71d6bbcb7e6deb2">CAN_SR_TBS</a></div><div class="ttdeci">#define CAN_SR_TBS(n)</div><div class="ttdef"><b>Definition:</b> <a href="can__001_8h_source.html#l00402">can_001.h:402</a></div></div>
+<div class="ttc" id="group___c_a_n__17_x_x__40_x_x_html_ga542d6d75b1ef828004521351264644a2"><div class="ttname"><a href="group___c_a_n__17_x_x__40_x_x.html#ga542d6d75b1ef828004521351264644a2">CAN_BUFFER_ID</a></div><div class="ttdeci">IP_CAN_BUFFER_ID_T CAN_BUFFER_ID</div><div class="ttdef"><b>Definition:</b> <a href="can__17xx__40xx_8h_source.html#l00064">can_17xx_40xx.h:64</a></div></div>
+<div class="ttc" id="struct_i_p___c_a_n___b_u_s___t_i_m_i_n_g___t_html_af7210564805b78e9c3f7f83350021bba"><div class="ttname"><a href="struct_i_p___c_a_n___b_u_s___t_i_m_i_n_g___t.html#af7210564805b78e9c3f7f83350021bba">IP_CAN_BUS_TIMING_T::TESG2</a></div><div class="ttdeci">uint8_t TESG2</div><div class="ttdef"><b>Definition:</b> <a href="can__001_8h_source.html#l00679">can_001.h:679</a></div></div>
+<div class="ttc" id="group___i_p___c_a_n__001_html_ga246c208c49d5c33106a1cd564acb9652"><div class="ttname"><a href="group___i_p___c_a_n__001.html#ga246c208c49d5c33106a1cd564acb9652">IP_CAN_GetStatus</a></div><div class="ttdeci">STATIC INLINE uint32_t IP_CAN_GetStatus(IP_CAN_001_T *pCAN)</div><div class="ttdoc">Get the status of the CAN Controller. </div><div class="ttdef"><b>Definition:</b> <a href="can__001_8h_source.html#l00797">can_001.h:797</a></div></div>
+<div class="ttc" id="group___s_y_s_c_t_l__17_x_x__40_x_x_html_gaecf57441c240b2e654da2a7de6da0f7b"><div class="ttname"><a href="group___s_y_s_c_t_l__17_x_x__40_x_x.html#gaecf57441c240b2e654da2a7de6da0f7b">CHIP_SYSCTL_RESET_T</a></div><div class="ttdeci">CHIP_SYSCTL_RESET_T</div><div class="ttdef"><b>Definition:</b> <a href="sysctl__17xx__40xx_8h_source.html#l00273">sysctl_17xx_40xx.h:273</a></div></div>
+<div class="ttc" id="group___i_p___c_a_n__001_html_ggac3403cda09fabfb8a9cc7a191229b370a4676dbb752485410e03d6b995983faf9"><div class="ttname"><a href="group___i_p___c_a_n__001.html#ggac3403cda09fabfb8a9cc7a191229b370a4676dbb752485410e03d6b995983faf9">CAN_BUFFER_1</a></div><div class="ttdef"><b>Definition:</b> <a href="can__001_8h_source.html#l00654">can_001.h:654</a></div></div>
+<div class="ttc" id="group___c_l_o_c_k__17_x_x__40_x_x_html_gga16115d41e6af3d543d4c5457d8d8343ca87fcb2dcc94fa2a6532820e016d19d72"><div class="ttname"><a href="group___c_l_o_c_k__17_x_x__40_x_x.html#gga16115d41e6af3d543d4c5457d8d8343ca87fcb2dcc94fa2a6532820e016d19d72">SYSCTL_CLOCK_CAN2</a></div><div class="ttdef"><b>Definition:</b> <a href="clock__17xx__40xx_8h_source.html#l00252">clock_17xx_40xx.h:252</a></div></div>
+<div class="ttc" id="group___s_y_s_c_t_l__17_x_x__40_x_x_html_ggaecf57441c240b2e654da2a7de6da0f7ba4bc1982378a526a7ab1b9bab4513233e"><div class="ttname"><a href="group___s_y_s_c_t_l__17_x_x__40_x_x.html#ggaecf57441c240b2e654da2a7de6da0f7ba4bc1982378a526a7ab1b9bab4513233e">SYSCTL_RESET_CAN1</a></div><div class="ttdef"><b>Definition:</b> <a href="sysctl__17xx__40xx_8h_source.html#l00287">sysctl_17xx_40xx.h:287</a></div></div>
+<div class="ttc" id="group___i_p___c_a_n__001_html_gad8cdfeb06deebcc77dde65a92da6fba9"><div class="ttname"><a href="group___i_p___c_a_n__001.html#gad8cdfeb06deebcc77dde65a92da6fba9">IP_CAN_AF_Init</a></div><div class="ttdeci">void IP_CAN_AF_Init(IP_CAN_001_AF_T *pCanAF, IP_CAN_001_AF_RAM_T *pCanAFRam)</div><div class="ttdoc">Initialize CAN Acceptance Filter. </div><div class="ttdef"><b>Definition:</b> <a href="can__001_8c_source.html#l00547">can_001.c:547</a></div></div>
+<div class="ttc" id="struct_i_p___c_a_n___b_u_s___t_i_m_i_n_g___t_html"><div class="ttname"><a href="struct_i_p___c_a_n___b_u_s___t_i_m_i_n_g___t.html">IP_CAN_BUS_TIMING_T</a></div><div class="ttdoc">CAN Bus Timing Structure. </div><div class="ttdef"><b>Definition:</b> <a href="can__001_8h_source.html#l00674">can_001.h:674</a></div></div>
+<div class="ttc" id="group___i_p___c_a_n__001_html_gae6761f4601ca40bdc15a6224131443cf"><div class="ttname"><a href="group___i_p___c_a_n__001.html#gae6761f4601ca40bdc15a6224131443cf">IP_CAN_Init</a></div><div class="ttdeci">void IP_CAN_Init(IP_CAN_001_T *pCAN)</div><div class="ttdoc">Initialize the CAN peripheral. </div><div class="ttdef"><b>Definition:</b> <a href="can__001_8c_source.html#l00332">can_001.c:332</a></div></div>
+<div class="ttc" id="group___c_l_o_c_k__17_x_x__40_x_x_html_gga16115d41e6af3d543d4c5457d8d8343ca3b2121b4604dda5ba85332c6f855192c"><div class="ttname"><a href="group___c_l_o_c_k__17_x_x__40_x_x.html#gga16115d41e6af3d543d4c5457d8d8343ca3b2121b4604dda5ba85332c6f855192c">SYSCTL_CLOCK_CAN1</a></div><div class="ttdef"><b>Definition:</b> <a href="clock__17xx__40xx_8h_source.html#l00251">clock_17xx_40xx.h:251</a></div></div>
+<div class="ttc" id="struct_i_p___c_a_n___b_u_s___t_i_m_i_n_g___t_html_a4d6ba0ef5491d849f6498386a65f612e"><div class="ttname"><a href="struct_i_p___c_a_n___b_u_s___t_i_m_i_n_g___t.html#a4d6ba0ef5491d849f6498386a65f612e">IP_CAN_BUS_TIMING_T::SJW</a></div><div class="ttdeci">uint8_t SJW</div><div class="ttdef"><b>Definition:</b> <a href="can__001_8h_source.html#l00677">can_001.h:677</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_e9967a62eb0adfb08d6da6a5b6090dce.html">lpcopen</a></li><li class="navelem"><a class="el" href="dir_9de244f5aef64593622a4e8655220356.html">software</a></li><li class="navelem"><a class="el" href="dir_31a1b7b0d37c21493df82ae7c333e639.html">lpc_core</a></li><li class="navelem"><a class="el" href="dir_1830a61c0edc8cc1910f28c837699b39.html">lpc_chip</a></li><li class="navelem"><a class="el" href="dir_03ae23d041d1826573cfbc11ccc106a0.html">chip_17xx_40xx</a></li><li class="navelem"><b>can_17xx_40xx.c</b></li>
+    <li class="footer">Généré le Mardi Janvier 7 2014 11:23:02 pour Hexapode par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
+  </ul>
+</div>
+</body>
+</html>

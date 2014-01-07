@@ -1,0 +1,86 @@
+var group___i_p___s_s_p__001 =
+[
+    [ "IP_SSP_001_T", "struct_i_p___s_s_p__001___t.html", [
+      [ "CPSR", "struct_i_p___s_s_p__001___t.html#a140588a82bafbf0bf0c983111aadb351", null ],
+      [ "CR0", "struct_i_p___s_s_p__001___t.html#a8fe50f18067c0ecfea3157c1720a671f", null ],
+      [ "CR1", "struct_i_p___s_s_p__001___t.html#ab0ec7102960640751d44e92ddac994f0", null ],
+      [ "DMACR", "struct_i_p___s_s_p__001___t.html#a082219a924d748e9c6092582aec06226", null ],
+      [ "DR", "struct_i_p___s_s_p__001___t.html#a3df0d8dfcd1ec958659ffe21eb64fa94", null ],
+      [ "ICR", "struct_i_p___s_s_p__001___t.html#afc0ed459ed55267df34cf3774e7c029d", null ],
+      [ "IMSC", "struct_i_p___s_s_p__001___t.html#aadaeb8eaf11a1ac2952008e4f5aea459", null ],
+      [ "MIS", "struct_i_p___s_s_p__001___t.html#ab93d8e22f60836895e96cc388310dd90", null ],
+      [ "RIS", "struct_i_p___s_s_p__001___t.html#aef20f9db3bdcf52941c8ac42f14a3c19", null ],
+      [ "SR", "struct_i_p___s_s_p__001___t.html#aa4e5f09c578d8d5c138b41a1e740df3f", null ]
+    ] ],
+    [ "SSP_CPSR_BITMASK", "group___i_p___s_s_p__001.html#gad90cbeb91495d457ae2dd8bda909a2a9", null ],
+    [ "SSP_CR0_BITMASK", "group___i_p___s_s_p__001.html#ga90be93bebdbdfee011d90ea6e054260a", null ],
+    [ "SSP_CR0_BITMASK", "group___i_p___s_s_p__001.html#ga90be93bebdbdfee011d90ea6e054260a", null ],
+    [ "SSP_CR0_CPHA_FIRST", "group___i_p___s_s_p__001.html#gaee3465bdb33add1970f6ce7f7bc638c4", null ],
+    [ "SSP_CR0_CPOL_LO", "group___i_p___s_s_p__001.html#gab4353fed07ef845a3796e154397f7e76", null ],
+    [ "SSP_CR0_DSS", "group___i_p___s_s_p__001.html#ga691ba9dbc6a0722a81ed4734c7f7ac8f", null ],
+    [ "SSP_CR0_FRF_MICROWIRE", "group___i_p___s_s_p__001.html#ga7ca858fcf0f529a38e1e1bf0a69d4486", null ],
+    [ "SSP_CR0_FRF_SPI", "group___i_p___s_s_p__001.html#ga4f0f58a8f4b87af0f18e84b981c31a74", null ],
+    [ "SSP_CR0_FRF_TI", "group___i_p___s_s_p__001.html#ga54c718a1a75a1e5e06417b9f8267ee27", null ],
+    [ "SSP_CR0_SCR", "group___i_p___s_s_p__001.html#ga10f56047b6024ff848675f9463f1b989", null ],
+    [ "SSP_CR0_SCR", "group___i_p___s_s_p__001.html#ga10f56047b6024ff848675f9463f1b989", null ],
+    [ "SSP_CR1_BITMASK", "group___i_p___s_s_p__001.html#gad90a9c1c97a5c4e19e048e9686a4d8fa", null ],
+    [ "SSP_CR1_LBM_EN", "group___i_p___s_s_p__001.html#gac0e5bef37b94df5ad96bf270aa802dcd", null ],
+    [ "SSP_CR1_SLAVE_EN", "group___i_p___s_s_p__001.html#ga483d570ffc25bc917c99b3e8ece75649", null ],
+    [ "SSP_CR1_SO_DISABLE", "group___i_p___s_s_p__001.html#gaf8cd75ca0bf07a236b992cca4769b4dc", null ],
+    [ "SSP_CR1_SSP_EN", "group___i_p___s_s_p__001.html#gaad500ed8cec6c1734a12a7f55ff6ec26", null ],
+    [ "SSP_DR_BITMASK", "group___i_p___s_s_p__001.html#gaca7cab2d530cc7dbaa9e9d3e9dc61b53", null ],
+    [ "SSP_ICR_BITMASK", "group___i_p___s_s_p__001.html#ga5ce108586bfd5b77c849aa9969c8973c", null ],
+    [ "SSP_SR_BITMASK", "group___i_p___s_s_p__001.html#ga0fe66130dd87296b6e16cd9fbcf7daf1", null ],
+    [ "IP_SSP_INTMASK_T", "group___i_p___s_s_p__001.html#ga45547130ce7160448f7aa8d40f481c4d", null ],
+    [ "IP_SSP_MASKINTSTATUS_T", "group___i_p___s_s_p__001.html#gae2436c89ef80dd4b350b31f3e748d572", null ],
+    [ "IP_SSP_RAWINTSTATUS_T", "group___i_p___s_s_p__001.html#gaad3a947bd84e8dce24a9ec02ed464853", null ],
+    [ "IP_SSP_STATUS_T", "group___i_p___s_s_p__001.html#gaca7b82d182b6418ad4ca4904e578488d", null ],
+    [ "IP_SSP_DMA", "group___i_p___s_s_p__001.html#gab86db2cee5f3447bd91640c433eb9d77", [
+      [ "SSP_DMA_RX", "group___i_p___s_s_p__001.html#ggab86db2cee5f3447bd91640c433eb9d77ae51f79e5713056c61aadb8d5ddfc335a", null ],
+      [ "SSP_DMA_TX", "group___i_p___s_s_p__001.html#ggab86db2cee5f3447bd91640c433eb9d77a5925a5061635b0742605b6bb4b434ce4", null ]
+    ] ],
+    [ "IP_SSP_INTMASK", "group___i_p___s_s_p__001.html#gaa51c1906e35f1792e02f496f7fe862ad", [
+      [ "SSP_RORIM", "group___i_p___s_s_p__001.html#ggaa51c1906e35f1792e02f496f7fe862ada891bf6d7622b4f6f010396f08a51adbf", null ],
+      [ "SSP_RTIM", "group___i_p___s_s_p__001.html#ggaa51c1906e35f1792e02f496f7fe862adaabb6398ce8ef5db95fc47fc2bd525f13", null ],
+      [ "SSP_RXIM", "group___i_p___s_s_p__001.html#ggaa51c1906e35f1792e02f496f7fe862ada2fff5a42799aae53c7a4bf3e3a900448", null ],
+      [ "SSP_TXIM", "group___i_p___s_s_p__001.html#ggaa51c1906e35f1792e02f496f7fe862ada34e61a5c1d77d3763e4f8e1bfacbdcc4", null ]
+    ] ],
+    [ "IP_SSP_MASKINTSTATUS", "group___i_p___s_s_p__001.html#gaec820960c9ec62bf15162a9a4af78e45", [
+      [ "SSP_RORMIS", "group___i_p___s_s_p__001.html#ggaec820960c9ec62bf15162a9a4af78e45a05e1bf0ddb0306501fcb234c6e885082", null ],
+      [ "SSP_RTMIS", "group___i_p___s_s_p__001.html#ggaec820960c9ec62bf15162a9a4af78e45a86603f74ba22232e10e325e2f0242308", null ],
+      [ "SSP_RXMIS", "group___i_p___s_s_p__001.html#ggaec820960c9ec62bf15162a9a4af78e45a07742f0e285a6bf09099e3298fac1184", null ],
+      [ "SSP_TXMIS", "group___i_p___s_s_p__001.html#ggaec820960c9ec62bf15162a9a4af78e45a8ad9ea51c1cde0cd518cdea049710093", null ]
+    ] ],
+    [ "IP_SSP_RAWINTSTATUS", "group___i_p___s_s_p__001.html#ga23033ccebb71d84a04b01384d4af6857", [
+      [ "SSP_RORRIS", "group___i_p___s_s_p__001.html#gga23033ccebb71d84a04b01384d4af6857ad112fd53fe6238566db3b86badca3643", null ],
+      [ "SSP_RTRIS", "group___i_p___s_s_p__001.html#gga23033ccebb71d84a04b01384d4af6857acadb0b951bbe2b20da961f4a55b775c2", null ],
+      [ "SSP_RXRIS", "group___i_p___s_s_p__001.html#gga23033ccebb71d84a04b01384d4af6857af284137785b0311fdf9ffd06dd91022f", null ],
+      [ "SSP_TXRIS", "group___i_p___s_s_p__001.html#gga23033ccebb71d84a04b01384d4af6857a0f19a960fdb1f4e1e41c2d3f391ab2a1", null ]
+    ] ],
+    [ "IP_SSP_STATUS", "group___i_p___s_s_p__001.html#gadf567651e5cfbfff7912263481645193", [
+      [ "SSP_STAT_TFE", "group___i_p___s_s_p__001.html#ggadf567651e5cfbfff7912263481645193af2476dad0360373ccb5896f6f4283569", null ],
+      [ "SSP_STAT_TNF", "group___i_p___s_s_p__001.html#ggadf567651e5cfbfff7912263481645193a895067b502eeae3c476190e309abde1a", null ],
+      [ "SSP_STAT_RNE", "group___i_p___s_s_p__001.html#ggadf567651e5cfbfff7912263481645193a82f15e0720cc2b0dc53e90b7546fb96b", null ],
+      [ "SSP_STAT_RFF", "group___i_p___s_s_p__001.html#ggadf567651e5cfbfff7912263481645193ad10671a086364beb55efad01f2c3688f", null ],
+      [ "SSP_STAT_BSY", "group___i_p___s_s_p__001.html#ggadf567651e5cfbfff7912263481645193a5129659a9c16fdda33b925f07cf8ef52", null ]
+    ] ],
+    [ "IP_SSP_ClearIntPending", "group___i_p___s_s_p__001.html#ga0c51106ed912a8041eb3b6d59cdad705", null ],
+    [ "IP_SSP_DeInit", "group___i_p___s_s_p__001.html#gafa3f4d71d36c326302523f7117722432", null ],
+    [ "IP_SSP_Disable", "group___i_p___s_s_p__001.html#ga37c73f27b389b51d6e58e082b1a42c23", null ],
+    [ "IP_SSP_DisableLoopBack", "group___i_p___s_s_p__001.html#ga5c82046a166090064696ba298483d6d6", null ],
+    [ "IP_SSP_DMA_Disable", "group___i_p___s_s_p__001.html#ga4886d19af8dbc95a986ad297899cb434", null ],
+    [ "IP_SSP_DMA_Enable", "group___i_p___s_s_p__001.html#ga849de51a2969f15ac59ab061fb98233f", null ],
+    [ "IP_SSP_Enable", "group___i_p___s_s_p__001.html#ga426b4ac19362552988922f35a1ccddc4", null ],
+    [ "IP_SSP_EnableLoopBack", "group___i_p___s_s_p__001.html#ga93d70f2ed6b65bb57c578a580c7a3880", null ],
+    [ "IP_SSP_GetDataSize", "group___i_p___s_s_p__001.html#ga1aed25db365e4de75d73abe5f3df5c9c", null ],
+    [ "IP_SSP_GetIntStatus", "group___i_p___s_s_p__001.html#ga43083abb439ca3e3379e10e6385057b4", null ],
+    [ "IP_SSP_GetRawIntStatus", "group___i_p___s_s_p__001.html#gaa62a76572d00625bd2b02f91770c1ef0", null ],
+    [ "IP_SSP_GetStatus", "group___i_p___s_s_p__001.html#gafc1ef0085aa2b14ceab0bcb133ae4d3b", null ],
+    [ "IP_SSP_Int_Disable", "group___i_p___s_s_p__001.html#ga95a01a485d482a4855b7e0f4fa706cf8", null ],
+    [ "IP_SSP_Int_Enable", "group___i_p___s_s_p__001.html#ga65d2c1706451ddccc1935fcd9e976741", null ],
+    [ "IP_SSP_ReceiveFrame", "group___i_p___s_s_p__001.html#gab37727d8962cc845822d4c6655675903", null ],
+    [ "IP_SSP_SendFrame", "group___i_p___s_s_p__001.html#ga0dd1c86629e3ec5891a54dfd227312f9", null ],
+    [ "IP_SSP_Set_ClockRate", "group___i_p___s_s_p__001.html#gaacc52cce04c74ef4fe78ef0387ba11cb", null ],
+    [ "IP_SSP_Set_Mode", "group___i_p___s_s_p__001.html#ga7045ecbaf144e20cd3e36e7905b3588a", null ],
+    [ "IP_SSP_SetFormat", "group___i_p___s_s_p__001.html#ga91afe8f403621723bb3112da95b4e280", null ]
+];
